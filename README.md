@@ -2,6 +2,11 @@
 
 JamitFoundation is a collection of useful concepts to enable composition oriented development with UIKit
 
+![Swift](https://img.shields.io/badge/Swift-5.0-orange)
+![Version](https://img.shields.io/github/v/tag/JamitLabs/JamitFoundation?label=Version)
+![Platforms](https://img.shields.io/badge/Platforms-iOS-yellow)
+![License](https://img.shields.io/github/license/JamitLabs/JamitFoundation.svg)(https://github.com/JamitLabs/JamitFoundation)
+
 ## Installation
 
 ### Xcode 11
