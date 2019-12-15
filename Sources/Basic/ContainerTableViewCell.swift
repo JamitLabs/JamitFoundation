@@ -81,9 +81,12 @@ open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: UITableVie
     open override func prepareForReuse() {
         super.prepareForReuse()
 
-        model = .default
+        view.model = .default
+        didChangeModel()
     }
+}
 
+extension ContainerTableViewCell {
     /// This method is intended to be overridden by a subclass to perform setup after the initialization of the cell.
     ///
     /// - Attention: Always ensure calling `super.viewDidLoad()` to avoid unexpected behaviour.
