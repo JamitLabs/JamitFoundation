@@ -62,8 +62,11 @@ open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: UICol
         super.prepareForReuse()
 
         view.model = .default
+        didChangeModel()
     }
+}
 
+extension ContainerCollectionViewCell {
     /// This method is intended to be overridden by a subclass to perform setup after the initialization of the cell.
     ///
     /// - Attention: Always ensure calling `super.viewDidLoad()` to avoid unexpected behaviour.
