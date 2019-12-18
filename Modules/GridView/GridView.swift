@@ -90,7 +90,13 @@ public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridVi
         let totalColumnSpacing = model.spacing.width * CGFloat(max(0, model.numberOfColumns - 1))
         let dimension = (bounds.width - totalColumnSpacing) / CGFloat(max(1, model.numberOfColumns))
 
-        return CGSize(width: dimension, height: dimension)
+        switch model.height {
+        case .symmetric:
+            return CGSize(width: dimension, height: dimension)
+
+        case let .constant(height):
+            return CGSize(width: dimension, height: height)
+        }
     }
 
     public func collectionView(
