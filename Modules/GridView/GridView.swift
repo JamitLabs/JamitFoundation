@@ -6,7 +6,7 @@ import UIKit
 
 public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridViewModel<ItemView.Model>>,
     UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    private class ItemViewCell: ContainerCollectionViewCell<ItemView> {}
+    private final class ItemViewCell: ContainerCollectionViewCell<ItemView> {}
 
     private lazy var collectionViewLayout: UICollectionViewLayout = UICollectionViewFlowLayout()
     private lazy var collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: collectionViewLayout)
