@@ -87,9 +87,9 @@ public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridVi
     ) -> CGSize {
         let bounds = collectionView.bounds.inset(by: model.insets)
         let totalColumnSpacing = model.spacing.width * CGFloat(max(0, model.numberOfColumns - 1))
-        let width = (bounds.width - totalColumnSpacing) / CGFloat(max(1, model.numberOfColumns))
+        let dimension = (bounds.width - totalColumnSpacing) / CGFloat(max(1, model.numberOfColumns))
 
-        return CGSize(width: width, height: width)
+        return CGSize(width: dimension, height: dimension)
     }
 
     public func collectionView(
