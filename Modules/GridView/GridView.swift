@@ -46,7 +46,6 @@ public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridVi
         super.viewDidLoad()
 
         collectionView.backgroundColor = .clear
-        addSubview(collectionView)
         collectionView.clipsToBounds = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
