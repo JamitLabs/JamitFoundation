@@ -2,8 +2,26 @@ import Foundation
 import JamitFoundation
 import UIKit
 
-// TODO: Write documentation for public interface!
-
+/// A stateful view which presents a collection of `ItemView`s in a grid based layout.
+///
+/// Example:
+/// ```swift
+/// // GridView instantiation with an image view listening to touch events
+/// let gridView: GridView<ActionView<ImageView>> = .instantiate()
+///
+/// // GridView model update
+/// let imageSourceURLs: [URL] = <#image sources#>
+/// gridView.model = GridViewModel(
+///     insets: .zero,
+///     spacing: .zero,
+///     numberOfColumns: 3,
+///     items: imageSourceURLs.map { imageSourceURL in
+///         return ActionViewModel(content: .url(imageSourceURL)) { [unowned self] in
+///             print("Did tap image view with url: \(imageSourceURL)")
+///         }
+///     }
+/// )
+/// ```
 public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridViewModel<ItemView.Model>>,
     UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private final class ItemViewCell: ContainerCollectionViewCell<ItemView> {}
@@ -11,11 +29,15 @@ public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridVi
     private lazy var collectionViewLayout: UICollectionViewLayout = UICollectionViewFlowLayout()
     private lazy var collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: collectionViewLayout)
 
+    /// A flag controlling the scroll behaviour of the underlying content view.
+    ///
+    /// If `isScrollEnabled` is true then the content of the `GridView` can scroll on the vertical axis.
     public var isScrollEnabled: Bool {
         get { collectionView.isScrollEnabled }
         set { collectionView.isScrollEnabled = newValue }
     }
 
+    /// A size indicating the natural size for the receiving view based on its intrinsic properties.
     public override var intrinsicContentSize: CGSize {
         return collectionView.contentSize
     }
