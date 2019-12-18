@@ -63,6 +63,7 @@ public final class GridView<ItemView: StatefulViewProtocol>: StatefulView<GridVi
 
         collectionViewLayout.invalidateLayout()
         collectionView.reloadData()
+        collectionView.layoutIfNeeded()
         invalidateIntrinsicContentSize()
     }
 
