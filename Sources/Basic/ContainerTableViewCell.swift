@@ -15,7 +15,7 @@ import UIKit
 /// // Making `MyView` embeddable as reusable table view cell...
 /// final class MyTableViewCell: ContainerTableViewCell<MyView> {}
 /// ```
-open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: UITableViewCell {
+open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: TableViewCell {
     /// A flag controlling the dynamic resizing behaviour of the embedded view.
     ///
     /// If `isDynamicallyResizable` returns true, then the `view` will be resizable without breaking constraints.
@@ -34,7 +34,7 @@ open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: UITableVie
         get { return view.model }
         set {
             view.model = newValue
-            didChangeModel()
+            perform(#selector(didChangeModel))
         }
     }
 
@@ -51,7 +51,7 @@ open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: UITableVie
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         defaultInit()
-        viewDidLoad()
+        perform(#selector(viewDidLoad))
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -63,7 +63,7 @@ open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: UITableVie
     open override func awakeFromNib() {
         super.awakeFromNib()
 
-        viewDidLoad()
+        perform(#selector(viewDidLoad))
     }
 
     private func defaultInit() {
@@ -82,18 +82,6 @@ open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: UITableVie
         super.prepareForReuse()
 
         view.model = .default
-        didChangeModel()
+        perform(#selector(didChangeModel))
     }
-}
-
-extension ContainerTableViewCell {
-    /// This method is intended to be overridden by a subclass to perform setup after the initialization of the cell.
-    ///
-    /// - Attention: Always ensure calling `super.viewDidLoad()` to avoid unexpected behaviour.
-    open func viewDidLoad() {}
-
-    /// This method is intended to be overridden by a subclass to listen for state changes.
-    ///
-    /// - Attention: Always ensure calling `super.didChangeModel()` to avoid unexpected behaviour.
-    open func didChangeModel() {}
 }

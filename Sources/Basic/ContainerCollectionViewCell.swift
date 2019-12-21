@@ -15,7 +15,7 @@ import UIKit
 /// // Making `MyView` embeddable as reusable collection view cell...
 /// final class MyCollectionViewCell: ContainerCollectionViewCell<MyView> {}
 /// ```
-open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: UICollectionViewCell {
+open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: CollectionViewCell {
     /// The underlying view which is embedded into the `contentView`.
     public private(set) lazy var view: ContentView = .instantiate()
 
@@ -29,7 +29,7 @@ open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: UICol
         get { return view.model }
         set {
             view.model = newValue
-            didChangeModel()
+            perform(#selector(didChangeModel))
         }
     }
 
@@ -37,7 +37,7 @@ open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: UICol
         super.init(frame: frame)
 
         defaultInit()
-        viewDidLoad()
+        perform(#selector(viewDidLoad))
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -49,7 +49,7 @@ open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: UICol
     open override func awakeFromNib() {
         super.awakeFromNib()
 
-        viewDidLoad()
+        perform(#selector(viewDidLoad))
     }
 
     private func defaultInit() {
@@ -62,18 +62,6 @@ open class ContainerCollectionViewCell<ContentView: StatefulViewProtocol>: UICol
         super.prepareForReuse()
 
         view.model = .default
-        didChangeModel()
+        perform(#selector(didChangeModel))
     }
-}
-
-extension ContainerCollectionViewCell {
-    /// This method is intended to be overridden by a subclass to perform setup after the initialization of the cell.
-    ///
-    /// - Attention: Always ensure calling `super.viewDidLoad()` to avoid unexpected behaviour.
-    open func viewDidLoad() {}
-
-    /// This method is intended to be overridden by a subclass to listen for state changes.
-    ///
-    /// - Attention: Always ensure calling `super.didChangeModel()` to avoid unexpected behaviour.
-    open func didChangeModel() {}
 }
