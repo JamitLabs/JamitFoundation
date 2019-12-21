@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604823AE166D001CFD85 /* CollectionViewCell.swift */; };
+		C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604923AE166D001CFD85 /* TableViewCell.swift */; };
 		C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */; };
 		C5CB31F82371D10F00E25E4B /* UITableView+recycling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31DA2371D10F00E25E4B /* UITableView+recycling.swift */; };
 		C5CB31F92371D10F00E25E4B /* UIView+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31DB2371D10F00E25E4B /* UIView+instantiate.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C568604923AE166D001CFD85 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JamitFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
 		C5CB31DA2371D10F00E25E4B /* UITableView+recycling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+recycling.swift"; sourceTree = "<group>"; };
@@ -112,11 +116,13 @@
 		C5CB31DD2371D10F00E25E4B /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				C568604823AE166D001CFD85 /* CollectionViewCell.swift */,
 				C5CB31E42371D10F00E25E4B /* ContainerCollectionViewCell.swift */,
 				C5CB31E22371D10F00E25E4B /* ContainerTableViewCell.swift */,
 				C5CB31E32371D10F00E25E4B /* ErrorCallback.swift */,
 				C5CB31E12371D10F00E25E4B /* StatefulView.swift */,
 				C5CB31E02371D10F00E25E4B /* StatefulViewController.swift */,
+				C568604923AE166D001CFD85 /* TableViewCell.swift */,
 				C5CB31DF2371D10F00E25E4B /* ViewController.swift */,
 				C5CB31DE2371D10F00E25E4B /* VoidCallback.swift */,
 			);
@@ -292,6 +298,7 @@
 				C5CB31FC2371D10F00E25E4B /* ViewController.swift in Sources */,
 				C5CB31F92371D10F00E25E4B /* UIView+instantiate.swift in Sources */,
 				C5CB32082371D10F00E25E4B /* StatefulViewProtocol.swift in Sources */,
+				C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */,
 				C5CB32032371D10F00E25E4B /* Image.swift in Sources */,
 				C5CB31F82371D10F00E25E4B /* UITableView+recycling.swift in Sources */,
 				C5CB32002371D10F00E25E4B /* ErrorCallback.swift in Sources */,
@@ -303,6 +310,7 @@
 				C5CB32092371D10F00E25E4B /* ScrollViewController.swift in Sources */,
 				C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */,
 				C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */,
+				C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
