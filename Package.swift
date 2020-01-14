@@ -7,7 +7,8 @@ let package = Package(
     platforms: [.iOS(.v10)],
     products: [
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
-        .library(name: "PageView", targets: ["PageView"])
+        .library(name: "PageView", targets: ["PageView"]),
+        .library(name: "GridView", targets: ["GridView"])
     ],
     dependencies: [],
     targets: [
@@ -20,6 +21,11 @@ let package = Package(
             name: "PageView",
             dependencies: ["JamitFoundation"],
             path: "Modules/PageView"
+        ),
+        .target(
+            name: "GridView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/GridView"
         )
     ]
 )
