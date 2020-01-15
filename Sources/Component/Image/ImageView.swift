@@ -18,6 +18,10 @@ public final class ImageView: StatefulView<Image> {
 
     private var errorCallback: ErrorCallback?
 
+    public override var contentMode: UIView.ContentMode {
+        didSet { imageView.contentMode = contentMode }
+    }
+
     public override func viewDidLoad() {
         super.viewDidLoad()
 
