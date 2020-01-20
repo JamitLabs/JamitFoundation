@@ -105,6 +105,12 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         }
     }
 
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        captureVideoPreviewLayer.frame = bounds
+    }
+
     private func didChangeState() {
         if isScanning, isScanningEnabled, !isCaptureSessionRunning {
             self.captureSessionQueue.async { [weak self] in
