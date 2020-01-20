@@ -4,7 +4,7 @@ import UIKit
 
 public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     private lazy var captureSession: AVCaptureSession = .init()
-    private lazy var captureDevice: AVCaptureDevice = .default(for: .video)!
+    private lazy var captureDevice: AVCaptureDevice? = .default(for: .video)
     private var captureSessionQueue: DispatchQueue = .init(
         label: "com.jamitlabs.JamitFoundation.BarcodeScannerView.CaptureSessionQueue",
         attributes: [],
@@ -44,7 +44,13 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
                 self.captureSession.sessionPreset = .high
             }
 
-            guard let captureDeviceInput = try? AVCaptureDeviceInput(device: self.captureDevice) else {
+            guard let captureDevice = self.captureDevice else {
+                return DispatchQueue.main.async { [weak self] in
+                    self?.model.onError(.videoCapturingDeviceNotAvailable)
+                }
+            }
+
+            guard let captureDeviceInput = try? AVCaptureDeviceInput(device: captureDevice) else {
                 return DispatchQueue.main.async { [weak self] in
                     self?.model.onError(.videoCapturingConfigurationFailed)
                 }
