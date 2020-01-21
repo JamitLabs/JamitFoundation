@@ -9,7 +9,7 @@ public struct BarcodeScannerViewModel: ViewModelProtocol {
     public let onScan: ScanCallback
     public let onError: ErrorCallback
 
-    init(
+    public init(
         barcodeTypes: [BarcodeType] = Self.default.barcodeTypes,
         onScan: @escaping ScanCallback = Self.default.onScan,
         onError: @escaping ErrorCallback = Self.default.onError
