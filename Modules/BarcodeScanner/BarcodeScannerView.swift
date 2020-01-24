@@ -2,6 +2,30 @@ import AVFoundation
 import JamitFoundation
 import UIKit
 
+/// A stateful view which presents a video capturing preview and scans the content of it for barcodes.
+///
+/// Example:
+/// ```swift
+/// // Instantiation of the barcode scanner view.
+/// let barcodeScannerView = BarcodeScannerView.instantiate()
+///
+/// // Configuration of the expected barcode types and the callbacks.
+/// barcodeScannerView.model = .init(
+///     barcodeTypes: [.qr],
+///     onScan: { barcodes in
+///         print(barcodes)
+///     },
+///     onError: { error in
+///         print(error)
+///     }
+/// )
+///
+/// // Starting the scan process.
+/// scannerView.startScanning()
+///
+/// // Stopping the scan process.
+/// scannerView.stopScanning()
+/// ```
 public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     private lazy var captureSession: AVCaptureSession = .init()
     private lazy var captureDevice: AVCaptureDevice? = .default(for: .video)
@@ -22,7 +46,15 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         didSet { didChangeState() }
     }
 
-    private(set) var isScanning: Bool = false {
+    /// A flag describing the scan process state.
+    ///
+    /// If `isScanning` is true then the scan process is running.
+    ///
+    /// - NOTE: This value is not always returning the current state of the capture session,
+    ///         it always reflects the last invocation state of the `startScanning` and `stopScanning` methods.
+    ///         When there is a runtime issue starting the scan process then this value can still be `true`
+    ///         even if the capturing session is not running at the moment.
+    public private(set) var isScanning: Bool = false {
         didSet { didChangeState() }
     }
 
@@ -133,7 +165,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         }
     }
 
-    // MARK: - Capture Session Management
+    /// Starts the scan process for the given `barcodeTypes` in the `model`.
     public func startScanning() {
         guard !isScanning else { return }
 
@@ -148,6 +180,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         }
     }
 
+    /// Stops the scann process for the given `barcodeTypes` in the `model`.
     public func stopScanning() {
         guard isScanning else { return }
 
@@ -275,11 +308,9 @@ extension BarcodeScannerView: AVCaptureMetadataOutputObjectsDelegate {
     ) {
         let barcodes = metadataObjects.compactMap { metadataObject -> Barcode? in
             guard let machineReadableCodeObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return nil }
+            guard let type = BarcodeType(rawValue: machineReadableCodeObject.type) else { return nil }
 
-            return Barcode(
-                type: BarcodeType(rawValue: machineReadableCodeObject.type),
-                body: machineReadableCodeObject.stringValue ?? ""
-            )
+            return Barcode(type: type, body: machineReadableCodeObject.stringValue ?? "")
         }
 
         guard barcodes.count > 0 else { return }
