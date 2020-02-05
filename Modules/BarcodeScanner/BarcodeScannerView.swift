@@ -172,10 +172,12 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         isScanning = true
 
         requestVideoCapturingAuthorization { [weak self] accessGranted in
-            if accessGranted {
-                self?.captureSessionQueue.resume()
-            } else {
-                self?.model.onError(.videoCapturingNotAuthorized)
+            guard let self = self else { return }
+
+            if !accessGranted {
+                self.model.onError(.videoCapturingNotAuthorized)
+            } else if !self.isCaptureSessionConfigured {
+                self.captureSessionQueue.resume()
             }
         }
     }
