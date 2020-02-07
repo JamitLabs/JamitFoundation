@@ -9,7 +9,8 @@ let package = Package(
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
         .library(name: "PageView", targets: ["PageView"]),
         .library(name: "GridView", targets: ["GridView"]),
-        .library(name: "BarcodeScanner", targets: ["BarcodeScanner"])
+        .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
+        .library(name: "CarouselView", targets: ["CarouselView"])
     ],
     dependencies: [],
     targets: [
@@ -32,6 +33,11 @@ let package = Package(
             name: "BarcodeScanner",
             dependencies: ["JamitFoundation"],
             path: "Modules/BarcodeScanner"
+        ),
+        .target(
+            name: "CarouselView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/CarouselView"
         )
     ]
 )
