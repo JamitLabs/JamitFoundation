@@ -22,7 +22,7 @@ import UIKit
 /// let fruitListViewController: FruitListViewController = .instantiate()
 /// fruitListViewController.model = .init(items: [FruitViewModel(...), ...])
 /// ```
-public final class ListViewController<View: StatefulViewProtocol>: StatefulViewController<ListViewModel<View.Model>>, UITableViewDataSource {
+open class ListViewController<View: StatefulViewProtocol>: StatefulViewController<ListViewModel<View.Model>>, UITableViewDataSource {
     private final class ListTableViewCell: ContainerTableViewCell<View> {}
 
     /// The content table view of the `ListViewController`.
