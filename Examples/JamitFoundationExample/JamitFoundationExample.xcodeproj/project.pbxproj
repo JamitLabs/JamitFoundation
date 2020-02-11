@@ -3,17 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FE723F27E8700D9A6D5 /* AppDelegate.swift */; };
-		1E1B3FEC23F27E8700D9A6D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FEB23F27E8700D9A6D5 /* ViewController.swift */; };
-		1E1B3FEF23F27E8700D9A6D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B3FED23F27E8700D9A6D5 /* Main.storyboard */; };
+		1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FEB23F27E8700D9A6D5 /* SampleListViewController.swift */; };
+		1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B3FED23F27E8700D9A6D5 /* SampleListView.storyboard */; };
 		1E1B3FF123F27E8700D9A6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B3FF023F27E8700D9A6D5 /* Assets.xcassets */; };
 		1E1B3FF423F27E8700D9A6D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B3FF223F27E8700D9A6D5 /* LaunchScreen.storyboard */; };
 		1E1B3FFF23F27E8700D9A6D5 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FFE23F27E8700D9A6D5 /* ExampleTests.swift */; };
 		1E1B400A23F27E8700D9A6D5 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B400923F27E8700D9A6D5 /* ExampleUITests.swift */; };
+		1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402323F281D800D9A6D5 /* TableViewController.swift */; };
+		1E1B402723F2822100D9A6D5 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1B402623F2822100D9A6D5 /* JamitFoundation */; };
+		1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402823F2824A00D9A6D5 /* TableViewViewModel.swift */; };
+		1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402D23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift */; };
+		1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */; };
+		1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */; };
+		1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */; };
+		1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */; };
+		1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229323F2A24200C90405 /* ListItemViewModel.swift */; };
+		1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229623F2A38E00C90405 /* ListItemView.swift */; };
+		1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7229823F2A39F00C90405 /* ListItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +47,8 @@
 /* Begin PBXFileReference section */
 		1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamitFoundationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1B3FE723F27E8700D9A6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E1B3FEB23F27E8700D9A6D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1E1B3FEE23F27E8700D9A6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E1B3FEB23F27E8700D9A6D5 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
+		1E1B3FEE23F27E8700D9A6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SampleListView.storyboard; sourceTree = "<group>"; };
 		1E1B3FF023F27E8700D9A6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E1B3FF323F27E8700D9A6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E1B3FF523F27E8700D9A6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +58,16 @@
 		1E1B400523F27E8700D9A6D5 /* JamitFoundationExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamitFoundationExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1B400923F27E8700D9A6D5 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		1E1B400B23F27E8700D9A6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E1B402323F281D800D9A6D5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1E1B402823F2824A00D9A6D5 /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
+		1E1B402D23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTitleTableViewCell.swift; sourceTree = "<group>"; };
+		1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTitleView.swift; sourceTree = "<group>"; };
+		1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTitleViewModel.swift; sourceTree = "<group>"; };
+		1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewTitleView.xib; sourceTree = "<group>"; };
+		1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		1EC7229323F2A24200C90405 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
+		1EC7229623F2A38E00C90405 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		1EC7229823F2A39F00C90405 /* ListItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1B402723F2822100D9A6D5 /* JamitFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				1E1B402023F27F0C00D9A6D5 /* Launch */,
-				1E1B402123F280E500D9A6D5 /* Main */,
+				1E1B402123F280E500D9A6D5 /* ListView */,
+				1E1B402223F2818C00D9A6D5 /* TableView */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -204,13 +227,46 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
-		1E1B402123F280E500D9A6D5 /* Main */ = {
+		1E1B402123F280E500D9A6D5 /* ListView */ = {
 			isa = PBXGroup;
 			children = (
-				1E1B3FED23F27E8700D9A6D5 /* Main.storyboard */,
-				1E1B3FEB23F27E8700D9A6D5 /* ViewController.swift */,
+				1E1B3FED23F27E8700D9A6D5 /* SampleListView.storyboard */,
+				1E1B3FEB23F27E8700D9A6D5 /* SampleListViewController.swift */,
+				1EC7229523F2A34200C90405 /* ListItem */,
 			);
-			path = Main;
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		1E1B402223F2818C00D9A6D5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */,
+				1E1B402323F281D800D9A6D5 /* TableViewController.swift */,
+				1E1B402823F2824A00D9A6D5 /* TableViewViewModel.swift */,
+				1E1B402C23F2843700D9A6D5 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		1E1B402C23F2843700D9A6D5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1E1B402D23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift */,
+				1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */,
+				1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */,
+				1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1EC7229523F2A34200C90405 /* ListItem */ = {
+			isa = PBXGroup;
+			children = (
+				1EC7229623F2A38E00C90405 /* ListItemView.swift */,
+				1EC7229823F2A39F00C90405 /* ListItemView.xib */,
+				1EC7229323F2A24200C90405 /* ListItemViewModel.swift */,
+			);
+			path = ListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +285,9 @@
 			dependencies = (
 			);
 			name = JamitFoundationExample;
+			packageProductDependencies = (
+				1E1B402623F2822100D9A6D5 /* JamitFoundation */,
+			);
 			productName = JamitFoundationExample;
 			productReference = 1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */;
 			productType = "com.apple.product-type.application";
@@ -301,6 +360,9 @@
 				Base,
 			);
 			mainGroup = 1E1B3FDB23F27E8700D9A6D5;
+			packageReferences = (
+				1E1B402523F2822100D9A6D5 /* XCRemoteSwiftPackageReference "JamitFoundation" */,
+			);
 			productRefGroup = 1E1B3FE523F27E8700D9A6D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,7 +381,10 @@
 			files = (
 				1E1B3FF423F27E8700D9A6D5 /* LaunchScreen.storyboard in Resources */,
 				1E1B3FF123F27E8700D9A6D5 /* Assets.xcassets in Resources */,
-				1E1B3FEF23F27E8700D9A6D5 /* Main.storyboard in Resources */,
+				1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */,
+				1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */,
+				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
+				1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +409,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1B3FEC23F27E8700D9A6D5 /* ViewController.swift in Sources */,
+				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
+				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
+				1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */,
+				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
+				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
+				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
+				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
+				1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */,
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,12 +453,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1E1B3FED23F27E8700D9A6D5 /* Main.storyboard */ = {
+		1E1B3FED23F27E8700D9A6D5 /* SampleListView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1E1B3FEE23F27E8700D9A6D5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SampleListView.storyboard;
 			sourceTree = "<group>";
 		};
 		1E1B3FF223F27E8700D9A6D5 /* LaunchScreen.storyboard */ = {
@@ -676,6 +748,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E1B402523F2822100D9A6D5 /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
+			requirement = {
+				branch = "feature/make-listviewcontroller-open";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E1B402623F2822100D9A6D5 /* JamitFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E1B402523F2822100D9A6D5 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = JamitFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E1B3FDC23F27E8700D9A6D5 /* Project object */;
 }

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "JamitFoundation",
+        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
+        "state": {
+          "branch": "feature/make-listviewcontroller-open",
+          "revision": "af9909139fe45d290e1ae518d75b37574d96d060",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
