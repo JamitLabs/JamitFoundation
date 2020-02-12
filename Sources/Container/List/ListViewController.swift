@@ -28,18 +28,18 @@ open class ListViewController<View: StatefulViewProtocol>: StatefulViewControlle
     /// The content table view of the `ListViewController`.
     public private(set) lazy var tableView: UITableView = .init(frame: .zero, style: .plain)
 
-    public override func loadView() {
+    open override func loadView() {
         view = tableView
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.register(cellOfType: ListTableViewCell.self)
     }
 
-    public override func didChangeModel() {
+    open override func didChangeModel() {
         super.didChangeModel()
 
         switch model.height {
