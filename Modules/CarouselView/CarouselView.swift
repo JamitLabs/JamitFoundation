@@ -30,6 +30,7 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        scrollView.clipsToBounds = false
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -70,10 +71,13 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
         }
 
         if !model.pages.isEmpty {
+            scrollView.isHidden = false
             leftContentViewPlaceholder.model = model.pages[modIndex(model.pages.count - 1, model.pages.count)]
             rightContentViewPlaceholder.model = model.pages[0]
             leftOffscreenContentViewPlaceholder.model = model.pages[modIndex(model.pages.count - 2, model.pages.count)]
             rightOffscreenContentViewPlaceholder.model = model.pages[modIndex(1, model.pages.count)]
+        } else {
+            scrollView.isHidden = true
         }
 
         updateContentLayout()
@@ -107,22 +111,23 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
             )
         }
 
-        leftOffscreenContentViewPlaceholder.frame = bounds.offsetBy(dx: -bounds.width, dy: 0)
-        leftOffscreenContentViewPlaceholder.frame = CGRect(
-            x: leftOffscreenContentViewPlaceholder.frame.origin.x + model.neighboringPageInset.left,
-            y: leftOffscreenContentViewPlaceholder.frame.origin.y + model.neighboringPageInset.top,
-            width: leftOffscreenContentViewPlaceholder.frame.size.width - model.neighboringPageInset.left - model.neighboringPageInset.right,
-            height: leftOffscreenContentViewPlaceholder.frame.size.height - model.neighboringPageInset.top - model.neighboringPageInset.bottom
-        )
-        rightOffscreenContentViewPlaceholder.frame = bounds.offsetBy(dx: bounds.width * CGFloat(model.pages.count + 2), dy: 0)
-        rightOffscreenContentViewPlaceholder.frame = CGRect(
-            x: rightOffscreenContentViewPlaceholder.frame.origin.x + model.neighboringPageInset.left,
-            y: rightOffscreenContentViewPlaceholder.frame.origin.y + model.neighboringPageInset.top,
-            width: rightOffscreenContentViewPlaceholder.frame.size.width - model.neighboringPageInset.left - model.neighboringPageInset.right,
-            height: rightOffscreenContentViewPlaceholder.frame.size.height - model.neighboringPageInset.top - model.neighboringPageInset.bottom
-        )
-
+        leftOffscreenContentViewPlaceholder.frame = calculateLeftOffscreenContentViewPlaceholderFrame()
+        rightOffscreenContentViewPlaceholder.frame = calculateRightOffscreenContentViewPlaceholderFrame()
         updateContentViewScales()
+    }
+
+
+    /// Scrolls to the page at the given index.
+    ///
+    /// - Parameters:
+    ///   - index: The index of the target page to scroll.
+    ///   - animated: A flag describing if the scroll should be performed with animations.
+    public func scrollToPage(atIndex index: Int, animated: Bool = true) {
+        let contentOffset = CGPoint(
+            x: CGFloat(index + 1) * bounds.width,
+            y: scrollView.contentOffset.y
+        )
+        scrollView.setContentOffset(contentOffset, animated: animated)
     }
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -133,7 +138,6 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
         let newContentViewIndex = bounds.width > 0 ? modIndex((Int(round(contentOffset / bounds.width))), model.pages.count) : 0
         if contentViewIndex != newContentViewIndex {
             contentViewIndex = newContentViewIndex
-            print(contentViewIndex)
             model.onPageIndexChanged(contentViewIndex)
         }
 
@@ -165,6 +169,7 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
                 dy: 0
             )
             let distanceFactor = min(1, abs(containerFrame.origin.x - scrollView.contentOffset.x) / bounds.width)
+            let distanceScaleFactor = 1.0 + (model.neighboringPageScaleFactor - 1.0) * distanceFactor
             let distanceInset = UIEdgeInsets(
                 top: model.pageInset.top + (model.neighboringPageInset.top - model.pageInset.top) * distanceFactor,
                 left: model.pageInset.left + (model.neighboringPageInset.left - model.pageInset.left) * distanceFactor,
@@ -172,6 +177,7 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
                 right: model.pageInset.right + (model.neighboringPageInset.right - model.pageInset.right) * distanceFactor
             )
 
+            view.transform = CGAffineTransform(scaleX: distanceScaleFactor, y: distanceScaleFactor)
             view.frame = CGRect(
                 x: containerFrame.origin.x + distanceInset.left,
                 y: containerFrame.origin.y + distanceInset.top,
@@ -181,7 +187,31 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
         }
     }
 
+    private func calculateLeftOffscreenContentViewPlaceholderFrame() -> CGRect {
+        var rect = bounds.offsetBy(dx: -bounds.width, dy: 0)
+        rect = CGRect(
+            x: rect.origin.x + model.neighboringPageInset.left,
+            y: rect.origin.y + model.neighboringPageInset.top,
+            width: rect.size.width - model.neighboringPageInset.left - model.neighboringPageInset.right,
+            height: rect.size.height - model.neighboringPageInset.top - model.neighboringPageInset.bottom
+        )
+        return rect
+    }
+
+    private func calculateRightOffscreenContentViewPlaceholderFrame() -> CGRect {
+        var rect = bounds.offsetBy(dx: bounds.width * CGFloat(model.pages.count + 2), dy: 0)
+        rect = CGRect(
+            x: rect.origin.x + model.neighboringPageInset.left,
+            y: rect.origin.y + model.neighboringPageInset.top,
+            width: rect.size.width - model.neighboringPageInset.left - model.neighboringPageInset.right,
+            height: rect.size.height - model.neighboringPageInset.top - model.neighboringPageInset.bottom
+        )
+        return rect
+    }
+
     private func modIndex(_ lhs: Int, _ rhs: Int) -> Int {
+        guard rhs > 0 else { return 0 }
+
         return (lhs % rhs + rhs) % rhs
     }
 }

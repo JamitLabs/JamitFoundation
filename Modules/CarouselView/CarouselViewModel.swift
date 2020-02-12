@@ -16,6 +16,9 @@ public struct CarouselViewModel<Content: ViewModelProtocol>: ViewModelProtocol {
     /// The insets applied to the neighboring page frames of the current active page.
     public let neighboringPageInset: UIEdgeInsets
 
+    /// The scale applied to the neighboring page frames of the current active page.
+    public let neighboringPageScaleFactor: CGFloat
+
     /// The callback for page index changes.
     public let onPageIndexChanged: PageIndexChangeCallback
 
@@ -24,16 +27,19 @@ public struct CarouselViewModel<Content: ViewModelProtocol>: ViewModelProtocol {
     /// - Parameter pages: The carousel content view models.
     /// - Parameter pageInset: The insets applied to the current active page frame.
     /// - Parameter neighboringPageInset: The insets applied to the neighboring page frames of the current active page.
+    /// - Parameter neighboringPageScaleFactor: The scale applied to the neighboring page frames of the current active page.
     /// - Parameter onPageIndexChanged: The content view models for the carousel content views.
     public init(
         pages: [Content] = Self.default.pages,
         pageInset: UIEdgeInsets = Self.default.pageInset,
         neighboringPageInset: UIEdgeInsets = Self.default.neighboringPageInset,
+        neighboringPageScaleFactor: CGFloat = Self.default.neighboringPageScaleFactor,
         onPageIndexChanged: @escaping PageIndexChangeCallback = Self.default.onPageIndexChanged
     ) {
         self.pages = pages
         self.pageInset = pageInset
         self.neighboringPageInset = neighboringPageInset
+        self.neighboringPageScaleFactor = neighboringPageScaleFactor
         self.onPageIndexChanged = onPageIndexChanged
     }
 }
@@ -45,6 +51,7 @@ extension CarouselViewModel {
             pages: [],
             pageInset: .zero,
             neighboringPageInset: .zero,
+            neighboringPageScaleFactor: 1.0,
             onPageIndexChanged: { _ in }
         )
     }
