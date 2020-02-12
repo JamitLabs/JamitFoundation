@@ -88,7 +88,11 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
                 }
             }
 
-            guard self.captureSession.canAddInput(captureDeviceInput) else { return }
+            guard self.captureSession.canAddInput(captureDeviceInput) else {
+                return DispatchQueue.main.async { [weak self] in
+                    self?.model.onError(.videoCapturingConfigurationFailed)
+                }
+            }
 
             self.captureSession.addInput(captureDeviceInput)
             self.captureDeviceInput = captureDeviceInput
@@ -315,8 +319,8 @@ extension BarcodeScannerView: AVCaptureMetadataOutputObjectsDelegate {
             return Barcode(type: type, body: machineReadableCodeObject.stringValue ?? "")
         }
 
-        guard barcodes.count > 0 else { return }
+        guard !barcodes.isEmpty else { return }
 
-        model.onScan(barcodes)
+        model.onSuccess(barcodes)
     }
 }
