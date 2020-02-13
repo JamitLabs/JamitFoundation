@@ -7,7 +7,10 @@ let package = Package(
     platforms: [.iOS(.v10)],
     products: [
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
-        .library(name: "PageView", targets: ["PageView"])
+        .library(name: "PageView", targets: ["PageView"]),
+        .library(name: "GridView", targets: ["GridView"]),
+        .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
+        .library(name: "CarouselView", targets: ["CarouselView"])
     ],
     dependencies: [],
     targets: [
@@ -20,6 +23,21 @@ let package = Package(
             name: "PageView",
             dependencies: ["JamitFoundation"],
             path: "Modules/PageView"
+        ),
+        .target(
+            name: "GridView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/GridView"
+        ),
+        .target(
+            name: "BarcodeScanner",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/BarcodeScanner"
+        ),
+        .target(
+            name: "CarouselView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/CarouselView"
         )
     ]
 )

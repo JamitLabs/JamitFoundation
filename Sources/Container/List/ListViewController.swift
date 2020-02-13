@@ -22,24 +22,24 @@ import UIKit
 /// let fruitListViewController: FruitListViewController = .instantiate()
 /// fruitListViewController.model = .init(items: [FruitViewModel(...), ...])
 /// ```
-public final class ListViewController<View: StatefulViewProtocol>: StatefulViewController<ListViewModel<View.Model>>, UITableViewDataSource {
+open class ListViewController<View: StatefulViewProtocol>: StatefulViewController<ListViewModel<View.Model>>, UITableViewDataSource {
     private final class ListTableViewCell: ContainerTableViewCell<View> {}
 
     /// The content table view of the `ListViewController`.
     public private(set) lazy var tableView: UITableView = .init(frame: .zero, style: .plain)
 
-    public override func loadView() {
+    open override func loadView() {
         view = tableView
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.register(cellOfType: ListTableViewCell.self)
     }
 
-    public override func didChangeModel() {
+    open override func didChangeModel() {
         super.didChangeModel()
 
         switch model.height {
