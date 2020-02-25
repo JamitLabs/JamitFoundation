@@ -101,3 +101,137 @@ public extension UICollectionView {
         return cell
     }
 }
+
+public extension UICollectionView {
+    /// Registers a reusable header view of type `ReusableViewType` which inherits from `UICollectionReusableView`.
+    ///
+    /// The reusable view will be registered as nib when there is a nib file inside the given Bundle
+    /// which has the same name as the class name of `CollectionReusableView`.
+    ///
+    /// The reuse identifier of the reusable view will be the class name of `CollectionReusableView`.
+    ///
+    /// - Parameter reuseableViewType: The type of reusable view to retrieve.
+    func register<CollectionReusableView: UICollectionReusableView>(
+        reusableHeaderWithType reuseableViewType: CollectionReusableView.Type
+    ) {
+        register(reusableViewWithType: reuseableViewType, ofKind: Self.elementKindSectionHeader)
+    }
+
+    /// Registers a reusable footer view of type `ReusableViewType` which inherits from `UICollectionReusableView`.
+    ///
+    /// The reusable view will be registered as nib when there is a nib file inside the given Bundle
+    /// which has the same name as the class name of `CollectionReusableView`.
+    ///
+    /// The reuse identifier of the reusable view will be the class name of `CollectionReusableView`.
+    ///
+    /// - Parameter reuseableViewType: The type of reusable view to retrieve.
+    func register<CollectionReusableView: UICollectionReusableView>(
+        reusableFooterWithType reuseableViewType: CollectionReusableView.Type
+    ) {
+        register(reusableViewWithType: reuseableViewType, ofKind: Self.elementKindSectionFooter)
+    }
+
+    /// Registers a reusable view of type `ReusableViewType` which inherits from `UICollectionReusableView`.
+    ///
+    /// The reusable view will be registered as nib when there is a nib file inside the given Bundle
+    /// which has the same name as the class name of `CollectionReusableView`.
+    ///
+    /// The reuse identifier of the reusable view will be the class name of `CollectionReusableView`.
+    ///
+    /// Example:
+    ///
+    /// ```swift
+    /// collectionView.register(reusableViewWithType: MySectionHeaderView.self, ofKind: UICollectionView.elementKindSectionHeader)
+    /// collectionView.register(reusableViewWithType: MySectionFooterView.self, ofKind: UICollectionView.elementKindSectionFooter)
+    /// ```
+    ///
+    /// - Parameter reuseableViewType: The type of reusable view to retrieve.
+    /// - Parameter reusableViewKind: The kind of supplementary view to retrieve.
+    func register<CollectionReusableView: UICollectionReusableView>(
+        reusableViewWithType reusableViewType: CollectionReusableView.Type,
+        ofKind reusableViewKind: String
+    ) {
+        let identifier = String(describing: reusableViewType)
+        if Bundle.main.path(forResource: identifier, ofType: "nib") != nil {
+            register(
+                UINib(nibName: identifier, bundle: .main),
+                forSupplementaryViewOfKind: reusableViewKind,
+                withReuseIdentifier: identifier
+            )
+        } else {
+            register(
+                reusableViewType,
+                forSupplementaryViewOfKind: reusableViewKind,
+                withReuseIdentifier: identifier
+            )
+        }
+    }
+
+    /// Dequeues a reusable header view of type `CollectionReusableView` which inherits from `UICollectionReusableView`.
+    ///
+    /// The class name of the `CollectionReusableView` will be used as identifier of the reusable view.
+    ///
+    /// Example:
+    ///
+    /// ```swift
+    /// // The type of `reusableHeaderView` will be `MyReusableHeaderView`.
+    /// let reusableHeaderView = collectionView.dequeue(reusableHeaderWithType: MyReusableHeaderView.self)
+    /// ```
+    ///
+    /// - Attention: Always ensure that the registered reusable view is of type `CollectionReusableView`,
+    ///              otherwise a crash will occur at runtime.
+    ///
+    /// - Parameter reuseableViewType: The type of reusable view to retrieve.
+    /// - Parameter indexPath: The index path for which the dequeue is intented to be.
+    func dequeue<CollectionReusableView: UICollectionReusableView>(
+        reusableHeaderWithType reuseableViewType: CollectionReusableView.Type,
+        for indexPath: IndexPath
+    ) -> CollectionReusableView {
+        return dequeue(reusableViewType: reuseableViewType, ofKind: Self.elementKindSectionHeader, for: indexPath)
+    }
+
+    /// Dequeues a reusable footer view of type `CollectionReusableView` which inherits from `UICollectionReusableView`.
+    ///
+    /// The class name of the `CollectionReusableView` will be used as identifier of the reusable view.
+    ///
+    /// Example:
+    ///
+    /// ```swift
+    /// // The type of `reusableFooterView` will be `MyReusableFooterView`.
+    /// let reusableFooterView = collectionView.dequeue(reusableFooterWithType: MyReusableFooterView.self)
+    /// ```
+    ///
+    /// - Attention: Always ensure that the registered reusable view is of type `CollectionReusableView`,
+    ///              otherwise a crash will occur at runtime.
+    ///
+    /// - Parameter reuseableViewType: The type of reusable view to retrieve.
+    /// - Parameter indexPath: The index path for which the dequeue is intented to be.
+    func dequeue<CollectionReusableView: UICollectionReusableView>(
+        reusableFooterWithType reuseableViewType: CollectionReusableView.Type,
+        for indexPath: IndexPath
+    ) -> CollectionReusableView {
+        return dequeue(reusableViewType: reuseableViewType, ofKind: Self.elementKindSectionFooter, for: indexPath)
+    }
+
+    /// Dequeues a reusable header view of type `CollectionReusableView` which inherits from `UICollectionReusableView`.
+    ///
+    /// The class name of the `CollectionReusableView` will be used as identifier of the reusable view.
+    ///
+    /// - Attention: Always ensure that the registered reusable view is of type `CollectionReusableView`
+    ///              when the view is not of type `CollectionReusableView` a crash will occur at runtime.
+    ///
+    /// - Parameter reuseableViewType: The type of reusable view to retrieve.
+    /// - Parameter reusableViewKind: The kind of supplementary view to retrieve.
+    /// - Parameter indexPath: The index path for which the dequeue is intented to be.
+    func dequeue<CollectionReusableView: UICollectionReusableView>(
+        reusableViewType: CollectionReusableView.Type,
+        ofKind reusableViewKind: String,
+        for indexPath: IndexPath
+    ) -> CollectionReusableView {
+        return dequeueReusableSupplementaryView(
+            ofKind: reusableViewKind,
+            withReuseIdentifier: String(describing: reusableViewType),
+            for: indexPath
+        ) as! CollectionReusableView
+    }
+}
