@@ -12,7 +12,8 @@ let package = Package(
         .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
         .library(name: "CarouselView", targets: ["CarouselView"]),
         .library(name: "TimePickerView", targets: ["TimePickerView"]),
-        .library(name: "WeakCache", targets: ["WeakCache"])
+        .library(name: "WeakCache", targets: ["WeakCache"]),
+        .library(name: "TabBarView", targets: ["TabBarView"])
     ],
     dependencies: [],
     targets: [
@@ -55,6 +56,11 @@ let package = Package(
             name: "WeakCacheTests",
             dependencies: ["WeakCache"],
             path: "Modules/WeakCache/Tests"
+		),
+		.target(
+            name: "TabBarView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/TabBarView"
         )
     ]
 )
