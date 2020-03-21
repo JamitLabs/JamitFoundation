@@ -3,7 +3,7 @@ import JamitFoundation
 public struct TabBarViewModel<ItemViewModel: ViewModelProtocol>: ViewModelProtocol {
     public typealias IndexChangeCallback = (Int) -> Void
 
-    public let items: [ItemViewModel]
+    public var items: [ItemViewModel]
     public let onSelectedIndexChanged: IndexChangeCallback
 
     public init(
