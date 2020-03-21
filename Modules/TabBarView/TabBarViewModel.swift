@@ -1,12 +1,12 @@
 import JamitFoundation
 
-struct TabBarViewModel<ItemViewModel: ViewModelProtocol>: ViewModelProtocol {
-    typealias IndexChangeCallback = (Int) -> Void
+public struct TabBarViewModel<ItemViewModel: ViewModelProtocol>: ViewModelProtocol {
+    public typealias IndexChangeCallback = (Int) -> Void
 
-    let items: [ItemViewModel]
-    let onSelectedIndexChanged: IndexChangeCallback
+    public let items: [ItemViewModel]
+    public let onSelectedIndexChanged: IndexChangeCallback
 
-    init(
+    public init(
         items: [ItemViewModel] = Self.default.items,
         onSelectedIndexChanged: @escaping IndexChangeCallback = Self.default.onSelectedIndexChanged
     ) {

@@ -8,9 +8,9 @@
 import JamitFoundation
 import UIKit
 
-final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabBarViewModel<ItemView.Model>> {
+public final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabBarViewModel<ItemView.Model>>  {
     // MARK: - Properties
-    var selectedIndex: Int = 0 {
+    public private(set) var selectedIndex: Int = 0 {
         didSet {
             model.onSelectedIndexChanged(selectedIndex)
         }
@@ -26,7 +26,7 @@ final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabBarViewM
     }()
 
     // MARK: - Methods
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,7 +37,7 @@ final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabBarViewM
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
-    override func didChangeModel() {
+    public override func didChangeModel() {
         super.didChangeModel()
 
         stackView.arrangedSubviews.forEach { view in
@@ -48,6 +48,8 @@ final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabBarViewM
         model.items.enumerated().forEach { index, item in
             let itemView: ActionView<ItemView> = .instantiate()
             itemView.model = .init(content: model.items[index], action: { [weak self] in
+                guard let self = self else { return }
+                self.selectedIndex = index
             })
 
             stackView.addArrangedSubview(itemView)
