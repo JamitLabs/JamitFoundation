@@ -25,6 +25,7 @@ public final class SelectableView<ContenView: StatefulViewProtocol>: StatefulVie
     public override func didChangeModel() {
         super.didChangeModel()
 
+        isSelected = model.isSelected
         view.model = model.content
     }
 }
