@@ -25,6 +25,10 @@
 		1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229323F2A24200C90405 /* ListItemViewModel.swift */; };
 		1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229623F2A38E00C90405 /* ListItemView.swift */; };
 		1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7229823F2A39F00C90405 /* ListItemView.xib */; };
+		1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA149F242A1D6400321BFC /* TableViewItemTableViewCell.swift */; };
+		1ECA14A2242A1D6C00321BFC /* TableViewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14A1242A1D6C00321BFC /* TableViewItemView.swift */; };
+		1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14A3242A1D7300321BFC /* TableViewItemView.xib */; };
+		1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14A5242A1D8000321BFC /* TableViewItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		1EC7229323F2A24200C90405 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		1EC7229623F2A38E00C90405 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		1EC7229823F2A39F00C90405 /* ListItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemView.xib; sourceTree = "<group>"; };
+		1ECA149F242A1D6400321BFC /* TableViewItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItemTableViewCell.swift; sourceTree = "<group>"; };
+		1ECA14A1242A1D6C00321BFC /* TableViewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItemView.swift; sourceTree = "<group>"; };
+		1ECA14A3242A1D7300321BFC /* TableViewItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewItemView.xib; sourceTree = "<group>"; };
+		1ECA14A5242A1D8000321BFC /* TableViewItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,10 +259,8 @@
 		1E1B402C23F2843700D9A6D5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1E1B402D23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift */,
-				1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */,
-				1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */,
-				1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */,
+				1ECA149D242A1D2B00321BFC /* Title */,
+				1ECA149E242A1D4300321BFC /* Item */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -267,6 +273,28 @@
 				1EC7229323F2A24200C90405 /* ListItemViewModel.swift */,
 			);
 			path = ListItem;
+			sourceTree = "<group>";
+		};
+		1ECA149D242A1D2B00321BFC /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				1E1B402D23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift */,
+				1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */,
+				1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */,
+				1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		1ECA149E242A1D4300321BFC /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				1ECA149F242A1D6400321BFC /* TableViewItemTableViewCell.swift */,
+				1ECA14A1242A1D6C00321BFC /* TableViewItemView.swift */,
+				1ECA14A3242A1D7300321BFC /* TableViewItemView.xib */,
+				1ECA14A5242A1D8000321BFC /* TableViewItemViewModel.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +412,7 @@
 				1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */,
 				1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */,
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
+				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
 				1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,11 +439,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
+				1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */,
 				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
 				1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */,
+				1ECA14A2242A1D6C00321BFC /* TableViewItemView.swift in Sources */,
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
 				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
 				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
+				1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */,
 				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
 				1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */,
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
@@ -754,8 +786,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				branch = "feature/make-listviewcontroller-open";
-				kind = branch;
+				kind = exactVersion;
+				version = 1.3.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

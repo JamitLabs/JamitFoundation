@@ -14,6 +14,7 @@ class TableViewController: StatefulViewController<TableViewViewModel> {
         title = "TableViewController"
         
         tableView.register(cellOfType: TableViewTitleTableViewCell.self)
+        tableView.register(cellOfType: TableViewItemTableViewCell.self)
     }
 
     override func didChangeModel() {
@@ -34,6 +35,11 @@ extension TableViewController: UITableViewDataSource {
         switch currentItem {
         case let .title(model):
             let view = tableView.dequeue(cellOfType: TableViewTitleTableViewCell.self, for: indexPath)
+            view.model = model
+            return view
+            
+        case let .item(model):
+            let view = tableView.dequeue(cellOfType: TableViewItemTableViewCell.self, for: indexPath)
             view.model = model
             return view
         }

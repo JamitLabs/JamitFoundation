@@ -6,6 +6,7 @@ import JamitFoundation
 struct TableViewViewModel: ViewModelProtocol {
     enum Item {
         case title(TableViewTitleViewModel)
+        case item(TableViewItemViewModel)
     }
 
     let items: [Item]
