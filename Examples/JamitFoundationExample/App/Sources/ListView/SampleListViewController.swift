@@ -5,15 +5,16 @@ import UIKit
 
 final class SampleListViewController: ListViewController<ListItemView> {
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         title = "ListViewController"
 
         model = ListViewModel.init(
             height: .constant(60),
             items: [
-                ListItemViewModel(title: "TableView")
+                ListItemViewModel(title: "TableView"),
+                ListItemViewModel(title: "ActionView")
             ]
         )
 
@@ -46,10 +47,27 @@ final class SampleListViewController: ListViewController<ListItemView> {
         )
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    private func showActionView() {
+        let viewController = ActionViewController.instantiate()
+        viewController.model = .init(
+            imageURL: URL(string: "https://picsum.photos/id/235/300/200")
+        )
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension SampleListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showTableView()
+        switch indexPath.row {
+        case 0:
+            showTableView()
+
+        case 1:
+            showActionView()
+
+        default:
+            break
+        }
     }
 }
