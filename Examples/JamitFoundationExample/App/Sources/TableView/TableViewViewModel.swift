@@ -11,13 +11,13 @@ struct TableViewViewModel: ViewModelProtocol {
 
     let items: [Item]
 
-    init(items: [Item] = TableViewViewModel.default.items) {
+    init(items: [Item] = Self.default.items) {
         self.items = items
     }
 }
 
 extension TableViewViewModel {
-    static let `default`: TableViewViewModel = .init(
+    static let `default`: Self = .init(
         items: []
     )
 }

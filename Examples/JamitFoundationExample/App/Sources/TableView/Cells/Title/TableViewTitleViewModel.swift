@@ -6,13 +6,13 @@ import JamitFoundation
 struct TableViewTitleViewModel: ViewModelProtocol {
     let title: String?
 
-    init(title: String? = TableViewTitleViewModel.default.title) {
+    init(title: String? = Self.default.title) {
         self.title = title
     }
 }
 
 extension TableViewTitleViewModel {
-    static var `default`: TableViewTitleViewModel = .init(
+    static var `default`: Self = .init(
         title: nil
     )
 }

@@ -10,14 +10,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
 
         title = "ListViewController"
 
-        model = ListViewModel.init(
-            height: .constant(60),
-            items: [
-                ListItemViewModel(title: "TableView"),
-                ListItemViewModel(title: "ActionView"),
-                ListItemViewModel(title: "ScrollView")
-            ]
-        )
+        let itemModels = ["TableView", "ActionView", "ScrollView"].map { ListItemViewModel(title: $0) }
+        model = .init(height: .constant(60), items: itemModels)
 
         tableView.separatorStyle = .none
         tableView.delegate = self
@@ -30,18 +24,18 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .title(.init(title: "Lorem ipsum")),
                 .item(.init(
                     imageURL: URL(string: "https://picsum.photos/id/233/200/300"),
-                    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla."
+                    details: "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla."
                     )
                 ),
                 .item(.init(
                     imageURL: URL(string: "https://picsum.photos/id/234/300/200"),
-                    description: "Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus."
+                    details: "Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus."
                     )
                 ),
                 .title(.init(title: "Vivamus integer")),
                 .item(.init(
                     imageURL: URL(string: "https://picsum.photos/id/235/300/200"),
-                    description: "Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad."
+                    details: "Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad."
                     )
                 )
             ]

@@ -6,10 +6,7 @@ import UIKit
 final class ActionViewController: StatefulViewController<ActionViewControllerViewModel> {
     @IBOutlet weak var actionViewContainer: UIView!
 
-    private lazy var actionView: ActionView<ImageView> = {
-        let actionView = ActionView<ImageView>.instantiate()
-        return actionView
-    }()
+    private lazy var actionView: ActionView<ImageView> = .instantiate()
 
     override func viewDidLoad() {
         super.viewDidLoad()

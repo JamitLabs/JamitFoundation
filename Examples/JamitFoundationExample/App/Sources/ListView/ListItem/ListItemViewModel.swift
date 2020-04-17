@@ -6,13 +6,13 @@ import JamitFoundation
 struct ListItemViewModel: ViewModelProtocol {
     let title: String?
 
-    init(title: String? = ListItemViewModel.default.title) {
+    init(title: String? = Self.default.title) {
         self.title = title
     }
 }
 
 extension ListItemViewModel {
-    static let `default`: ListItemViewModel = .init(
+    static let `default`: Self = .init(
         title: nil
     )
 }

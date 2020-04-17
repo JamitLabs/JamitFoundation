@@ -8,6 +8,6 @@ final class TableViewTitleTableViewCell: ContainerTableViewCell<TableViewTitleVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.selectionStyle = .none
+        selectionStyle = .none
     }
 }

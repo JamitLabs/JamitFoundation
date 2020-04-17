@@ -5,20 +5,20 @@ import Foundation
 
 struct TableViewItemViewModel: ViewModelProtocol {
     let imageURL: URL?
-    let description: String?
+    let details: String?
 
     init(
-        imageURL: URL? = TableViewItemViewModel.default.imageURL,
-        description: String? = TableViewItemViewModel.default.description
+        imageURL: URL? = Self.default.imageURL,
+        details: String? = Self.default.details
     ) {
         self.imageURL = imageURL
-        self.description = description
+        self.details = details
     }
 }
 
 extension TableViewItemViewModel {
-    static let `default`: TableViewItemViewModel = .init(
+    static let `default`: Self = .init(
         imageURL: nil,
-        description: nil
+        details: nil
     )
 }

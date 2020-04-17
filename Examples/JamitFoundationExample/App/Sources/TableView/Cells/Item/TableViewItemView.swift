@@ -7,7 +7,7 @@ final class TableViewItemView: StatefulView<TableViewItemViewModel> {
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var backgroundView: UIView!
     @IBOutlet private var imageViewContainer: UIView!
-    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var detailsLabel: UILabel!
     
     private lazy var imageView: ImageView = {
         let imageView = ImageView()
@@ -44,6 +44,6 @@ final class TableViewItemView: StatefulView<TableViewItemViewModel> {
             imageView.model = .default
         }
 
-        titleLabel.text = model.description
+        detailsLabel.text = model.details
     }
 }

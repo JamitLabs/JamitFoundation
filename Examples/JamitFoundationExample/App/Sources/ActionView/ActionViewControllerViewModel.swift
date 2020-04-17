@@ -6,13 +6,13 @@ import JamitFoundation
 struct ActionViewControllerViewModel: ViewModelProtocol {
     let imageURL: URL?
 
-    init(imageURL: URL? = ActionViewControllerViewModel.default.imageURL) {
+    init(imageURL: URL? = Self.default.imageURL) {
         self.imageURL = imageURL
     }
 }
 
 extension ActionViewControllerViewModel {
-    static let `default`: ActionViewControllerViewModel = .init(
+    static let `default`: Self = .init(
         imageURL: nil
     )
 }
