@@ -33,12 +33,12 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
 
     private func didTapActionView() {
         let alert = UIAlertController(
-            title: "You did tap the image",
-            message: "This alert controller is being shown due to tapping on the image and the action view taking care of it.",
+            title: NSLocalizedString("ACTION_VIEW.ALERT.TITLE", comment: ""),
+            message: NSLocalizedString("ACTION_VIEW.ALERT.MESSAGE", comment: ""),
             preferredStyle: .alert
         )
 
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("ACTION_VIEW.ALERT.ACTION.TITLE", comment: ""), style: .default, handler: nil))
 
         present(alert, animated: true)
     }

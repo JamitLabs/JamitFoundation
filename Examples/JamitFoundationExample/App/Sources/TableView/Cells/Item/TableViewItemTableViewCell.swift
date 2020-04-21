@@ -6,6 +6,6 @@ final class TableViewItemTableViewCell: ContainerTableViewCell<TableViewItemView
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.selectionStyle = .none
+        selectionStyle = .none
     }
 }
