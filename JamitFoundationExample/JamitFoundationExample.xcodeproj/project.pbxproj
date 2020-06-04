@@ -29,6 +29,17 @@
 		1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */; };
 		1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E4D4D52244EEA8200B22541 /* Localizable.strings */; };
 		1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */; };
+		1EB2D9732488EAEB00E2B1A4 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9722488EAEB00E2B1A4 /* CarouselViewController.swift */; };
+		1EB2D9752488EAF900E2B1A4 /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9742488EAF900E2B1A4 /* CarouselViewController.xib */; };
+		1EB2D9772488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9762488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift */; };
+		1EB2D97A2488F29C00E2B1A4 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D9792488F29C00E2B1A4 /* PageView */; };
+		1EB2D97C2488F29C00E2B1A4 /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D97B2488F29C00E2B1A4 /* BarcodeScanner */; };
+		1EB2D97E2488F29C00E2B1A4 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D97D2488F29C00E2B1A4 /* CarouselView */; };
+		1EB2D9802488F29C00E2B1A4 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D97F2488F29C00E2B1A4 /* JamitFoundation */; };
+		1EB2D9822488F29C00E2B1A4 /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D9812488F29C00E2B1A4 /* GridView */; };
+		1EB2D9852488F75E00E2B1A4 /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */; };
+		1EB2D9872488F76500E2B1A4 /* CarouselItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */; };
+		1EB2D9892488F77000E2B1A4 /* CarouselItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */; };
 		1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229323F2A24200C90405 /* ListItemViewModel.swift */; };
 		1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229623F2A38E00C90405 /* ListItemView.swift */; };
 		1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7229823F2A39F00C90405 /* ListItemView.xib */; };
@@ -121,6 +132,12 @@
 		1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1E4D4D52244EEA8200B22541 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		1EB2D9722488EAEB00E2B1A4 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		1EB2D9742488EAF900E2B1A4 /* CarouselViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselViewController.xib; sourceTree = "<group>"; };
+		1EB2D9762488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemView.swift; sourceTree = "<group>"; };
+		1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemView.xib; sourceTree = "<group>"; };
+		1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemViewModel.swift; sourceTree = "<group>"; };
 		1EC7229323F2A24200C90405 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		1EC7229623F2A38E00C90405 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		1EC7229823F2A39F00C90405 /* ListItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemView.xib; sourceTree = "<group>"; };
@@ -304,6 +321,7 @@
 				1E1B402223F2818C00D9A6D5 /* TableView */,
 				1ECA14A7242A6B1200321BFC /* ActionView */,
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
+				1EB2D9712488EA7B00E2B1A4 /* CarouselView */,
 				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
 				1E1031E324B616660015581B /* CollapsibleView */,
 				1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */,
@@ -365,6 +383,27 @@
 				1ECA149E242A1D4300321BFC /* Item */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		1EB2D9712488EA7B00E2B1A4 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				1EB2D9722488EAEB00E2B1A4 /* CarouselViewController.swift */,
+				1EB2D9742488EAF900E2B1A4 /* CarouselViewController.xib */,
+				1EB2D9762488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift */,
+				1EB2D9832488F40400E2B1A4 /* CarouselItemView */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		1EB2D9832488F40400E2B1A4 /* CarouselItemView */ = {
+			isa = PBXGroup;
+			children = (
+				1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */,
+				1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */,
+				1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */,
+			);
+			path = CarouselItemView;
 			sourceTree = "<group>";
 		};
 		1E46DE4C24AF6DB3007226EF /* TimePickerView */ = {
@@ -600,8 +639,10 @@
 				1E1031E724B616920015581B /* CollapsibleViewController.xib in Resources */,
 				1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */,
 				1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */,
+				1EB2D9872488F76500E2B1A4 /* CarouselItemView.xib in Resources */,
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
 				1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */,
+				1EB2D9752488EAF900E2B1A4 /* CarouselViewController.xib in Resources */,
 				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
 				1E46DE5024AF6DDD007226EF /* TimePickerViewController.xib in Resources */,
 				EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */,
@@ -638,9 +679,12 @@
 				1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */,
 				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
+				1EB2D9892488F77000E2B1A4 /* CarouselItemViewModel.swift in Sources */,
 				1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */,
 				1E46DE4E24AF6DCF007226EF /* TimePickerViewController.swift in Sources */,
 				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
+				1EB2D9732488EAEB00E2B1A4 /* CarouselViewController.swift in Sources */,
+				1EB2D9772488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift in Sources */,
 				1ECA14AD242A6BFF00321BFC /* ActionViewControllerViewModel.swift in Sources */,
 				1ECA14A9242A6BED00321BFC /* ActionViewController.swift in Sources */,
 				1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */,
@@ -656,6 +700,7 @@
 				EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */,
 				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
 				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
+				1EB2D9852488F75E00E2B1A4 /* CarouselItemView.swift in Sources */,
 				1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */,
 				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
 				EBED3B8024D2A57700CF9221 /* FancyLabelView.swift in Sources */,
