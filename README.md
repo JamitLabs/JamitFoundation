@@ -32,6 +32,13 @@ Add the following line to your Cartfile.
 git "git@github.com:JamitLabs/JamitFoundation.git"
 ```
 
+### CocoaPods
+
+Add the following line to your Podfile
+```swift
+# A collection of useful concepts to enable composition oriented development with UIKit
+pod 'JamitFoundation', :tag => '1.3.2', :git => 'https://github.com/JamitLabs/JamitFoundation.git'
+```
 
 ## Usage
 
@@ -95,10 +102,10 @@ final class ExampleCollectionViewCell: ContainerCollectionViewCell<ExampleView> 
 final class MyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.register(cellOfType: ExampleTableViewCell.self)
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cellOfType: ExampleTableViewCell.self, for: indexPath)
         cell.model = ExampleViewModel(title: "Hello World")
