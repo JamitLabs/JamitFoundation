@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="o48-js-ZZz" customClass="MyScrollViewController" customModule="JamitFoundationExample" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="iAN-dP-Jc7">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pf0-kE-gNQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiz-6x-hi9">
+                                <rect key="frame" x="10" y="10" width="394" height="798"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hiz-6x-hi9" firstAttribute="top" secondItem="pf0-kE-gNQ" secondAttribute="top" constant="10" id="0nr-9t-bvG"/>
+                            <constraint firstAttribute="bottom" secondItem="hiz-6x-hi9" secondAttribute="bottom" constant="10" id="25e-jx-h4i"/>
+                            <constraint firstItem="hiz-6x-hi9" firstAttribute="leading" secondItem="pf0-kE-gNQ" secondAttribute="leading" constant="10" id="FQU-ju-xvu"/>
+                            <constraint firstAttribute="trailing" secondItem="hiz-6x-hi9" secondAttribute="trailing" constant="10" id="WZc-RG-y7x"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="pf0-kE-gNQ" firstAttribute="leading" secondItem="bJ1-Fi-0cZ" secondAttribute="leading" id="1zB-Vg-TmH"/>
+                    <constraint firstItem="bJ1-Fi-0cZ" firstAttribute="trailing" secondItem="pf0-kE-gNQ" secondAttribute="trailing" id="A9p-Za-qEz"/>
+                    <constraint firstItem="bJ1-Fi-0cZ" firstAttribute="bottom" secondItem="pf0-kE-gNQ" secondAttribute="bottom" id="KbG-W5-5HY"/>
+                    <constraint firstItem="pf0-kE-gNQ" firstAttribute="top" secondItem="bJ1-Fi-0cZ" secondAttribute="top" id="MC5-xP-Xyc"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="bJ1-Fi-0cZ"/>
+            </view>
+            <connections>
+                <outlet property="textLabel" destination="hiz-6x-hi9" id="2Vr-BG-tMX"/>
+            </connections>
+            <point key="canvasLocation" x="281" y="-36"/>
+        </viewController>
+    </objects>
+</document>
