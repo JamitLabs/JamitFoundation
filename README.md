@@ -40,79 +40,29 @@ Add the following line to your Podfile
 pod 'JamitFoundation', :tag => '1.3.2', :git => 'https://github.com/JamitLabs/JamitFoundation.git'
 ```
 
+### Prerequisities
+- iOS 10.0 or later
+- Swift 5.0 or later
+
 ## Usage
 
-### View / ViewController usage concept
+Besides the documentation there exists a [sample project](https://github.com/JamitLabs/JamitFoundation/tree/develop/Examples/JamitFoundationExample) which contains a lot of examples to help you out getting started using JamitFoundation.
 
-#### Instantiation
+### Contributing
 
-Views and ViewControllers should be instantiated using the `instantiate(bundle:, withOwner:, options:)` extension on UIView and UIViewController, it will lookup for a nib file with the same name as the custom view class in the bundle and instantiate it or if there is no nib available the default initializer will be used for instantiation.
+Great! Look over these things first.
+- Please read our [Code of Conduct](https://github.com/JamitLabs/JamitFoundation/blob/develop/CODE_OF_CONDUCT.md)
+- Check out the [current issues](https://github.com/JamitLabs/JamitFoundation/issues) and see if you can tackle any of those.
+- Download the project and check out the current code base. Suggest any improvements by opening a new issue.
+- Be kind and helpful.
 
-#### Specializations
+### Contact
 
-Every view with dynamic content should subclass from `StatefulView` with a specific `ViewModel`.
+Have a question or an issue about JamitFoundation? Create an [issue](https://github.com/JamitLabs/JamitFoundation/issues/new)!
 
-Example:
+### License
 
-```swift
-final class ExampleView: StatefulView<ExampleViewModel> {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Load custom child views here or run initial setup code ...
-    }
-
-    override func didChangeModel() {
-        super.didChangeModel()
-
-        // Update view content using model here ...
-        print(model.title)
-    }
-}
-
-struct ExampleViewModel: ViewModelProtocol {
-    let title: String
-
-    init(
-        title: String = ExampleViewModel.default.title
-    ) {
-        self.title = title
-    }
-}
-
-extension ExampleViewModel {
-    static let `default`: ExampleViewModel = .init(
-        title: ""
-    )
-}
-
-```
-
-#### TableView / CollectionView usage
-
-Every `StatefulView` can also be used inside a UITableView or in a UICollectionView as cell by creating a cell specialization.
-
-Example:
-
-```swift
-final class ExampleTableViewCell: ContainerTableViewCell<ExampleView> {}
-
-final class ExampleCollectionViewCell: ContainerCollectionViewCell<ExampleView> {}
-
-final class MyTableViewController: UITableViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView.register(cellOfType: ExampleTableViewCell.self)
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(cellOfType: ExampleTableViewCell.self, for: indexPath)
-        cell.model = ExampleViewModel(title: "Hello World")
-        return cell
-    }
-}
-```
+JamitFoundation is licensed unter the [MIT License](https://github.com/JamitLabs/JamitFoundation/blob/develop/LICENSE).
 
 ## Modules
 Following optional modules are available:
