@@ -29,6 +29,9 @@
 		1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */; };
 		1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E4D4D52244EEA8200B22541 /* Localizable.strings */; };
 		1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */; };
+		1E8879FA24890940002A553C /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8879F924890940002A553C /* BarcodeScannerViewController.swift */; };
+		1E8879FC24890948002A553C /* BarcodeScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8879FB24890948002A553C /* BarcodeScannerViewController.xib */; };
+		1E8879FE24890952002A553C /* BarcodeScannerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8879FD24890952002A553C /* BarcodeScannerViewControllerViewModel.swift */; };
 		1EB2D9732488EAEB00E2B1A4 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9722488EAEB00E2B1A4 /* CarouselViewController.swift */; };
 		1EB2D9752488EAF900E2B1A4 /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9742488EAF900E2B1A4 /* CarouselViewController.xib */; };
 		1EB2D9772488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9762488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift */; };
@@ -132,6 +135,9 @@
 		1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1E4D4D52244EEA8200B22541 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		1E8879F924890940002A553C /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		1E8879FB24890948002A553C /* BarcodeScannerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarcodeScannerViewController.xib; sourceTree = "<group>"; };
+		1E8879FD24890952002A553C /* BarcodeScannerViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EB2D9722488EAEB00E2B1A4 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		1EB2D9742488EAF900E2B1A4 /* CarouselViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselViewController.xib; sourceTree = "<group>"; };
 		1EB2D9762488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -325,6 +331,7 @@
 				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
 				1E1031E324B616660015581B /* CollapsibleView */,
 				1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */,
+				1E8879F82489090C002A553C /* BarcodeScanner */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -383,6 +390,16 @@
 				1ECA149E242A1D4300321BFC /* Item */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		1E8879F82489090C002A553C /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				1E8879F924890940002A553C /* BarcodeScannerViewController.swift */,
+				1E8879FB24890948002A553C /* BarcodeScannerViewController.xib */,
+				1E8879FD24890952002A553C /* BarcodeScannerViewControllerViewModel.swift */,
+			);
+			path = BarcodeScanner;
 			sourceTree = "<group>";
 		};
 		1EB2D9712488EA7B00E2B1A4 /* CarouselView */ = {
@@ -643,6 +660,7 @@
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
 				1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */,
 				1EB2D9752488EAF900E2B1A4 /* CarouselViewController.xib in Resources */,
+				1E8879FC24890948002A553C /* BarcodeScannerViewController.xib in Resources */,
 				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
 				1E46DE5024AF6DDD007226EF /* TimePickerViewController.xib in Resources */,
 				EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */,
@@ -702,11 +720,13 @@
 				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
 				1EB2D9852488F75E00E2B1A4 /* CarouselItemView.swift in Sources */,
 				1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */,
+				1E8879FE24890952002A553C /* BarcodeScannerViewControllerViewModel.swift in Sources */,
 				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
 				EBED3B8024D2A57700CF9221 /* FancyLabelView.swift in Sources */,
 				1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */,
 				EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */,
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
+				1E8879FA24890940002A553C /* BarcodeScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

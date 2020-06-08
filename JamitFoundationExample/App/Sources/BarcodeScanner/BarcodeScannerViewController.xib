@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="D4E-rm-Vue" customClass="BarcodeScannerViewController" customModule="JamitFoundationExample" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="rdX-Ws-3S9">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXG-Fx-0Lc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="FXG-Fx-0Lc" firstAttribute="leading" secondItem="GZS-wt-Apc" secondAttribute="leading" id="G8N-fs-AED"/>
+                    <constraint firstItem="GZS-wt-Apc" firstAttribute="trailing" secondItem="FXG-Fx-0Lc" secondAttribute="trailing" id="IUP-Lm-VYo"/>
+                    <constraint firstItem="GZS-wt-Apc" firstAttribute="bottom" secondItem="FXG-Fx-0Lc" secondAttribute="bottom" id="g9V-I0-yBN"/>
+                    <constraint firstItem="FXG-Fx-0Lc" firstAttribute="top" secondItem="GZS-wt-Apc" secondAttribute="top" id="iIW-eo-TT5"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="GZS-wt-Apc"/>
+            </view>
+            <connections>
+                <outlet property="contentView" destination="FXG-Fx-0Lc" id="R7X-Mf-bCq"/>
+            </connections>
+            <point key="canvasLocation" x="159" y="-470"/>
+        </viewController>
+    </objects>
+</document>

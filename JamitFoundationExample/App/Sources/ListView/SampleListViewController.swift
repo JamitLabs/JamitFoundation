@@ -19,12 +19,19 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TIME_PICKER_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: "")),
+				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE", comment: ""))
             ]
         )
 
         tableView.separatorStyle = .none
         tableView.delegate = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.reloadData()
     }
 
     private func showTableView() {
@@ -175,6 +182,32 @@ final class SampleListViewController: ListViewController<ListItemView> {
             items: items
         )
         navigationController?.pushViewController(viewController, animated: true)
+	}
+
+	private func showBarcodeScanner() {
+        #if targetEnvironment(simulator)
+            showBarcodeScannerOnlyOnRealDevicesAlert()
+            tableView.reloadData()
+        #else
+            let viewController: BarcodeScannerViewController = .instantiate()
+            navigationController?.pushViewController(viewController, animated: true)
+        #endif
+    }
+
+    private func showBarcodeScannerOnlyOnRealDevicesAlert() {
+        let alertController = UIAlertController(
+            title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.TITLE", comment: ""),
+            message: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.MESSAGE", comment: ""),
+            preferredStyle: .alert
+        )
+
+        let okAction = UIAlertAction(
+            title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.OK_ACTION_TITLE", comment: ""),
+            style: .default
+        )
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true)
     }
 }
 
@@ -204,6 +237,9 @@ extension SampleListViewController: UITableViewDelegate {
 
         case 7:
             showCollectionView()
+
+		case 5:
+            showBarcodeScanner()
 
         default:
             break
