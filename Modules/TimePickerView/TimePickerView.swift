@@ -1,6 +1,23 @@
 import JamitFoundation
 import UIKit
 
+/// A stateful view which adds a time picker view to an embedded `ContentView`.
+///
+/// Example:
+/// ```swift
+/// let model: TimePickerViewModel = .init(
+///     hourLabel: "hour",
+///     hoursLabel: "hours",
+///     minutesLabel: "minutes",
+///     font: .systemFont(ofSize: 20.0),
+///     maximumHours: 23,
+///     maximumMinutes: 59
+/// ) { result in
+///     ...
+/// }
+/// let contentView: TimePickerView = .instantiate()
+/// contentView.model = model
+/// ```
 final class TimePickerView: StatefulView<TimePickerViewModel> {
     private enum Constants {
         static let hoursLabelInset: CGFloat = 10.0
