@@ -18,7 +18,7 @@ import UIKit
 /// let contentView: TimePickerView = .instantiate()
 /// contentView.model = model
 /// ```
-final class TimePickerView: StatefulView<TimePickerViewModel> {
+public final class TimePickerView: StatefulView<TimePickerViewModel> {
     private enum Constants {
         static let hoursLabelInset: CGFloat = 10.0
         static let minutesLabelInset: CGFloat = 25.0
@@ -51,7 +51,7 @@ final class TimePickerView: StatefulView<TimePickerViewModel> {
     @IBOutlet private var pickerView: UIPickerView!
 
     // MARK: - Methods
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
@@ -91,9 +91,9 @@ final class TimePickerView: StatefulView<TimePickerViewModel> {
 }
 
 extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int { TimePickerComponent.allCases.count }
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int { TimePickerComponent.allCases.count }
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         guard let timePickerComponent = TimePickerComponent(rawValue: component) else { return 0 }
 
         switch timePickerComponent {
@@ -102,13 +102,13 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         }
     }
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         guard TimePickerComponent(rawValue: component) != nil else { return nil }
 
         return String(row)
     }
 
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let hoursComponent = pickerView.selectedRow(inComponent: TimePickerComponent.hours.rawValue)
         let minutesComponent = pickerView.selectedRow(inComponent: TimePickerComponent.minutes.rawValue)
 
@@ -125,11 +125,11 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         model.didSelectComponents((hours: hoursComponent, minutes: minutesComponent))
     }
 
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+    public func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         Constants.rowHeight
     }
 
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         guard let timePickerComponent = TimePickerComponent(rawValue: component) else { return nil }
 
         let text = String(row)
@@ -156,7 +156,7 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         return attributedString
     }
 
-    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+    public func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         bounds.width / 3.0
     }
 }
