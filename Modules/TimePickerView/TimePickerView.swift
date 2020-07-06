@@ -60,8 +60,11 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
     public override func didChangeModel() {
         super.didChangeModel()
 
-        pickerView.selectRow(model.selectedHour, inComponent: TimePickerComponent.hours.rawValue, animated: true)
-        pickerView.selectRow(model.selectedMinute, inComponent: TimePickerComponent.minutes.rawValue, animated: true)
+        let selectedHour = (model.selectedHour >= 0 && model.selectedHour <= model.maximumHours) ? model.selectedHour : 0
+        pickerView.selectRow(selectedHour, inComponent: TimePickerComponent.hours.rawValue, animated: true)
+
+        let selectedMinute = (model.selectedMinute >= 0 && model.selectedMinute <= model.maximumMinutes) ? model.selectedMinute : 0
+        pickerView.selectRow(selectedMinute, inComponent: TimePickerComponent.minutes.rawValue, animated: true)
     }
 
     private func setupView() {
