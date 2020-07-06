@@ -48,7 +48,7 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
         return minutesLabel
     }()
 
-    @IBOutlet private var pickerView: UIPickerView!
+    private var pickerView: UIPickerView = .init()
 
     // MARK: - Methods
     public override func viewDidLoad() {
@@ -58,6 +58,8 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
     }
 
     private func setupView() {
+        addSubview(pickerView)
+
         pickerView.delegate = self
         pickerView.dataSource = self
 
