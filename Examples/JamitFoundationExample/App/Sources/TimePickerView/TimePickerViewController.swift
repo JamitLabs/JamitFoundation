@@ -30,16 +30,16 @@ final class TimePickerViewController: StatefulViewController<TimePickerViewContr
         titleLabel.text = model.title
 
         timePickerView.model = .init(
-            hourLabel: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.TIME_PICKER_HOUR.TITLE", comment: ""),
-            hoursLabel: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.TIME_PICKER_HOURS.TITLE", comment: ""),
-            minutesLabel: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.TIME_PICKER_MINUTES.TITLE", comment: ""),
+            hourLabelTitle: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.TIME_PICKER_HOUR.TITLE", comment: ""),
+            hoursLabelTitle: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.TIME_PICKER_HOURS.TITLE", comment: ""),
+            minutesLabelTitle: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.TIME_PICKER_MINUTES.TITLE", comment: ""),
             font: .systemFont(ofSize: 20.0),
             maximumHours: 23,
             maximumMinutes: 59,
             selectedHour: model.selectedHour,
             selectedMinute: model.selectedMinute
         ) { result in
-                print(result)
+            print(result)
         }
     }
 }

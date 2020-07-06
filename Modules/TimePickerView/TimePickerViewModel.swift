@@ -9,11 +9,11 @@ public struct TimePickerViewModel: ViewModelProtocol {
     public typealias ComponentSelectionCallback = (TimeComponent) -> Void
 
     /// The string which will be used to place behind the hour component when only one hour is selected.
-    public let hourLabel: String
+    public let hourLabelTitle: String
     /// The string which will be used to place behind the hour component when more than one hour is selected.
-    public let hoursLabel: String
+    public let hoursLabelTitle: String
     /// The string which will be used to place behind the minutes component.
-    public let minutesLabel: String
+    public let minutesLabelTitle: String
     /// The font used within the time picker components.
     public let font: UIFont
     
@@ -31,9 +31,9 @@ public struct TimePickerViewModel: ViewModelProtocol {
 
     /// The default initializer of `TimePickerViewModel`.
     ///
-    /// - Parameter hourLabel: The string which will be used to place behind the hour component when only one hour is selected.
-    /// - Parameter hoursLabel: The string which will be used to place behind the hour component when more than one hour is selected.
-    /// - Parameter minutesLabel: The scroll axis for the paging behaviour.
+    /// - Parameter hourLabelTitle: The string which will be used to place behind the hour component when only one hour is selected.
+    /// - Parameter hoursLabelTitle: The string which will be used to place behind the hour component when more than one hour is selected.
+    /// - Parameter minutesLabelTitle: The scroll axis for the paging behaviour.
     /// - Parameter hourLabel: The string which will be used to place behind the minutes component.
     /// - Parameter font: The font used within the time picker components.
     /// - Parameter maximumHours: The maximum amount of hours a user can pick.
@@ -42,9 +42,9 @@ public struct TimePickerViewModel: ViewModelProtocol {
     /// - Parameter selectedMinute: The selected minute.
     /// - Parameter didSelectComponents: The callback when the user selects a component, will be called every time the minute or hour component will be changed.
     public init(
-        hourLabel: String = Self.default.hourLabel,
-        hoursLabel: String = Self.default.hoursLabel,
-        minutesLabel: String = Self.default.minutesLabel,
+        hourLabelTitle: String = Self.default.hourLabelTitle,
+        hoursLabelTitle: String = Self.default.hoursLabelTitle,
+        minutesLabelTitle: String = Self.default.minutesLabelTitle,
         font: UIFont = Self.default.font,
         maximumHours: Int = Self.default.maximumHours,
         maximumMinutes: Int = Self.default.maximumMinutes,
@@ -52,9 +52,9 @@ public struct TimePickerViewModel: ViewModelProtocol {
         selectedMinute: Int = Self.default.selectedMinute,
         didSelectComponents: @escaping ComponentSelectionCallback = Self.default.didSelectComponents
     ) {
-        self.hourLabel = hourLabel
-        self.hoursLabel = hoursLabel
-        self.minutesLabel = minutesLabel
+        self.hourLabelTitle = hourLabelTitle
+        self.hoursLabelTitle = hoursLabelTitle
+        self.minutesLabelTitle = minutesLabelTitle
         self.font = font
         self.maximumHours = maximumHours
         self.maximumMinutes = maximumMinutes
@@ -67,9 +67,9 @@ public struct TimePickerViewModel: ViewModelProtocol {
 extension TimePickerViewModel {
     /// The default state of `TimePickerViewModel`.
     public static let `default`: TimePickerViewModel = .init(
-        hourLabel: "hour",
-        hoursLabel: "hours",
-        minutesLabel: "minutes",
+        hourLabelTitle: "hour",
+        hoursLabelTitle: "hours",
+        minutesLabelTitle: "minutes",
         font: .systemFont(ofSize: 20),
         maximumHours: 23,
         maximumMinutes: 59,

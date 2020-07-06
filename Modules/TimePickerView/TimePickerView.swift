@@ -128,10 +128,10 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         if let timeComponent = TimePickerComponent(rawValue: component) {
             switch timeComponent {
             case .hours:
-                hoursLabel.text = row == 1 ? model.hourLabel: model.hoursLabel
+                hoursLabel.text = row == 1 ? model.hourLabelTitle: model.hoursLabelTitle
 
             case .minutes:
-                minutesLabel.text = model.minutesLabel
+                minutesLabel.text = model.minutesLabelTitle
             }
         }
 
