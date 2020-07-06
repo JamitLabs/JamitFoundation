@@ -75,14 +75,14 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
         hoursLayoutGuide.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         hoursLayoutGuide.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5).isActive = true
 
-        pickerView.addSubview(hoursLabel)
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
+        pickerView.addSubview(hoursLabel)
 
         hoursLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         hoursLabel.leadingAnchor.constraint(equalTo: hoursLayoutGuide.leadingAnchor, constant: Constants.hoursLabelInset).isActive = true
 
-        pickerView.addSubview(minutesLabel)
         minutesLabel.translatesAutoresizingMaskIntoConstraints = false
+        pickerView.addSubview(minutesLabel)
 
         minutesLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         minutesLabel.leadingAnchor.constraint(equalTo: minutesLayoutGuide.trailingAnchor, constant: Constants.minutesLabelInset).isActive = true
@@ -107,7 +107,7 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         guard TimePickerComponent(rawValue: component) != nil else { return nil }
 
-        return String(row)
+        return row < 10 ? "0\(row)" : String(row)
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
