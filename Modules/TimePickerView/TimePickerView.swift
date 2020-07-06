@@ -98,16 +98,17 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         guard let timePickerComponent = TimePickerComponent(rawValue: component) else { return 0 }
 
+        let zeroOffset: Int = 1
         switch timePickerComponent {
-        case .hours: return model.maximumHours <= 0 ? 1 : model.maximumHours
-        case .minutes: return model.maximumMinutes <= 0 ? 1 : model.maximumMinutes
+        case .hours: return model.maximumHours <= 0 ? 1 : model.maximumHours + zeroOffset
+        case .minutes: return model.maximumMinutes <= 0 ? 1 : model.maximumMinutes + zeroOffset
         }
     }
 
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         guard TimePickerComponent(rawValue: component) != nil else { return nil }
 
-        return row < 10 ? "0\(row)" : String(row)
+        return String(row)
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
