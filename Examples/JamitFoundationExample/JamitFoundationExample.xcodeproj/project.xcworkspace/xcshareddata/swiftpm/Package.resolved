@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "JamitFoundation",
+        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
+        "state": {
+          "branch": "feature/time-picker-view",
+          "revision": "275367b7fd4243c5066ea6ee221297ad860acd70",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

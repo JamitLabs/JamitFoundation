@@ -15,6 +15,7 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TABLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.ACTION_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TIME_PICKER_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: ""))
             ]
@@ -70,6 +71,16 @@ final class SampleListViewController: ListViewController<ListItemView> {
         navigationController?.pushViewController(scrollViewController, animated: true)
     }
     
+    private func showTimePickerView() {
+        let viewController: TimePickerViewController = .instantiate()
+        viewController.model = .init(
+            title: NSLocalizedString("TIME_PICKER_VIEW_CONTROLLER.DESCRIPTION.TITLE", comment: ""),
+            selectedHour: 2,
+            selectedMinute: 10
+		)
+		navigationController?.pushViewController(viewController, animated: true)
+	}
+
     private func showCollapsibleView() {
         let viewController: CollapsibleViewController = .instantiate()
         viewController.model = .init(
@@ -123,9 +134,12 @@ extension SampleListViewController: UITableViewDelegate {
             showScrollView()
 
         case 3:
+            showTimePickerView()
+
+		case 4:
             showCollapsibleView()
 
-        case 4:
+        case 5:
             showCollectionView()
 
         default:
