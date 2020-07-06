@@ -78,13 +78,13 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
         hoursLabel.translatesAutoresizingMaskIntoConstraints = false
         pickerView.addSubview(hoursLabel)
 
-        hoursLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        hoursLabel.centerYAnchor.constraint(equalTo: pickerView.centerYAnchor).isActive = true
         hoursLabel.leadingAnchor.constraint(equalTo: hoursLayoutGuide.leadingAnchor, constant: Constants.hoursLabelInset).isActive = true
 
         minutesLabel.translatesAutoresizingMaskIntoConstraints = false
         pickerView.addSubview(minutesLabel)
 
-        minutesLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        minutesLabel.centerYAnchor.constraint(equalTo: pickerView.centerYAnchor).isActive = true
         minutesLabel.leadingAnchor.constraint(equalTo: minutesLayoutGuide.trailingAnchor, constant: Constants.minutesLabelInset).isActive = true
 
         pickerView(pickerView, didSelectRow: 0, inComponent: TimePickerComponent.hours.rawValue)
