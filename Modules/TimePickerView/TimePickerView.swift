@@ -57,6 +57,13 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
         setupView()
     }
 
+    public override func didChangeModel() {
+        super.didChangeModel()
+
+        pickerView.selectRow(model.selectedHour, inComponent: TimePickerComponent.hours.rawValue, animated: true)
+        pickerView.selectRow(model.selectedMinute, inComponent: TimePickerComponent.minutes.rawValue, animated: true)
+    }
+
     private func setupView() {
         addSubview(pickerView)
 

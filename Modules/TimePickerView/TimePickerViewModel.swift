@@ -18,9 +18,14 @@ public struct TimePickerViewModel: ViewModelProtocol {
     public let font: UIFont
     
     /// The maximum amount of hours a user can pick.
-    public var maximumHours: Int
+    public let maximumHours: Int
     /// The maximum amount of minutes a user can pick.
-    public var maximumMinutes: Int
+    public let maximumMinutes: Int
+    /// The selected hour.
+    public let selectedHour: Int
+    /// The selected minute.
+    public let selectedMinute: Int
+    
     /// The callback when the user selects a component, will be called every time the minute or hour component will be changed.
     public let didSelectComponents: ComponentSelectionCallback
 
@@ -33,6 +38,8 @@ public struct TimePickerViewModel: ViewModelProtocol {
     /// - Parameter font: The font used within the time picker components.
     /// - Parameter maximumHours: The maximum amount of hours a user can pick.
     /// - Parameter maximumMinutes: The maximum amount of minutes a user can pick.
+    /// - Parameter selectedHour: The selected hour.
+    /// - Parameter selectedMinute: The selected minute.
     /// - Parameter didSelectComponents: The callback when the user selects a component, will be called every time the minute or hour component will be changed.
     public init(
         hourLabel: String = Self.default.hourLabel,
@@ -41,6 +48,8 @@ public struct TimePickerViewModel: ViewModelProtocol {
         font: UIFont = Self.default.font,
         maximumHours: Int = Self.default.maximumHours,
         maximumMinutes: Int = Self.default.maximumMinutes,
+        selectedHour: Int = Self.default.selectedHour,
+        selectedMinute: Int = Self.default.selectedMinute,
         didSelectComponents: @escaping ComponentSelectionCallback = Self.default.didSelectComponents
     ) {
         self.hourLabel = hourLabel
@@ -49,6 +58,8 @@ public struct TimePickerViewModel: ViewModelProtocol {
         self.font = font
         self.maximumHours = maximumHours
         self.maximumMinutes = maximumMinutes
+        self.selectedHour = selectedHour
+        self.selectedMinute = selectedMinute
         self.didSelectComponents = didSelectComponents
     }
 }
@@ -62,6 +73,8 @@ extension TimePickerViewModel {
         font: .systemFont(ofSize: 20),
         maximumHours: 23,
         maximumMinutes: 59,
+        selectedHour: 0,
+        selectedMinute: 0,
         didSelectComponents: { _ in }
     )
 }
