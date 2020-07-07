@@ -862,7 +862,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				branch = "feature/collapsible-view";
+				branch = "feature/#18-improvements-to-action-view";
 				kind = branch;
 			};
 		};

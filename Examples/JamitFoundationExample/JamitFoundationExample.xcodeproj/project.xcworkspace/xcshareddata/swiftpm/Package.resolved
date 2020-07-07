@@ -5,8 +5,8 @@
         "package": "JamitFoundation",
         "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
         "state": {
-          "branch": "feature/collapsible-view",
-          "revision": "60d6676419db4ece4f1f8d690591198a02b7a566",
+          "branch": "feature/#18-improvements-to-action-view",
+          "revision": "0fc0afd06499c860997a531f31a26f7092748ea4",
           "version": null
         }
       }

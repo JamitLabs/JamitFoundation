@@ -26,7 +26,11 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
 
         guard let imageURL = model.imageURL else { return }
 
-        actionView.model = .init(content: .url(imageURL)) { [weak self] in
+        actionView.model = .init(
+            content: .url(imageURL),
+            highlightAnimation: .curveEaseInOut,
+            cornerRadius: 20
+        ) { [weak self] in
             self?.didTapActionView()
         }
     }
