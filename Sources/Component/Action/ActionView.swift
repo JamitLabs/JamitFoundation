@@ -64,9 +64,37 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
     @objc
     private func updateBackgroundColor() {
         if [.highlighted, .selected].contains(button.state) {
-            button.backgroundColor = UIColor.black.withAlphaComponent(0.15)
+            switch model.highlightAnimation {
+            case .normal:
+                button.backgroundColor = UIColor.black.withAlphaComponent(0.15)
+
+            case .curveEaseInOut:
+                UIView.animate(
+                    withDuration: 0.15,
+                    delay: 0,
+                    options: [.curveEaseInOut],
+                    animations: {
+                        self.view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                    },
+                    completion: nil
+                )
+            }
         } else {
-            button.backgroundColor = UIColor.black.withAlphaComponent(0)
+            switch model.highlightAnimation {
+            case .normal:
+                button.backgroundColor = UIColor.black.withAlphaComponent(0)
+
+            case .curveEaseInOut:
+                UIView.animate(
+                    withDuration: 0.15,
+                    delay: 0,
+                    options: [.curveEaseInOut],
+                    animations: {
+                        self.view.transform = .identity
+                    },
+                    completion: nil
+                )
+            }
         }
     }
 
