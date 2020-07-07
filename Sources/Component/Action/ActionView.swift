@@ -70,7 +70,7 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
 
             case .curveEaseInOut:
                 UIView.animate(
-                    withDuration: 0.15,
+                    withDuration: model.animationDuration,
                     delay: 0,
                     options: [.curveEaseInOut],
                     animations: {
@@ -86,7 +86,7 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
 
             case .curveEaseInOut:
                 UIView.animate(
-                    withDuration: 0.15,
+                    withDuration: model.animationDuration,
                     delay: 0,
                     options: [.curveEaseInOut],
                     animations: {
