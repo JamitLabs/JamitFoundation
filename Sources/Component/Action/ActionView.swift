@@ -21,6 +21,7 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -28,6 +29,7 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
         view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
+        button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         addSubview(button)
         button.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -47,6 +49,11 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
         super.didChangeModel()
 
         view.model = model.content
+
+        guard let cornerRadius = model.cornerRadius else { return }
+
+        view.layer.cornerRadius = cornerRadius
+        button.layer.cornerRadius = cornerRadius
     }
 
     @objc
