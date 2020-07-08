@@ -18,7 +18,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TIME_PICKER_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TAB_BAR.TITLE", comment: ""))
             ]
         )
 
@@ -161,6 +162,10 @@ final class SampleListViewController: ListViewController<ListItemView> {
             ),
             items: items
         )
+	}
+
+    private func showTabBar() {
+        let viewController: TabBarViewController = .instantiate()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -188,6 +193,9 @@ extension SampleListViewController: UITableViewDelegate {
 
         case 6:
             showCollectionView()
+
+		case 7:
+            showTabBar()
 
         default:
             break

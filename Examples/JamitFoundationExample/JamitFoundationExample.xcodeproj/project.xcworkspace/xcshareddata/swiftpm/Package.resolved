@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "JamitFoundation",
-        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
+        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation.git",
         "state": {
-          "branch": "feature/collapsible-view-in-table-view",
-          "revision": "52dde3db9ed0542af65ea1d745fa658b74a9e00d",
+          "branch": "feature/tab-bar",
+          "revision": "11db0f9de6b5e2cbb7fef67743e71b1593c85cc8",
           "version": null
         }
       }

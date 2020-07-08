@@ -59,6 +59,17 @@
 		EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B8424D2A82900CF9221 /* FancyLabelView.xib */; };
 		EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B8824D2B00F00CF9221 /* FancyLabelViewCell.swift */; };
 		EBED3B8B24D2B06400CF9221 /* FancyLabelSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B8A24D2B06400CF9221 /* FancyLabelSupplementaryView.swift */; };
+		DE61D05E24B61A0D00AB8DD0 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D05D24B61A0D00AB8DD0 /* PageView */; };
+		DE61D06024B61A0D00AB8DD0 /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D05F24B61A0D00AB8DD0 /* GridView */; };
+		DE61D06224B61A0D00AB8DD0 /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06124B61A0D00AB8DD0 /* BarcodeScanner */; };
+		DE61D06424B61A0D00AB8DD0 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06324B61A0D00AB8DD0 /* CarouselView */; };
+		DE61D06624B61A0D00AB8DD0 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06524B61A0D00AB8DD0 /* JamitFoundation */; };
+		DE61D06824B61A0D00AB8DD0 /* TabBarView in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06724B61A0D00AB8DD0 /* TabBarView */; };
+		DE61D06E24B61ABD00AB8DD0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61D06A24B61ABD00AB8DD0 /* TabBarViewController.swift */; };
+		DE61D07024B61ABD00AB8DD0 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61D06C24B61ABD00AB8DD0 /* TabBarViewModel.swift */; };
+		DE61D07124B61ABD00AB8DD0 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE61D06D24B61ABD00AB8DD0 /* TabBarViewController.xib */; };
+		DE61D07624B61B1500AB8DD0 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61D07324B61B1500AB8DD0 /* TabBarItemView.swift */; };
+		DE61D07724B61B1500AB8DD0 /* TabBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61D07424B61B1500AB8DD0 /* TabBarItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +155,11 @@
 		EBED3B8424D2A82900CF9221 /* FancyLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FancyLabelView.xib; sourceTree = "<group>"; };
 		EBED3B8824D2B00F00CF9221 /* FancyLabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyLabelViewCell.swift; sourceTree = "<group>"; };
 		EBED3B8A24D2B06400CF9221 /* FancyLabelSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyLabelSupplementaryView.swift; sourceTree = "<group>"; };
+		DE61D06A24B61ABD00AB8DD0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DE61D06C24B61ABD00AB8DD0 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		DE61D06D24B61ABD00AB8DD0 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		DE61D07324B61B1500AB8DD0 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		DE61D07424B61B1500AB8DD0 /* TabBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +173,7 @@
 				1E46DE4524AF6CE4007226EF /* CarouselView in Frameworks */,
 				1E46DE4724AF6CE4007226EF /* TimePickerView in Frameworks */,
 				1E46DE4124AF6CE4007226EF /* PageView in Frameworks */,
+				DE61D06824B61A0D00AB8DD0 /* TabBarView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				EBED3B7424D29EFB00CF9221 /* CollectionView */,
+				DE61D06924B61A4A00AB8DD0 /* TabBar */,
 				1E1B402023F27F0C00D9A6D5 /* Launch */,
 				1E1B402123F280E500D9A6D5 /* ListView */,
 				1E1B402223F2818C00D9A6D5 /* TableView */,
@@ -475,6 +493,26 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
+		DE61D06924B61A4A00AB8DD0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DE61D07224B61B0600AB8DD0 /* TabBarItem */,
+				DE61D06A24B61ABD00AB8DD0 /* TabBarViewController.swift */,
+				DE61D06C24B61ABD00AB8DD0 /* TabBarViewModel.swift */,
+				DE61D06D24B61ABD00AB8DD0 /* TabBarViewController.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DE61D07224B61B0600AB8DD0 /* TabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				DE61D07324B61B1500AB8DD0 /* TabBarItemView.swift */,
+				DE61D07424B61B1500AB8DD0 /* TabBarItemViewModel.swift */,
+			);
+			path = TabBarItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,6 +537,7 @@
 				1E46DE4624AF6CE4007226EF /* TimePickerView */,
 				1E46DE4824AF6CE4007226EF /* JamitFoundation */,
 				1E46DE4A24AF6CE4007226EF /* GridView */,
+				DE61D06724B61A0D00AB8DD0 /* TabBarView */,
 			);
 			productName = JamitFoundationExample;
 			productReference = 1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */;
@@ -597,6 +636,7 @@
 				1E1031E724B616920015581B /* CollapsibleViewController.xib in Resources */,
 				1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */,
 				1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */,
+				DE61D07124B61ABD00AB8DD0 /* TabBarViewController.xib in Resources */,
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
 				1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */,
 				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
@@ -651,7 +691,12 @@
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
 				1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */,
 				EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */,
+				DE61D06E24B61ABD00AB8DD0 /* TabBarViewController.swift in Sources */,
+				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
+				DE61D07724B61B1500AB8DD0 /* TabBarItemViewModel.swift in Sources */,
 				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
+				DE61D07024B61ABD00AB8DD0 /* TabBarViewModel.swift in Sources */,
+				DE61D07624B61B1500AB8DD0 /* TabBarItemView.swift in Sources */,
 				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
 				1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */,
 				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
@@ -993,9 +1038,9 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
+			repositoryURL = "https://github.com/JamitLabs/JamitFoundation.git";
 			requirement = {
-				branch = "feature/collapsible-view-in-table-view";
+				branch = "feature/tab-bar";
 				kind = branch;
 			};
 		};
@@ -1031,6 +1076,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = GridView;
+		};
+		DE61D06724B61A0D00AB8DD0 /* TabBarView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE61D05C24B61A0D00AB8DD0 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = TabBarView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

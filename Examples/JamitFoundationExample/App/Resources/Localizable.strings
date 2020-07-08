@@ -5,6 +5,7 @@
 "SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE" = "CollapsibleView";
 "SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE" = "CollapsibleTableViewController";
 "SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE" = "CollectionView";
+"SAMPLE_LIST_VIEW_CONTROLLER.TAB_BAR.TITLE" = "TabBar";
 
 "TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE" = "Lorem ispum";
 "TABLE_VIEW_CONTROLLER.FIRST_SECTION.FIRST_ITEM.DETAILS"= "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla.";
