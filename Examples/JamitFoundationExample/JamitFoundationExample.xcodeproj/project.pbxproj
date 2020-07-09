@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1031E424B6168A0015581B /* CollapsibleViewController.swift */; };
+		1E1031E724B616920015581B /* CollapsibleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1031E624B616920015581B /* CollapsibleViewController.xib */; };
+		1E1031E924B6169C0015581B /* CollapsibleViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1031E824B6169C0015581B /* CollapsibleViewControllerViewModel.swift */; };
+		1E1031F524B729750015581B /* CollapsibleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1031F424B729750015581B /* CollapsibleItemView.swift */; };
 		1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FE723F27E8700D9A6D5 /* AppDelegate.swift */; };
 		1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FEB23F27E8700D9A6D5 /* SampleListViewController.swift */; };
 		1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B3FED23F27E8700D9A6D5 /* SampleListView.storyboard */; };
@@ -56,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1031E424B6168A0015581B /* CollapsibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleViewController.swift; sourceTree = "<group>"; };
+		1E1031E624B616920015581B /* CollapsibleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsibleViewController.xib; sourceTree = "<group>"; };
+		1E1031E824B6169C0015581B /* CollapsibleViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1E1031F424B729750015581B /* CollapsibleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleItemView.swift; sourceTree = "<group>"; };
 		1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamitFoundationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1B3FE723F27E8700D9A6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E1B3FEB23F27E8700D9A6D5 /* SampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +126,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1031E324B616660015581B /* CollapsibleView */ = {
+			isa = PBXGroup;
+			children = (
+				1E1031E424B6168A0015581B /* CollapsibleViewController.swift */,
+				1E1031E624B616920015581B /* CollapsibleViewController.xib */,
+				1E1031E824B6169C0015581B /* CollapsibleViewControllerViewModel.swift */,
+				1E1031F324B7295D0015581B /* Views */,
+			);
+			path = CollapsibleView;
+			sourceTree = "<group>";
+		};
+		1E1031F324B7295D0015581B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E1031F424B729750015581B /* CollapsibleItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1E1B3FDB23F27E8700D9A6D5 = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +249,7 @@
 				1E1B402223F2818C00D9A6D5 /* TableView */,
 				1ECA14A7242A6B1200321BFC /* ActionView */,
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
+				1E1031E324B616660015581B /* CollapsibleView */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -446,6 +474,7 @@
 			files = (
 				1E1B3FF423F27E8700D9A6D5 /* LaunchScreen.storyboard in Resources */,
 				1E1B3FF123F27E8700D9A6D5 /* Assets.xcassets in Resources */,
+				1E1031E724B616920015581B /* CollapsibleViewController.xib in Resources */,
 				1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */,
 				1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */,
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
@@ -478,13 +507,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1031E924B6169C0015581B /* CollapsibleViewControllerViewModel.swift in Sources */,
 				1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */,
+				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
 				1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */,
 				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
 				1ECA14AD242A6BFF00321BFC /* ActionViewControllerViewModel.swift in Sources */,
 				1ECA14A9242A6BED00321BFC /* ActionViewController.swift in Sources */,
 				1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */,
+				1E1031F524B729750015581B /* CollapsibleItemView.swift in Sources */,
 				1ECA14A2242A1D6C00321BFC /* TableViewItemView.swift in Sources */,
 				1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */,
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
@@ -830,8 +862,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				kind = exactVersion;
-				version = 1.3.2;
+				branch = "feature/collapsible-view";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
