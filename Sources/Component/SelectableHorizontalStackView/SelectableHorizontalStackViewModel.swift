@@ -1,6 +1,4 @@
-import JamitFoundation
-
-public struct TabBarViewModel<ItemViewModel: ViewModelProtocol>: ViewModelProtocol {
+public struct SelectableHorizontalStackViewModel<ItemViewModel: ViewModelProtocol>: ViewModelProtocol {
     public typealias IndexChangeCallback = (Int) -> Void
 
     public var items: [ItemViewModel]
@@ -15,8 +13,8 @@ public struct TabBarViewModel<ItemViewModel: ViewModelProtocol>: ViewModelProtoc
     }
 }
 
-extension TabBarViewModel {
-    public static var `default`: TabBarViewModel {
+extension SelectableHorizontalStackViewModel {
+    public static var `default`: Self {
         .init(
             items: [],
             onSelectedIndexChanged: { _ in }

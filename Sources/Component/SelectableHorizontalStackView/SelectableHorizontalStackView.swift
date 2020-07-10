@@ -1,15 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Raoul Schwagmeier on 10.03.20.
-//
-
-import JamitFoundation
 import UIKit
 
-public final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabBarViewModel<ItemView.Model>>  {
-    // MARK: - Properties
+public final class SelectableHorizontalStackView<ItemView: StatefulViewProtocol>: StatefulView<SelectableHorizontalStackViewModel<ItemView.Model>>  {
     public private(set) var selectedIndex: Int = 0 {
         didSet {
             model.onSelectedIndexChanged(selectedIndex)
@@ -21,11 +12,9 @@ public final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabB
         view.axis = .horizontal
         view.distribution = .fillEqually
         view.alignment = .fill
-
         return view
     }()
 
-    // MARK: - Methods
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,6 +38,7 @@ public final class TabBarView<ItemView: StatefulViewProtocol>: StatefulView<TabB
             let itemView: ActionView<ItemView> = .instantiate()
             itemView.model = .init(content: model.items[index], action: { [weak self] in
                 guard let self = self else { return }
+
                 self.selectedIndex = index
             })
 
