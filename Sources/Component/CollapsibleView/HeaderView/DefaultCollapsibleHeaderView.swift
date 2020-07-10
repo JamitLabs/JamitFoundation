@@ -16,18 +16,12 @@ import UIKit
 /// defaultCollapsibleHeaderView.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
 /// ```
 public final class DefaultCollapsibleHeaderView: StatefulView<DefaultCollapsibleHeaderViewModel> {
-    private lazy var titleLabel: UILabel = {
-        let titleLabel: UILabel = .init()
-        return titleLabel
-    }()
-    
-    private lazy var arrowImageView: UIImageView = {
-        let imageView: UIImageView = .init()
-        return imageView
-    }()
+    private lazy var titleLabel: UILabel = .init()
+
+    private lazy var arrowImageView: UIImageView = .init()
     private var arrowImageViewWidthConstraint: NSLayoutConstraint?
     private var arrowImageViewHeightConstraint: NSLayoutConstraint?
-    
+
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,10 +44,10 @@ public final class DefaultCollapsibleHeaderView: StatefulView<DefaultCollapsible
 
     public override func didChangeModel() {
         super.didChangeModel()
-        
+
         titleLabel.text = model.title
         titleLabel.font = model.titleFont
-        
+
         arrowImageView.image = model.arrowImageUp
         arrowImageViewWidthConstraint?.constant = model.arrowImageViewSizeConstant
         arrowImageViewHeightConstraint?.constant = model.arrowImageViewSizeConstant
@@ -62,7 +56,7 @@ public final class DefaultCollapsibleHeaderView: StatefulView<DefaultCollapsible
 
 extension DefaultCollapsibleHeaderView: CollapsibleHeaderViewDelegate {
     public func didChangeCollapsibleState(to isCollapsed: Bool) {
-        UIView.animate(withDuration: model.arrowAnimationDuration) {[weak self] in
+        UIView.animate(withDuration: model.arrowAnimationDuration) { [weak self] in
             guard let self = self else { return }
 
             let xValue: CGFloat = isCollapsed ? 0.0: 1.0

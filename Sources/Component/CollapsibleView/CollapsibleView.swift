@@ -57,7 +57,7 @@ public final class CollapsibleView: StatefulView<CollapsibleViewModel> {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        headerViewContainer.backgroundColor = .white
+        headerViewContainer.backgroundColor = model.headerViewContainerBackgroundColor
         headerViewContainer.translatesAutoresizingMaskIntoConstraints = false
         addSubview(headerViewContainer)
         headerViewContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
