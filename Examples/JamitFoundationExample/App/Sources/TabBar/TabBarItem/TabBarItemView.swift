@@ -4,13 +4,16 @@ import JamitFoundation
 import UIKit
 
 final class TabBarItemView: StatefulView<TabBarItemViewModel> {
-    private lazy var label: UILabel = .init()
+    private lazy var label: UILabel = {
+        let label: UILabel = .init()
+        label.textAlignment = .center
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         label.translatesAutoresizingMaskIntoConstraints = false
-
         addSubview(label)
         label.topAnchor.constraint(equalTo: topAnchor).isActive = true
         label.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true

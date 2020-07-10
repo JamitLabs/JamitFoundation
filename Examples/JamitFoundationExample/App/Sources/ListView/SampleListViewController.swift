@@ -166,6 +166,27 @@ final class SampleListViewController: ListViewController<ListItemView> {
 
     private func showTabBar() {
         let viewController: TabBarViewController = .instantiate()
+
+        let firstContentView: UIView = .init()
+        firstContentView.backgroundColor = .red
+        let secondContentView: UIView = .init()
+        secondContentView.backgroundColor = .blue
+        let thirdContentView: UIView = .init()
+        thirdContentView.backgroundColor = .green
+
+        viewController.model = .init(
+            items: [
+                .init(text: "First", contentView: firstContentView) {
+                    print("DidSelectFirstItem")
+                },
+                .init(text: "Second", contentView: secondContentView) {
+                    print("DidSelectSecondItem")
+                },
+                .init(text: "Third", contentView: thirdContentView) {
+                    print("DidSelectThirdItem")
+                }
+            ]
+        )
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

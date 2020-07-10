@@ -4,9 +4,21 @@ import JamitFoundation
 import UIKit
 
 struct TabBarViewModel: ViewModelProtocol {
-    init() { }
+    let items: [TabBarItemViewModel]
+    var selectedTabItemIndex: Int
+
+    init(
+        items: [TabBarItemViewModel] = Self.default.items,
+        selectedTabItemIndex: Int = Self.default.selectedTabItemIndex
+    ) {
+        self.items = items
+        self.selectedTabItemIndex = selectedTabItemIndex
+    }
 }
 
 extension TabBarViewModel {
-    static let `default`: Self = .init()
+    static let `default`: Self = .init(
+        items: [],
+        selectedTabItemIndex: 0
+    )
 }

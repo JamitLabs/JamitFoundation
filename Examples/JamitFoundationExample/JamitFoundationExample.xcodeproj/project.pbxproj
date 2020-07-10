@@ -64,7 +64,6 @@
 		DE61D06224B61A0D00AB8DD0 /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06124B61A0D00AB8DD0 /* BarcodeScanner */; };
 		DE61D06424B61A0D00AB8DD0 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06324B61A0D00AB8DD0 /* CarouselView */; };
 		DE61D06624B61A0D00AB8DD0 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06524B61A0D00AB8DD0 /* JamitFoundation */; };
-		DE61D06824B61A0D00AB8DD0 /* TabBarView in Frameworks */ = {isa = PBXBuildFile; productRef = DE61D06724B61A0D00AB8DD0 /* TabBarView */; };
 		DE61D06E24B61ABD00AB8DD0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61D06A24B61ABD00AB8DD0 /* TabBarViewController.swift */; };
 		DE61D07024B61ABD00AB8DD0 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61D06C24B61ABD00AB8DD0 /* TabBarViewModel.swift */; };
 		DE61D07124B61ABD00AB8DD0 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE61D06D24B61ABD00AB8DD0 /* TabBarViewController.xib */; };
@@ -317,8 +316,6 @@
 				DE61D06924B61A4A00AB8DD0 /* TabBar */,
 				1E1B402023F27F0C00D9A6D5 /* Launch */,
 				1E1B402123F280E500D9A6D5 /* ListView */,
-				1E1B402223F2818C00D9A6D5 /* TableView */,
-				1ECA14A7242A6B1200321BFC /* ActionView */,
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
 				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
 				1E1031E324B616660015581B /* CollapsibleView */,
@@ -496,10 +493,10 @@
 		DE61D06924B61A4A00AB8DD0 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				DE61D07224B61B0600AB8DD0 /* TabBarItem */,
 				DE61D06A24B61ABD00AB8DD0 /* TabBarViewController.swift */,
-				DE61D06C24B61ABD00AB8DD0 /* TabBarViewModel.swift */,
 				DE61D06D24B61ABD00AB8DD0 /* TabBarViewController.xib */,
+				DE61D06C24B61ABD00AB8DD0 /* TabBarViewModel.swift */,
+				DE61D07224B61B0600AB8DD0 /* TabBarItem */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
