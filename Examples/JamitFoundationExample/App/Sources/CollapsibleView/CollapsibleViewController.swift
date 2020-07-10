@@ -41,16 +41,16 @@ final class CollapsibleViewController: StatefulViewController<CollapsibleViewCon
 
         firstCollapsibleView.model = CollapsibleViewModel(
             headerView: firstDefaultCollapsibleHeaderView,
+            headerViewContainerBackgroundColor: .white,
             items: [
                 CollapsibleItemView(backgroundColor: .red, height: 44.0),
                 CollapsibleItemView(backgroundColor: .blue, height: 44.0)
-
             ],
             isCollapsed: true,
             animationDuration: 0.5
         )
         
-        secondDefaultCollapsibleHeaderView.model = DefaultCollapsibleHeaderViewModel.init(
+        secondDefaultCollapsibleHeaderView.model = .init(
             title: model.headerTitles.last ?? "",
             titleFont: model.headerTitleFont,
             arrowImageUp: model.headerArrowImage
@@ -59,6 +59,7 @@ final class CollapsibleViewController: StatefulViewController<CollapsibleViewCon
 
         secondCollapsibleView.model = .init(
             headerView: secondDefaultCollapsibleHeaderView,
+            headerViewContainerBackgroundColor: .white,
             items: [
                 CollapsibleItemView(backgroundColor: .orange, height: 44.0),
                 CollapsibleItemView(backgroundColor: .green, height: 64.0)
