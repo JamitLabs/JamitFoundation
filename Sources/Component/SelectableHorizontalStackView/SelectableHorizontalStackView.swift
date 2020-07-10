@@ -18,6 +18,8 @@ public final class SelectableHorizontalStackView<ItemView: StatefulViewProtocol>
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        stackView.backgroundColor = .white
+
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
         stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -28,6 +30,8 @@ public final class SelectableHorizontalStackView<ItemView: StatefulViewProtocol>
 
     public override func didChangeModel() {
         super.didChangeModel()
+
+        selectedIndex = model.selectedItemIndex
 
         stackView.arrangedSubviews.forEach { view in
             view.removeFromSuperview()
