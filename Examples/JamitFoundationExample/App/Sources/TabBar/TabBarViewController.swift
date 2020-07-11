@@ -32,21 +32,25 @@ final class TabBarViewController: StatefulViewController<TabBarViewModel> {
         super.didChangeModel()
 
         tabBar.model = .init(
-            items: model.items,
+            items: model.items.map { return $0.tabBarItemView.model },
             selectedItemIndex: model.selectedTabItemIndex,
             onSelectedIndexChanged: { [weak self] index in
-                self?.model.items[index].didSelectItem?()
+                self?.model.items[index].tabBarItemView.model.didSelectItem?()
 
                 guard
                     let self = self,
-                    !self.contentView.subviews.contains(self.model.items[index].contentView)
+                    !self.contentView.subviews.contains(self.model.items[index].view)
                 else {
                     return
                 }
 
                 self.contentView.subviews.forEach { $0.removeFromSuperview() }
 
-                let newContentView = self.model.items[index].contentView
+                let newContentViewController = self.model.items[index]
+                guard let newContentView = newContentViewController.view else { return }
+
+                self.addChild(newContentViewController)
+
                 newContentView.translatesAutoresizingMaskIntoConstraints = false
                 self.contentView.addSubview(newContentView)
                 newContentView.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true

@@ -4,11 +4,11 @@ import JamitFoundation
 import UIKit
 
 struct TabBarViewModel: ViewModelProtocol {
-    let items: [TabBarItemViewModel]
+    let items: [TabBarViewControllerProtocol]
     var selectedTabItemIndex: Int
 
     init(
-        items: [TabBarItemViewModel] = Self.default.items,
+        items: [TabBarViewControllerProtocol] = Self.default.items,
         selectedTabItemIndex: Int = Self.default.selectedTabItemIndex
     ) {
         self.items = items

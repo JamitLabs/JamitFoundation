@@ -166,25 +166,24 @@ final class SampleListViewController: ListViewController<ListItemView> {
 
     private func showTabBar() {
         let viewController: TabBarViewController = .instantiate()
-
-        let firstContentView: UIView = .init()
-        firstContentView.backgroundColor = .red
-        let secondContentView: UIView = .init()
-        secondContentView.backgroundColor = .blue
-        let thirdContentView: UIView = .init()
-        thirdContentView.backgroundColor = .green
+        let firstContentViewController: TabBarContentViewController = .init()
+        firstContentViewController.backgroundColor = .red
+        firstContentViewController.shouldShowModally = true
+        firstContentViewController.tabBarItemView.model = .init(text: "FIRST") {
+            print("FIRST SELECTED")
+        }
+        
+        let secondContentViewController: TabBarContentViewController = .init()
+        secondContentViewController.backgroundColor = .blue
+        secondContentViewController.shouldShowModally = false
+        secondContentViewController.tabBarItemView.model = .init(text: "SECOND") {
+            print("SECOND SELECTED")
+        }
 
         viewController.model = .init(
             items: [
-                .init(text: "First", contentView: firstContentView) {
-                    print("DidSelectFirstItem")
-                },
-                .init(text: "Second", contentView: secondContentView) {
-                    print("DidSelectSecondItem")
-                },
-                .init(text: "Third", contentView: thirdContentView) {
-                    print("DidSelectThirdItem")
-                }
+                firstContentViewController,
+                secondContentViewController
             ]
         )
         navigationController?.pushViewController(viewController, animated: true)
