@@ -1,6 +1,7 @@
 "SAMPLE_LIST_VIEW_CONTROLLER.TABLE_VIEW_ITEM.TITLE" = "TableView";
 "SAMPLE_LIST_VIEW_CONTROLLER.ACTION_VIEW_ITEM.TITLE" = "ActionView";
 "SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE" = "ScrollView";
+"SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE" = "CollapsibleView";
 
 "TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE" = "Lorem ispum";
 "TABLE_VIEW_CONTROLLER.FIRST_SECTION.FIRST_ITEM.DETAILS"= "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla.";
@@ -15,3 +16,7 @@
 "ACTION_VIEW.ALERT.TITLE" = "You did tap the image";
 "ACTION_VIEW.ALERT.MESSAGE" = "This alert controller is being shown due to tapping on the image and the action view taking care of it.";
 "ACTION_VIEW.ALERT.ACTION.TITLE" = "Okay";
+
+
+"COLLAPSIBLE_VIEW.FIRST_HEADER.TITLE" = "First header title";
+"COLLAPSIBLE_VIEW.SECOND_HEADER.TITLE" = "Second header title";

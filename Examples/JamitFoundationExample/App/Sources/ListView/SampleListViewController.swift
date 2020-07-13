@@ -14,7 +14,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
             items: [
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TABLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.ACTION_VIEW_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: ""))
             ]
         )
 
@@ -67,6 +68,20 @@ final class SampleListViewController: ListViewController<ListItemView> {
         let scrollViewController = ScrollViewController(contentViewController: viewController)
         navigationController?.pushViewController(scrollViewController, animated: true)
     }
+    
+    private func showCollapsibleView() {
+        let viewController: CollapsibleViewController = .instantiate()
+        viewController.model = .init(
+            headerTitles: [
+                NSLocalizedString("COLLAPSIBLE_VIEW.FIRST_HEADER.TITLE", comment: ""),
+                NSLocalizedString("COLLAPSIBLE_VIEW.SECOND_HEADER.TITLE", comment: "")
+            ],
+            headerViewHeightConstant: 60.0,
+            headerTitleFont: .systemFont(ofSize: 16.0),
+            headerArrowImage: UIImage(named: "icArrowUp")
+        )
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension SampleListViewController: UITableViewDelegate {
@@ -80,6 +95,9 @@ extension SampleListViewController: UITableViewDelegate {
 
         case 2:
             showScrollView()
+
+        case 3:
+            showCollapsibleView()
 
         default:
             break
