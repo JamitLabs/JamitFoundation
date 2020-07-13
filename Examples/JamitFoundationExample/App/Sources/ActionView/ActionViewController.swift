@@ -4,21 +4,34 @@ import JamitFoundation
 import UIKit
 
 final class ActionViewController: StatefulViewController<ActionViewControllerViewModel> {
-    @IBOutlet weak var actionViewContainer: UIView!
+    @IBOutlet private var stackView: UIStackView!
 
-    private lazy var actionView: ActionView<ImageView> = .instantiate()
+    private lazy var firstActionView: ActionView<ImageView> = .instantiate()
+    private lazy var secondActionView: ActionView<ImageView> = .instantiate()
+    private lazy var thirdActionView: ActionView<ImageView> = .instantiate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "ActionViewController"
 
-        actionView.translatesAutoresizingMaskIntoConstraints = false
-        actionViewContainer.addSubview(actionView)
-        actionView.leadingAnchor.constraint(equalTo: actionViewContainer.leadingAnchor).isActive = true
-        actionView.trailingAnchor.constraint(equalTo: actionViewContainer.trailingAnchor).isActive = true
-        actionView.topAnchor.constraint(equalTo: actionViewContainer.topAnchor).isActive = true
-        actionView.bottomAnchor.constraint(equalTo: actionViewContainer.bottomAnchor).isActive = true
+        let firstLabel: UILabel = .init()
+        firstLabel.text = "Highlighting normal"
+        stackView.addArrangedSubview(firstLabel)
+        stackView.addArrangedSubview(firstActionView)
+        firstActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        
+        let secondLabel: UILabel = .init()
+        secondLabel.text = "Highlighting curveEaseInOut"
+        stackView.addArrangedSubview(secondLabel)
+        stackView.addArrangedSubview(secondActionView)
+        secondActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        
+        let thirdLabel: UILabel = .init()
+        thirdLabel.text = "Highlighting custom"
+        stackView.addArrangedSubview(thirdLabel)
+        stackView.addArrangedSubview(thirdActionView)
+        thirdActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
     }
 
     override func didChangeModel() {
@@ -26,13 +39,45 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
 
         guard let imageURL = model.imageURL else { return }
 
-        actionView.model = .init(
+        firstActionView.contentMode = .scaleAspectFit
+        firstActionView.model = .init(
             content: .url(imageURL),
-            highlightAnimation: .curveEaseInOut,
-            cornerRadius: 20,
-            animationDuration: 1
+            highlightAnimation: .normal,
+            cornerRadius: 20
         ) { [weak self] in
             self?.didTapActionView()
+        }
+
+        secondActionView.contentMode = .scaleAspectFit
+        secondActionView.model = .init(
+            content: .url(imageURL),
+            highlightAnimation: .curveEaseInOut(duration: 0.3),
+            cornerRadius: 20
+        ) { [weak self] in
+            self?.didTapActionView()
+        }
+
+        thirdActionView.contentMode = .scaleAspectFit
+        thirdActionView.model = .init(
+            content: .url(imageURL),
+            highlightAnimation: .custom(customHighlightAnimation),
+            cornerRadius: 20
+        ) { [weak self] in
+            self?.didTapActionView()
+        }
+    }
+    
+    private func customHighlightAnimation(view: UIView, state: UIControl.State) {
+        switch state {
+        case .highlighted, .selected:
+            UIView.animate(withDuration: 1.0) {
+                view.layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 4.0), 1.0, 0.0, 0.0)
+            }
+
+        default:
+            UIView.animate(withDuration: 1.0) {
+                view.layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 4.0), 0.0, 0.0, 0.0)
+            }
         }
     }
 

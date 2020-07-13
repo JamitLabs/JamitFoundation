@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,6 @@
 		1E1B3FFF23F27E8700D9A6D5 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B3FFE23F27E8700D9A6D5 /* ExampleTests.swift */; };
 		1E1B400A23F27E8700D9A6D5 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B400923F27E8700D9A6D5 /* ExampleUITests.swift */; };
 		1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402323F281D800D9A6D5 /* TableViewController.swift */; };
-		1E1B402723F2822100D9A6D5 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1B402623F2822100D9A6D5 /* JamitFoundation */; };
 		1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402823F2824A00D9A6D5 /* TableViewViewModel.swift */; };
 		1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402D23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift */; };
 		1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */; };
@@ -40,6 +39,8 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
+		1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; };
+		1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,35 @@
 			remoteGlobalIDString = 1E1B3FE323F27E8700D9A6D5;
 			remoteInfo = JamitFoundationExample;
 		};
+		1EDB1C5224BC6AB000FEFA7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C5CB31C02371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		1EDB1C5424BC6ACF00FEFA7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1EDB1C5924BC6AEA00FEFA7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E1031E424B6168A0015581B /* CollapsibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +127,7 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JamitFoundation.xcodeproj; path = ../../JamitFoundation.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1B402723F2822100D9A6D5 /* JamitFoundation in Frameworks */,
+				1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +182,8 @@
 				1E1B3FFD23F27E8700D9A6D5 /* Tests */,
 				1E1B400823F27E8700D9A6D5 /* UITests */,
 				1E1B3FE523F27E8700D9A6D5 /* Products */,
+				1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */,
+				1EDB1C5624BC6AEA00FEFA7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -362,6 +394,21 @@
 			path = ScrollView;
 			sourceTree = "<group>";
 		};
+		1EDB1C4F24BC6AB000FEFA7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EDB1C5624BC6AEA00FEFA7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,14 +419,15 @@
 				1E1B3FE023F27E8700D9A6D5 /* Sources */,
 				1E1B3FE123F27E8700D9A6D5 /* Frameworks */,
 				1E1B3FE223F27E8700D9A6D5 /* Resources */,
+				1EDB1C5924BC6AEA00FEFA7D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1EDB1C5524BC6ACF00FEFA7D /* PBXTargetDependency */,
 			);
 			name = JamitFoundationExample;
 			packageProductDependencies = (
-				1E1B402623F2822100D9A6D5 /* JamitFoundation */,
 			);
 			productName = JamitFoundationExample;
 			productReference = 1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */;
@@ -454,10 +502,15 @@
 			);
 			mainGroup = 1E1B3FDB23F27E8700D9A6D5;
 			packageReferences = (
-				1E1B402523F2822100D9A6D5 /* XCRemoteSwiftPackageReference "JamitFoundation" */,
 			);
 			productRefGroup = 1E1B3FE523F27E8700D9A6D5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1EDB1C4F24BC6AB000FEFA7D /* Products */;
+					ProjectRef = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1E1B3FE323F27E8700D9A6D5 /* JamitFoundationExample */,
@@ -466,6 +519,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JamitFoundation.framework;
+			remoteRef = 1EDB1C5224BC6AB000FEFA7D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E1B3FE223F27E8700D9A6D5 /* Resources */ = {
@@ -557,6 +620,11 @@
 			isa = PBXTargetDependency;
 			target = 1E1B3FE323F27E8700D9A6D5 /* JamitFoundationExample */;
 			targetProxy = 1E1B400623F27E8700D9A6D5 /* PBXContainerItemProxy */;
+		};
+		1EDB1C5524BC6ACF00FEFA7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JamitFoundation;
+			targetProxy = 1EDB1C5424BC6ACF00FEFA7D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -856,25 +924,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1E1B402523F2822100D9A6D5 /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
-			requirement = {
-				branch = "feature/#18-improvements-to-action-view";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1E1B402623F2822100D9A6D5 /* JamitFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E1B402523F2822100D9A6D5 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = JamitFoundation;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E1B3FDC23F27E8700D9A6D5 /* Project object */;
 }

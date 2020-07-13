@@ -36,9 +36,9 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
         button.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         button.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        button.addTarget(self, action: #selector(didTriggerAction), for: .touchUpInside)
-        button.addTarget(self, action: #selector(updateBackgroundColor), for: .allTouchEvents)
-        button.addTarget(self, action: #selector(lateUpdateBackgroundColor), for: .allTouchEvents)
+        button.addTarget(self, action: #selector(didTriggerAction), for: .primaryActionTriggered)
+        button.addTarget(self, action: #selector(didChangeButtonState), for: .allTouchEvents)
+        button.addTarget(self, action: #selector(lateDidChangeButtonState), for: .allTouchEvents)
 
         isUserInteractionEnabled = true
 
@@ -62,46 +62,62 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
     }
 
     @objc
-    private func updateBackgroundColor() {
-        if [.highlighted, .selected].contains(button.state) {
-            switch model.highlightAnimation {
-            case .normal:
-                button.backgroundColor = UIColor.black.withAlphaComponent(0.15)
+    private func didChangeButtonState() {
+        switch button.state {
+        case .highlighted, .selected:
+            willHighlight()
 
-            case .curveEaseInOut:
-                UIView.animate(
-                    withDuration: model.animationDuration,
-                    delay: 0,
-                    options: [.curveEaseInOut],
-                    animations: {
-                        self.view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-                    },
-                    completion: nil
-                )
-            }
-        } else {
-            switch model.highlightAnimation {
-            case .normal:
-                button.backgroundColor = UIColor.black.withAlphaComponent(0)
+        default:
+            willRemoveHighlighting()
+        }
+    }
 
-            case .curveEaseInOut:
-                UIView.animate(
-                    withDuration: model.animationDuration,
-                    delay: 0,
-                    options: [.curveEaseInOut],
-                    animations: {
-                        self.view.transform = .identity
-                    },
-                    completion: nil
-                )
-            }
+    private func willHighlight() {
+        switch model.highlightAnimation {
+        case .normal:
+            button.backgroundColor = UIColor.black.withAlphaComponent(0.15)
+
+        case let .curveEaseInOut(duration):
+            UIView.animate(
+                withDuration: duration,
+                delay: 0,
+                options: [.curveEaseInOut],
+                animations: {
+                    self.view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                },
+                completion: nil
+            )
+
+        case let .custom(animation):
+            animation(view, button.state)
+        }
+    }
+
+    private func willRemoveHighlighting() {
+        switch model.highlightAnimation {
+        case .normal:
+            button.backgroundColor = UIColor.black.withAlphaComponent(0)
+
+        case let .curveEaseInOut(duration):
+            UIView.animate(
+                withDuration: duration,
+                delay: 0,
+                options: [.curveEaseInOut],
+                animations: {
+                    self.view.transform = .identity
+                },
+                completion: nil
+            )
+
+        case let .custom(animation):
+            animation(view, button.state)
         }
     }
 
     @objc
-    private func lateUpdateBackgroundColor() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + model.animationDuration) { [weak self] in
-            self?.updateBackgroundColor()
+    private func lateDidChangeButtonState() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+            self?.didChangeButtonState()
         }
     }
 }
