@@ -21,7 +21,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gBq-ST-itg">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gBq-ST-itg">
                         <rect key="frame" x="20" y="90.5" width="374" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" placeholder="YES" id="ylc-KU-hiP"/>

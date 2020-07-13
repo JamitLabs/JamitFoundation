@@ -20,12 +20,18 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
         stackView.addArrangedSubview(firstLabel)
         stackView.addArrangedSubview(firstActionView)
         firstActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        firstActionView.view.layer.cornerRadius = 20.0
+        if #available(iOS 11.0, *) {
+            firstActionView.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
         
         let secondLabel: UILabel = .init()
         secondLabel.text = "Highlighting curveEaseInOut"
         stackView.addArrangedSubview(secondLabel)
         stackView.addArrangedSubview(secondActionView)
         secondActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+
+        secondActionView.view.layer.cornerRadius = 20.0
         
         let thirdLabel: UILabel = .init()
         thirdLabel.text = "Highlighting custom"
@@ -42,28 +48,25 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
         firstActionView.contentMode = .scaleAspectFit
         firstActionView.model = .init(
             content: .url(imageURL),
-            highlightAnimation: .normal,
-            cornerRadius: 20
-        ) { [weak self] in
-            self?.didTapActionView()
+            highlightAnimation: .normal
+        ) {
+            NSLog("Did tap firstActionView with highlight animation normal")
         }
 
         secondActionView.contentMode = .scaleAspectFit
         secondActionView.model = .init(
             content: .url(imageURL),
-            highlightAnimation: .curveEaseInOut(duration: 0.3),
-            cornerRadius: 20
-        ) { [weak self] in
-            self?.didTapActionView()
+            highlightAnimation: .curveEaseInOut(duration: 0.3)
+        ) {
+            NSLog("Did tap secondActionView with highlight animation curveEaseInOut")
         }
 
         thirdActionView.contentMode = .scaleAspectFit
         thirdActionView.model = .init(
             content: .url(imageURL),
-            highlightAnimation: .custom(customHighlightAnimation),
-            cornerRadius: 20
-        ) { [weak self] in
-            self?.didTapActionView()
+            highlightAnimation: .custom(customHighlightAnimation)
+        ) {
+            NSLog("Did tap thirdActionView with highlight animation custom")
         }
     }
     
@@ -79,17 +82,5 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
                 view.layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 4.0), 0.0, 0.0, 0.0)
             }
         }
-    }
-
-    private func didTapActionView() {
-        let alert = UIAlertController(
-            title: NSLocalizedString("ACTION_VIEW.ALERT.TITLE", comment: ""),
-            message: NSLocalizedString("ACTION_VIEW.ALERT.MESSAGE", comment: ""),
-            preferredStyle: .alert
-        )
-
-        alert.addAction(UIAlertAction(title: NSLocalizedString("ACTION_VIEW.ALERT.ACTION.TITLE", comment: ""), style: .default, handler: nil))
-
-        present(alert, animated: true)
     }
 }

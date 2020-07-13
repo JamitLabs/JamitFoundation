@@ -45,15 +45,20 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
         bringSubviewToFront(button)
     }
 
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        button.layer.cornerRadius = view.layer.cornerRadius
+
+        if #available(iOS 11.0, *) {
+            button.layer.maskedCorners = view.layer.maskedCorners
+        }
+    }
+
     public override func didChangeModel() {
         super.didChangeModel()
 
         view.model = model.content
-
-        guard let cornerRadius = model.cornerRadius else { return }
-
-        view.layer.cornerRadius = cornerRadius
-        button.layer.cornerRadius = cornerRadius
     }
 
     @objc

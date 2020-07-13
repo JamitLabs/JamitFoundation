@@ -19,9 +19,6 @@ public struct ActionViewModel<Content: ViewModelProtocol>: ViewModelProtocol {
     /// The highlight animation to perform.
     public let highlightAnimation: HighlightAnimation
 
-    /// Set this to be able to have a rounded action view
-    public let cornerRadius: CGFloat?
-
     /// The action closure to be called when a tab gesture is recognized
     public let action: VoidCallback
 
@@ -29,18 +26,14 @@ public struct ActionViewModel<Content: ViewModelProtocol>: ViewModelProtocol {
     ///
     /// - Parameter content: A generic state view model for the embedded `Content` view.
     /// - Parameter highlightAnimation: The highlight animation to perform.
-    /// - Parameter cornerRadius: Set this to be able to have a rounded action view
-    /// - Parameter animationDuration: The duration of the tab gesture highlighting animation.
     /// - Parameter action: The action closure to be called when a tab gesture is recognized
     public init(
         content: Content = ActionViewModel.default.content,
         highlightAnimation: HighlightAnimation = ActionViewModel.default.highlightAnimation,
-        cornerRadius: CGFloat? = ActionViewModel.default.cornerRadius,
         action: @escaping VoidCallback = ActionViewModel.default.action
     ) {
         self.content = content
         self.highlightAnimation = highlightAnimation
-        self.cornerRadius = cornerRadius
         self.action = action
     }
 }
@@ -51,7 +44,6 @@ extension ActionViewModel {
         return .init(
             content: .default,
             highlightAnimation: .normal,
-            cornerRadius: nil,
             action: {}
         )
     }
