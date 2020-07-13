@@ -14,28 +14,25 @@ public protocol CollapsibleHeaderViewDelegate {
 ///
 /// Example:
 /// ```swift
-/// let defaultCollapsibleHeaderView: DefaultCollapsibleHeaderView = .init()
-/// defaultCollapsibleHeaderView.model = .init(
-///     title: "Header title",
-///     titleFont: .systemFont(ofSize: 16.0),
-///     arrowImageUp: nil // TODO: Place an image here if needed
-/// )
-/// // TODO: adjust height of your header view.
-/// defaultCollapsibleHeaderView.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
 ///
-/// let view: UIView = .init()
-/// view.backgroundColor = .red
-/// view.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-/// view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+/// let itemView: UIView = .init()
+/// itemView.backgroundColor = .red
+/// itemView.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
+/// itemView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
 ///
-/// collapsibleView.model = CollapsibleViewModel(
-///     headerView: defaultCollapsibleHeaderView,
-///     items: [view],
-///     isCollapsed: true
+/// collapsibleView.model = .init(
+///     headerViewModel: .init(
+///         title: "Header title",
+///         titleFont: .systemFont(ofSize: 16.0),
+///         arrowImageUp: nil // TODO: Place an image here if needed
+///     ),
+///     items: [itemView],
+///     isCollapsed: true,
+///     animationDuration: 0.3
 /// )
 /// ```
-public final class CollapsibleView: StatefulView<CollapsibleViewModel> {
-    private lazy var headerViewContainer: UIView = .init()
+public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulView<CollapsibleViewModel<HeaderView.Model>> {
+    private lazy var headerView: HeaderView = .instantiate()
 
     private lazy var actionButton: UIButton = {
         let actionButton: UIButton = .init()
@@ -57,23 +54,22 @@ public final class CollapsibleView: StatefulView<CollapsibleViewModel> {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        headerViewContainer.backgroundColor = model.headerViewContainerBackgroundColor
-        headerViewContainer.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(headerViewContainer)
-        headerViewContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        headerViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        headerViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(headerView)
+        headerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        headerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        headerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         addSubview(actionButton)
-        actionButton.topAnchor.constraint(equalTo: headerViewContainer.topAnchor).isActive = true
-        actionButton.leadingAnchor.constraint(equalTo: headerViewContainer.leadingAnchor).isActive = true
-        actionButton.trailingAnchor.constraint(equalTo: headerViewContainer.trailingAnchor).isActive = true
-        actionButton.bottomAnchor.constraint(equalTo: headerViewContainer.bottomAnchor).isActive = true
+        actionButton.topAnchor.constraint(equalTo: headerView.topAnchor).isActive = true
+        actionButton.leadingAnchor.constraint(equalTo: headerView.leadingAnchor).isActive = true
+        actionButton.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
+        actionButton.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
-        stackView.topAnchor.constraint(equalTo: headerViewContainer.bottomAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -82,12 +78,7 @@ public final class CollapsibleView: StatefulView<CollapsibleViewModel> {
     public override func didChangeModel() {
         super.didChangeModel()
 
-        model.headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerViewContainer.addSubview(model.headerView)
-        model.headerView.topAnchor.constraint(equalTo: headerViewContainer.topAnchor).isActive = true
-        model.headerView.leadingAnchor.constraint(equalTo: headerViewContainer.leadingAnchor).isActive = true
-        model.headerView.trailingAnchor.constraint(equalTo: headerViewContainer.trailingAnchor).isActive = true
-        model.headerView.bottomAnchor.constraint(equalTo: headerViewContainer.bottomAnchor).isActive = true
+        headerView.model = model.headerViewModel
 
         if (stackView.arrangedSubviews.count != model.items.count) {
             stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
@@ -104,9 +95,7 @@ public final class CollapsibleView: StatefulView<CollapsibleViewModel> {
             }
         }
 
-        guard let headerView = model.headerView as? CollapsibleHeaderViewDelegate else { return }
-
-        headerView.didChangeCollapsibleState(to: model.isCollapsed)
+        (headerView as? CollapsibleHeaderViewDelegate)?.didChangeCollapsibleState(to: model.isCollapsed)
     }
 
     @objc

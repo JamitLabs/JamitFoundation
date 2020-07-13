@@ -12,8 +12,6 @@ import UIKit
 ///     titleFont: .systemFont(ofSize: 16.0),
 ///     arrowImageUp: nil // TODO: Place an image here if needed
 /// )
-/// // TODO: adjust height of your header view.
-/// defaultCollapsibleHeaderView.heightAnchor.constraint(equalToConstant: 60.0).isActive = true
 /// ```
 public final class DefaultCollapsibleHeaderView: StatefulView<DefaultCollapsibleHeaderViewModel> {
     private lazy var titleLabel: UILabel = .init()
@@ -35,10 +33,10 @@ public final class DefaultCollapsibleHeaderView: StatefulView<DefaultCollapsible
 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16.0).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: arrowImageView.leadingAnchor, constant: -10.0).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16.0).isActive = true
         arrowImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor).isActive = true
     }
 

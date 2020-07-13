@@ -14,6 +14,8 @@ public struct DefaultCollapsibleHeaderViewModel: ViewModelProtocol {
     public let arrowAnimationDuration: TimeInterval
     /// The size of the arrow image view.
     public let arrowImageViewSizeConstant: CGFloat
+    /// The background color should be whit instead of clear
+    public var backgroundColor: UIColor = .white
 
     /// The default initializer of `CollapsibleViewModel`.
     ///
@@ -42,7 +44,7 @@ extension DefaultCollapsibleHeaderViewModel {
     public static let `default`: Self = .init(
         title: nil,
         titleFont: .systemFont(ofSize: 16),
-        arrowImageUp: UIImage(named: "icArrowUp"),
+        arrowImageUp: nil,
         arrowAnimationDuration: 0.3,
         arrowImageViewSizeConstant: 24.0
     )
