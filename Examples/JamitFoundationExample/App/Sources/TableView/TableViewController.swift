@@ -5,7 +5,6 @@ import JamitFoundation
 import UIKit
 
 class TableViewController: StatefulViewController<TableViewViewModel> {
-
     @IBOutlet private var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -15,6 +14,7 @@ class TableViewController: StatefulViewController<TableViewViewModel> {
         
         tableView.register(cellOfType: TableViewTitleTableViewCell.self)
         tableView.register(cellOfType: TableViewItemTableViewCell.self)
+        tableView.register(cellOfType: CollapsibleTableViewCell.self)
     }
 
     override func didChangeModel() {
@@ -42,8 +42,22 @@ extension TableViewController: UITableViewDataSource {
             let view = tableView.dequeue(cellOfType: TableViewItemTableViewCell.self, for: indexPath)
             view.model = model
             return view
+
+        case let .collapsible(model):
+            let view = tableView.dequeue(cellOfType: CollapsibleTableViewCell.self, for: indexPath)
+            view.model = model
+            
+            view.model.didChangeCollapsibleState = { isCollapsed in
+                guard case let .collapsible(viewModel) = self.model.items[indexPath.row] else { return }
+
+                var newViewModel = viewModel
+                newViewModel.isCollapsed = isCollapsed
+                self.model.items[indexPath.row] = .collapsible(newViewModel)
+            }
+            return view
         }
     }
+    
 }
 
 extension TableViewController: UITableViewDelegate {

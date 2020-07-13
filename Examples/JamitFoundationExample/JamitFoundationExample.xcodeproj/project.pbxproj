@@ -35,6 +35,7 @@
 		1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */; };
 		1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E4D4D52244EEA8200B22541 /* Localizable.strings */; };
 		1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */; };
+		1E7C774624BC7AB300B4CC88 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C774524BC7AB300B4CC88 /* CollapsibleTableViewCell.swift */; };
 		1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229323F2A24200C90405 /* ListItemViewModel.swift */; };
 		1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229623F2A38E00C90405 /* ListItemView.swift */; };
 		1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7229823F2A39F00C90405 /* ListItemView.xib */; };
@@ -117,6 +118,7 @@
 		1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1E4D4D52244EEA8200B22541 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		1E7C774524BC7AB300B4CC88 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		1EC7229323F2A24200C90405 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		1EC7229623F2A38E00C90405 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		1EC7229823F2A39F00C90405 /* ListItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemView.xib; sourceTree = "<group>"; };
@@ -352,10 +354,19 @@
 		1E1B402C23F2843700D9A6D5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1E7C774424BC7A9900B4CC88 /* Collapsible */,
 				1ECA149D242A1D2B00321BFC /* Title */,
 				1ECA149E242A1D4300321BFC /* Item */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		1E7C774424BC7A9900B4CC88 /* Collapsible */ = {
+			isa = PBXGroup;
+			children = (
+				1E7C774524BC7AB300B4CC88 /* CollapsibleTableViewCell.swift */,
+			);
+			path = Collapsible;
 			sourceTree = "<group>";
 		};
 		1E46DE4C24AF6DB3007226EF /* TimePickerView */ = {
@@ -614,6 +625,7 @@
 			files = (
 				1E1031E924B6169C0015581B /* CollapsibleViewControllerViewModel.swift in Sources */,
 				1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */,
+				1E7C774624BC7AB300B4CC88 /* CollapsibleTableViewCell.swift in Sources */,
 				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
 				1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */,

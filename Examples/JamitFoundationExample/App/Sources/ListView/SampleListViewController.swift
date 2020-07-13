@@ -29,6 +29,22 @@ final class SampleListViewController: ListViewController<ListItemView> {
         let viewController: TableViewController = .instantiate()
         viewController.model = .init(
             items: [
+                .collapsible(
+                    .init(
+                        headerViewModel: .init(
+                            title: "Hallo Jens",
+                            titleFont: .systemFont(ofSize: 16.0),
+                            arrowImageUp: UIImage(named: "icArrowUp"),
+                            arrowAnimationDuration: 0.3,
+                            arrowImageViewSizeConstant: 24.0
+                        ),
+                        items: [
+                            CollapsibleItemView(backgroundColor: .red, height: 44.0)
+                        ],
+                        isCollapsed: true,
+                        animationDuration: 0.3
+                    )
+                ),
                 .title(.init(title: NSLocalizedString("TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE", comment: ""))),
                 .item(
                     .init(

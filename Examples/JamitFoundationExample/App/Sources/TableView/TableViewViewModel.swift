@@ -7,9 +7,10 @@ struct TableViewViewModel: ViewModelProtocol {
     enum Item {
         case title(TableViewTitleViewModel)
         case item(TableViewItemViewModel)
+        case collapsible(CollapsibleViewModel<DefaultCollapsibleHeaderViewModel>)
     }
 
-    let items: [Item]
+    var items: [Item]
 
     init(items: [Item] = Self.default.items) {
         self.items = items

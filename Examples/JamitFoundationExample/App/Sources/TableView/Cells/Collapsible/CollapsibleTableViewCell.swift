@@ -3,7 +3,7 @@
 import JamitFoundation
 import UIKit
 
-final class TableViewTitleTableViewCell: ContainerTableViewCell<TableViewTitleView> {
+final class CollapsibleTableViewCell: ContainerTableViewCell<CollapsibleView<DefaultCollapsibleHeaderView>> {
     override func viewDidLoad() {
         super.viewDidLoad()
 

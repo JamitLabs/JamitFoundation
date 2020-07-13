@@ -45,7 +45,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
 
     private lazy var stackView: UIStackView = {
         let stackView: UIStackView = .init()
-        stackView.alignment = .fill
+        stackView.alignment = .center
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
         return stackView
@@ -101,6 +101,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
     @objc
     private func didTriggerAction() {
         model.isCollapsed.toggle()
+        model.didChangeCollapsibleState?(model.isCollapsed)
     }
 
     @objc
