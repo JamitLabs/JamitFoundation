@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,33 +15,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tap onto this image view" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfK-RT-jVa">
-                        <rect key="frame" x="10" y="54" width="394" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tap on one of these image views" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfK-RT-jVa">
+                        <rect key="frame" x="10" y="54" width="394" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYS-kR-OH0">
-                        <rect key="frame" x="10" y="82" width="394" height="160"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gBq-ST-itg">
+                        <rect key="frame" x="20" y="90.5" width="374" height="200"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="160" id="Xcf-ga-5I9"/>
+                            <constraint firstAttribute="height" constant="200" placeholder="YES" id="ylc-KU-hiP"/>
                         </constraints>
-                    </view>
+                    </stackView>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 <constraints>
-                    <constraint firstItem="kYS-kR-OH0" firstAttribute="leading" secondItem="bmE-Tp-Bb3" secondAttribute="leading" constant="10" id="Fjy-p5-BS2"/>
-                    <constraint firstItem="kYS-kR-OH0" firstAttribute="top" secondItem="qfK-RT-jVa" secondAttribute="bottom" constant="10" id="Qrp-x3-Cll"/>
+                    <constraint firstItem="gBq-ST-itg" firstAttribute="leading" secondItem="bmE-Tp-Bb3" secondAttribute="leading" constant="20" id="R18-yq-zIf"/>
+                    <constraint firstItem="gBq-ST-itg" firstAttribute="top" secondItem="qfK-RT-jVa" secondAttribute="bottom" constant="16" id="XnT-jD-yzL"/>
                     <constraint firstItem="qfK-RT-jVa" firstAttribute="leading" secondItem="bmE-Tp-Bb3" secondAttribute="leading" constant="10" id="Y6x-Qt-fAz"/>
                     <constraint firstItem="bmE-Tp-Bb3" firstAttribute="trailing" secondItem="qfK-RT-jVa" secondAttribute="trailing" constant="10" id="e1y-od-wxJ"/>
-                    <constraint firstItem="bmE-Tp-Bb3" firstAttribute="trailing" secondItem="kYS-kR-OH0" secondAttribute="trailing" constant="10" id="fNz-5w-ODx"/>
+                    <constraint firstItem="bmE-Tp-Bb3" firstAttribute="trailing" secondItem="gBq-ST-itg" secondAttribute="trailing" constant="20" id="qJT-ob-KKg"/>
                     <constraint firstItem="qfK-RT-jVa" firstAttribute="top" secondItem="bmE-Tp-Bb3" secondAttribute="top" constant="10" id="rpe-ic-PiH"/>
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="bmE-Tp-Bb3"/>
             </view>
             <connections>
-                <outlet property="actionViewContainer" destination="kYS-kR-OH0" id="yLI-iy-VZF"/>
+                <outlet property="stackView" destination="gBq-ST-itg" id="oqu-Wf-uUU"/>
             </connections>
             <point key="canvasLocation" x="64" y="-410"/>
         </viewController>

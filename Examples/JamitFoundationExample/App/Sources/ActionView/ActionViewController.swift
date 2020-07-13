@@ -4,21 +4,40 @@ import JamitFoundation
 import UIKit
 
 final class ActionViewController: StatefulViewController<ActionViewControllerViewModel> {
-    @IBOutlet weak var actionViewContainer: UIView!
+    @IBOutlet private var stackView: UIStackView!
 
-    private lazy var actionView: ActionView<ImageView> = .instantiate()
+    private lazy var firstActionView: ActionView<ImageView> = .instantiate()
+    private lazy var secondActionView: ActionView<ImageView> = .instantiate()
+    private lazy var thirdActionView: ActionView<ImageView> = .instantiate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "ActionViewController"
 
-        actionView.translatesAutoresizingMaskIntoConstraints = false
-        actionViewContainer.addSubview(actionView)
-        actionView.leadingAnchor.constraint(equalTo: actionViewContainer.leadingAnchor).isActive = true
-        actionView.trailingAnchor.constraint(equalTo: actionViewContainer.trailingAnchor).isActive = true
-        actionView.topAnchor.constraint(equalTo: actionViewContainer.topAnchor).isActive = true
-        actionView.bottomAnchor.constraint(equalTo: actionViewContainer.bottomAnchor).isActive = true
+        let firstLabel: UILabel = .init()
+        firstLabel.text = "Highlighting normal"
+        stackView.addArrangedSubview(firstLabel)
+        stackView.addArrangedSubview(firstActionView)
+        firstActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+        firstActionView.view.layer.cornerRadius = 20.0
+        if #available(iOS 11.0, *) {
+            firstActionView.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+        
+        let secondLabel: UILabel = .init()
+        secondLabel.text = "Highlighting curveEaseInOut"
+        stackView.addArrangedSubview(secondLabel)
+        stackView.addArrangedSubview(secondActionView)
+        secondActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
+
+        secondActionView.view.layer.cornerRadius = 20.0
+        
+        let thirdLabel: UILabel = .init()
+        thirdLabel.text = "Highlighting custom"
+        stackView.addArrangedSubview(thirdLabel)
+        stackView.addArrangedSubview(thirdActionView)
+        thirdActionView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
     }
 
     override func didChangeModel() {
@@ -26,20 +45,42 @@ final class ActionViewController: StatefulViewController<ActionViewControllerVie
 
         guard let imageURL = model.imageURL else { return }
 
-        actionView.model = .init(content: .url(imageURL)) { [weak self] in
-            self?.didTapActionView()
+        firstActionView.contentMode = .scaleAspectFit
+        firstActionView.model = .init(
+            content: .url(imageURL),
+            highlightAnimation: .normal
+        ) {
+            NSLog("Did tap firstActionView with highlight animation normal")
+        }
+
+        secondActionView.contentMode = .scaleAspectFit
+        secondActionView.model = .init(
+            content: .url(imageURL),
+            highlightAnimation: .curveEaseInOut(duration: 0.3)
+        ) {
+            NSLog("Did tap secondActionView with highlight animation curveEaseInOut")
+        }
+
+        thirdActionView.contentMode = .scaleAspectFit
+        thirdActionView.model = .init(
+            content: .url(imageURL),
+            highlightAnimation: .custom(customHighlightAnimation)
+        ) {
+            NSLog("Did tap thirdActionView with highlight animation custom")
         }
     }
+    
+    private func customHighlightAnimation(view: UIView, state: UIControl.State) {
+        switch state {
+        case .highlighted, .selected:
+            UIView.animate(withDuration: 1.0) {
+                view.layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 4.0), 1.0, 0.0, 0.0)
+            }
 
-    private func didTapActionView() {
-        let alert = UIAlertController(
-            title: NSLocalizedString("ACTION_VIEW.ALERT.TITLE", comment: ""),
-            message: NSLocalizedString("ACTION_VIEW.ALERT.MESSAGE", comment: ""),
-            preferredStyle: .alert
-        )
-
-        alert.addAction(UIAlertAction(title: NSLocalizedString("ACTION_VIEW.ALERT.ACTION.TITLE", comment: ""), style: .default, handler: nil))
-
-        present(alert, animated: true)
+        default:
+            UIView.animate(withDuration: 1.0) {
+                view.layer.transform = CATransform3DMakeRotation(CGFloat(Double.pi / 4.0), 0.0, 0.0, 0.0)
+            }
+        }
     }
 }
