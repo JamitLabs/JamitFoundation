@@ -6,11 +6,9 @@ import UIKit
 final class CollapsibleViewController: StatefulViewController<CollapsibleViewControllerViewModel> {
     @IBOutlet private var contentView: UIView!
 
-    private lazy var firstCollapsibleView: CollapsibleView = .init()
-    private lazy var firstDefaultCollapsibleHeaderView: DefaultCollapsibleHeaderView = .init()
-    private lazy var secondCollapsibleView: CollapsibleView = .init()
-    private lazy var secondDefaultCollapsibleHeaderView: DefaultCollapsibleHeaderView = .init()
-
+    private lazy var firstCollapsibleView: CollapsibleView<DefaultCollapsibleHeaderView> = .instantiate()
+    private lazy var secondCollapsibleView: CollapsibleView<DefaultCollapsibleHeaderView> = .instantiate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,16 +30,13 @@ final class CollapsibleViewController: StatefulViewController<CollapsibleViewCon
     override func didChangeModel() {
         super.didChangeModel()
 
-        firstDefaultCollapsibleHeaderView.model = .init(
-            title: model.headerTitles.first ?? "",
-            titleFont: model.headerTitleFont,
-            arrowImageUp: model.headerArrowImage
-        )
-        firstDefaultCollapsibleHeaderView.heightAnchor.constraint(equalToConstant: model.headerViewHeightConstant).isActive = true
-
         firstCollapsibleView.model = CollapsibleViewModel(
-            headerView: firstDefaultCollapsibleHeaderView,
-            headerViewContainerBackgroundColor: .white,
+            headerViewModel: .init(
+                title: model.headerTitles.first ?? "",
+                titleFont: model.headerTitleFont,
+                arrowImageUp: model.headerArrowImage,
+                arrowAnimationDuration: 0.5
+            ),
             items: [
                 CollapsibleItemView(backgroundColor: .red, height: 44.0),
                 CollapsibleItemView(backgroundColor: .blue, height: 44.0)
@@ -49,17 +44,13 @@ final class CollapsibleViewController: StatefulViewController<CollapsibleViewCon
             isCollapsed: true,
             animationDuration: 0.5
         )
-        
-        secondDefaultCollapsibleHeaderView.model = .init(
-            title: model.headerTitles.last ?? "",
-            titleFont: model.headerTitleFont,
-            arrowImageUp: model.headerArrowImage
-        )
-        secondDefaultCollapsibleHeaderView.heightAnchor.constraint(equalToConstant: model.headerViewHeightConstant).isActive = true
 
         secondCollapsibleView.model = .init(
-            headerView: secondDefaultCollapsibleHeaderView,
-            headerViewContainerBackgroundColor: .white,
+            headerViewModel: .init(
+                title: model.headerTitles.last ?? "",
+                titleFont: model.headerTitleFont,
+                arrowImageUp: model.headerArrowImage
+            ),
             items: [
                 CollapsibleItemView(backgroundColor: .orange, height: 44.0),
                 CollapsibleItemView(backgroundColor: .green, height: 64.0)
