@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0B5DAB24BC9296005A2A66 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E0B5DAA24BC9296005A2A66 /* PageView */; };
+		1E0B5DAD24BC9296005A2A66 /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1E0B5DAC24BC9296005A2A66 /* BarcodeScanner */; };
+		1E0B5DAF24BC9296005A2A66 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E0B5DAE24BC9296005A2A66 /* CarouselView */; };
+		1E0B5DB124BC9296005A2A66 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E0B5DB024BC9296005A2A66 /* JamitFoundation */; };
+		1E0B5DB324BC9296005A2A66 /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E0B5DB224BC9296005A2A66 /* GridView */; };
 		1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1031E424B6168A0015581B /* CollapsibleViewController.swift */; };
 		1E1031E724B616920015581B /* CollapsibleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1031E624B616920015581B /* CollapsibleViewController.xib */; };
 		1E1031E924B6169C0015581B /* CollapsibleViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1031E824B6169C0015581B /* CollapsibleViewControllerViewModel.swift */; };
@@ -35,11 +40,6 @@
 		1EB2D9732488EAEB00E2B1A4 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9722488EAEB00E2B1A4 /* CarouselViewController.swift */; };
 		1EB2D9752488EAF900E2B1A4 /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9742488EAF900E2B1A4 /* CarouselViewController.xib */; };
 		1EB2D9772488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9762488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift */; };
-		1EB2D97A2488F29C00E2B1A4 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D9792488F29C00E2B1A4 /* PageView */; };
-		1EB2D97C2488F29C00E2B1A4 /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D97B2488F29C00E2B1A4 /* BarcodeScanner */; };
-		1EB2D97E2488F29C00E2B1A4 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D97D2488F29C00E2B1A4 /* CarouselView */; };
-		1EB2D9802488F29C00E2B1A4 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D97F2488F29C00E2B1A4 /* JamitFoundation */; };
-		1EB2D9822488F29C00E2B1A4 /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB2D9812488F29C00E2B1A4 /* GridView */; };
 		1EB2D9852488F75E00E2B1A4 /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */; };
 		1EB2D9872488F76500E2B1A4 /* CarouselItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */; };
 		1EB2D9892488F77000E2B1A4 /* CarouselItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */; };

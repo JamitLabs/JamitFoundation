@@ -5,9 +5,9 @@
         "package": "JamitFoundation",
         "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
         "state": {
-          "branch": null,
-          "revision": "85e70a4ab2e4a5f30679d3ac91ea242ee40fdfd1",
-          "version": "1.4.2"
+          "branch": "develop",
+          "revision": "6761555003818e29d519438cbc6be4eb2605aebe",
+          "version": null
         }
       }
     ]
