@@ -32,17 +32,37 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .collapsible(
                     .init(
                         headerViewModel: .init(
-                            title: "Hallo Jens",
+                            title: "DefaultCollapsibleHeaderView",
                             titleFont: .systemFont(ofSize: 16.0),
                             arrowImageUp: UIImage(named: "icArrowUp"),
                             arrowAnimationDuration: 0.3,
                             arrowImageViewSizeConstant: 24.0
                         ),
                         items: [
-                            CollapsibleItemView(backgroundColor: .red, height: 44.0)
+                            CollapsibleItemView(backgroundColor: .red, height: 44.0),
+                            CollapsibleItemView(backgroundColor: .blue, height: 64.0),
+                            CollapsibleItemView(backgroundColor: .gray, height: 84.0),
                         ],
                         isCollapsed: true,
-                        animationDuration: 0.3
+                        animationDuration: 0.5
+                    )
+                ),
+                .collapsible(
+                    .init(
+                        headerViewModel: .init(
+                            title: "DefaultCollapsibleHeaderView",
+                            titleFont: .systemFont(ofSize: 16.0),
+                            arrowImageUp: UIImage(named: "icArrowUp"),
+                            arrowAnimationDuration: 0.3,
+                            arrowImageViewSizeConstant: 24.0
+                        ),
+                        items: [
+                            CollapsibleItemView(backgroundColor: .red, height: 44.0)//,
+                            //CollapsibleItemView(backgroundColor: .blue, height: 64.0),
+                            //CollapsibleItemView(backgroundColor: .gray, height: 84.0),
+                        ],
+                        isCollapsed: true,
+                        animationDuration: 0.5
                     )
                 ),
                 .title(.init(title: NSLocalizedString("TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE", comment: ""))),

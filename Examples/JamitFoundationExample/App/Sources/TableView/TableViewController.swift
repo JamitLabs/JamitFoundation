@@ -12,6 +12,9 @@ class TableViewController: StatefulViewController<TableViewViewModel> {
 
         title = "TableViewController"
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+
         tableView.register(cellOfType: TableViewTitleTableViewCell.self)
         tableView.register(cellOfType: TableViewItemTableViewCell.self)
         tableView.register(cellOfType: CollapsibleTableViewCell.self)
@@ -20,7 +23,26 @@ class TableViewController: StatefulViewController<TableViewViewModel> {
     override func didChangeModel() {
         super.didChangeModel()
 
-        tableView.reloadData()
+        let visibleIndexPaths = tableView.indexPathsForVisibleRows ?? []
+        guard !visibleIndexPaths.isEmpty else {
+            tableView.reloadData()
+            return
+        }
+
+        tableView.beginUpdates()
+        visibleIndexPaths.forEach { indexPath in
+            guard
+                let cell = tableView.visibleCells[indexPath.row] as? CollapsibleTableViewCell,
+                cell.didChangeState
+            else {
+                return
+            }
+
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            cell.didChangeState = false
+        }
+
+        tableView.endUpdates()
     }
 }
 
@@ -53,6 +75,8 @@ extension TableViewController: UITableViewDataSource {
                 var newViewModel = viewModel
                 newViewModel.isCollapsed = isCollapsed
                 self.model.items[indexPath.row] = .collapsible(newViewModel)
+                
+                view.didChangeState = true
             }
             return view
         }
