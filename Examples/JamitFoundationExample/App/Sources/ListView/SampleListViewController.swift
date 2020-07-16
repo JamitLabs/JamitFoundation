@@ -44,7 +44,7 @@ final class SampleListViewController: ListViewController<ListItemView> {
                             CollapsibleItemView(backgroundColor: .gray, height: 84.0),
                         ],
                         isCollapsed: true,
-                        animationDuration: 0.5
+                        animationDuration: 0.25
                     )
                 ),
                 .collapsible(
@@ -57,12 +57,12 @@ final class SampleListViewController: ListViewController<ListItemView> {
                             arrowImageViewSizeConstant: 24.0
                         ),
                         items: [
-                            CollapsibleItemView(backgroundColor: .red, height: 44.0)//,
-                            //CollapsibleItemView(backgroundColor: .blue, height: 64.0),
-                            //CollapsibleItemView(backgroundColor: .gray, height: 84.0),
+                            CollapsibleItemView(backgroundColor: .red, height: 44.0),
+                            CollapsibleItemView(backgroundColor: .blue, height: 64.0),
+                            CollapsibleItemView(backgroundColor: .gray, height: 84.0),
                         ],
                         isCollapsed: true,
-                        animationDuration: 0.5
+                        animationDuration: 0.0
                     )
                 ),
                 .title(.init(title: NSLocalizedString("TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE", comment: ""))),

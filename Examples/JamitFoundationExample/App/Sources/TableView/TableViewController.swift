@@ -30,17 +30,18 @@ class TableViewController: StatefulViewController<TableViewViewModel> {
         }
 
         tableView.beginUpdates()
-        visibleIndexPaths.forEach { indexPath in
-            guard
-                let cell = tableView.visibleCells[indexPath.row] as? CollapsibleTableViewCell,
-                cell.didChangeState
-            else {
-                return
-            }
-
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-            cell.didChangeState = false
-        }
+        // TODO: Check if necessary
+//        visibleIndexPaths.forEach { indexPath in
+//            guard
+//                let cell = tableView.visibleCells[indexPath.row] as? CollapsibleTableViewCell,
+//                cell.didChangeState
+//            else {
+//                return
+//            }
+//
+//            tableView.reloadRows(at: [indexPath], with: .none)
+//            cell.didChangeState = false
+//        }
 
         tableView.endUpdates()
     }
