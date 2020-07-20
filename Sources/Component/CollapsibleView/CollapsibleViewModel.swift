@@ -42,7 +42,7 @@ extension CollapsibleViewModel {
             headerViewModel: .default,
             items: [],
             isCollapsed: false,
-            animationDuration: 0.3,
+            animationDuration: 0.0,
             didChangeCollapsibleState: nil
         )
     }

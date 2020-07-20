@@ -8,7 +8,7 @@ final class CollapsibleViewController: StatefulViewController<CollapsibleViewCon
 
     private lazy var firstCollapsibleView: CollapsibleView<DefaultCollapsibleHeaderView> = .instantiate()
     private lazy var secondCollapsibleView: CollapsibleView<DefaultCollapsibleHeaderView> = .instantiate()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

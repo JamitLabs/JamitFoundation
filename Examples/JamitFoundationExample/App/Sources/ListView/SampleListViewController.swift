@@ -17,6 +17,7 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TIME_PICKER_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE", comment: ""))
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: ""))
             ]
         )
@@ -29,42 +30,6 @@ final class SampleListViewController: ListViewController<ListItemView> {
         let viewController: TableViewController = .instantiate()
         viewController.model = .init(
             items: [
-                .collapsible(
-                    .init(
-                        headerViewModel: .init(
-                            title: "DefaultCollapsibleHeaderView",
-                            titleFont: .systemFont(ofSize: 16.0),
-                            arrowImageUp: UIImage(named: "icArrowUp"),
-                            arrowAnimationDuration: 0.3,
-                            arrowImageViewSizeConstant: 24.0
-                        ),
-                        items: [
-                            CollapsibleItemView(backgroundColor: .red, height: 44.0),
-                            CollapsibleItemView(backgroundColor: .blue, height: 64.0),
-                            CollapsibleItemView(backgroundColor: .gray, height: 84.0),
-                        ],
-                        isCollapsed: true,
-                        animationDuration: 0.25
-                    )
-                ),
-                .collapsible(
-                    .init(
-                        headerViewModel: .init(
-                            title: "DefaultCollapsibleHeaderView",
-                            titleFont: .systemFont(ofSize: 16.0),
-                            arrowImageUp: UIImage(named: "icArrowUp"),
-                            arrowAnimationDuration: 0.3,
-                            arrowImageViewSizeConstant: 24.0
-                        ),
-                        items: [
-                            CollapsibleItemView(backgroundColor: .red, height: 44.0),
-                            CollapsibleItemView(backgroundColor: .blue, height: 64.0),
-                            CollapsibleItemView(backgroundColor: .gray, height: 84.0),
-                        ],
-                        isCollapsed: true,
-                        animationDuration: 0.0
-                    )
-                ),
                 .title(.init(title: NSLocalizedString("TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE", comment: ""))),
                 .item(
                     .init(
@@ -130,6 +95,49 @@ final class SampleListViewController: ListViewController<ListItemView> {
         )
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    private func showCollapsibleTableViewController() {
+        let viewController: CollapsibleTableViewController = .instantiate()
+        viewController.model = .init(
+            items: [
+                .collapsible(
+                    .init(
+                        headerViewModel: .init(
+                            title: "DefaultCollapsibleHeaderView",
+                            titleFont: .systemFont(ofSize: 16.0),
+                            arrowImageUp: UIImage(named: "icArrowUp"),
+                            arrowAnimationDuration: 0.3,
+                            arrowImageViewSizeConstant: 24.0
+                        ),
+                        items: [
+                            CollapsibleItemView(backgroundColor: .red, height: 44.0),
+                            CollapsibleItemView(backgroundColor: .blue, height: 64.0),
+                            CollapsibleItemView(backgroundColor: .gray, height: 84.0),
+                        ],
+                        isCollapsed: true
+                    )
+                ),
+                .collapsible(
+                    .init(
+                        headerViewModel: .init(
+                            title: "DefaultCollapsibleHeaderView",
+                            titleFont: .systemFont(ofSize: 16.0),
+                            arrowImageUp: UIImage(named: "icArrowUp"),
+                            arrowAnimationDuration: 0.3,
+                            arrowImageViewSizeConstant: 24.0
+                        ),
+                        items: [
+                            CollapsibleItemView(backgroundColor: .red, height: 44.0),
+                            CollapsibleItemView(backgroundColor: .blue, height: 64.0),
+                            CollapsibleItemView(backgroundColor: .gray, height: 84.0),
+                        ],
+                        isCollapsed: false
+                    )
+                )
+            ]
+        )
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
     private func showCollectionView() {
         let viewController: SampleCollectionViewController = .instantiate()
@@ -176,6 +184,9 @@ extension SampleListViewController: UITableViewDelegate {
             showCollapsibleView()
 
         case 5:
+            showCollapsibleTableViewController()
+
+        case 6:
             showCollectionView()
 
         default:

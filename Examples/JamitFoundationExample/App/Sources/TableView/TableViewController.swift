@@ -11,39 +11,15 @@ class TableViewController: StatefulViewController<TableViewViewModel> {
         super.viewDidLoad()
 
         title = "TableViewController"
-        
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = UITableView.automaticDimension
 
         tableView.register(cellOfType: TableViewTitleTableViewCell.self)
         tableView.register(cellOfType: TableViewItemTableViewCell.self)
-        tableView.register(cellOfType: CollapsibleTableViewCell.self)
     }
 
     override func didChangeModel() {
         super.didChangeModel()
 
-        let visibleIndexPaths = tableView.indexPathsForVisibleRows ?? []
-        guard !visibleIndexPaths.isEmpty else {
-            tableView.reloadData()
-            return
-        }
-
-        tableView.beginUpdates()
-        // TODO: Check if necessary
-//        visibleIndexPaths.forEach { indexPath in
-//            guard
-//                let cell = tableView.visibleCells[indexPath.row] as? CollapsibleTableViewCell,
-//                cell.didChangeState
-//            else {
-//                return
-//            }
-//
-//            tableView.reloadRows(at: [indexPath], with: .none)
-//            cell.didChangeState = false
-//        }
-
-        tableView.endUpdates()
+        tableView.reloadData()
     }
 }
 
@@ -65,24 +41,8 @@ extension TableViewController: UITableViewDataSource {
             let view = tableView.dequeue(cellOfType: TableViewItemTableViewCell.self, for: indexPath)
             view.model = model
             return view
-
-        case let .collapsible(model):
-            let view = tableView.dequeue(cellOfType: CollapsibleTableViewCell.self, for: indexPath)
-            view.model = model
-            
-            view.model.didChangeCollapsibleState = { isCollapsed in
-                guard case let .collapsible(viewModel) = self.model.items[indexPath.row] else { return }
-
-                var newViewModel = viewModel
-                newViewModel.isCollapsed = isCollapsed
-                self.model.items[indexPath.row] = .collapsible(newViewModel)
-                
-                view.didChangeState = true
-            }
-            return view
         }
     }
-    
 }
 
 extension TableViewController: UITableViewDelegate {

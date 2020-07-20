@@ -34,14 +34,6 @@ public protocol CollapsibleHeaderViewDelegate {
 public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulView<CollapsibleViewModel<HeaderView.Model>> {
     private lazy var headerView: HeaderView = .instantiate()
 
-    private lazy var headerBottomConstraint: NSLayoutConstraint = {
-        return headerView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-    }()
-
-    private lazy var stackViewBottomConstraint: NSLayoutConstraint = {
-        return stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-    }()
-
     private lazy var actionButton: UIButton = {
         let actionButton: UIButton = .init()
         actionButton.setTitle("", for: .normal)
@@ -81,6 +73,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
         stackView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
     public override func didChangeModel() {
@@ -92,19 +85,16 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
             stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
 
             model.items.forEach { view in
+                view.isHidden = model.isCollapsed
                 stackView.addArrangedSubview(view)
             }
         } else {
-            // TODO: Check if animation is necessary
-//            UIView.animate(withDuration: model.animationDuration) {
-//                self.model.items.forEach { view in
-//                    view.isHidden = !self.model.isCollapsed
-//                }
-//            }
+            UIView.animate(withDuration: model.animationDuration) {
+                self.model.items.forEach { view in
+                    view.isHidden = self.model.isCollapsed
+                }
+            }
         }
-
-        headerBottomConstraint.isActive = model.isCollapsed
-        stackViewBottomConstraint.isActive = !model.isCollapsed
 
         (headerView as? CollapsibleHeaderViewDelegate)?.didChangeCollapsibleState(to: model.isCollapsed)
     }
