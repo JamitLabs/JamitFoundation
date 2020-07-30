@@ -2,6 +2,7 @@
 "SAMPLE_LIST_VIEW_CONTROLLER.ACTION_VIEW_ITEM.TITLE" = "ActionView";
 "SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE" = "ScrollView";
 "SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE" = "CollapsibleView";
+"SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE" = "CollectionView";
 
 "TABLE_VIEW_CONTROLLER.FIRST_SECTION.TITLE" = "Lorem ispum";
 "TABLE_VIEW_CONTROLLER.FIRST_SECTION.FIRST_ITEM.DETAILS"= "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla.";
