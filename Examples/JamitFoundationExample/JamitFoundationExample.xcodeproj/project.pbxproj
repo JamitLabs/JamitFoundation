@@ -41,6 +41,14 @@
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
 		1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; };
 		1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */; };
+		EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */; };
+		EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */; };
+		EBED3B8024D2A57700CF9221 /* FancyLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7F24D2A57700CF9221 /* FancyLabelView.swift */; };
+		EBED3B8324D2A71C00CF9221 /* FancyLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B8224D2A71C00CF9221 /* FancyLabelViewModel.swift */; };
+		EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B8424D2A82900CF9221 /* FancyLabelView.xib */; };
+		EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B8824D2B00F00CF9221 /* FancyLabelViewCell.swift */; };
+		EBED3B8B24D2B06400CF9221 /* FancyLabelSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B8A24D2B06400CF9221 /* FancyLabelSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +136,14 @@
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JamitFoundation.xcodeproj; path = ../../JamitFoundation.xcodeproj; sourceTree = "<group>"; };
+		EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
+		EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewViewModel.swift; sourceTree = "<group>"; };
+		EBED3B7F24D2A57700CF9221 /* FancyLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyLabelView.swift; sourceTree = "<group>"; };
+		EBED3B8224D2A71C00CF9221 /* FancyLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyLabelViewModel.swift; sourceTree = "<group>"; };
+		EBED3B8424D2A82900CF9221 /* FancyLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FancyLabelView.xib; sourceTree = "<group>"; };
+		EBED3B8824D2B00F00CF9221 /* FancyLabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyLabelViewCell.swift; sourceTree = "<group>"; };
+		EBED3B8A24D2B06400CF9221 /* FancyLabelSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyLabelSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +292,7 @@
 		1E1B401D23F27EF800D9A6D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EBED3B7424D29EFB00CF9221 /* CollectionView */,
 				1E1B402023F27F0C00D9A6D5 /* Launch */,
 				1E1B402123F280E500D9A6D5 /* ListView */,
 				1E1B402223F2818C00D9A6D5 /* TableView */,
@@ -407,6 +424,37 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBED3B7424D29EFB00CF9221 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */,
+				EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */,
+				EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */,
+				EBED3B8724D2ACF900CF9221 /* ReusableView */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		EBED3B8124D2A70900CF9221 /* FancyLabel */ = {
+			isa = PBXGroup;
+			children = (
+				EBED3B8A24D2B06400CF9221 /* FancyLabelSupplementaryView.swift */,
+				EBED3B7F24D2A57700CF9221 /* FancyLabelView.swift */,
+				EBED3B8424D2A82900CF9221 /* FancyLabelView.xib */,
+				EBED3B8824D2B00F00CF9221 /* FancyLabelViewCell.swift */,
+				EBED3B8224D2A71C00CF9221 /* FancyLabelViewModel.swift */,
+			);
+			path = FancyLabel;
+			sourceTree = "<group>";
+		};
+		EBED3B8724D2ACF900CF9221 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				EBED3B8124D2A70900CF9221 /* FancyLabel */,
+			);
+			path = ReusableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,6 +591,8 @@
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
 				1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */,
 				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
+				EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */,
+				EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */,
 				1ECA14AB242A6BF700321BFC /* ActionViewController.xib in Resources */,
 				1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */,
 				1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */,
@@ -580,14 +630,20 @@
 				1ECA14A9242A6BED00321BFC /* ActionViewController.swift in Sources */,
 				1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */,
 				1E1031F524B729750015581B /* CollapsibleItemView.swift in Sources */,
+				EBED3B8B24D2B06400CF9221 /* FancyLabelSupplementaryView.swift in Sources */,
 				1ECA14A2242A1D6C00321BFC /* TableViewItemView.swift in Sources */,
 				1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */,
+				EBED3B8324D2A71C00CF9221 /* FancyLabelViewModel.swift in Sources */,
+				EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */,
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
+				EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */,
 				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
 				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
 				1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */,
 				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
+				EBED3B8024D2A57700CF9221 /* FancyLabelView.swift in Sources */,
 				1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */,
+				EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */,
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

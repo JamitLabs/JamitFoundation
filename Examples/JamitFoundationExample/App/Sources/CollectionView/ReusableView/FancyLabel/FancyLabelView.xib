@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Mo6-YU-7do" customClass="FancyLabelView" customModule="JamitFoundationExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9k-yo-S4t">
+                    <rect key="frame" x="0.0" y="0.0" width="429" height="189"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krI-bG-oMG" customClass="Label" customModule="JamitFoundation">
+                    <rect key="frame" x="193" y="84" width="43.5" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="krI-bG-oMG" secondAttribute="bottom" constant="8" id="2nY-GP-6br"/>
+                <constraint firstItem="o9k-yo-S4t" firstAttribute="leading" secondItem="Mo6-YU-7do" secondAttribute="leading" id="FeT-Np-EEH"/>
+                <constraint firstItem="krI-bG-oMG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mo6-YU-7do" secondAttribute="leading" constant="8" id="NAj-HU-iMJ"/>
+                <constraint firstItem="krI-bG-oMG" firstAttribute="centerX" secondItem="Mo6-YU-7do" secondAttribute="centerX" id="RAp-dE-zqA"/>
+                <constraint firstAttribute="bottom" secondItem="o9k-yo-S4t" secondAttribute="bottom" id="XwE-rd-gPY"/>
+                <constraint firstItem="krI-bG-oMG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mo6-YU-7do" secondAttribute="top" constant="8" id="cxh-9K-HbT"/>
+                <constraint firstItem="o9k-yo-S4t" firstAttribute="top" secondItem="Mo6-YU-7do" secondAttribute="top" id="dNG-oR-WaT"/>
+                <constraint firstItem="krI-bG-oMG" firstAttribute="centerY" secondItem="Mo6-YU-7do" secondAttribute="centerY" id="ghX-7o-4G4"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="krI-bG-oMG" secondAttribute="trailing" constant="8" id="wRF-ow-fQf"/>
+                <constraint firstAttribute="trailing" secondItem="o9k-yo-S4t" secondAttribute="trailing" id="xOB-40-jbk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundView" destination="o9k-yo-S4t" id="Zfi-OE-iPc"/>
+                <outlet property="titleLabel" destination="krI-bG-oMG" id="cGN-YE-plW"/>
+            </connections>
+            <point key="canvasLocation" x="136.95652173913044" y="-82.03125"/>
+        </view>
+    </objects>
+</document>
