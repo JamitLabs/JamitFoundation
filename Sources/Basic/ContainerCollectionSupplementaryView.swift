@@ -15,7 +15,7 @@ import UIKit
 /// // Making `MyView` embeddable as reusable supplementary view...
 /// final class MyCollectionSupplementaryView: ContainerCollectionReusableView<MyView> {}
 /// ```
-class ContainerCollectionReusableView<ContentView: StatefulViewProtocol>: CollectionReusableView {
+open class ContainerCollectionReusableView<ContentView: StatefulViewProtocol>: CollectionReusableView {
     /// The underlying view which is embedded into the `contentView`.
     public private(set) lazy var contentView: ContentView = .instantiate()
 
