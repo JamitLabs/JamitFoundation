@@ -35,6 +35,8 @@
 		C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31F52371D10F00E25E4B /* ListViewController.swift */; };
 		C5CB320B2371D10F00E25E4B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31F62371D10F00E25E4B /* ListViewModel.swift */; };
 		C5CB32152371D1A700E25E4B /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBED3B7224D29D8100CF9221 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */; };
+		EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		C5CB31F62371D10F00E25E4B /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C5CB32132371D1A700E25E4B /* JamitFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JamitFoundation.h; sourceTree = "<group>"; };
 		C5CB32142371D1A700E25E4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerCollectionSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 		C5CB31DD2371D10F00E25E4B /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */,
+				EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */,
 				C568604823AE166D001CFD85 /* CollectionViewCell.swift */,
 				C5CB31E42371D10F00E25E4B /* ContainerCollectionViewCell.swift */,
 				C5CB31E22371D10F00E25E4B /* ContainerTableViewCell.swift */,
@@ -333,10 +339,12 @@
 				C5CB32002371D10F00E25E4B /* ErrorCallback.swift in Sources */,
 				C5CB31FD2371D10F00E25E4B /* StatefulViewController.swift in Sources */,
 				1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */,
+				EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */,
 				C5CB31FA2371D10F00E25E4B /* UICollectionView+recycling.swift in Sources */,
 				C5CB31FB2371D10F00E25E4B /* VoidCallback.swift in Sources */,
 				C5CB32042371D10F00E25E4B /* ImageView.swift in Sources */,
 				C5CB32072371D10F00E25E4B /* ViewModelProtocol.swift in Sources */,
+				EBED3B7224D29D8100CF9221 /* CollectionReusableView.swift in Sources */,
 				C5CB32092371D10F00E25E4B /* ScrollViewController.swift in Sources */,
 				C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */,
 				1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */,

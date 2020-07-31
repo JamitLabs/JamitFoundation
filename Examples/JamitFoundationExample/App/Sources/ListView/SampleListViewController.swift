@@ -15,7 +15,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TABLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.ACTION_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: ""))
             ]
         )
 
@@ -82,6 +83,31 @@ final class SampleListViewController: ListViewController<ListItemView> {
         )
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    private func showCollectionView() {
+        let viewController: SampleCollectionViewController = .instantiate()
+
+        let itemNumber = 40
+        let itemBackgroundColor: UIColor = .cyan
+        let opacityFactor: CGFloat = 1 / CGFloat(itemNumber)
+        let items: [SampleCollectionViewItemModel] = (0..<itemNumber).map { index in
+            let opacity: CGFloat = 1 - (CGFloat(index) * opacityFactor)
+            return .init(backgroundColor: itemBackgroundColor.withAlphaComponent(opacity))
+        }
+
+        viewController.model = .init(
+            header: .init(
+                title: "Header".uppercased(),
+                backgroundColor: UIColor.yellow.withAlphaComponent(0.2)
+            ),
+            footer: .init(
+                title: "Footer".uppercased(),
+                backgroundColor: UIColor.yellow.withAlphaComponent(0.1)
+            ),
+            items: items
+        )
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension SampleListViewController: UITableViewDelegate {
@@ -98,6 +124,9 @@ extension SampleListViewController: UITableViewDelegate {
 
         case 3:
             showCollapsibleView()
+
+        case 4:
+            showCollectionView()
 
         default:
             break
