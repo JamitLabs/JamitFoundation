@@ -10,7 +10,8 @@ let package = Package(
         .library(name: "PageView", targets: ["PageView"]),
         .library(name: "GridView", targets: ["GridView"]),
         .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
-        .library(name: "CarouselView", targets: ["CarouselView"])
+        .library(name: "CarouselView", targets: ["CarouselView"]),
+        .library(name: "WeakCache", targets: ["WeakCache"])
     ],
     dependencies: [],
     targets: [
@@ -38,6 +39,11 @@ let package = Package(
             name: "CarouselView",
             dependencies: ["JamitFoundation"],
             path: "Modules/CarouselView"
+        ),
+        .target(
+            name: "WeakCache",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/WeakCache"
         )
     ]
 )
