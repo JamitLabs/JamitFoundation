@@ -4,41 +4,67 @@ WeakCache is a data structure which holds its elements with a weak reference. Th
 
 ## Usage
 
-The following example is using the `WeakCache` for implementing an observer. The `CoordinatorCounter`is holding a `WeakCache`containing `CoordinatorObserving`. If a `CoordinatorObserving` registers at the `CoordinatorCounter` all observers are notified about the changed count.
+```swift
+// Initialize with type you want to store
+let viewControllerCache: WeakCache<UIViewController> = .init()
+
+// Object you want to store, make sure a strong reference is hold at some place
+let myViewController: MyViewController = .init()
+
+// Add the viewController to the cache
+viewControllerCache.append(myViewController)
+
+// To iterate through all elements use `all` property
+viewControllerCache.all.forEach { viewController in 
+	// Do some stuff
+}
+
+// To remove myViewController just call remove
+viewControllerCache.remove(myViewController)
+ 
+```
+
+
+### Common Use Case - The Observer
+
+We often use the `WeakCache` for observer implementations. It is used for storing observers without the need to make thoughts about reference counting and reference cycles.
+The following example shows how the observer can be implemented. 
 
 ```swift
-public final class CoordinatorCounter {
-    static let shared: CoordinatorCounter = .init()
+public final class MySubject {
+	static let shared: MySubject = .init()
 
-    let observers: WeakCache<CoordinatorObserving> = .init()
+	let observers: WeakCache<MyObserving> = .init()
+	
+	private var valueToObserve: String = "SomeValue" {
+		didSet {
+			notifyObserversAboutValueChange()
+		}
+	}
 
-    private init() { /* NOOP */ }
+	private init() { /* NOOP */ }
 
-    public func register(_ observer: CoordinatorObserving) {
-        guard !observers.contains(observer) else { return }
+   	public func register(_ observer: MyObserving) {
+   		guard !observers.contains(observer) else { return }
 
         observers.append(observer)
-        notifyObserverAboutChangedObserverCount()
+        
+        // Optional: If you need to provide the actual value directly after registration 
+        // just notify this observer
+        observer.mySubject(self, didChangeValueTo: valueToObserve)
     }
 
-    public func unregister(_ observer: CoordinatorObserving) {
+    public func unregister(_ observer: MyObserving) {
         observers.remove(observer)
-        notifyObserverAboutChangedObserverCount()
     }
 
-    public func notifyObserverAboutChangedObserverCount() {
-        observers.all.forEach {
-            $0.coordinatorCounter(self, changedCountTo: observers.all.count)
-        }
+    public func notifyObserversAboutValueChange() {
+        observers.all.forEach { $0.mySubject(self, didChangeValueTo: valueToObserve) }
     }
 }
 
-public protocol CoordinatorObserving: AnyObject {
-    func coordinatorCounter(_ counter: CoordinatorCounter, changedCountTo count: Int)
-}
-
-public extension CoordinatorObserving {
-    func coordinatorCounter(_ counter: CoordinatorCounter, changedCountTo count: Int) { /* NOOP */ }
+public protocol MyObserving: AnyObject {
+    func mySubject(_ subject: MySubject, didChangeValueTo newValue: String)
 }
 
 ```
