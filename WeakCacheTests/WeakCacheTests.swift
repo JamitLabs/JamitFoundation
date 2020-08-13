@@ -19,7 +19,6 @@ class WeakCacheTests: XCTestCase {
     func testRemovingElement() throws {
         let cache: WeakCache<CacheableElement>  = .init()
 
-        // Add element
         let element = CacheableElement()
         cache.append(element)
         XCTAssertTrue(cache.contains(element))
