@@ -15,7 +15,7 @@ import Foundation
 /// cache.append(someViewController)
 /// ```
 ///
-public final class WeakCache<Element> {
+public final class WeakCache<Element: AnyObject> {
     private let elements: NSHashTable<AnyObject>
 
     /// All elements of the cache
@@ -32,7 +32,7 @@ public final class WeakCache<Element> {
     /// - parameters:
     ///     - element: The element to append
     public func append(_ element: Element) {
-        elements.add(element as AnyObject)
+        elements.add(element)
     }
 
     /// Removes an element from the cache
@@ -40,7 +40,7 @@ public final class WeakCache<Element> {
     /// - parameters:
     ///     - element: The element to remove
     public func remove(_ element: Element) {
-        elements.remove(element as AnyObject)
+        elements.remove(element)
     }
 
     /// Checks if the element is stored in the `WeakCache`
@@ -49,7 +49,7 @@ public final class WeakCache<Element> {
     ///     - element: The element to check
     /// - returns: `true` if the given element is in the cache, `false` if not
     public func contains(_ element: Element) -> Bool {
-        return elements.contains(element as AnyObject)
+        return elements.contains(element)
     }
 
     /// Removes all elements from the cache

@@ -43,7 +43,12 @@ let package = Package(
         .target(
             name: "WeakCache",
             dependencies: ["JamitFoundation"],
-            path: "Modules/WeakCache"
+            path: "Modules/WeakCache/Sources"
+        ),
+        .testTarget(
+            name: "WeakCacheTests",
+            dependencies: ["WeakCache"],
+            path: "Modules/WeakCache/Tests"
         )
     ]
 )
