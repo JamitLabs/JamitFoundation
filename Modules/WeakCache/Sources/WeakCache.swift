@@ -5,7 +5,7 @@ import Foundation
 ///
 /// `WeakCache` is a DataStructure based on `NSHashTable`. The reference counter of the stored elements is not
 /// increased by adding it to the `WeakCache`.
-/// If the element is deinitialized it is automatically removed from the cache.
+/// If the element is deinitialized it is automatically removed from the cache. Elements are accessible as collection through the all property.
 ///
 /// Example:
 ///
@@ -18,7 +18,7 @@ import Foundation
 public final class WeakCache<Element: AnyObject> {
     private let elements: NSHashTable<AnyObject>
 
-    /// All elements of the cache
+    /// All elements of the cache mapped into a collection
     public var all: [Element] {
         return elements.allObjects.compactMap { $0 as? Element }
     }

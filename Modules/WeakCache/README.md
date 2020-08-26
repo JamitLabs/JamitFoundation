@@ -1,6 +1,6 @@
 # WeakCache
 
-WeakCache is a data structure which holds its elements with a weak reference. The objects reference counter is not increased by adding it to this Cache. This is very useful for example implementing observer patterns.
+WeakCache is a data structure which holds its elements with a weak reference. The objects reference count is not increased by adding it to this Cache. This is very useful for example implementing observer patterns.
 
 ## Usage
 
