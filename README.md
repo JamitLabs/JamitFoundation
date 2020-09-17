@@ -106,3 +106,12 @@ final class MyTableViewController: UITableViewController {
     }
 }
 ```
+
+## Modules
+Following optional modules are available:
+
+- [WeakCache](Modules/WeakCache/README.md)
+- PageView
+- GridView
+- CarouselView
+- BarcodeScanner

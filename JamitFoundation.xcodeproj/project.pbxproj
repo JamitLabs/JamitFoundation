@@ -104,12 +104,20 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
+		B4F0DABC24E3F8DB0074056A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5CB31B62371D0BE00E25E4B = {
 			isa = PBXGroup;
 			children = (
 				C5CB32122371D1A700E25E4B /* SupportingFiles */,
 				C5CB31D72371D10F00E25E4B /* Sources */,
 				C5CB31C12371D0BE00E25E4B /* Products */,
+				B4F0DABC24E3F8DB0074056A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +289,7 @@
 		C5CB31B72371D0BE00E25E4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
