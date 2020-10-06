@@ -17,7 +17,7 @@ Add the package dependency to your `Package.swift` file.
  let package = Package(
     // ...
     dependencies: [
-+       .package(url: "git@github.com:JamitLabs/JamitFoundation.git", .upToNextMajor(from: "1.0.0"))
++       .package(url: "git@github.com:JamitLabs/JamitFoundation.git", .upToNextMajor(from: "1.4.0"))
     ]
     // ...
  )
@@ -115,3 +115,4 @@ Following optional modules are available:
 - GridView
 - CarouselView
 - BarcodeScanner
+- TimePickerView

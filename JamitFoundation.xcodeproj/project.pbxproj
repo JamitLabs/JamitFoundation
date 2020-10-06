@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
 		1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F424BC6C840087D132 /* CollapsibleView.swift */; };
 		1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */; };
 		1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */; };
 		1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */; };
+		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
 		C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604823AE166D001CFD85 /* CollectionViewCell.swift */; };
 		C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604923AE166D001CFD85 /* TableViewCell.swift */; };
@@ -42,11 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
 		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
 		1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleViewModel.swift; sourceTree = "<group>"; };
 		1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderView.swift; sourceTree = "<group>"; };
 		1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderViewModel.swift; sourceTree = "<group>"; };
+		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C568604923AE166D001CFD85 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation;
 				PRODUCT_NAME = JamitFoundation;
 				SKIP_INSTALL = YES;
@@ -544,7 +544,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation;
 				PRODUCT_NAME = JamitFoundation;
 				SKIP_INSTALL = YES;
