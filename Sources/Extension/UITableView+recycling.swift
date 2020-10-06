@@ -26,6 +26,29 @@ public extension UITableView {
         }
     }
 
+    /// Registers a reusable table view headerFooterView of type `HeaderFooterViewType` which inherits from `UITableViewHeaderFooterView`.
+    ///
+    /// The reusable headerFooterView will be registered as nib when there is a nib file inside the given Bundle
+    /// which has the same name as the class name of `HeaderFooterViewType`.
+    ///
+    /// The reuse identifier of the headerFooterView will be the class name of `HeaderFooterViewType`.
+    ///
+    /// Example:
+    ///
+    /// ```swift
+    /// tableView.register(headerFooterViewOfType: MyHeaderFooterView.self)
+    /// ```
+    ///
+    /// - Parameter headerFooterViewOfType: The type of the reusable headerFooterView to register.
+    func register<HeaderFooterViewType: UITableViewHeaderFooterView>(headerFooterViewOfType headerFooterViewType: HeaderFooterViewType.Type) {
+        let identifier = String(describing: headerFooterViewType)
+        if Bundle.main.path(forResource: identifier, ofType: "nib") != nil {
+            register(UINib(nibName: identifier, bundle: .main), forHeaderFooterViewReuseIdentifier: identifier)
+        } else {
+            register(headerFooterViewType, forHeaderFooterViewReuseIdentifier: identifier)
+        }
+    }
+
     /// Dequeues a reusable table view cell of type `CellType` which inherits from `UITableViewCell`.
     ///
     /// The class name of the `CellType` will be used as reuse identifier of the dequeued cell.
@@ -43,6 +66,24 @@ public extension UITableView {
     /// - Parameter indexPath: The index path for which the dequeue is intented to be.
     func dequeue<Cell: UITableViewCell>(cellOfType cellType: Cell.Type, for indexPath: IndexPath) -> Cell {
         return dequeueReusableCell(withIdentifier: String(describing: cellType), for: indexPath) as! Cell
+    }
+
+    /// Dequeues a reusable table view headerFooterView of type `HeaderFooterView` which inherits from `UITableViewHeaderFooterView`.
+    ///
+    /// The class name of the `HeaderFooterView` will be used as reuse identifier of the dequeued cell.
+    ///
+    /// Example:
+    /// ```swift
+    /// // The type of `headerFooterview` will be `MyHeaderFooterView`.
+    /// let headerFooter = tableView.dequeue(headerFooterViewOfType: MyHeaderFooterView.self)
+    /// ```
+    ///
+    /// - Attention: Always ensure that the registered headerFooterView is of type `HeaderFooterView`
+    ///              when the cell is not of type `HeaderFooterView` a crash will occure at runtime.
+    ///
+    /// - Parameter headerFooterViewType: The reusable headerFooterView type to be dequeued.
+    func dequeue<HeaderFooterView: UITableViewHeaderFooterView>(headerFooterViewOfType headerFooterViewType: HeaderFooterView.Type) -> HeaderFooterView {
+        return dequeueReusableHeaderFooterView(withIdentifier: String(describing: headerFooterViewType)) as! HeaderFooterView
     }
 }
 
