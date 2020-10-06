@@ -48,8 +48,6 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
-		1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; };
-		1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1EFCDA7024C5C1C600B41530 /* CollapsibleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */; };
 		1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */; };
 		1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */; };
@@ -135,7 +133,6 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
-		1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JamitFoundation.xcodeproj; path = ../../JamitFoundation.xcodeproj; sourceTree = "<group>"; };
 		1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsibleTableViewController.xib; sourceTree = "<group>"; };
 		1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
@@ -368,14 +365,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		1E7C774424BC7A9900B4CC88 /* Collapsible */ = {
-			isa = PBXGroup;
-			children = (
-				1E7C774524BC7AB300B4CC88 /* CollapsibleTableViewCell.swift */,
-			);
-			path = Collapsible;
-			sourceTree = "<group>";
-		};
 		1E46DE4C24AF6DB3007226EF /* TimePickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +434,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */,
+				1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */,
+				1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */,
+			);
+			path = CollapsibleTableView;
+			sourceTree = "<group>";
+		};
 		EBED3B7424D29EFB00CF9221 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,16 +473,6 @@
 				EBED3B8124D2A70900CF9221 /* FancyLabel */,
 			);
 			path = ReusableView;
-			sourceTree = "<group>";
-		};
-		1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */ = {
-			isa = PBXGroup;
-			children = (
-				1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */,
-				1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */,
-				1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */,
-			);
-			path = CollapsibleTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1006,7 +995,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				branch = "feature/time-picker-view";
+				branch = "feature/collapsible-view-in-table-view";
 				kind = branch;
 			};
 		};

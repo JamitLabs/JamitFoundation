@@ -114,6 +114,8 @@
 				1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */,
 			);
 			path = CollapsibleTableViewCell;
+			sourceTree = "<group>";
+		};
 		B4F0DABC24E3F8DB0074056A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
