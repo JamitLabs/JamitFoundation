@@ -11,6 +11,7 @@ let package = Package(
         .library(name: "GridView", targets: ["GridView"]),
         .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
         .library(name: "CarouselView", targets: ["CarouselView"]),
+        .library(name: "TimePickerView", targets: ["TimePickerView"]),
         .library(name: "WeakCache", targets: ["WeakCache"])
     ],
     dependencies: [],
@@ -41,6 +42,11 @@ let package = Package(
             path: "Modules/CarouselView"
         ),
         .target(
+            name: "TimePickerView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/TimePickerView"
+		),
+		.target(
             name: "WeakCache",
             dependencies: ["JamitFoundation"],
             path: "Modules/WeakCache/Sources"

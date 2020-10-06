@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,15 @@
 		1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */; };
 		1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */; };
 		1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */; };
+		1E46DE4124AF6CE4007226EF /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4024AF6CE4007226EF /* PageView */; };
+		1E46DE4324AF6CE4007226EF /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4224AF6CE4007226EF /* BarcodeScanner */; };
+		1E46DE4524AF6CE4007226EF /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4424AF6CE4007226EF /* CarouselView */; };
+		1E46DE4724AF6CE4007226EF /* TimePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4624AF6CE4007226EF /* TimePickerView */; };
+		1E46DE4924AF6CE4007226EF /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4824AF6CE4007226EF /* JamitFoundation */; };
+		1E46DE4B24AF6CE4007226EF /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4A24AF6CE4007226EF /* GridView */; };
+		1E46DE4E24AF6DCF007226EF /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE4D24AF6DCF007226EF /* TimePickerViewController.swift */; };
+		1E46DE5024AF6DDD007226EF /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E46DE4F24AF6DDD007226EF /* TimePickerViewController.xib */; };
+		1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */; };
 		1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E4D4D52244EEA8200B22541 /* Localizable.strings */; };
 		1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */; };
 		1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229323F2A24200C90405 /* ListItemViewModel.swift */; };
@@ -39,8 +48,6 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
-		1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; };
-		1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */; };
 		EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */; };
 		EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */; };
@@ -66,20 +73,6 @@
 			remoteGlobalIDString = 1E1B3FE323F27E8700D9A6D5;
 			remoteInfo = JamitFoundationExample;
 		};
-		1EDB1C5224BC6AB000FEFA7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C5CB31C02371D0BE00E25E4B;
-			remoteInfo = JamitFoundation;
-		};
-		1EDB1C5424BC6ACF00FEFA7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
-			remoteInfo = JamitFoundation;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,7 +82,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +112,9 @@
 		1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTitleView.swift; sourceTree = "<group>"; };
 		1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTitleViewModel.swift; sourceTree = "<group>"; };
 		1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewTitleView.xib; sourceTree = "<group>"; };
+		1E46DE4D24AF6DCF007226EF /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		1E46DE4F24AF6DDD007226EF /* TimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerViewController.xib; sourceTree = "<group>"; };
+		1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1E4D4D52244EEA8200B22541 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1E4DC76B23F2B4CF00F940D7 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		1EC7229323F2A24200C90405 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
@@ -135,7 +130,6 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
-		1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JamitFoundation.xcodeproj; path = ../../JamitFoundation.xcodeproj; sourceTree = "<group>"; };
 		EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
 		EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewViewModel.swift; sourceTree = "<group>"; };
@@ -151,7 +145,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */,
+				1E46DE4324AF6CE4007226EF /* BarcodeScanner in Frameworks */,
+				1E46DE4B24AF6CE4007226EF /* GridView in Frameworks */,
+				1E46DE4924AF6CE4007226EF /* JamitFoundation in Frameworks */,
+				1E46DE4524AF6CE4007226EF /* CarouselView in Frameworks */,
+				1E46DE4724AF6CE4007226EF /* TimePickerView in Frameworks */,
+				1E46DE4124AF6CE4007226EF /* PageView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +197,6 @@
 				1E1B3FFD23F27E8700D9A6D5 /* Tests */,
 				1E1B400823F27E8700D9A6D5 /* UITests */,
 				1E1B3FE523F27E8700D9A6D5 /* Products */,
-				1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */,
 				1EDB1C5624BC6AEA00FEFA7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -298,6 +296,7 @@
 				1E1B402223F2818C00D9A6D5 /* TableView */,
 				1ECA14A7242A6B1200321BFC /* ActionView */,
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
+				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
 				1E1031E324B616660015581B /* CollapsibleView */,
 			);
 			path = Sources;
@@ -359,6 +358,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1E46DE4C24AF6DB3007226EF /* TimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1E46DE4D24AF6DCF007226EF /* TimePickerViewController.swift */,
+				1E46DE4F24AF6DDD007226EF /* TimePickerViewController.xib */,
+				1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */,
+			);
+			path = TimePickerView;
+			sourceTree = "<group>";
+		};
 		1EC7229523F2A34200C90405 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,14 +418,6 @@
 				1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */,
 			);
 			path = ScrollView;
-			sourceTree = "<group>";
-		};
-		1EDB1C4F24BC6AB000FEFA7D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1EDB1C5624BC6AEA00FEFA7D /* Frameworks */ = {
@@ -472,10 +473,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				1EDB1C5524BC6ACF00FEFA7D /* PBXTargetDependency */,
 			);
 			name = JamitFoundationExample;
 			packageProductDependencies = (
+				1E46DE4024AF6CE4007226EF /* PageView */,
+				1E46DE4224AF6CE4007226EF /* BarcodeScanner */,
+				1E46DE4424AF6CE4007226EF /* CarouselView */,
+				1E46DE4624AF6CE4007226EF /* TimePickerView */,
+				1E46DE4824AF6CE4007226EF /* JamitFoundation */,
+				1E46DE4A24AF6CE4007226EF /* GridView */,
 			);
 			productName = JamitFoundationExample;
 			productReference = 1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */;
@@ -550,15 +556,10 @@
 			);
 			mainGroup = 1E1B3FDB23F27E8700D9A6D5;
 			packageReferences = (
+				1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */,
 			);
 			productRefGroup = 1E1B3FE523F27E8700D9A6D5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1EDB1C4F24BC6AB000FEFA7D /* Products */;
-					ProjectRef = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1E1B3FE323F27E8700D9A6D5 /* JamitFoundationExample */,
@@ -567,16 +568,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = JamitFoundation.framework;
-			remoteRef = 1EDB1C5224BC6AB000FEFA7D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E1B3FE223F27E8700D9A6D5 /* Resources */ = {
@@ -591,6 +582,7 @@
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
 				1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */,
 				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
+				1E46DE5024AF6DDD007226EF /* TimePickerViewController.xib in Resources */,
 				EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */,
 				EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */,
 				1ECA14AB242A6BF700321BFC /* ActionViewController.xib in Resources */,
@@ -625,6 +617,7 @@
 				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
 				1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */,
+				1E46DE4E24AF6DCF007226EF /* TimePickerViewController.swift in Sources */,
 				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
 				1ECA14AD242A6BFF00321BFC /* ActionViewControllerViewModel.swift in Sources */,
 				1ECA14A9242A6BED00321BFC /* ActionViewController.swift in Sources */,
@@ -633,6 +626,7 @@
 				EBED3B8B24D2B06400CF9221 /* FancyLabelSupplementaryView.swift in Sources */,
 				1ECA14A2242A1D6C00321BFC /* TableViewItemView.swift in Sources */,
 				1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */,
+				1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */,
 				EBED3B8324D2A71C00CF9221 /* FancyLabelViewModel.swift in Sources */,
 				EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */,
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
@@ -676,11 +670,6 @@
 			isa = PBXTargetDependency;
 			target = 1E1B3FE323F27E8700D9A6D5 /* JamitFoundationExample */;
 			targetProxy = 1E1B400623F27E8700D9A6D5 /* PBXContainerItemProxy */;
-		};
-		1EDB1C5524BC6ACF00FEFA7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JamitFoundation;
-			targetProxy = 1EDB1C5424BC6ACF00FEFA7D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -980,6 +969,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
+			requirement = {
+				branch = "feature/time-picker-view";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E46DE4024AF6CE4007226EF /* PageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = PageView;
+		};
+		1E46DE4224AF6CE4007226EF /* BarcodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = BarcodeScanner;
+		};
+		1E46DE4424AF6CE4007226EF /* CarouselView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = CarouselView;
+		};
+		1E46DE4624AF6CE4007226EF /* TimePickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = TimePickerView;
+		};
+		1E46DE4824AF6CE4007226EF /* JamitFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = JamitFoundation;
+		};
+		1E46DE4A24AF6CE4007226EF /* GridView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = GridView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E1B3FDC23F27E8700D9A6D5 /* Project object */;
 }
