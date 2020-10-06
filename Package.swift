@@ -4,13 +4,15 @@ import PackageDescription
 
 let package = Package(
     name: "JamitFoundation",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v9)],
     products: [
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
         .library(name: "PageView", targets: ["PageView"]),
         .library(name: "GridView", targets: ["GridView"]),
         .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
-        .library(name: "CarouselView", targets: ["CarouselView"])
+        .library(name: "CarouselView", targets: ["CarouselView"]),
+        .library(name: "TimePickerView", targets: ["TimePickerView"]),
+        .library(name: "WeakCache", targets: ["WeakCache"])
     ],
     dependencies: [],
     targets: [
@@ -38,6 +40,21 @@ let package = Package(
             name: "CarouselView",
             dependencies: ["JamitFoundation"],
             path: "Modules/CarouselView"
+        ),
+        .target(
+            name: "TimePickerView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/TimePickerView"
+		),
+		.target(
+            name: "WeakCache",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/WeakCache/Sources"
+        ),
+        .testTarget(
+            name: "WeakCacheTests",
+            dependencies: ["WeakCache"],
+            path: "Modules/WeakCache/Tests"
         )
     ]
 )

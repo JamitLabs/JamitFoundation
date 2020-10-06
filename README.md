@@ -17,7 +17,7 @@ Add the package dependency to your `Package.swift` file.
  let package = Package(
     // ...
     dependencies: [
-+       .package(url: "git@github.com:JamitLabs/JamitFoundation.git", .upToNextMajor(from: "1.0.0"))
++       .package(url: "git@github.com:JamitLabs/JamitFoundation.git", .upToNextMajor(from: "1.4.0"))
     ]
     // ...
  )
@@ -106,3 +106,13 @@ final class MyTableViewController: UITableViewController {
     }
 }
 ```
+
+## Modules
+Following optional modules are available:
+
+- [WeakCache](Modules/WeakCache/README.md)
+- PageView
+- GridView
+- CarouselView
+- BarcodeScanner
+- TimePickerView

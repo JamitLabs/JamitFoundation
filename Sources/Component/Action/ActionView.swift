@@ -21,6 +21,7 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         view.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -28,19 +29,30 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
         view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
+        button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         addSubview(button)
         button.topAnchor.constraint(equalTo: topAnchor).isActive = true
         button.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         button.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        button.addTarget(self, action: #selector(didTriggerAction), for: .touchUpInside)
-        button.addTarget(self, action: #selector(updateBackgroundColor), for: .allTouchEvents)
-        button.addTarget(self, action: #selector(lateUpdateBackgroundColor), for: .allTouchEvents)
+        button.addTarget(self, action: #selector(didTriggerAction), for: .primaryActionTriggered)
+        button.addTarget(self, action: #selector(didChangeButtonState), for: .allTouchEvents)
+        button.addTarget(self, action: #selector(lateDidChangeButtonState), for: .allTouchEvents)
 
         isUserInteractionEnabled = true
 
         bringSubviewToFront(button)
+    }
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        button.layer.cornerRadius = view.layer.cornerRadius
+
+        if #available(iOS 11.0, *) {
+            button.layer.maskedCorners = view.layer.maskedCorners
+        }
     }
 
     public override func didChangeModel() {
@@ -55,18 +67,62 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
     }
 
     @objc
-    private func updateBackgroundColor() {
-        if [.highlighted, .selected].contains(button.state) {
+    private func didChangeButtonState() {
+        switch button.state {
+        case .highlighted, .selected:
+            willHighlight()
+
+        default:
+            willRemoveHighlighting()
+        }
+    }
+
+    private func willHighlight() {
+        switch model.highlightAnimation {
+        case .normal:
             button.backgroundColor = UIColor.black.withAlphaComponent(0.15)
-        } else {
+
+        case let .curveEaseInOut(duration):
+            UIView.animate(
+                withDuration: duration,
+                delay: 0,
+                options: [.curveEaseInOut],
+                animations: {
+                    self.view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                },
+                completion: nil
+            )
+
+        case let .custom(animation):
+            animation(view, button.state)
+        }
+    }
+
+    private func willRemoveHighlighting() {
+        switch model.highlightAnimation {
+        case .normal:
             button.backgroundColor = UIColor.black.withAlphaComponent(0)
+
+        case let .curveEaseInOut(duration):
+            UIView.animate(
+                withDuration: duration,
+                delay: 0,
+                options: [.curveEaseInOut],
+                animations: {
+                    self.view.transform = .identity
+                },
+                completion: nil
+            )
+
+        case let .custom(animation):
+            animation(view, button.state)
         }
     }
 
     @objc
-    private func lateUpdateBackgroundColor() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + model.animationDuration) { [weak self] in
-            self?.updateBackgroundColor()
+    private func lateDidChangeButtonState() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+            self?.didChangeButtonState()
         }
     }
 }

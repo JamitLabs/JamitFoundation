@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F424BC6C840087D132 /* CollapsibleView.swift */; };
+		1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */; };
+		1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */; };
+		1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */; };
+		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
+		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
 		C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604823AE166D001CFD85 /* CollectionViewCell.swift */; };
 		C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604923AE166D001CFD85 /* TableViewCell.swift */; };
 		C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */; };
@@ -31,9 +37,17 @@
 		C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31F52371D10F00E25E4B /* ListViewController.swift */; };
 		C5CB320B2371D10F00E25E4B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31F62371D10F00E25E4B /* ListViewModel.swift */; };
 		C5CB32152371D1A700E25E4B /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBED3B7224D29D8100CF9221 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */; };
+		EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
+		1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleViewModel.swift; sourceTree = "<group>"; };
+		1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderView.swift; sourceTree = "<group>"; };
+		1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderViewModel.swift; sourceTree = "<group>"; };
+		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
+		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C568604923AE166D001CFD85 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JamitFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +74,8 @@
 		C5CB31F62371D10F00E25E4B /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C5CB32132371D1A700E25E4B /* JamitFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JamitFoundation.h; sourceTree = "<group>"; };
 		C5CB32142371D1A700E25E4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerCollectionSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +89,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E0B89F324BC6C840087D132 /* CollapsibleView */ = {
+			isa = PBXGroup;
+			children = (
+				1E0B89F424BC6C840087D132 /* CollapsibleView.swift */,
+				1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */,
+				1E0B89F624BC6C840087D132 /* HeaderView */,
+			);
+			path = CollapsibleView;
+			sourceTree = "<group>";
+		};
+		1E0B89F624BC6C840087D132 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */,
+				1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		1EFCDA6924C5C10600B41530 /* CollapsibleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */,
+			);
+			path = CollapsibleTableViewCell;
+			sourceTree = "<group>";
+		};
+		B4F0DABC24E3F8DB0074056A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5CB31B62371D0BE00E25E4B = {
 			isa = PBXGroup;
 			children = (
 				C5CB32122371D1A700E25E4B /* SupportingFiles */,
 				C5CB31D72371D10F00E25E4B /* Sources */,
 				C5CB31C12371D0BE00E25E4B /* Products */,
+				B4F0DABC24E3F8DB0074056A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C5CB31DC2371D10F00E25E4B /* UICollectionView+recycling.swift */,
+				1E80B037246ACA0400DB7514 /* UIControl+extension.swift */,
 				C5CB31DA2371D10F00E25E4B /* UITableView+recycling.swift */,
 				C5CB31DB2371D10F00E25E4B /* UIView+instantiate.swift */,
 				C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */,
@@ -116,6 +168,8 @@
 		C5CB31DD2371D10F00E25E4B /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */,
+				EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */,
 				C568604823AE166D001CFD85 /* CollectionViewCell.swift */,
 				C5CB31E42371D10F00E25E4B /* ContainerCollectionViewCell.swift */,
 				C5CB31E22371D10F00E25E4B /* ContainerTableViewCell.swift */,
@@ -133,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				C5CB31EB2371D10F00E25E4B /* Action */,
+				1EFCDA6924C5C10600B41530 /* CollapsibleTableViewCell */,
+				1E0B89F324BC6C840087D132 /* CollapsibleView */,
 				C5CB31E82371D10F00E25E4B /* Image */,
 				C5CB31E62371D10F00E25E4B /* Label */,
 			);
@@ -247,6 +303,7 @@
 		C5CB31B72371D0BE00E25E4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
@@ -288,7 +345,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */,
 				C5CB31FE2371D10F00E25E4B /* StatefulView.swift in Sources */,
+				1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */,
 				C5CB32012371D10F00E25E4B /* ContainerCollectionViewCell.swift in Sources */,
 				C5CB320B2371D10F00E25E4B /* ListViewModel.swift in Sources */,
 				C5CB32022371D10F00E25E4B /* Label.swift in Sources */,
@@ -303,14 +362,20 @@
 				C5CB31F82371D10F00E25E4B /* UITableView+recycling.swift in Sources */,
 				C5CB32002371D10F00E25E4B /* ErrorCallback.swift in Sources */,
 				C5CB31FD2371D10F00E25E4B /* StatefulViewController.swift in Sources */,
+				1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */,
+				EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */,
 				C5CB31FA2371D10F00E25E4B /* UICollectionView+recycling.swift in Sources */,
 				C5CB31FB2371D10F00E25E4B /* VoidCallback.swift in Sources */,
 				C5CB32042371D10F00E25E4B /* ImageView.swift in Sources */,
 				C5CB32072371D10F00E25E4B /* ViewModelProtocol.swift in Sources */,
+				1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */,
+				EBED3B7224D29D8100CF9221 /* CollectionReusableView.swift in Sources */,
 				C5CB32092371D10F00E25E4B /* ScrollViewController.swift in Sources */,
 				C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */,
+				1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */,
 				C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */,
 				C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */,
+				1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,13 +512,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation;
 				PRODUCT_NAME = JamitFoundation;
 				SKIP_INSTALL = YES;
@@ -473,13 +538,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation;
 				PRODUCT_NAME = JamitFoundation;
 				SKIP_INSTALL = YES;
