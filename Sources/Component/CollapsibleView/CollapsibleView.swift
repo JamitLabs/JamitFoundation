@@ -45,7 +45,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
 
     private lazy var stackView: UIStackView = {
         let stackView: UIStackView = .init()
-        stackView.alignment = .fill
+        stackView.alignment = .center
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
         return stackView
@@ -54,6 +54,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        clipsToBounds = true
         headerView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(headerView)
         headerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -84,13 +85,13 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
             stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
 
             model.items.forEach { view in
-                view.isHidden = !model.isCollapsed
+                view.isHidden = model.isCollapsed
                 stackView.addArrangedSubview(view)
             }
         } else {
             UIView.animate(withDuration: model.animationDuration) {
                 self.model.items.forEach { view in
-                    view.isHidden = !self.model.isCollapsed
+                    view.isHidden = self.model.isCollapsed
                 }
             }
         }
@@ -101,6 +102,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
     @objc
     private func didTriggerAction() {
         model.isCollapsed.toggle()
+        model.didChangeCollapsibleState?(model.isCollapsed)
     }
 
     @objc

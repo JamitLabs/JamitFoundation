@@ -12,6 +12,7 @@ public struct CollapsibleViewModel<HeaderViewModel: ViewModelProtocol>: ViewMode
     public var isCollapsed: Bool
     /// The animation duration for the state change of the collapsible view
     public let animationDuration: TimeInterval
+    public var didChangeCollapsibleState: ((Bool) -> Void)?
 
     /// The default initializer of `CollapsibleViewModel`.
     ///
@@ -23,12 +24,14 @@ public struct CollapsibleViewModel<HeaderViewModel: ViewModelProtocol>: ViewMode
         headerViewModel: HeaderViewModel = Self.default.headerViewModel,
         items: [UIView] = Self.default.items,
         isCollapsed: Bool = Self.default.isCollapsed,
-        animationDuration: TimeInterval = Self.default.animationDuration
+        animationDuration: TimeInterval = Self.default.animationDuration,
+        didChangeCollapsibleState: ((Bool) -> Void)? = Self.default.didChangeCollapsibleState
     ) {
         self.headerViewModel = headerViewModel
         self.items = items
         self.isCollapsed = isCollapsed
         self.animationDuration = animationDuration
+        self.didChangeCollapsibleState = didChangeCollapsibleState
     }
 }
 
@@ -39,7 +42,8 @@ extension CollapsibleViewModel {
             headerViewModel: .default,
             items: [],
             isCollapsed: false,
-            animationDuration: 0.3
+            animationDuration: 0.0,
+            didChangeCollapsibleState: nil
         )
     }
 }

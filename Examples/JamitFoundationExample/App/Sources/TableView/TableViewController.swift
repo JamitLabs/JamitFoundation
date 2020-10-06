@@ -5,14 +5,13 @@ import JamitFoundation
 import UIKit
 
 class TableViewController: StatefulViewController<TableViewViewModel> {
-
     @IBOutlet private var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "TableViewController"
-        
+
         tableView.register(cellOfType: TableViewTitleTableViewCell.self)
         tableView.register(cellOfType: TableViewItemTableViewCell.self)
     }

@@ -48,6 +48,9 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
+		1EFCDA7024C5C1C600B41530 /* CollapsibleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */; };
+		1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */; };
+		1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */; };
 		EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */; };
 		EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */; };
 		EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */; };
@@ -130,6 +133,9 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsibleTableViewController.xib; sourceTree = "<group>"; };
+		1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
 		EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
 		EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewViewModel.swift; sourceTree = "<group>"; };
@@ -298,6 +304,7 @@
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
 				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
 				1E1031E324B616660015581B /* CollapsibleView */,
+				1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -425,6 +432,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */,
+				1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */,
+				1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */,
+			);
+			path = CollapsibleTableView;
 			sourceTree = "<group>";
 		};
 		EBED3B7424D29EFB00CF9221 /* CollectionView */ = {
@@ -574,6 +591,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFCDA7024C5C1C600B41530 /* CollapsibleTableViewController.xib in Resources */,
 				1E1B3FF423F27E8700D9A6D5 /* LaunchScreen.storyboard in Resources */,
 				1E1B3FF123F27E8700D9A6D5 /* Assets.xcassets in Resources */,
 				1E1031E724B616920015581B /* CollapsibleViewController.xib in Resources */,
@@ -612,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */,
 				1E1031E924B6169C0015581B /* CollapsibleViewControllerViewModel.swift in Sources */,
 				1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */,
 				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
@@ -630,6 +649,7 @@
 				EBED3B8324D2A71C00CF9221 /* FancyLabelViewModel.swift in Sources */,
 				EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */,
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
+				1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */,
 				EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */,
 				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
 				1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */,
@@ -975,7 +995,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				branch = "feature/time-picker-view";
+				branch = "feature/collapsible-view-in-table-view";
 				kind = branch;
 			};
 		};
