@@ -238,7 +238,7 @@ extension SampleListViewController: UITableViewDelegate {
         case 7:
             showCollectionView()
 
-		case 5:
+		case 8:
             showBarcodeScanner()
 
         default:
