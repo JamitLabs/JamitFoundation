@@ -162,6 +162,7 @@ final class SampleListViewController: ListViewController<ListItemView> {
             ),
             items: items
         )
+        navigationController?.pushViewController(viewController, animated: true)
 	}
 
     private func showTabBar() {

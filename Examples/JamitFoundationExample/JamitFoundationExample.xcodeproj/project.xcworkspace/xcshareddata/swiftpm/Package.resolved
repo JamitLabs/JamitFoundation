@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "JamitFoundation",
-        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation.git",
+        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
         "state": {
           "branch": "feature/tab-bar",
-          "revision": "d46c918a80e898e7357a6cfab3e773f75bca1c63",
+          "revision": "cc672eb7f064aafbdfe6097e5f975ff878cd2355",
           "version": null
         }
       }
