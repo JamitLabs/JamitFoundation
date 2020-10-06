@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
 		1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F424BC6C840087D132 /* CollapsibleView.swift */; };
 		1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */; };
 		1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
 		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
 		1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleViewModel.swift; sourceTree = "<group>"; };
 		1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C5CB31DC2371D10F00E25E4B /* UICollectionView+recycling.swift */,
+				1E80B037246ACA0400DB7514 /* UIControl+extension.swift */,
 				C5CB31DA2371D10F00E25E4B /* UITableView+recycling.swift */,
 				C5CB31DB2371D10F00E25E4B /* UIView+instantiate.swift */,
 				C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */,
@@ -353,6 +356,7 @@
 				C5CB31FB2371D10F00E25E4B /* VoidCallback.swift in Sources */,
 				C5CB32042371D10F00E25E4B /* ImageView.swift in Sources */,
 				C5CB32072371D10F00E25E4B /* ViewModelProtocol.swift in Sources */,
+				1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */,
 				EBED3B7224D29D8100CF9221 /* CollectionReusableView.swift in Sources */,
 				C5CB32092371D10F00E25E4B /* ScrollViewController.swift in Sources */,
 				C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */,
