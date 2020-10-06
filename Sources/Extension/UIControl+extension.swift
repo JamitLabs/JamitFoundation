@@ -3,29 +3,29 @@
 import UIKit
 
 @objc
-class ClosureWrapper: NSObject {
-    private let closure: VoidCallback?
+private class CallbackWrapper: NSObject {
+    private let callback: VoidCallback?
 
-    init(_ closure: VoidCallback?) {
-        self.closure = closure
+    init(_ callback: VoidCallback?) {
+        self.callback = callback
     }
 
     @objc
     func invoke () {
-        closure?()
+        callback?()
     }
 }
 
 public extension UIControl {
-    struct AssociatedKey {
-        static var actionWrapper: UInt8 = 0
+    private struct AssociatedKey {
+        static var callbackWrapper: UInt8 = 0
     }
 
-    /// Add an action to a UIControl by simply passing the control event. The closure will then be notified when this event is being triggered.
-    func addAction(for controlEvent: UIControl.Event = .primaryActionTriggered, _ closure: VoidCallback?) {
-        let actionWrapper = ClosureWrapper(closure)
-        addTarget(actionWrapper, action: #selector(actionWrapper.invoke), for: controlEvent)
+    /// Add an action to a UIControl by simply passing the control event. The callback will then be notified when this event is being triggered.
+    func addAction(for controlEvent: UIControl.Event = .primaryActionTriggered, _ callback: VoidCallback?) {
+        let callbackWrapper = CallbackWrapper(callback)
+        addTarget(callbackWrapper, action: #selector(callbackWrapper.invoke), for: controlEvent)
 
-        objc_setAssociatedObject(self, &AssociatedKey.actionWrapper, actionWrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        objc_setAssociatedObject(self, &AssociatedKey.callbackWrapper, callbackWrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
     }
 }
