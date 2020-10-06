@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "JamitFoundation",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v9)],
     products: [
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
         .library(name: "PageView", targets: ["PageView"]),
