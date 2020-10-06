@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,8 +48,6 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
-		1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; };
-		1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */; };
 		EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */; };
 		EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */; };
@@ -75,20 +73,6 @@
 			remoteGlobalIDString = 1E1B3FE323F27E8700D9A6D5;
 			remoteInfo = JamitFoundationExample;
 		};
-		1EDB1C5224BC6AB000FEFA7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C5CB31C02371D0BE00E25E4B;
-			remoteInfo = JamitFoundation;
-		};
-		1EDB1C5424BC6ACF00FEFA7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
-			remoteInfo = JamitFoundation;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,7 +82,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1EDB1C5824BC6AEA00FEFA7D /* JamitFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +130,6 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
-		1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JamitFoundation.xcodeproj; path = ../../JamitFoundation.xcodeproj; sourceTree = "<group>"; };
 		EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
 		EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewViewModel.swift; sourceTree = "<group>"; };
@@ -163,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDB1C5724BC6AEA00FEFA7D /* JamitFoundation.framework in Frameworks */,
 				1E46DE4324AF6CE4007226EF /* BarcodeScanner in Frameworks */,
 				1E46DE4B24AF6CE4007226EF /* GridView in Frameworks */,
 				1E46DE4924AF6CE4007226EF /* JamitFoundation in Frameworks */,
@@ -216,7 +197,6 @@
 				1E1B3FFD23F27E8700D9A6D5 /* Tests */,
 				1E1B400823F27E8700D9A6D5 /* UITests */,
 				1E1B3FE523F27E8700D9A6D5 /* Products */,
-				1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */,
 				1EDB1C5624BC6AEA00FEFA7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -440,14 +420,6 @@
 			path = ScrollView;
 			sourceTree = "<group>";
 		};
-		1EDB1C4F24BC6AB000FEFA7D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1EDB1C5624BC6AEA00FEFA7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,7 +473,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1EDB1C5524BC6ACF00FEFA7D /* PBXTargetDependency */,
 			);
 			name = JamitFoundationExample;
 			packageProductDependencies = (
@@ -589,12 +560,6 @@
 			);
 			productRefGroup = 1E1B3FE523F27E8700D9A6D5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1EDB1C4F24BC6AB000FEFA7D /* Products */;
-					ProjectRef = 1EDB1C4E24BC6AB000FEFA7D /* JamitFoundation.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1E1B3FE323F27E8700D9A6D5 /* JamitFoundationExample */,
@@ -603,16 +568,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1EDB1C5324BC6AB000FEFA7D /* JamitFoundation.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = JamitFoundation.framework;
-			remoteRef = 1EDB1C5224BC6AB000FEFA7D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E1B3FE223F27E8700D9A6D5 /* Resources */ = {
@@ -715,11 +670,6 @@
 			isa = PBXTargetDependency;
 			target = 1E1B3FE323F27E8700D9A6D5 /* JamitFoundationExample */;
 			targetProxy = 1E1B400623F27E8700D9A6D5 /* PBXContainerItemProxy */;
-		};
-		1EDB1C5524BC6ACF00FEFA7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JamitFoundation;
-			targetProxy = 1EDB1C5424BC6ACF00FEFA7D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
