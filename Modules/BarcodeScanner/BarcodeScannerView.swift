@@ -42,6 +42,8 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     private var isCaptureSessionConfigured: Bool = false
     private var isCaptureSessionRunning: Bool = false
 
+    private var isDeinited: Bool = false
+
     private var isScanningEnabled: Bool = false {
         didSet { didChangeState() }
     }
@@ -58,6 +60,12 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         didSet { didChangeState() }
     }
 
+    deinit {
+        // Resuming the capture session queue before release is mandatory to avoid crashes
+        isDeinited = true
+        captureSessionQueue.resume()
+    }
+
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,7 +75,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
 
         captureSessionQueue.suspend()
         captureSessionQueue.async { [weak self] in
-            guard let self = self else { return }
+            guard let self = self, !self.isDeinited else { return }
 
             self.captureSession.beginConfiguration()
             defer { self.captureSession.commitConfiguration() }
