@@ -127,7 +127,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         super.didChangeModel()
 
         captureSessionQueue.async { [weak self] in
-            guard let self = self, self.isCaptureSessionConfigured else { return }
+            guard let self = self, self.isCaptureSessionConfigured, !self.isDeinited else { return }
 
             self.captureSession.beginConfiguration()
             defer { self.captureSession.commitConfiguration() }
@@ -158,7 +158,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     private func didChangeState() {
         if isScanning, isScanningEnabled, !isCaptureSessionRunning {
             self.captureSessionQueue.async { [weak self] in
-                guard let self = self else { return }
+                guard let self = self, !self.isDeinited else { return }
 
                 self.addObservers()
                 self.captureSession.startRunning()
@@ -168,7 +168,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
 
         if (!isScanning || !isScanningEnabled), isCaptureSessionRunning {
             self.captureSessionQueue.async { [weak self] in
-                guard let self = self else { return }
+                guard let self = self, !self.isDeinited else { return }
 
                 self.captureSession.stopRunning()
                 self.isCaptureSessionRunning = self.captureSession.isRunning
@@ -271,7 +271,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     @objc
     private func captureDeviceSubjectAreaDidChange(_ notification: NSNotification) {
         captureSessionQueue.async { [weak self] in
-            guard let self = self, let device = self.captureDeviceInput?.device else { return }
+            guard let self = self, let device = self.captureDeviceInput?.device, !self.isDeinited else { return }
 
             do {
                 try device.lockForConfiguration()
@@ -303,7 +303,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         let error = AVError(_nsError: errorValue)
         if error.code == .mediaServicesWereReset {
             captureSessionQueue.async { [weak self] in
-                guard let self = self, self.isCaptureSessionRunning else { return }
+                guard let self = self, self.isCaptureSessionRunning, !self.isDeinited else { return }
 
                 self.captureSession.startRunning()
                 self.isCaptureSessionRunning = self.captureSession.isRunning
