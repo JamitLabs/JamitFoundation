@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name          = "JamitFoundation"
-  spec.version       = "1.4.0"
+  spec.version       = "1.4.1"
   spec.summary       = "JamitFoundation is a collection of useful concepts to enable composition oriented development with UIKit."
   spec.homepage      = "https://github.com/JamitLabs/JamitFoundation"
   spec.license       = { :type => 'MIT' }
