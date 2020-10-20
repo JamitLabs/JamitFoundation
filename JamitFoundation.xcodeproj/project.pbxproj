@@ -92,6 +92,7 @@
 		1E0B89F324BC6C840087D132 /* CollapsibleView */ = {
 			isa = PBXGroup;
 			children = (
+				38B9498325189CAD00E1B9C7 /* Tests */,
 				1E0B89F424BC6C840087D132 /* CollapsibleView.swift */,
 				1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */,
 				1E0B89F624BC6C840087D132 /* HeaderView */,
@@ -126,10 +127,10 @@
 		C5CB31B62371D0BE00E25E4B = {
 			isa = PBXGroup;
 			children = (
-				C5CB32122371D1A700E25E4B /* SupportingFiles */,
-				C5CB31D72371D10F00E25E4B /* Sources */,
-				C5CB31C12371D0BE00E25E4B /* Products */,
 				B4F0DABC24E3F8DB0074056A /* Frameworks */,
+				C5CB31C12371D0BE00E25E4B /* Products */,
+				C5CB31D72371D10F00E25E4B /* Sources */,
+				C5CB32122371D1A700E25E4B /* SupportingFiles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -363,6 +364,7 @@
 				C5CB32002371D10F00E25E4B /* ErrorCallback.swift in Sources */,
 				C5CB31FD2371D10F00E25E4B /* StatefulViewController.swift in Sources */,
 				1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */,
+				38B9498525189CAD00E1B9C7 /* CollapsibleViewTests.swift in Sources */,
 				EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */,
 				C5CB31FA2371D10F00E25E4B /* UICollectionView+recycling.swift in Sources */,
 				C5CB31FB2371D10F00E25E4B /* VoidCallback.swift in Sources */,

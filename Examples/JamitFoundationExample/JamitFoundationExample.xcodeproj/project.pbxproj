@@ -444,6 +444,34 @@
 			path = CollapsibleTableView;
 			sourceTree = "<group>";
 		};
+		3829A0792514A20D00F22C12 /* WeakCache */ = {
+			isa = PBXGroup;
+			children = (
+				3829A07A2514A20D00F22C12 /* Tests */,
+				3829A07D2514A20D00F22C12 /* README.md */,
+				3829A07E2514A20D00F22C12 /* Sources */,
+			);
+			name = WeakCache;
+			path = ../../Modules/WeakCache;
+			sourceTree = "<group>";
+		};
+		3829A07A2514A20D00F22C12 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3829A07B2514A20D00F22C12 /* CacheableElement.swift */,
+				3829A07C2514A20D00F22C12 /* WeakCacheTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3829A07E2514A20D00F22C12 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3829A07F2514A20D00F22C12 /* WeakCache.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		EBED3B7424D29EFB00CF9221 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (

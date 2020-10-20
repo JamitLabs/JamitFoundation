@@ -4,21 +4,29 @@
 import XCTest
 
 class WeakCacheTests: XCTestCase {
-    func testAddingElement() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
 
+    var cache: WeakCache<CacheableElement>!
+
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        self.cache = .init()
+    }
+
+    func testAddingElement() throws {
         let element = CacheableElement()
+        let amountCacheElements = cache.all.count
+
         cache.append(element)
 
-        XCTAssertTrue(cache.contains(element))
+        XCTAssertTrue(cache.all.count == (amountCacheElements + 1))
 
         let cachedElement = cache.all.first { $0.identifier == element.identifier }
         XCTAssertNotNil(cachedElement)
+
+        XCTAssertTrue(cache.contains(element))
     }
 
     func testRemovingElement() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
-
         let element = CacheableElement()
         cache.append(element)
         XCTAssertTrue(cache.contains(element))
@@ -28,8 +36,6 @@ class WeakCacheTests: XCTestCase {
     }
 
     func testRemovingAllElements() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
-
         let generatedElements: [CacheableElement] = (0 ..< 10).map { _ in CacheableElement() }
         generatedElements.forEach { cache.append($0) }
         XCTAssertEqual(cache.all.count, 10)
@@ -39,9 +45,14 @@ class WeakCacheTests: XCTestCase {
     }
 
     func testElementShouldNotBeReferencedStrong() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
-
         cache.append(CacheableElement())
         XCTAssertTrue(cache.all.isEmpty)
+    }
+
+    override func tearDownWithError() throws {
+        try super.tearDownWithError()
+
+        self.cache.removeAll()
+        self.cache = nil
     }
 }

@@ -82,27 +82,38 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
         headerView.model = model.headerViewModel
 
         if (stackView.arrangedSubviews.count != model.items.count) {
-            stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-
-            model.items.forEach { view in
-                view.isHidden = model.isCollapsed
-                stackView.addArrangedSubview(view)
-            }
+            refreshStackViewElements()
         } else {
-            UIView.animate(withDuration: model.animationDuration) {
-                self.model.items.forEach { view in
-                    view.isHidden = self.model.isCollapsed
-                }
-            }
+            updateCollapsedState()
         }
 
         (headerView as? CollapsibleHeaderViewDelegate)?.didChangeCollapsibleState(to: model.isCollapsed)
     }
 
+    private func refreshStackViewElements() {
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+
+        model.items.forEach { view in
+            view.isHidden = !model.isCollapsed
+            stackView.addArrangedSubview(view)
+        }
+    }
+
+    private func updateCollapsedState() {
+        UIView.animate(withDuration: model.animationDuration) {
+            self.model.items.forEach { view in
+                view.isHidden = !self.model.isCollapsed
+            }
+        }
+    }
+
     @objc
     private func didTriggerAction() {
         model.isCollapsed.toggle()
-        model.didChangeCollapsibleState?(model.isCollapsed)
+    }
+
+    func stackViewSize() -> Int {
+        return stackView.subviews.count
     }
 
     @objc

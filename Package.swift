@@ -1,5 +1,4 @@
 // swift-tools-version:5.0
-
 import PackageDescription
 
 let package = Package(
@@ -55,6 +54,11 @@ let package = Package(
             name: "WeakCacheTests",
             dependencies: ["WeakCache"],
             path: "Modules/WeakCache/Tests"
+        ),
+        .testTarget(
+            name: "CollapsibleViewTests",
+            dependencies: ["JamitFoundation"],
+            path: "Tests/Component/CollapsibleView"
         )
     ]
 )
