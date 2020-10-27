@@ -34,11 +34,11 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         attributes: [],
         target: nil
     )
-    private var captureSessionQueueRunning: Bool = true {
+    private var isCaptureSessionQueueRunning: Bool = true {
         didSet {
-            if captureSessionQueueRunning && !oldValue {
+            if isCaptureSessionQueueRunning && !oldValue {
                 captureSessionQueue.resume()
-            } else if !captureSessionQueueRunning && oldValue {
+            } else if !isCaptureSessionQueueRunning && oldValue {
                 captureSessionQueue.suspend()
             }
         }
@@ -73,8 +73,8 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         // Resuming the capture session queue before release is mandatory to avoid crashes
         isDeinited = true
 
-        // Simply setting `captureSessionQueueRunning = true` doesn't work because its didSet observer isn't called in-time before the deinit ¯\_(ツ)_/¯
-        if !captureSessionQueueRunning {
+        // Simply setting `isCaptureSessionQueueRunning = true` doesn't work because its didSet observer isn't called in-time before the deinit ¯\_(ツ)_/¯
+        if !isCaptureSessionQueueRunning {
             captureSessionQueue.resume()
         }
     }
@@ -86,7 +86,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         captureVideoPreviewLayer.videoGravity = .resizeAspectFill
         layer.addSublayer(captureVideoPreviewLayer)
 
-        captureSessionQueueRunning = false
+        isCaptureSessionQueueRunning = false
         captureSessionQueue.async { [weak self] in
             guard let self = self, !self.isDeinited else { return }
 
@@ -202,7 +202,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
             if !accessGranted {
                 self.model.onError(.videoCapturingNotAuthorized)
             } else if !self.isCaptureSessionConfigured {
-                self.captureSessionQueueRunning = true
+                self.isCaptureSessionQueueRunning = true
             }
         }
     }
