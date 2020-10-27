@@ -34,6 +34,15 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         attributes: [],
         target: nil
     )
+    private var captureSessionQueueRunning: Bool = true {
+        didSet {
+            if captureSessionQueueRunning && !oldValue {
+                captureSessionQueue.resume()
+            } else if !captureSessionQueueRunning && oldValue {
+                captureSessionQueue.suspend()
+            }
+        }
+    }
 
     private var captureDeviceInput: AVCaptureDeviceInput?
     private lazy var captureMetadataOutput: AVCaptureMetadataOutput = .init()
@@ -63,7 +72,11 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     deinit {
         // Resuming the capture session queue before release is mandatory to avoid crashes
         isDeinited = true
-        captureSessionQueue.resume()
+
+        // Simply setting `captureSessionQueueRunning = true` doesn't work because its didSet observer isn't called in-time before the deinit ¯\_(ツ)_/¯
+        if !captureSessionQueueRunning {
+            captureSessionQueue.resume()
+        }
     }
 
     public override func viewDidLoad() {
@@ -73,7 +86,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
         captureVideoPreviewLayer.videoGravity = .resizeAspectFill
         layer.addSublayer(captureVideoPreviewLayer)
 
-        captureSessionQueue.suspend()
+        captureSessionQueueRunning = false
         captureSessionQueue.async { [weak self] in
             guard let self = self, !self.isDeinited else { return }
 
@@ -189,7 +202,7 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
             if !accessGranted {
                 self.model.onError(.videoCapturingNotAuthorized)
             } else if !self.isCaptureSessionConfigured {
-                self.captureSessionQueue.resume()
+                self.captureSessionQueueRunning = true
             }
         }
     }
