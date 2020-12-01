@@ -136,6 +136,11 @@
 		1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsibleTableViewController.xib; sourceTree = "<group>"; };
 		1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
+		388180E12565234D004F33A8 /* Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		388180E22565234D004F33A8 /* BarcodeScannerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerError.swift; sourceTree = "<group>"; };
+		388180E32565234D004F33A8 /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		388180E42565234D004F33A8 /* BarcodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeType.swift; sourceTree = "<group>"; };
+		388180E52565234D004F33A8 /* BarcodeScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewModel.swift; sourceTree = "<group>"; };
 		EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
 		EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewViewModel.swift; sourceTree = "<group>"; };
@@ -430,6 +435,7 @@
 		1EDB1C5624BC6AEA00FEFA7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				388180E02565234D004F33A8 /* BarcodeScanner */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -444,32 +450,17 @@
 			path = CollapsibleTableView;
 			sourceTree = "<group>";
 		};
-		3829A0792514A20D00F22C12 /* WeakCache */ = {
+		388180E02565234D004F33A8 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				3829A07A2514A20D00F22C12 /* Tests */,
-				3829A07D2514A20D00F22C12 /* README.md */,
-				3829A07E2514A20D00F22C12 /* Sources */,
+				388180E12565234D004F33A8 /* Barcode.swift */,
+				388180E22565234D004F33A8 /* BarcodeScannerError.swift */,
+				388180E32565234D004F33A8 /* BarcodeScannerView.swift */,
+				388180E42565234D004F33A8 /* BarcodeType.swift */,
+				388180E52565234D004F33A8 /* BarcodeScannerViewModel.swift */,
 			);
-			name = WeakCache;
-			path = ../../Modules/WeakCache;
-			sourceTree = "<group>";
-		};
-		3829A07A2514A20D00F22C12 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				3829A07B2514A20D00F22C12 /* CacheableElement.swift */,
-				3829A07C2514A20D00F22C12 /* WeakCacheTests.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		3829A07E2514A20D00F22C12 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				3829A07F2514A20D00F22C12 /* WeakCache.swift */,
-			);
-			path = Sources;
+			name = BarcodeScanner;
+			path = ../../Modules/BarcodeScanner;
 			sourceTree = "<group>";
 		};
 		EBED3B7424D29EFB00CF9221 /* CollectionView */ = {
@@ -575,7 +566,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
 					1E1B3FE323F27E8700D9A6D5 = {
@@ -767,6 +758,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -827,6 +819,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -862,7 +855,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				INFOPLIST_FILE = App/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -881,7 +874,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				INFOPLIST_FILE = App/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

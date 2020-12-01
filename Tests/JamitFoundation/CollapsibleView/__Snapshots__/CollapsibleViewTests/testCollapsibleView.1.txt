@@ -1,0 +1,10 @@
+<UIView; frame = (0 0; 390 844); autoresize = W+H; layer = <CALayer>>
+   | <_TtGC15JamitFoundation15CollapsibleViewCS_28DefaultCollapsibleHeaderView_; frame = (0 0; 390 844); clipsToBounds = YES; layer = <CALayer>>
+   |    | <JamitFoundation.DefaultCollapsibleHeaderView; frame = (0 0; 390 714); layer = <CALayer>>
+   |    |    | <UIImageView; frame = (356 345; 24 24); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    | <UILabel; frame = (20 16; 326 682); text = 'title'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    | <UIButton; frame = (0 0; 390 714); opaque = NO; layer = <CALayer>>
+   |    |    | <UIButtonLabel; frame = (0 0; 0 0); hidden = YES; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    | <UIStackView; frame = (0 714; 390 130); layer = <CALayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 0; 390 50); layer = <CALayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 50; 390 80); layer = <CALayer>>

@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "JamitFoundation",
-    platforms: [.iOS(.v9)],
+    platforms: [.iOS(.v11)],
     products: [
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
         .library(name: "PageView", targets: ["PageView"]),
@@ -13,7 +13,12 @@ let package = Package(
         .library(name: "TimePickerView", targets: ["TimePickerView"]),
         .library(name: "WeakCache", targets: ["WeakCache"])
     ],
-    dependencies: [],
+    dependencies: [
+        .package(
+            url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
+            from: "1.8.1"
+        ),
+    ],
     targets: [
         .target(
             name: "JamitFoundation",
@@ -32,7 +37,7 @@ let package = Package(
         ),
         .target(
             name: "BarcodeScanner",
-            dependencies: ["JamitFoundation"],
+            dependencies: ["JamitFoundation", "SnapshotTesting"],
             path: "Modules/BarcodeScanner"
         ),
         .target(
@@ -51,15 +56,39 @@ let package = Package(
             path: "Modules/WeakCache/Sources"
         ),
         .testTarget(
-            name: "WeakCacheTests",
-            dependencies: ["WeakCache"],
-            path: "Modules/WeakCache/Tests"
+            name: "JamitFoundationTests",
+            dependencies: ["JamitFoundation", "SnapshotTesting"],
+            path: "Tests/JamitFoundation"
         ),
         .testTarget(
-            name: "CollapsibleViewTests",
+            name: "PageViewTests",
             dependencies: ["JamitFoundation"],
-            path: "Tests/Component/CollapsibleView"
-        )
+            path: "Tests/Modules/PageView"
+        ),
+        .testTarget(
+            name: "GridViewTests",
+            dependencies: ["JamitFoundation"],
+            path: "Tests/Modules/GridView"
+        ),
+        .testTarget(
+            name: "BarcodeScannerTests",
+            dependencies: ["JamitFoundation", "BarcodeScanner"],
+            path: "Tests/Modules/BarcodeScanner"
+        ),
+        .testTarget(
+            name: "CarouselViewTests",
+            dependencies: ["JamitFoundation"],
+            path: "Tests/Modules/CarouselView"
+        ),
+        .testTarget(
+            name: "TimePickerViewTests",
+            dependencies: ["JamitFoundation"],
+            path: "Tests/Modules/TimePickerView"
+        ),
+        .testTarget(
+            name: "WeakCacheTests",
+            dependencies: ["WeakCache"],
+            path: "Tests/Modules/WeakCache"
+        ),
     ]
 )
-

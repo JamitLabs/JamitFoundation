@@ -84,3 +84,6 @@ iOSInjectionProject/
 
 # Xcode Swift PM
 .swiftpm
+
+# MacOS
+.DS_Store
