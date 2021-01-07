@@ -13,7 +13,8 @@ let package = Package(
         .library(name: "CarouselView", targets: ["CarouselView"]),
         .library(name: "TimePickerView", targets: ["TimePickerView"]),
         .library(name: "WeakCache", targets: ["WeakCache"]),
-        .library(name: "UserDefaults", targets: ["UserDefaults"])
+        .library(name: "UserDefaults", targets: ["UserDefaults"]),
+        .library(name: "Keychain", targets: ["Keychain"])
     ],
     dependencies: [],
     targets: [
@@ -66,6 +67,16 @@ let package = Package(
             name: "UserDefaultsTests",
             dependencies: ["UserDefaults"],
             path: "Modules/UserDefaults/Tests"
+        ),
+        .target(
+            name: "Keychain",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/Keychain/Sources"
+        ),
+        .testTarget(
+            name: "KeychainTests",
+            dependencies: ["Keychain"],
+            path: "Modules/Keychain/Tests"
         )
     ]
 )
