@@ -1,4 +1,5 @@
 import Foundation
+import OSLog
 
 ///
 /// `Secured` is a property wrapper that can be applied to any codable property to store it in the keychain
@@ -13,7 +14,6 @@ public struct Secured<Value: Codable> {
     private enum KeychainError: Error, LocalizedError {
         case itemNotFound
         case accessError(status: String)
-        case unexpectedData
         case decodingError(error: Error)
         case encodingError(error: Error)
         case saveItemToKeychain(status: String)
@@ -23,7 +23,6 @@ public struct Secured<Value: Codable> {
             switch self {
             case .itemNotFound: return "The requested item could not be found in the keychain"
             case .accessError: return "The keychain item could not be accessed"
-            case .unexpectedData: return "The retrieved keychain data type is unexpected"
             case .decodingError: return "The retrieved keychain data could not be decoded"
             case .encodingError: return "The item could not be encoded"
             case .saveItemToKeychain: return "The item could not be saved to the keychain"
@@ -106,10 +105,18 @@ public struct Secured<Value: Codable> {
 
     private func logError(_ error: Error) {
         guard let keychainError = error as? KeychainError else {
-            return NSLog("An unexpected error occurred:\nKey: %@\nError: %@", key, error.localizedDescription)
+            if #available(iOS 10.0, *) {
+                os_log("An unexpected error occurred:\nKey: %@\nError: %@", key, error.localizedDescription)
+            } else {
+                print("An unexpected error occurred:\nKey: %@\nError: %@", key, error.localizedDescription)
+            }
         }
 
-        NSLog(keychainError.description(for: key))
+        if #available(iOS 10.0, *) {
+            os_log(keychainError.description(for: key))
+        } else {
+            print(keychainError.description(for: key))
+        }
     }
 
     private func loadValueFromKeychain() throws -> Value {
