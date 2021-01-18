@@ -1,0 +1,35 @@
+<UIView; frame = (0 0; 375 812); autoresize = W+H; layer = <CALayer>>
+   | <_TtGC15JamitFoundation15CollapsibleViewCS_28DefaultCollapsibleHeaderView_; frame = (0 0; 390 844); clipsToBounds = YES; layer = <CALayer>>
+   |    | <JamitFoundation.DefaultCollapsibleHeaderView; frame = (0 0; 390 114); layer = <CALayer>>
+   |    |    | <UIImageView; frame = (356 45; 24 24); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    | <UILabel; frame = (20 16; 326 82); text = 'testManyCollapsibleViews'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    | <UIButton; frame = (0 0; 390 114); opaque = NO; layer = <CALayer>>
+   |    |    | <UIButtonLabel; frame = (0 0; 0 0); hidden = YES; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    | <UIStackView; frame = (0 114; 390 730); layer = <CALayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 0; 390 50); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 50); text = 'Item 1'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 50); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 50; 390 120); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 120); text = 'Item 2'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 120); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 170; 390 50); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 50); text = 'Item 3'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 50); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 220; 390 120); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 120); text = 'Item 4'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 120); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 340; 390 50); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 50); text = 'Item 5'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 50); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 390; 390 120); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 120); text = 'Item 6'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 120); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 510; 390 50); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 50); text = 'Item 7'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 50); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 560; 390 120); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 120); text = 'Item 8'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 120); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>
+   |    |    | <JamitFoundationTests.CollapsibleElementView; frame = (0 680; 390 50); layer = <CALayer>>
+   |    |    |    | <UITextField; frame = (0 0; 390 50); text = 'Item 9'; opaque = NO; gestureRecognizers = <NSArray>; borderStyle = None; background = <_UITextFieldNoBackgroundProvider: textfield=<UITextField>>; layer = <CALayer>>
+   |    |    |    |    | <_UITextFieldCanvasView; frame = (0 0; 390 50); opaque = NO; userInteractionEnabled = NO; layer = <_UITextTiledLayer>>

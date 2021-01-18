@@ -9,12 +9,24 @@ import Foundation
 import UIKit
 
 class CollapsibleElementView: UIView {
-    init(backgroundColor: UIColor, height: CGFloat) {
-        super.init(frame: .zero)
+    private lazy var textView: UITextField = {
+        let textView = UITextField()
+        return textView
+    }()
 
+
+    init(backgroundColor: UIColor, height: CGFloat, text: String) {
+        super.init(frame: .zero)
         self.backgroundColor = backgroundColor
         heightAnchor.constraint(equalToConstant: height).isActive = true
         widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+
+        addSubview(textView)
+        textView.text = text
+
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.heightAnchor.constraint(equalToConstant: height).isActive = true
+        textView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
     }
 
     required init?(coder: NSCoder) {

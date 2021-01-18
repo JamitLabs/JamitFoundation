@@ -17,6 +17,8 @@ public struct DefaultCollapsibleHeaderViewModel: ViewModelProtocol {
     /// The background color should be whit instead of clear
     public var backgroundColor: UIColor = .white
 
+    public var headerViewHeightConstant: CGFloat
+
     /// The default initializer of `CollapsibleViewModel`.
     ///
     /// - Parameter title: The title of the header view.
@@ -28,12 +30,14 @@ public struct DefaultCollapsibleHeaderViewModel: ViewModelProtocol {
         title: String? = Self.default.title,
         titleFont: UIFont = Self.default.titleFont,
         arrowImageUp: UIImage? = Self.default.arrowImageUp,
+        headerViewHeightConstant: CGFloat = Self.default.headerViewHeightConstant,
         arrowAnimationDuration: TimeInterval = Self.default.arrowAnimationDuration,
         arrowImageViewSizeConstant: CGFloat = Self.default.arrowImageViewSizeConstant
     ) {
         self.title = title
         self.titleFont = titleFont
         self.arrowImageUp = arrowImageUp
+        self.headerViewHeightConstant = headerViewHeightConstant
         self.arrowAnimationDuration = arrowAnimationDuration
         self.arrowImageViewSizeConstant = arrowImageViewSizeConstant
     }
@@ -45,6 +49,7 @@ extension DefaultCollapsibleHeaderViewModel {
         title: nil,
         titleFont: .systemFont(ofSize: 16),
         arrowImageUp: nil,
+        headerViewHeightConstant: 44,
         arrowAnimationDuration: 0.3,
         arrowImageViewSizeConstant: 24.0
     )
