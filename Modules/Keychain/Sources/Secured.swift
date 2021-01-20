@@ -131,7 +131,9 @@ public struct Secured<Value: Codable> {
             keychainResponse.status == errSecSuccess,
             let item = keychainResponse.queryResult as? [String: Any],
             let data = item[kSecValueData as String] as? Data
-        else { throw KeychainError.itemNotFound }
+        else {
+            throw KeychainError.itemNotFound
+        }
 
         do {
             let value = try JSONDecoder().decode(Value.self, from: data)
@@ -148,7 +150,6 @@ public struct Secured<Value: Codable> {
         do {
             encodedData = try JSONEncoder().encode(value)
         } catch {
-            try deleteFromKeychain()
             throw KeychainError.encodingError(error: error)
         }
 
@@ -163,7 +164,9 @@ public struct Secured<Value: Codable> {
             status = keychain.add(addQuery)
         }
 
-        guard status == errSecSuccess else { throw KeychainError.saveItemToKeychain(status: status.description) }
+        guard status == errSecSuccess else {
+            throw KeychainError.saveItemToKeychain(status: status.description)
+        }
     }
 
     private func deleteFromKeychain() throws {
@@ -172,6 +175,8 @@ public struct Secured<Value: Codable> {
         guard
             status == errSecSuccess ||
             status == errSecItemNotFound
-        else { throw KeychainError.deleteItem }
+        else {
+            throw KeychainError.deleteItem
+        }
     }
 }
