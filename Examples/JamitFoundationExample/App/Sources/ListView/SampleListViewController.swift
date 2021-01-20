@@ -89,7 +89,6 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 NSLocalizedString("COLLAPSIBLE_VIEW.FIRST_HEADER.TITLE", comment: ""),
                 NSLocalizedString("COLLAPSIBLE_VIEW.SECOND_HEADER.TITLE", comment: "")
             ],
-            headerViewHeightConstant: 60.0,
             headerTitleFont: .systemFont(ofSize: 16.0),
             headerArrowImage: UIImage(named: "icArrowUp")
         )
