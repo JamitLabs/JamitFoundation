@@ -5,8 +5,8 @@
         "package": "JamitFoundation",
         "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
         "state": {
-          "branch": "feature/collapsible-view-in-table-view",
-          "revision": "52dde3db9ed0542af65ea1d745fa658b74a9e00d",
+          "branch": "develop",
+          "revision": "e46cc5e797a84e783c46810171e671fb515d1d9b",
           "version": null
         }
       }
