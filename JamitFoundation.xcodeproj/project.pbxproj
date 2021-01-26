@@ -13,6 +13,21 @@
 		1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */; };
 		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
+		A75A69A925C02E89003BF4CE /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699125C02E89003BF4CE /* PageViewModel.swift */; };
+		A75A69AA25C02E89003BF4CE /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699225C02E89003BF4CE /* PageView.swift */; };
+		A75A69AB25C02E89003BF4CE /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699425C02E89003BF4CE /* CarouselView.swift */; };
+		A75A69AC25C02E89003BF4CE /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699525C02E89003BF4CE /* CarouselViewModel.swift */; };
+		A75A69AF25C02E89003BF4CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A75A699A25C02E89003BF4CE /* README.md */; };
+		A75A69B025C02E89003BF4CE /* WeakCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699C25C02E89003BF4CE /* WeakCache.swift */; };
+		A75A69B125C02E89003BF4CE /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699E25C02E89003BF4CE /* Barcode.swift */; };
+		A75A69B225C02E89003BF4CE /* BarcodeScannerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A699F25C02E89003BF4CE /* BarcodeScannerError.swift */; };
+		A75A69B325C02E89003BF4CE /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A025C02E89003BF4CE /* BarcodeScannerView.swift */; };
+		A75A69B425C02E89003BF4CE /* BarcodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A125C02E89003BF4CE /* BarcodeType.swift */; };
+		A75A69B525C02E89003BF4CE /* BarcodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A225C02E89003BF4CE /* BarcodeScannerViewModel.swift */; };
+		A75A69B625C02E89003BF4CE /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A425C02E89003BF4CE /* GridViewModel.swift */; };
+		A75A69B725C02E89003BF4CE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A525C02E89003BF4CE /* GridView.swift */; };
+		A75A69B825C02E89003BF4CE /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A725C02E89003BF4CE /* TimePickerView.swift */; };
+		A75A69B925C02E89003BF4CE /* TimePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A69A825C02E89003BF4CE /* TimePickerViewModel.swift */; };
 		C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604823AE166D001CFD85 /* CollectionViewCell.swift */; };
 		C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604923AE166D001CFD85 /* TableViewCell.swift */; };
 		C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */; };
@@ -48,6 +63,23 @@
 		1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderViewModel.swift; sourceTree = "<group>"; };
 		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
+		A75A699125C02E89003BF4CE /* PageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
+		A75A699225C02E89003BF4CE /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		A75A699425C02E89003BF4CE /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		A75A699525C02E89003BF4CE /* CarouselViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		A75A699825C02E89003BF4CE /* CacheableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheableElement.swift; sourceTree = "<group>"; };
+		A75A699925C02E89003BF4CE /* WeakCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakCacheTests.swift; sourceTree = "<group>"; };
+		A75A699A25C02E89003BF4CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A75A699C25C02E89003BF4CE /* WeakCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakCache.swift; sourceTree = "<group>"; };
+		A75A699E25C02E89003BF4CE /* Barcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		A75A699F25C02E89003BF4CE /* BarcodeScannerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerError.swift; sourceTree = "<group>"; };
+		A75A69A025C02E89003BF4CE /* BarcodeScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		A75A69A125C02E89003BF4CE /* BarcodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeType.swift; sourceTree = "<group>"; };
+		A75A69A225C02E89003BF4CE /* BarcodeScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewModel.swift; sourceTree = "<group>"; };
+		A75A69A425C02E89003BF4CE /* GridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		A75A69A525C02E89003BF4CE /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		A75A69A725C02E89003BF4CE /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		A75A69A825C02E89003BF4CE /* TimePickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerViewModel.swift; sourceTree = "<group>"; };
 		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C568604923AE166D001CFD85 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JamitFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +148,94 @@
 			path = CollapsibleTableViewCell;
 			sourceTree = "<group>";
 		};
+		A75A698F25C02E89003BF4CE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699025C02E89003BF4CE /* PageView */,
+				A75A699325C02E89003BF4CE /* CarouselView */,
+				A75A699625C02E89003BF4CE /* WeakCache */,
+				A75A699D25C02E89003BF4CE /* BarcodeScanner */,
+				A75A69A325C02E89003BF4CE /* GridView */,
+				A75A69A625C02E89003BF4CE /* TimePickerView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A75A699025C02E89003BF4CE /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699125C02E89003BF4CE /* PageViewModel.swift */,
+				A75A699225C02E89003BF4CE /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		A75A699325C02E89003BF4CE /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699425C02E89003BF4CE /* CarouselView.swift */,
+				A75A699525C02E89003BF4CE /* CarouselViewModel.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		A75A699625C02E89003BF4CE /* WeakCache */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699725C02E89003BF4CE /* Tests */,
+				A75A699A25C02E89003BF4CE /* README.md */,
+				A75A699B25C02E89003BF4CE /* Sources */,
+			);
+			path = WeakCache;
+			sourceTree = "<group>";
+		};
+		A75A699725C02E89003BF4CE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699825C02E89003BF4CE /* CacheableElement.swift */,
+				A75A699925C02E89003BF4CE /* WeakCacheTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A75A699B25C02E89003BF4CE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699C25C02E89003BF4CE /* WeakCache.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A75A699D25C02E89003BF4CE /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				A75A699E25C02E89003BF4CE /* Barcode.swift */,
+				A75A699F25C02E89003BF4CE /* BarcodeScannerError.swift */,
+				A75A69A025C02E89003BF4CE /* BarcodeScannerView.swift */,
+				A75A69A125C02E89003BF4CE /* BarcodeType.swift */,
+				A75A69A225C02E89003BF4CE /* BarcodeScannerViewModel.swift */,
+			);
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		A75A69A325C02E89003BF4CE /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A69A425C02E89003BF4CE /* GridViewModel.swift */,
+				A75A69A525C02E89003BF4CE /* GridView.swift */,
+			);
+			path = GridView;
+			sourceTree = "<group>";
+		};
+		A75A69A625C02E89003BF4CE /* TimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A69A725C02E89003BF4CE /* TimePickerView.swift */,
+				A75A69A825C02E89003BF4CE /* TimePickerViewModel.swift */,
+			);
+			path = TimePickerView;
+			sourceTree = "<group>";
+		};
 		B4F0DABC24E3F8DB0074056A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +248,7 @@
 			children = (
 				C5CB32122371D1A700E25E4B /* SupportingFiles */,
 				C5CB31D72371D10F00E25E4B /* Sources */,
+				A75A698F25C02E89003BF4CE /* Modules */,
 				C5CB31C12371D0BE00E25E4B /* Products */,
 				B4F0DABC24E3F8DB0074056A /* Frameworks */,
 			);
@@ -335,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75A69AF25C02E89003BF4CE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,33 +470,47 @@
 				1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */,
 				C5CB31FE2371D10F00E25E4B /* StatefulView.swift in Sources */,
 				1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */,
+				A75A69B325C02E89003BF4CE /* BarcodeScannerView.swift in Sources */,
 				C5CB32012371D10F00E25E4B /* ContainerCollectionViewCell.swift in Sources */,
 				C5CB320B2371D10F00E25E4B /* ListViewModel.swift in Sources */,
 				C5CB32022371D10F00E25E4B /* Label.swift in Sources */,
 				C5CB31FF2371D10F00E25E4B /* ContainerTableViewCell.swift in Sources */,
 				C5CB32062371D10F00E25E4B /* ActionView.swift in Sources */,
+				A75A69AC25C02E89003BF4CE /* CarouselViewModel.swift in Sources */,
 				C5CB32052371D10F00E25E4B /* ActionViewModel.swift in Sources */,
 				C5CB31FC2371D10F00E25E4B /* ViewController.swift in Sources */,
 				C5CB31F92371D10F00E25E4B /* UIView+instantiate.swift in Sources */,
+				A75A69B825C02E89003BF4CE /* TimePickerView.swift in Sources */,
+				A75A69B925C02E89003BF4CE /* TimePickerViewModel.swift in Sources */,
 				C5CB32082371D10F00E25E4B /* StatefulViewProtocol.swift in Sources */,
 				C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */,
+				A75A69B025C02E89003BF4CE /* WeakCache.swift in Sources */,
 				C5CB32032371D10F00E25E4B /* Image.swift in Sources */,
 				C5CB31F82371D10F00E25E4B /* UITableView+recycling.swift in Sources */,
 				C5CB32002371D10F00E25E4B /* ErrorCallback.swift in Sources */,
 				C5CB31FD2371D10F00E25E4B /* StatefulViewController.swift in Sources */,
 				1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */,
 				EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */,
+				A75A69AA25C02E89003BF4CE /* PageView.swift in Sources */,
 				C5CB31FA2371D10F00E25E4B /* UICollectionView+recycling.swift in Sources */,
 				C5CB31FB2371D10F00E25E4B /* VoidCallback.swift in Sources */,
+				A75A69B125C02E89003BF4CE /* Barcode.swift in Sources */,
+				A75A69B525C02E89003BF4CE /* BarcodeScannerViewModel.swift in Sources */,
 				C5CB32042371D10F00E25E4B /* ImageView.swift in Sources */,
 				C5CB32072371D10F00E25E4B /* ViewModelProtocol.swift in Sources */,
+				A75A69AB25C02E89003BF4CE /* CarouselView.swift in Sources */,
+				A75A69A925C02E89003BF4CE /* PageViewModel.swift in Sources */,
 				1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */,
+				A75A69B225C02E89003BF4CE /* BarcodeScannerError.swift in Sources */,
 				EBED3B7224D29D8100CF9221 /* CollectionReusableView.swift in Sources */,
+				A75A69B625C02E89003BF4CE /* GridViewModel.swift in Sources */,
 				C5CB32092371D10F00E25E4B /* ScrollViewController.swift in Sources */,
 				C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */,
 				1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */,
+				A75A69B425C02E89003BF4CE /* BarcodeType.swift in Sources */,
 				C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */,
 				C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */,
+				A75A69B725C02E89003BF4CE /* GridView.swift in Sources */,
 				1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
