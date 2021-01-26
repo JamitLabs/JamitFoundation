@@ -1,7 +1,5 @@
 Pod::Spec.new do |spec|
 
-  inhibit_all_warnings!
-
   spec.name          = "JamitFoundation"
   spec.version       = "1.4.2"
   spec.summary       = "JamitFoundation is a collection of useful concepts to enable composition oriented development with UIKit."
