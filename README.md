@@ -17,7 +17,7 @@ Add the package dependency to your `Package.swift` file.
  let package = Package(
     // ...
     dependencies: [
-+       .package(url: "git@github.com:JamitLabs/JamitFoundation.git", .upToNextMajor(from: "1.4.0"))
++       .package(url: "git@github.com:JamitLabs/JamitFoundation.git", .upToNextMajor(from: "1.4.2"))
     ]
     // ...
  )
@@ -32,6 +32,19 @@ Add the following line to your Cartfile.
 git "git@github.com:JamitLabs/JamitFoundation.git"
 ```
 
+### CocoaPods
+
+Add the following line to your Podfile.
+
+```swift
+pod 'JamitFoundation', :git => 'https://github.com/knothed/JamitFoundation.git', :tag => '1.4.2', :inhibit_warnings => true
+```
+
+If you don't want to include all of JamitFoundation, but only specific microframeworks (e.g. PageView), add the following line to your Podfile.
+
+```swift
+pod 'JamitFoundation/PageView', :git => 'https://github.com/knothed/JamitFoundation.git', :tag => '1.4.2', :inhibit_warnings => true
+```
 
 ## Usage
 
