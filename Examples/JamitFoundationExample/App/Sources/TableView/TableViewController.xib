@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="dIS-nH-i6f" customClass="TableViewController" customModule="JamitFoundationExample" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="Srp-oH-WHG">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5W-LB-MMc" userLabel="ContentView">
+                        <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IQo-ec-ZzB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dIS-nH-i6f" id="34B-zu-8zf"/>
+                                    <outlet property="delegate" destination="dIS-nH-i6f" id="YCB-ai-YSB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IQo-ec-ZzB" secondAttribute="trailing" id="CR0-wM-RMR"/>
+                            <constraint firstAttribute="bottom" secondItem="IQo-ec-ZzB" secondAttribute="bottom" id="YfY-sT-OQA"/>
+                            <constraint firstItem="IQo-ec-ZzB" firstAttribute="leading" secondItem="p5W-LB-MMc" secondAttribute="leading" id="dkU-VX-j7W"/>
+                            <constraint firstItem="IQo-ec-ZzB" firstAttribute="top" secondItem="p5W-LB-MMc" secondAttribute="top" id="eX1-3P-cH7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="p5W-LB-MMc" firstAttribute="top" secondItem="x8R-Wu-qZw" secondAttribute="top" id="E4b-70-XKM"/>
+                    <constraint firstAttribute="bottom" secondItem="p5W-LB-MMc" secondAttribute="bottom" id="VHu-vG-ptE"/>
+                    <constraint firstAttribute="trailing" secondItem="p5W-LB-MMc" secondAttribute="trailing" id="s6w-Jw-7XG"/>
+                    <constraint firstItem="p5W-LB-MMc" firstAttribute="leading" secondItem="Srp-oH-WHG" secondAttribute="leading" id="y7o-FQ-CAU"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="x8R-Wu-qZw"/>
+            </view>
+            <connections>
+                <outlet property="tableView" destination="IQo-ec-ZzB" id="8dl-U0-po8"/>
+            </connections>
+            <point key="canvasLocation" x="-74" y="-410"/>
+        </viewController>
+    </objects>
+</document>
