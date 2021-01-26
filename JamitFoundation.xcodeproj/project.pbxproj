@@ -13,6 +13,11 @@
 		1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */; };
 		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
+		A75A6B0725C03787003BF4CE /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75A6B2F25C037BC003BF4CE /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE225C03683003BF4CE /* PageViewModel.swift */; };
+		A75A6B3025C037BC003BF4CE /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE325C03683003BF4CE /* PageView.swift */; };
+		A75A6B3F25C03917003BF4CE /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A75A6B4025C03917003BF4CE /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604823AE166D001CFD85 /* CollectionViewCell.swift */; };
 		C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604923AE166D001CFD85 /* TableViewCell.swift */; };
 		C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */; };
@@ -41,6 +46,30 @@
 		EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A75A6B4125C03917003BF4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A75A6B4325C03917003BF4CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A75A6B4025C03917003BF4CE /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
 		1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleViewModel.swift; sourceTree = "<group>"; };
@@ -48,6 +77,25 @@
 		1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderViewModel.swift; sourceTree = "<group>"; };
 		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
+		A75A6AE225C03683003BF4CE /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
+		A75A6AE325C03683003BF4CE /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		A75A6AE525C03683003BF4CE /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		A75A6AE625C03683003BF4CE /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		A75A6AE925C03683003BF4CE /* CacheableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheableElement.swift; sourceTree = "<group>"; };
+		A75A6AEA25C03683003BF4CE /* WeakCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakCacheTests.swift; sourceTree = "<group>"; };
+		A75A6AEB25C03683003BF4CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A75A6AED25C03683003BF4CE /* WeakCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakCache.swift; sourceTree = "<group>"; };
+		A75A6AEF25C03683003BF4CE /* Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		A75A6AF025C03683003BF4CE /* BarcodeScannerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerError.swift; sourceTree = "<group>"; };
+		A75A6AF125C03683003BF4CE /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		A75A6AF225C03683003BF4CE /* BarcodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeType.swift; sourceTree = "<group>"; };
+		A75A6AF325C03683003BF4CE /* BarcodeScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewModel.swift; sourceTree = "<group>"; };
+		A75A6AF525C03683003BF4CE /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		A75A6AF625C03683003BF4CE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		A75A6AF825C03683003BF4CE /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		A75A6AF925C03683003BF4CE /* TimePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewModel.swift; sourceTree = "<group>"; };
+		A75A6B2D25C03787003BF4CE /* PageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75A6B2E25C03787003BF4CE /* PageView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PageView.plist; sourceTree = "<group>"; };
 		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C568604923AE166D001CFD85 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JamitFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +127,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A75A6B2825C03787003BF4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A6B3F25C03917003BF4CE /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BD2371D0BE00E25E4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +172,94 @@
 			path = CollapsibleTableViewCell;
 			sourceTree = "<group>";
 		};
+		A75A6AE025C03683003BF4CE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE125C03683003BF4CE /* PageView */,
+				A75A6AE425C03683003BF4CE /* CarouselView */,
+				A75A6AE725C03683003BF4CE /* WeakCache */,
+				A75A6AEE25C03683003BF4CE /* BarcodeScanner */,
+				A75A6AF425C03683003BF4CE /* GridView */,
+				A75A6AF725C03683003BF4CE /* TimePickerView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A75A6AE125C03683003BF4CE /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE225C03683003BF4CE /* PageViewModel.swift */,
+				A75A6AE325C03683003BF4CE /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		A75A6AE425C03683003BF4CE /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE525C03683003BF4CE /* CarouselView.swift */,
+				A75A6AE625C03683003BF4CE /* CarouselViewModel.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		A75A6AE725C03683003BF4CE /* WeakCache */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE825C03683003BF4CE /* Tests */,
+				A75A6AEB25C03683003BF4CE /* README.md */,
+				A75A6AEC25C03683003BF4CE /* Sources */,
+			);
+			path = WeakCache;
+			sourceTree = "<group>";
+		};
+		A75A6AE825C03683003BF4CE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE925C03683003BF4CE /* CacheableElement.swift */,
+				A75A6AEA25C03683003BF4CE /* WeakCacheTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A75A6AEC25C03683003BF4CE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AED25C03683003BF4CE /* WeakCache.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A75A6AEE25C03683003BF4CE /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AEF25C03683003BF4CE /* Barcode.swift */,
+				A75A6AF025C03683003BF4CE /* BarcodeScannerError.swift */,
+				A75A6AF125C03683003BF4CE /* BarcodeScannerView.swift */,
+				A75A6AF225C03683003BF4CE /* BarcodeType.swift */,
+				A75A6AF325C03683003BF4CE /* BarcodeScannerViewModel.swift */,
+			);
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		A75A6AF425C03683003BF4CE /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AF525C03683003BF4CE /* GridViewModel.swift */,
+				A75A6AF625C03683003BF4CE /* GridView.swift */,
+			);
+			path = GridView;
+			sourceTree = "<group>";
+		};
+		A75A6AF725C03683003BF4CE /* TimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AF825C03683003BF4CE /* TimePickerView.swift */,
+				A75A6AF925C03683003BF4CE /* TimePickerViewModel.swift */,
+			);
+			path = TimePickerView;
+			sourceTree = "<group>";
+		};
 		B4F0DABC24E3F8DB0074056A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +272,7 @@
 			children = (
 				C5CB32122371D1A700E25E4B /* SupportingFiles */,
 				C5CB31D72371D10F00E25E4B /* Sources */,
+				A75A6AE025C03683003BF4CE /* Modules */,
 				C5CB31C12371D0BE00E25E4B /* Products */,
 				B4F0DABC24E3F8DB0074056A /* Frameworks */,
 			);
@@ -137,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */,
+				A75A6B2D25C03787003BF4CE /* PageView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +407,7 @@
 			children = (
 				C5CB32132371D1A700E25E4B /* JamitFoundation.h */,
 				C5CB32142371D1A700E25E4B /* Info.plist */,
+				A75A6B2E25C03787003BF4CE /* PageView.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -268,6 +415,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A75A6B0625C03787003BF4CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A6B0725C03787003BF4CE /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BB2371D0BE00E25E4B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +434,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A75A6B0525C03787003BF4CE /* PageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75A6B2A25C03787003BF4CE /* Build configuration list for PBXNativeTarget "PageView" */;
+			buildPhases = (
+				A75A6B0625C03787003BF4CE /* Headers */,
+				A75A6B0825C03787003BF4CE /* Sources */,
+				A75A6B2825C03787003BF4CE /* Frameworks */,
+				A75A6B2925C03787003BF4CE /* Resources */,
+				A75A6B4325C03917003BF4CE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A75A6B4225C03917003BF4CE /* PBXTargetDependency */,
+			);
+			name = PageView;
+			productName = UIFoundation;
+			productReference = A75A6B2D25C03787003BF4CE /* PageView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C5CB31BF2371D0BE00E25E4B /* JamitFoundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5CB31C82371D0BE00E25E4B /* Build configuration list for PBXNativeTarget "JamitFoundation" */;
@@ -326,11 +501,19 @@
 			projectRoot = "";
 			targets = (
 				C5CB31BF2371D0BE00E25E4B /* JamitFoundation */,
+				A75A6B0525C03787003BF4CE /* PageView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A75A6B2925C03787003BF4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BE2371D0BE00E25E4B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +524,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A75A6B0825C03787003BF4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A6B3025C037BC003BF4CE /* PageView.swift in Sources */,
+				A75A6B2F25C037BC003BF4CE /* PageViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BC2371D0BE00E25E4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,7 +573,67 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A75A6B4225C03917003BF4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A75A6B4125C03917003BF4CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A75A6B2B25C03787003BF4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/PageView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.PageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A75A6B2C25C03787003BF4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/PageView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.PageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C5CB31C62371D0BE00E25E4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -557,6 +809,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A75A6B2A25C03787003BF4CE /* Build configuration list for PBXNativeTarget "PageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75A6B2B25C03787003BF4CE /* Debug */,
+				A75A6B2C25C03787003BF4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5CB31BA2371D0BE00E25E4B /* Build configuration list for PBXProject "JamitFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
