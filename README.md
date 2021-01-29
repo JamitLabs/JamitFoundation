@@ -37,13 +37,13 @@ git "git@github.com:JamitLabs/JamitFoundation.git"
 Add the following line to your Podfile.
 
 ```swift
-pod 'JamitFoundation', :git => 'https://github.com/knothed/JamitFoundation.git', :tag => '1.4.2', :inhibit_warnings => true
+pod 'JamitFoundation', :git => 'https://github.com/JamitLabs/JamitFoundation.git', :tag => '1.4.2', :inhibit_warnings => true
 ```
 
 If you don't want to include all of JamitFoundation, but only specific microframeworks (e.g. PageView), add the following line to your Podfile.
 
 ```swift
-pod 'JamitFoundation/PageView', :git => 'https://github.com/knothed/JamitFoundation.git', :tag => '1.4.2', :inhibit_warnings => true
+pod 'JamitFoundation/PageView', :git => 'https://github.com/JamitLabs/JamitFoundation.git', :tag => '1.4.2', :inhibit_warnings => true
 ```
 
 ## Usage
