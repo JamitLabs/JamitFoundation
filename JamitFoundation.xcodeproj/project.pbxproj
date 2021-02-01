@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,41 @@
 		1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */; };
 		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
+		A752F14825C43F380065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A752F14D25C43F380065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A752F15025C43F380065CD94 /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A752F15B25C43F3B0065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A752F16025C43F3B0065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A752F16325C43F3B0065CD94 /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A752F16E25C43F410065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A752F17325C43F410065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A752F17625C43F410065CD94 /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A752F18125C43F4A0065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A752F18625C43F4A0065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A752F18925C43F4A0065CD94 /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A752F19325C43F4C0065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A752F19825C43F4C0065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A752F19B25C43F4C0065CD94 /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A752F1B125C442E30065CD94 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE525C03683003BF4CE /* CarouselView.swift */; };
+		A752F1B225C442E30065CD94 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE625C03683003BF4CE /* CarouselViewModel.swift */; };
+		A752F1B425C442F10065CD94 /* WeakCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AED25C03683003BF4CE /* WeakCache.swift */; };
+		A752F1B625C442F60065CD94 /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AEF25C03683003BF4CE /* Barcode.swift */; };
+		A752F1B725C442F60065CD94 /* BarcodeScannerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF025C03683003BF4CE /* BarcodeScannerError.swift */; };
+		A752F1B825C442F60065CD94 /* BarcodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF325C03683003BF4CE /* BarcodeScannerViewModel.swift */; };
+		A752F1B925C442F60065CD94 /* BarcodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF225C03683003BF4CE /* BarcodeType.swift */; };
+		A752F1BA25C442F60065CD94 /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF125C03683003BF4CE /* BarcodeScannerView.swift */; };
+		A752F1BC25C442FB0065CD94 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF525C03683003BF4CE /* GridViewModel.swift */; };
+		A752F1BD25C442FB0065CD94 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF625C03683003BF4CE /* GridView.swift */; };
+		A752F1BF25C443000065CD94 /* TimePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF925C03683003BF4CE /* TimePickerViewModel.swift */; };
+		A752F1C025C443000065CD94 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AF825C03683003BF4CE /* TimePickerView.swift */; };
+		A75A6B0725C03787003BF4CE /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75A6B2F25C037BC003BF4CE /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE225C03683003BF4CE /* PageViewModel.swift */; };
+		A75A6B3025C037BC003BF4CE /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE325C03683003BF4CE /* PageView.swift */; };
+		A75A6B3F25C03917003BF4CE /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		A75A6B4025C03917003BF4CE /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7BCD13825C44ADF00687520 /* WeakCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A752F16725C43F3B0065CD94 /* WeakCache.framework */; platformFilter = ios; };
+		A7BCD14425C44B2500687520 /* CacheableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE925C03683003BF4CE /* CacheableElement.swift */; };
+		A7BCD14525C44B2500687520 /* WeakCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AEA25C03683003BF4CE /* WeakCacheTests.swift */; };
 		C568604A23AE166D001CFD85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604823AE166D001CFD85 /* CollectionViewCell.swift */; };
 		C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C568604923AE166D001CFD85 /* TableViewCell.swift */; };
 		C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */; };
@@ -41,6 +76,127 @@
 		EBED3B7324D29D8100CF9221 /* ContainerCollectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A752F14625C43F380065CD94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		A752F15925C43F3B0065CD94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		A752F16C25C43F410065CD94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		A752F17F25C43F4A0065CD94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		A752F19125C43F4C0065CD94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		A75A6B4125C03917003BF4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
+		A7BCD13925C44ADF00687520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A752F15725C43F3B0065CD94;
+			remoteInfo = WeakCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A752F14F25C43F380065CD94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A752F15025C43F380065CD94 /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F16225C43F3B0065CD94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A752F16325C43F3B0065CD94 /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F17525C43F410065CD94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A752F17625C43F410065CD94 /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F18825C43F4A0065CD94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A752F18925C43F4A0065CD94 /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F19A25C43F4C0065CD94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A752F19B25C43F4C0065CD94 /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A6B4325C03917003BF4CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A75A6B4025C03917003BF4CE /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
 		1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleViewModel.swift; sourceTree = "<group>"; };
@@ -48,6 +204,37 @@
 		1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderViewModel.swift; sourceTree = "<group>"; };
 		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
+		A752F15425C43F380065CD94 /* CarouselView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarouselView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A752F15525C43F380065CD94 /* TimePickerView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TimePickerView.plist; sourceTree = "<group>"; };
+		A752F16725C43F3B0065CD94 /* WeakCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A752F16825C43F3B0065CD94 /* BarcodeScanner.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BarcodeScanner.plist; sourceTree = "<group>"; };
+		A752F17A25C43F410065CD94 /* BarcodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BarcodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A752F17B25C43F410065CD94 /* WeakCache.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WeakCache.plist; sourceTree = "<group>"; };
+		A752F18D25C43F4A0065CD94 /* GridView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GridView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A752F18E25C43F4A0065CD94 /* CarouselView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CarouselView.plist; sourceTree = "<group>"; };
+		A752F19F25C43F4C0065CD94 /* TimePickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimePickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A752F1A125C43F4C0065CD94 /* GridView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GridView.plist; sourceTree = "<group>"; };
+		A75A6AE225C03683003BF4CE /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
+		A75A6AE325C03683003BF4CE /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		A75A6AE525C03683003BF4CE /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		A75A6AE625C03683003BF4CE /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		A75A6AE925C03683003BF4CE /* CacheableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheableElement.swift; sourceTree = "<group>"; };
+		A75A6AEA25C03683003BF4CE /* WeakCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakCacheTests.swift; sourceTree = "<group>"; };
+		A75A6AEB25C03683003BF4CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A75A6AED25C03683003BF4CE /* WeakCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakCache.swift; sourceTree = "<group>"; };
+		A75A6AEF25C03683003BF4CE /* Barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		A75A6AF025C03683003BF4CE /* BarcodeScannerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerError.swift; sourceTree = "<group>"; };
+		A75A6AF125C03683003BF4CE /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		A75A6AF225C03683003BF4CE /* BarcodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeType.swift; sourceTree = "<group>"; };
+		A75A6AF325C03683003BF4CE /* BarcodeScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewModel.swift; sourceTree = "<group>"; };
+		A75A6AF525C03683003BF4CE /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		A75A6AF625C03683003BF4CE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		A75A6AF825C03683003BF4CE /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		A75A6AF925C03683003BF4CE /* TimePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewModel.swift; sourceTree = "<group>"; };
+		A75A6B2D25C03787003BF4CE /* PageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75A6B2E25C03787003BF4CE /* PageView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PageView.plist; sourceTree = "<group>"; };
+		A7BCD13325C44ADF00687520 /* WeakCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeakCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7BCD13725C44ADF00687520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C568604923AE166D001CFD85 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JamitFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,12 +260,68 @@
 		C5CB31F52371D10F00E25E4B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C5CB31F62371D10F00E25E4B /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C5CB32132371D1A700E25E4B /* JamitFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JamitFoundation.h; sourceTree = "<group>"; };
-		C5CB32142371D1A700E25E4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CB32142371D1A700E25E4B /* JamitFoundation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JamitFoundation.plist; sourceTree = "<group>"; };
 		EBED3B7024D29D8000CF9221 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		EBED3B7124D29D8000CF9221 /* ContainerCollectionSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerCollectionSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A752F14C25C43F380065CD94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F14D25C43F380065CD94 /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F15F25C43F3B0065CD94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F16025C43F3B0065CD94 /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F17225C43F410065CD94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F17325C43F410065CD94 /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F18525C43F4A0065CD94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F18625C43F4A0065CD94 /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F19725C43F4C0065CD94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F19825C43F4C0065CD94 /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A6B2825C03787003BF4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A6B3F25C03917003BF4CE /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BCD13025C44ADF00687520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BCD13825C44ADF00687520 /* WeakCache.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BD2371D0BE00E25E4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +359,109 @@
 			path = CollapsibleTableViewCell;
 			sourceTree = "<group>";
 		};
+		A752F1A425C43F8E0065CD94 /* Info.plists */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB32142371D1A700E25E4B /* JamitFoundation.plist */,
+				A75A6B2E25C03787003BF4CE /* PageView.plist */,
+				A752F15525C43F380065CD94 /* TimePickerView.plist */,
+				A752F16825C43F3B0065CD94 /* BarcodeScanner.plist */,
+				A752F17B25C43F410065CD94 /* WeakCache.plist */,
+				A752F18E25C43F4A0065CD94 /* CarouselView.plist */,
+				A752F1A125C43F4C0065CD94 /* GridView.plist */,
+			);
+			path = Info.plists;
+			sourceTree = "<group>";
+		};
+		A75A6AE025C03683003BF4CE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE125C03683003BF4CE /* PageView */,
+				A75A6AE425C03683003BF4CE /* CarouselView */,
+				A75A6AE725C03683003BF4CE /* WeakCache */,
+				A75A6AEE25C03683003BF4CE /* BarcodeScanner */,
+				A75A6AF425C03683003BF4CE /* GridView */,
+				A75A6AF725C03683003BF4CE /* TimePickerView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A75A6AE125C03683003BF4CE /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE225C03683003BF4CE /* PageViewModel.swift */,
+				A75A6AE325C03683003BF4CE /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		A75A6AE425C03683003BF4CE /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE525C03683003BF4CE /* CarouselView.swift */,
+				A75A6AE625C03683003BF4CE /* CarouselViewModel.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		A75A6AE725C03683003BF4CE /* WeakCache */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AE825C03683003BF4CE /* Tests */,
+				A75A6AEB25C03683003BF4CE /* README.md */,
+				A75A6AEC25C03683003BF4CE /* Sources */,
+			);
+			path = WeakCache;
+			sourceTree = "<group>";
+		};
+		A75A6AE825C03683003BF4CE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A7BCD13725C44ADF00687520 /* Info.plist */,
+				A75A6AE925C03683003BF4CE /* CacheableElement.swift */,
+				A75A6AEA25C03683003BF4CE /* WeakCacheTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A75A6AEC25C03683003BF4CE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AED25C03683003BF4CE /* WeakCache.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A75A6AEE25C03683003BF4CE /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AEF25C03683003BF4CE /* Barcode.swift */,
+				A75A6AF025C03683003BF4CE /* BarcodeScannerError.swift */,
+				A75A6AF125C03683003BF4CE /* BarcodeScannerView.swift */,
+				A75A6AF225C03683003BF4CE /* BarcodeType.swift */,
+				A75A6AF325C03683003BF4CE /* BarcodeScannerViewModel.swift */,
+			);
+			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		A75A6AF425C03683003BF4CE /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AF525C03683003BF4CE /* GridViewModel.swift */,
+				A75A6AF625C03683003BF4CE /* GridView.swift */,
+			);
+			path = GridView;
+			sourceTree = "<group>";
+		};
+		A75A6AF725C03683003BF4CE /* TimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A75A6AF825C03683003BF4CE /* TimePickerView.swift */,
+				A75A6AF925C03683003BF4CE /* TimePickerViewModel.swift */,
+			);
+			path = TimePickerView;
+			sourceTree = "<group>";
+		};
 		B4F0DABC24E3F8DB0074056A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +474,7 @@
 			children = (
 				C5CB32122371D1A700E25E4B /* SupportingFiles */,
 				C5CB31D72371D10F00E25E4B /* Sources */,
+				A75A6AE025C03683003BF4CE /* Modules */,
 				C5CB31C12371D0BE00E25E4B /* Products */,
 				B4F0DABC24E3F8DB0074056A /* Frameworks */,
 			);
@@ -137,6 +484,13 @@
 			isa = PBXGroup;
 			children = (
 				C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */,
+				A75A6B2D25C03787003BF4CE /* PageView.framework */,
+				A752F15425C43F380065CD94 /* CarouselView.framework */,
+				A752F16725C43F3B0065CD94 /* WeakCache.framework */,
+				A752F17A25C43F410065CD94 /* BarcodeScanner.framework */,
+				A752F18D25C43F4A0065CD94 /* GridView.framework */,
+				A752F19F25C43F4C0065CD94 /* TimePickerView.framework */,
+				A7BCD13325C44ADF00687520 /* WeakCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,8 +613,8 @@
 		C5CB32122371D1A700E25E4B /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A752F1A425C43F8E0065CD94 /* Info.plists */,
 				C5CB32132371D1A700E25E4B /* JamitFoundation.h */,
-				C5CB32142371D1A700E25E4B /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -268,6 +622,54 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A752F14725C43F380065CD94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F14825C43F380065CD94 /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F15A25C43F3B0065CD94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F15B25C43F3B0065CD94 /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F16D25C43F410065CD94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F16E25C43F410065CD94 /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F18025C43F4A0065CD94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F18125C43F4A0065CD94 /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F19225C43F4C0065CD94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F19325C43F4C0065CD94 /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A6B0625C03787003BF4CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A6B0725C03787003BF4CE /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BB2371D0BE00E25E4B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +681,144 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A752F14425C43F380065CD94 /* CarouselView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A752F15125C43F380065CD94 /* Build configuration list for PBXNativeTarget "CarouselView" */;
+			buildPhases = (
+				A752F14725C43F380065CD94 /* Headers */,
+				A752F14925C43F380065CD94 /* Sources */,
+				A752F14C25C43F380065CD94 /* Frameworks */,
+				A752F14E25C43F380065CD94 /* Resources */,
+				A752F14F25C43F380065CD94 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A752F14525C43F380065CD94 /* PBXTargetDependency */,
+			);
+			name = CarouselView;
+			productName = UIFoundation;
+			productReference = A752F15425C43F380065CD94 /* CarouselView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A752F15725C43F3B0065CD94 /* WeakCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A752F16425C43F3B0065CD94 /* Build configuration list for PBXNativeTarget "WeakCache" */;
+			buildPhases = (
+				A752F15A25C43F3B0065CD94 /* Headers */,
+				A752F15C25C43F3B0065CD94 /* Sources */,
+				A752F15F25C43F3B0065CD94 /* Frameworks */,
+				A752F16125C43F3B0065CD94 /* Resources */,
+				A752F16225C43F3B0065CD94 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A752F15825C43F3B0065CD94 /* PBXTargetDependency */,
+			);
+			name = WeakCache;
+			productName = UIFoundation;
+			productReference = A752F16725C43F3B0065CD94 /* WeakCache.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A752F16A25C43F410065CD94 /* BarcodeScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A752F17725C43F410065CD94 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */;
+			buildPhases = (
+				A752F16D25C43F410065CD94 /* Headers */,
+				A752F16F25C43F410065CD94 /* Sources */,
+				A752F17225C43F410065CD94 /* Frameworks */,
+				A752F17425C43F410065CD94 /* Resources */,
+				A752F17525C43F410065CD94 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A752F16B25C43F410065CD94 /* PBXTargetDependency */,
+			);
+			name = BarcodeScanner;
+			productName = UIFoundation;
+			productReference = A752F17A25C43F410065CD94 /* BarcodeScanner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A752F17D25C43F4A0065CD94 /* GridView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A752F18A25C43F4A0065CD94 /* Build configuration list for PBXNativeTarget "GridView" */;
+			buildPhases = (
+				A752F18025C43F4A0065CD94 /* Headers */,
+				A752F18225C43F4A0065CD94 /* Sources */,
+				A752F18525C43F4A0065CD94 /* Frameworks */,
+				A752F18725C43F4A0065CD94 /* Resources */,
+				A752F18825C43F4A0065CD94 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A752F17E25C43F4A0065CD94 /* PBXTargetDependency */,
+			);
+			name = GridView;
+			productName = UIFoundation;
+			productReference = A752F18D25C43F4A0065CD94 /* GridView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A752F18F25C43F4C0065CD94 /* TimePickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A752F19C25C43F4C0065CD94 /* Build configuration list for PBXNativeTarget "TimePickerView" */;
+			buildPhases = (
+				A752F19225C43F4C0065CD94 /* Headers */,
+				A752F19425C43F4C0065CD94 /* Sources */,
+				A752F19725C43F4C0065CD94 /* Frameworks */,
+				A752F19925C43F4C0065CD94 /* Resources */,
+				A752F19A25C43F4C0065CD94 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A752F19025C43F4C0065CD94 /* PBXTargetDependency */,
+			);
+			name = TimePickerView;
+			productName = UIFoundation;
+			productReference = A752F19F25C43F4C0065CD94 /* TimePickerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A75A6B0525C03787003BF4CE /* PageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75A6B2A25C03787003BF4CE /* Build configuration list for PBXNativeTarget "PageView" */;
+			buildPhases = (
+				A75A6B0625C03787003BF4CE /* Headers */,
+				A75A6B0825C03787003BF4CE /* Sources */,
+				A75A6B2825C03787003BF4CE /* Frameworks */,
+				A75A6B2925C03787003BF4CE /* Resources */,
+				A75A6B4325C03917003BF4CE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A75A6B4225C03917003BF4CE /* PBXTargetDependency */,
+			);
+			name = PageView;
+			productName = UIFoundation;
+			productReference = A75A6B2D25C03787003BF4CE /* PageView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A7BCD13225C44ADF00687520 /* WeakCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7BCD13D25C44ADF00687520 /* Build configuration list for PBXNativeTarget "WeakCacheTests" */;
+			buildPhases = (
+				A7BCD12F25C44ADF00687520 /* Sources */,
+				A7BCD13025C44ADF00687520 /* Frameworks */,
+				A7BCD13125C44ADF00687520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7BCD13A25C44ADF00687520 /* PBXTargetDependency */,
+			);
+			name = WeakCacheTests;
+			productName = WeakCacheTests;
+			productReference = A7BCD13325C44ADF00687520 /* WeakCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C5CB31BF2371D0BE00E25E4B /* JamitFoundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5CB31C82371D0BE00E25E4B /* Build configuration list for PBXNativeTarget "JamitFoundation" */;
@@ -303,10 +843,13 @@
 		C5CB31B72371D0BE00E25E4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
+					A7BCD13225C44ADF00687520 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					C5CB31BF2371D0BE00E25E4B = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -326,11 +869,67 @@
 			projectRoot = "";
 			targets = (
 				C5CB31BF2371D0BE00E25E4B /* JamitFoundation */,
+				A75A6B0525C03787003BF4CE /* PageView */,
+				A752F14425C43F380065CD94 /* CarouselView */,
+				A752F15725C43F3B0065CD94 /* WeakCache */,
+				A752F16A25C43F410065CD94 /* BarcodeScanner */,
+				A752F17D25C43F4A0065CD94 /* GridView */,
+				A752F18F25C43F4C0065CD94 /* TimePickerView */,
+				A7BCD13225C44ADF00687520 /* WeakCacheTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A752F14E25C43F380065CD94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F16125C43F3B0065CD94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F17425C43F410065CD94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F18725C43F4A0065CD94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F19925C43F4C0065CD94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A6B2925C03787003BF4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BCD13125C44ADF00687520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BE2371D0BE00E25E4B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +940,71 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A752F14925C43F380065CD94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F1B225C442E30065CD94 /* CarouselViewModel.swift in Sources */,
+				A752F1B125C442E30065CD94 /* CarouselView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F15C25C43F3B0065CD94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F1B425C442F10065CD94 /* WeakCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F16F25C43F410065CD94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F1BA25C442F60065CD94 /* BarcodeScannerView.swift in Sources */,
+				A752F1B825C442F60065CD94 /* BarcodeScannerViewModel.swift in Sources */,
+				A752F1B725C442F60065CD94 /* BarcodeScannerError.swift in Sources */,
+				A752F1B925C442F60065CD94 /* BarcodeType.swift in Sources */,
+				A752F1B625C442F60065CD94 /* Barcode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F18225C43F4A0065CD94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F1BD25C442FB0065CD94 /* GridView.swift in Sources */,
+				A752F1BC25C442FB0065CD94 /* GridViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752F19425C43F4C0065CD94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A752F1BF25C443000065CD94 /* TimePickerViewModel.swift in Sources */,
+				A752F1C025C443000065CD94 /* TimePickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75A6B0825C03787003BF4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75A6B3025C037BC003BF4CE /* PageView.swift in Sources */,
+				A75A6B2F25C037BC003BF4CE /* PageViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BCD12F25C44ADF00687520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BCD14525C44B2500687520 /* WeakCacheTests.swift in Sources */,
+				A7BCD14425C44B2500687520 /* CacheableElement.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CB31BC2371D0BE00E25E4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,7 +1045,398 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A752F14525C43F380065CD94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A752F14625C43F380065CD94 /* PBXContainerItemProxy */;
+		};
+		A752F15825C43F3B0065CD94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A752F15925C43F3B0065CD94 /* PBXContainerItemProxy */;
+		};
+		A752F16B25C43F410065CD94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A752F16C25C43F410065CD94 /* PBXContainerItemProxy */;
+		};
+		A752F17E25C43F4A0065CD94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A752F17F25C43F4A0065CD94 /* PBXContainerItemProxy */;
+		};
+		A752F19025C43F4C0065CD94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A752F19125C43F4C0065CD94 /* PBXContainerItemProxy */;
+		};
+		A75A6B4225C03917003BF4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = A75A6B4125C03917003BF4CE /* PBXContainerItemProxy */;
+		};
+		A7BCD13A25C44ADF00687520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = A752F15725C43F3B0065CD94 /* WeakCache */;
+			targetProxy = A7BCD13925C44ADF00687520 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A752F15225C43F380065CD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/CarouselView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.CarouselView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A752F15325C43F380065CD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/CarouselView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.CarouselView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A752F16525C43F3B0065CD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/WeakCache.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.WeakCache;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A752F16625C43F3B0065CD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/WeakCache.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.WeakCache;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A752F17825C43F410065CD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/BarcodeScanner.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.BarcodeScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A752F17925C43F410065CD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/BarcodeScanner.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.BarcodeScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A752F18B25C43F4A0065CD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/GridView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.GridView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A752F18C25C43F4A0065CD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/GridView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.GridView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A752F19D25C43F4C0065CD94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/TimePickerView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.TimePickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A752F19E25C43F4C0065CD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/TimePickerView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.TimePickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A75A6B2B25C03787003BF4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/PageView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.PageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A75A6B2C25C03787003BF4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/PageView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.PageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A7BCD13B25C44ADF00687520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S7ZMR5757M;
+				INFOPLIST_FILE = "$(SRCROOT)/Modules/WeakCache/Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.jamitfoundation.WeakCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7BCD13C25C44ADF00687520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S7ZMR5757M;
+				INFOPLIST_FILE = "$(SRCROOT)/Modules/WeakCache/Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.jamitfoundation.WeakCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C5CB31C62371D0BE00E25E4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -510,7 +1565,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/JamitFoundation.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,7 +1591,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/JamitFoundation.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -557,6 +1612,69 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A752F15125C43F380065CD94 /* Build configuration list for PBXNativeTarget "CarouselView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A752F15225C43F380065CD94 /* Debug */,
+				A752F15325C43F380065CD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A752F16425C43F3B0065CD94 /* Build configuration list for PBXNativeTarget "WeakCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A752F16525C43F3B0065CD94 /* Debug */,
+				A752F16625C43F3B0065CD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A752F17725C43F410065CD94 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A752F17825C43F410065CD94 /* Debug */,
+				A752F17925C43F410065CD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A752F18A25C43F4A0065CD94 /* Build configuration list for PBXNativeTarget "GridView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A752F18B25C43F4A0065CD94 /* Debug */,
+				A752F18C25C43F4A0065CD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A752F19C25C43F4C0065CD94 /* Build configuration list for PBXNativeTarget "TimePickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A752F19D25C43F4C0065CD94 /* Debug */,
+				A752F19E25C43F4C0065CD94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75A6B2A25C03787003BF4CE /* Build configuration list for PBXNativeTarget "PageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75A6B2B25C03787003BF4CE /* Debug */,
+				A75A6B2C25C03787003BF4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7BCD13D25C44ADF00687520 /* Build configuration list for PBXNativeTarget "WeakCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7BCD13B25C44ADF00687520 /* Debug */,
+				A7BCD13C25C44ADF00687520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5CB31BA2371D0BE00E25E4B /* Build configuration list for PBXProject "JamitFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
