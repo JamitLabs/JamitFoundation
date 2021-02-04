@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage      = "https://github.com/JamitLabs/JamitFoundation"
   spec.license       = { :type => 'MIT' }
   spec.author        = { "Jamit Labs GmbH" => "mail@jamitlabs.com" }
-  spec.platform      = :ios, "10.0"
+  spec.platform      = :ios, "9.0"
   spec.swift_version = "5.0"
   spec.source        = { :git => "https://github.com/JamitLabs/JamitFoundation.git", :tag => "#{spec.version}" }
   spec.source_files  = "Sources/**/*.{h,m,swift}"
