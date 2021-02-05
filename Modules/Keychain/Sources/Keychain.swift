@@ -10,7 +10,7 @@ public final class Keychain: KeychainProtocol {
         SecItemAdd(dictionary as CFDictionary, nil)
     }
 
-    public func fetch(_ query: [String : Any]) -> Keychain {
+    public func fetch(_ query: [String : Any]) -> KeychainResult {
         var queryResult: AnyObject?
         let status = withUnsafeMutablePointer(to: &queryResult) {
             SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0))
