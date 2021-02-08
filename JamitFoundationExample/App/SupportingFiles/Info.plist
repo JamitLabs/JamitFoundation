@@ -24,6 +24,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>SampleListView</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is needed so you can scan barcodes</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

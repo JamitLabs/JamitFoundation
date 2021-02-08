@@ -15,15 +15,23 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TABLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.ACTION_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SCROLL_VIEW_ITEM.TITLE", comment: "")),
+				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.CAROUSEL_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.TIME_PICKER_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: "")),
+				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE", comment: ""))
             ]
         )
 
         tableView.separatorStyle = .none
         tableView.delegate = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.reloadData()
     }
 
     private func showTableView() {
@@ -70,6 +78,18 @@ final class SampleListViewController: ListViewController<ListItemView> {
         )
         let scrollViewController = ScrollViewController(contentViewController: viewController)
         navigationController?.pushViewController(scrollViewController, animated: true)
+    }
+
+    private func showCarouselView() {
+        let viewController = CarouselViewController.instantiate()
+        viewController.model = .init(
+            carouselItemViewModels: [
+                .init(backgroundColor: .green),
+                .init(backgroundColor: .blue),
+                .init(backgroundColor: .red)
+            ]
+        )
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func showTimePickerView() {
@@ -162,6 +182,32 @@ final class SampleListViewController: ListViewController<ListItemView> {
             items: items
         )
         navigationController?.pushViewController(viewController, animated: true)
+	}
+
+	private func showBarcodeScanner() {
+        #if targetEnvironment(simulator)
+            showBarcodeScannerOnlyOnRealDevicesAlert()
+            tableView.reloadData()
+        #else
+            let viewController: BarcodeScannerViewController = .instantiate()
+            navigationController?.pushViewController(viewController, animated: true)
+        #endif
+    }
+
+    private func showBarcodeScannerOnlyOnRealDevicesAlert() {
+        let alertController = UIAlertController(
+            title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.TITLE", comment: ""),
+            message: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.MESSAGE", comment: ""),
+            preferredStyle: .alert
+        )
+
+        let okAction = UIAlertAction(
+            title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.OK_ACTION_TITLE", comment: ""),
+            style: .default
+        )
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true)
     }
 }
 
@@ -178,16 +224,22 @@ extension SampleListViewController: UITableViewDelegate {
             showScrollView()
 
         case 3:
-            showTimePickerView()
+            showCarouselView()
 
 		case 4:
+            showTimePickerView()
+
+		case 5:
             showCollapsibleView()
 
-        case 5:
+        case 6:
             showCollapsibleTableViewController()
 
-        case 6:
+        case 7:
             showCollectionView()
+
+		case 8:
+            showBarcodeScanner()
 
         default:
             break

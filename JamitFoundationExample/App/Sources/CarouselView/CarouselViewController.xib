@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="tRi-vE-krL" customClass="CarouselViewController" customModule="JamitFoundationExample" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="6oI-97-v21">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-qF-w6f">
+                        <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="xAe-mX-pJU" firstAttribute="trailing" secondItem="IHA-qF-w6f" secondAttribute="trailing" id="Bso-7W-BcP"/>
+                    <constraint firstItem="xAe-mX-pJU" firstAttribute="bottom" secondItem="IHA-qF-w6f" secondAttribute="bottom" id="CpN-qU-p6T"/>
+                    <constraint firstItem="IHA-qF-w6f" firstAttribute="leading" secondItem="xAe-mX-pJU" secondAttribute="leading" id="cSb-yQ-a9F"/>
+                    <constraint firstItem="IHA-qF-w6f" firstAttribute="top" secondItem="xAe-mX-pJU" secondAttribute="top" id="pAo-c7-g7B"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="xAe-mX-pJU"/>
+            </view>
+            <connections>
+                <outlet property="contentView" destination="IHA-qF-w6f" id="fMw-Ha-cb0"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="-417"/>
+        </viewController>
+    </objects>
+</document>

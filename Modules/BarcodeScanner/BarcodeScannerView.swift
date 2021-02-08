@@ -70,6 +70,8 @@ public final class BarcodeScannerView: StatefulView<BarcodeScannerViewModel> {
     }
 
     deinit {
+        removeObservers()
+
         // Resuming the capture session queue before release is mandatory to avoid crashes
         isDeinited = true
 
