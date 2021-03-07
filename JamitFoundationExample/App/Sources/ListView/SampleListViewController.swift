@@ -20,7 +20,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: "")),
-				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE", comment: ""))
+				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.MESSAGE_VIEW_ITEM.TITLE", comment: ""))
             ]
         )
 
@@ -209,6 +210,12 @@ final class SampleListViewController: ListViewController<ListItemView> {
 
         present(alertController, animated: true)
     }
+    
+    private func showMessageView() {
+        let viewController: MessageViewController = .instantiate()
+        viewController.model = .init()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension SampleListViewController: UITableViewDelegate {
@@ -240,6 +247,9 @@ extension SampleListViewController: UITableViewDelegate {
 
 		case 8:
             showBarcodeScanner()
+
+        case 9:
+            showMessageView()
 
         default:
             break

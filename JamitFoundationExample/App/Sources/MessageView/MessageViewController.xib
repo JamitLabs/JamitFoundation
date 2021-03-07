@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="Ucw-wC-mcz" customClass="MessageViewController" customModule="JamitFoundationExample" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="fei-Kt-gBH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFy-Mw-1Oq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="axJ-uC-3rQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-nq-j3X">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                        <state key="normal" title="MessageViewFromTop"/>
+                                        <connections>
+                                            <action selector="showMessageViewFromTop" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="FPO-bb-EYY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qU-57-8EV">
+                                        <rect key="frame" x="0.0" y="204.5" width="414" height="204.5"/>
+                                        <state key="normal" title="MessageViewFromBottom"/>
+                                        <connections>
+                                            <action selector="showMessageViewFromBottom" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="8tR-C9-UGc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtJ-lL-ksG">
+                                        <rect key="frame" x="0.0" y="409" width="414" height="204.5"/>
+                                        <state key="normal" title="MessageViewFromTopWithBackground"/>
+                                        <connections>
+                                            <action selector="showMessageViewFromTopWithBackground" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="qlj-Ij-9kw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkd-Uk-WO6">
+                                        <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <state key="normal" title="MessageViewFromBottomWithBackground"/>
+                                        <connections>
+                                            <action selector="showMessageViewFromBottomWithBackground" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="jAG-d8-74X"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="axJ-uC-3rQ" secondAttribute="bottom" id="AaO-OQ-zRL"/>
+                            <constraint firstAttribute="trailing" secondItem="axJ-uC-3rQ" secondAttribute="trailing" id="N1l-MO-MD7"/>
+                            <constraint firstItem="axJ-uC-3rQ" firstAttribute="top" secondItem="vFy-Mw-1Oq" secondAttribute="top" id="QH2-GX-6A9"/>
+                            <constraint firstItem="axJ-uC-3rQ" firstAttribute="leading" secondItem="vFy-Mw-1Oq" secondAttribute="leading" id="zTy-cS-vHc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="Zs2-2X-zmH"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="Zs2-2X-zmH" firstAttribute="trailing" secondItem="vFy-Mw-1Oq" secondAttribute="trailing" id="BJP-6V-mmI"/>
+                    <constraint firstItem="vFy-Mw-1Oq" firstAttribute="leading" secondItem="Zs2-2X-zmH" secondAttribute="leading" id="gbC-EK-Vd2"/>
+                    <constraint firstItem="vFy-Mw-1Oq" firstAttribute="top" secondItem="Zs2-2X-zmH" secondAttribute="top" id="sG0-Ni-8xM"/>
+                    <constraint firstItem="Zs2-2X-zmH" firstAttribute="bottom" secondItem="vFy-Mw-1Oq" secondAttribute="bottom" id="stT-c8-qhI"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-299" y="-138"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
