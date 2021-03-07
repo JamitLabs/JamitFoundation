@@ -44,4 +44,8 @@ Pod::Spec.new do |spec|
     sp.source_files = 'Modules/WeakCache'
   end
 
+  spec.subspec 'MessageView' do |sp|
+    sp.dependency 'JamitFoundation/Core'
+    sp.source_files = 'Modules/MessageView'
+  end
 end
