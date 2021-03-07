@@ -4,6 +4,11 @@ import Foundation
 import JamitFoundation
 import UIKit
 
+/// A stateful view which can be used to display messages to the user
+///
+/// For a detailed example have a look at the sample project as this view is mainly
+/// for the use with a `MessageViewPresenter`.
+///
 public final class MessageView: StatefulView<MessageViewModel> {
     private lazy var button: UIButton = .instantiate()
 
@@ -78,6 +83,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
         hideMessageView()
     }
 
+    /// Show the message view
     public func showMessageView() {
         switch model.origin {
         case .top:
@@ -112,6 +118,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
         )
     }
 
+    /// Hide the message view
     public func hideMessageView() {
         switch model.origin {
         case .top:
