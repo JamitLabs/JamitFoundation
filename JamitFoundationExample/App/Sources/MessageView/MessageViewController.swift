@@ -50,7 +50,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         messageViewPresenter.showInfo(
             withTitle: "MessageView From bottom with background view",
             andMessage: "This is a message view presented from bottom with a background view",
-            origin: .top,
+            origin: .bottom,
             shouldHaveBackgroundView: true,
             with: UIColor.black.withAlphaComponent(0.3)
         ) {

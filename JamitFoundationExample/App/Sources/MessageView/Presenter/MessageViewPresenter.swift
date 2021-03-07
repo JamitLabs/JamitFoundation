@@ -103,7 +103,7 @@ extension MessageViewPresenter {
             leadingSpacing: leadingSpacing,
             trailingSpacing: trailingSpacing,
             bottomSpacing: bottomSpacing,
-            contentViewBackgroundColor: .blue,
+            messageViewBackgroundColor: .blue,
             cornerRadius: cornerRadius,
             animationDuration: 1.0,
             animationOptions: [.curveEaseInOut],
