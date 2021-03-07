@@ -28,7 +28,7 @@ public struct MessageViewModel: ViewModelProtocol {
     /// The bottom spacing the message view should have
     public let bottomSpacing: CGFloat
     /// The background color of the message view
-    public let contentViewBackgroundColor: UIColor
+    public let messageViewBackgroundColor: UIColor
     /// The corner radius of the message view
     public let cornerRadius: CGFloat
     /// The animation duration used for origin animation
@@ -51,7 +51,7 @@ public struct MessageViewModel: ViewModelProtocol {
     ///  - leadingSpacing: The leading spacing the message view should have
     ///  - trailingSpacing: The trailing spacing the message view should have
     ///  - bottomSpacing: The bottom spacing the message view should have
-    ///  - contentViewBackgroundColor: The background color of the message view
+    ///  - messageViewBackgroundColor: The background color of the message view
     ///  - cornerRadius: The corner radius of the message view
     ///  - animationDuration : The animation duration used for origin animation
     ///  - animationOptions : The animation options to use with the animation
@@ -65,7 +65,7 @@ public struct MessageViewModel: ViewModelProtocol {
         leadingSpacing: CGFloat = Self.default.leadingSpacing,
         trailingSpacing: CGFloat = Self.default.trailingSpacing,
         bottomSpacing: CGFloat = Self.default.bottomSpacing,
-        contentViewBackgroundColor: UIColor = Self.default.contentViewBackgroundColor,
+        messageViewBackgroundColor: UIColor = Self.default.messageViewBackgroundColor,
         cornerRadius: CGFloat = Self.default.cornerRadius,
         animationDuration: Double = Self.default.animationDuration,
         animationOptions: UIView.AnimationOptions = Self.default.animationOptions,
@@ -79,7 +79,7 @@ public struct MessageViewModel: ViewModelProtocol {
         self.leadingSpacing = leadingSpacing
         self.trailingSpacing = trailingSpacing
         self.bottomSpacing = bottomSpacing
-        self.contentViewBackgroundColor = contentViewBackgroundColor
+        self.messageViewBackgroundColor = messageViewBackgroundColor
         self.cornerRadius = cornerRadius
         self.animationDuration = animationDuration
         self.animationOptions = animationOptions
@@ -99,7 +99,7 @@ extension MessageViewModel {
             leadingSpacing: 0.0,
             trailingSpacing: 0.0,
             bottomSpacing: 0.0,
-            contentViewBackgroundColor: .white,
+            messageViewBackgroundColor: .white,
             cornerRadius: 0.0,
             animationDuration: 1.0,
             animationOptions: [.curveEaseInOut],

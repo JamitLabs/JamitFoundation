@@ -28,7 +28,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
         super.didChangeModel()
 
         layer.cornerRadius = model.cornerRadius
-        backgroundColor = model.contentViewBackgroundColor
+        backgroundColor = model.messageViewBackgroundColor
 
         setup()
 
