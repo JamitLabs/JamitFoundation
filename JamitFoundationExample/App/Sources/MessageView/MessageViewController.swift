@@ -16,7 +16,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         messageViewPresenter.showInfo(
             withTitle: "MessageView From top",
             andMessage: "This is a message view presented from top without a background view",
-            origin: .top,
+            position: .top,
             shouldHaveBackgroundView: false
         ) {
            print("Did dismiss messag view from top without background view")
@@ -27,7 +27,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         messageViewPresenter.showInfo(
             withTitle: "MessageView From bottom",
             andMessage: "This is a message view presented from bottom without a background view",
-            origin: .bottom,
+            position: .bottom,
             shouldHaveBackgroundView: false
         ) {
            print("Did dismiss messag view from bottom without background view")
@@ -38,7 +38,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         messageViewPresenter.showInfo(
             withTitle: "MessageView From top with background view",
             andMessage: "This is a message view presented from top with a background view",
-            origin: .top,
+            position: .top,
             shouldHaveBackgroundView: true,
             with: UIColor.black.withAlphaComponent(0.3)
         ) {
@@ -50,7 +50,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         messageViewPresenter.showInfo(
             withTitle: "MessageView From bottom with background view",
             andMessage: "This is a message view presented from bottom with a background view",
-            origin: .bottom,
+            position: .bottom,
             shouldHaveBackgroundView: true,
             with: UIColor.black.withAlphaComponent(0.3)
         ) {

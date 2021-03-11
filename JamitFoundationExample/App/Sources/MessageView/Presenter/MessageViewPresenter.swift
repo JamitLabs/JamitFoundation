@@ -6,15 +6,17 @@ import MessageView
 import UIKit
 
 final class MessageViewPresenter {
+    private enum Constants {
+        static let topSpacing: CGFloat = 40.0
+        static let leadingSpacing: CGFloat = 20.0
+        static let trailingSpacing: CGFloat = 20.0
+        static let bottomSpacing: CGFloat = 20.0
+        static let cornerRadius: CGFloat = 10.0
+    }
+
     private var backgroundView: UIView?
     private var currentMessageView: MessageView?
     private var messageViews: [MessageView] = []
-
-    private let topSpacing: CGFloat = 40.0
-    private let leadingSpacing: CGFloat = 20.0
-    private let trailingSpacing: CGFloat = 20.0
-    private let bottomSpacing: CGFloat = 20.0
-    private let cornerRadius: CGFloat = 10.0
 
     private func addToQueue(_ messageView: MessageView) {
         messageViews.append(messageView)
@@ -34,15 +36,6 @@ final class MessageViewPresenter {
     private func attach(messageView: MessageView) {
         guard let window = UIApplication.shared.windows.last else { return }
 
-        let heightOffset: CGFloat = 10.0
-        let height: CGFloat = messageView.model.contentView.bounds.height + heightOffset
-        let bounds: CGRect = .init(
-            x: leadingSpacing,
-            y: messageView.model.origin == .bottom ? UIScreen.main.bounds.height : -height,
-            width: UIScreen.main.bounds.width - leadingSpacing - trailingSpacing,
-            height: height
-        )
-
         if messageView.model.shouldHaveBackgroundView {
             let backgroundView: UIView = .init(frame: window.bounds)
             backgroundView.backgroundColor = messageView.model.backgroundViewBackgroundColor
@@ -56,7 +49,22 @@ final class MessageViewPresenter {
             window.addSubview(messageView)
         }
 
-        messageView.frame = bounds
+        let targetSize = CGSize(
+            width: UIScreen.main.bounds.width - Constants.leadingSpacing - Constants.trailingSpacing,
+            height: UIView.layoutFittingCompressedSize.height
+        )
+        let size = messageView.model.contentView.systemLayoutSizeFitting(
+            targetSize,
+            withHorizontalFittingPriority: .required,
+            verticalFittingPriority: .defaultLow
+        )
+
+        messageView.frame = .init(
+            x: Constants.leadingSpacing,
+            y: messageView.model.position == .bottom ? UIScreen.main.bounds.height : -size.height,
+            width: size.width,
+            height: size.height
+        )
     }
 
     private func hide(_ completion: VoidCallback?) {
@@ -84,7 +92,7 @@ extension MessageViewPresenter {
     func showInfo(
         withTitle title: String,
         andMessage message: String,
-        origin: MessageViewModel.Origin = .bottom,
+        position: MessageViewModel.Position = .bottom,
         shouldHaveBackgroundView: Bool = true,
         with backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3),
         completion: VoidCallback? = nil
@@ -98,17 +106,17 @@ extension MessageViewPresenter {
         let messageView: MessageView = .instantiate()
         messageView.model = .init(
             contentView: infoMessageView,
-            origin: origin,
-            topSpacing: topSpacing,
-            leadingSpacing: leadingSpacing,
-            trailingSpacing: trailingSpacing,
-            bottomSpacing: bottomSpacing,
+            position: position,
+            topSpacing: Constants.topSpacing,
+            bottomSpacing: Constants.bottomSpacing,
             messageViewBackgroundColor: .blue,
-            cornerRadius: cornerRadius,
+            cornerRadius: Constants.cornerRadius,
             animationDuration: 1.0,
             animationOptions: [.curveEaseInOut],
             shouldHaveBackgroundView: shouldHaveBackgroundView,
-            backgroundViewBackgroundColor: backgroundColor
+            backgroundViewBackgroundColor: backgroundColor,
+            shouldAddSwipeGestureRecognizer: true,
+            shouldAddOverlayButton: true
         ) { [weak self] in
             self?.hide(completion)
         }
