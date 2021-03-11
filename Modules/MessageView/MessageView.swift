@@ -1,6 +1,5 @@
 // Copyright © 2021 Jamit Labs GmbH. All rights reserved.
 
-import Foundation
 import JamitFoundation
 import UIKit
 
@@ -33,13 +32,25 @@ public final class MessageView: StatefulView<MessageViewModel> {
         setup()
 
         isHidden = true
+        
+        button.gestureRecognizers?.removeAll()
 
-        switch model.origin {
+        guard model.shouldAddSwipeGestureRecognizer else { return }
+
+        switch model.position {
         case .top:
-            button.addGestureRecognizer(swipeUpGestureRecognizer)
+            if model.shouldAddOverlayButton {
+                button.addGestureRecognizer(swipeUpGestureRecognizer)
+            } else {
+                model.contentView.addGestureRecognizer(swipeUpGestureRecognizer)
+            }
 
         case .bottom:
-            button.addGestureRecognizer(swipeDownGestureRecognizer)
+            if model.shouldAddOverlayButton {
+                button.addGestureRecognizer(swipeDownGestureRecognizer)
+            } else {
+                model.contentView.addGestureRecognizer(swipeDownGestureRecognizer)
+            }
         }
     }
 
@@ -53,6 +64,8 @@ public final class MessageView: StatefulView<MessageViewModel> {
         model.contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         model.contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomAnchor.constraint(equalTo: model.contentView.bottomAnchor).isActive = true
+
+        guard model.shouldAddOverlayButton else { return }
 
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +98,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
     /// Show the message view
     public func showMessageView() {
-        switch model.origin {
+        switch model.position {
         case .top:
             showAnimate { [weak self] in
                 guard let self = self else { return }
@@ -120,7 +133,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
     /// Hide the message view
     public func hideMessageView() {
-        switch model.origin {
+        switch model.position {
         case .top:
             hideAnimation(
                 animations: { [weak self] in
@@ -133,7 +146,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
                     guard let self = self else { return }
 
                     self.isHidden = true
-                    self.model.action?()
+                    self.model.completion?()
                 }
             )
 
@@ -149,7 +162,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
                     guard let self = self else { return }
 
                     self.isHidden = true
-                    self.model.action?()
+                    self.model.completion?()
                 }
             )
         }
