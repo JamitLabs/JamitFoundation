@@ -14,7 +14,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
     }
 
     @IBAction func showMessageViewFromTop() {
-        messageViewPresenter.showInfo(
+        messageViewPresenter.show(
             withTitle: "MessageView From top",
             andMessage: "This is a message view presented from top without a background view",
             position: .top,
@@ -24,9 +24,21 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         }
     }
 
+    @IBAction func showTimedMessageViewFromTop() {
+        messageViewPresenter.show(
+            withTitle: "Timed MessageView from top",
+            andMessage: "This is a timed message view presented from top without a background view",
+            position: .top,
+            shouldHaveBackgroundView: false,
+            hideOption: .timer(3)
+        ) {
+           print("Did dismiss messag view from top without background view")
+        }
+    }
+
     @IBAction func showMessageViewFromBottom() {
-        messageViewPresenter.showInfo(
-            withTitle: "MessageView From bottom",
+        messageViewPresenter.show(
+            withTitle: "MessageView from bottom",
             andMessage: "This is a message view presented from bottom without a background view",
             position: .bottom,
             shouldHaveBackgroundView: false
@@ -35,9 +47,21 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         }
     }
 
+    @IBAction func showTimedMessageViewFromBottom() {
+        messageViewPresenter.show(
+            withTitle: "Timed MessageView from bottom",
+            andMessage: "This is a timed message view presented from bottom without a background view",
+            position: .bottom,
+            shouldHaveBackgroundView: false,
+            hideOption: .timer(3)
+        ) {
+           print("Did dismiss messag view from bottom without background view")
+        }
+    }
+
     @IBAction func showMessageViewFromTopWithBackground() {
-        messageViewPresenter.showInfo(
-            withTitle: "MessageView From top with background view",
+        messageViewPresenter.show(
+            withTitle: "MessageView from top with background view",
             andMessage: "This is a message view presented from top with a background view",
             position: .top,
             shouldHaveBackgroundView: true,
@@ -48,8 +72,8 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
     }
 
     @IBAction func showMessageViewFromBottomWithBackground() {
-        messageViewPresenter.showInfo(
-            withTitle: "MessageView From bottom with background view",
+        messageViewPresenter.show(
+            withTitle: "MessageView from bottom with background view",
             andMessage: "This is a message view presented from bottom with a background view",
             position: .bottom,
             shouldHaveBackgroundView: true,
@@ -57,5 +81,21 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
         ) {
            print("Did dismiss messag view from bottom with background view")
         }
+    }
+
+    @IBAction func dismissLatestMessageViewAnimated() {
+        messageViewPresenter.dismissLatest()
+    }
+
+    @IBAction func dismissLatestMessageView() {
+        messageViewPresenter.dismissLatest(animated: false)
+    }
+
+    @IBAction func dismissAllMessageViewsAnimated() {
+        messageViewPresenter.dismissAllMessages()
+    }
+
+    @IBAction func dismissAllMessageViews() {
+        messageViewPresenter.dismissAllMessages(animated: false)
     }
 }

@@ -23,31 +23,73 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-nq-j3X">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                         <state key="normal" title="MessageViewFromTop"/>
                                         <connections>
                                             <action selector="showMessageViewFromTop" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="FPO-bb-EYY"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXB-bB-3Nl" userLabel="TimedMessageViewFromTop">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="81.5"/>
+                                        <state key="normal" title="TimedMessageViewFromTop"/>
+                                        <connections>
+                                            <action selector="showTimedMessageViewFromTop" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="BDI-qA-bw0"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qU-57-8EV">
-                                        <rect key="frame" x="0.0" y="204.5" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="414" height="82"/>
                                         <state key="normal" title="MessageViewFromBottom"/>
                                         <connections>
                                             <action selector="showMessageViewFromBottom" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="8tR-C9-UGc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5y-fr-OuH" userLabel="TimedMessageViewFromBottom">
+                                        <rect key="frame" x="0.0" y="245.5" width="414" height="81.5"/>
+                                        <state key="normal" title="TimedMessageViewFromBottom"/>
+                                        <connections>
+                                            <action selector="showTimedMessageViewFromBottom" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="uc5-dX-Aph"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtJ-lL-ksG">
-                                        <rect key="frame" x="0.0" y="409" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="327" width="414" height="82"/>
                                         <state key="normal" title="MessageViewFromTopWithBackground"/>
                                         <connections>
                                             <action selector="showMessageViewFromTopWithBackground" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="qlj-Ij-9kw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkd-Uk-WO6">
-                                        <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="409" width="414" height="82"/>
                                         <state key="normal" title="MessageViewFromBottomWithBackground"/>
                                         <connections>
                                             <action selector="showMessageViewFromBottomWithBackground" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="jAG-d8-74X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-m9-Zs1" userLabel="DismisLatestMessageViewAnimated">
+                                        <rect key="frame" x="0.0" y="491" width="414" height="81.5"/>
+                                        <state key="normal" title="DismisLatestMessageViewAnimated"/>
+                                        <connections>
+                                            <action selector="dismissLatestMessageViewAnimated" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="Vgg-sG-8iS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHE-gK-6bU">
+                                        <rect key="frame" x="0.0" y="572.5" width="414" height="82"/>
+                                        <state key="normal" title="DismissLatestMessageView"/>
+                                        <connections>
+                                            <action selector="dismissLatestMessageView" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="dth-61-9JW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHQ-zN-oGa" userLabel="DismissAllMessageViewsAnimated">
+                                        <rect key="frame" x="0.0" y="654.5" width="414" height="81.5"/>
+                                        <state key="normal" title="DismissAllMessageViewsAnimated"/>
+                                        <connections>
+                                            <action selector="dismissAllMessageViewsAnimated" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="k05-CE-sBj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-cp-mTS">
+                                        <rect key="frame" x="0.0" y="736" width="414" height="82"/>
+                                        <state key="normal" title="DismissAllMessageViews"/>
+                                        <connections>
+                                            <action selector="dismissAllMessageViews" destination="Ucw-wC-mcz" eventType="primaryActionTriggered" id="se1-Nq-3PF"/>
                                         </connections>
                                     </button>
                                 </subviews>
