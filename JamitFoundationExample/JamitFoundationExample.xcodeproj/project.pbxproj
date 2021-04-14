@@ -67,6 +67,7 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
+		1ED5045B2626CB460014263D /* MessageViewPresenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5045A2626CB460014263D /* MessageViewPresenter+Extension.swift */; };
 		1EFCDA7024C5C1C600B41530 /* CollapsibleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */; };
 		1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */; };
 		1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */; };
@@ -167,6 +168,7 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1ED5045A2626CB460014263D /* MessageViewPresenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageViewPresenter+Extension.swift"; sourceTree = "<group>"; };
 		1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsibleTableViewController.xib; sourceTree = "<group>"; };
 		1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		1EBCCBDB25F4F0CF00079E3F /* MessageView */ = {
 			isa = PBXGroup;
 			children = (
+				1ED504592626CB300014263D /* Extension */,
 				1EBCCBEF25F4FE7A00079E3F /* Info */,
 				1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */,
 				1EBCCBE025F4F12800079E3F /* MessageViewController.xib */,
@@ -518,6 +521,14 @@
 				1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */,
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		1ED504592626CB300014263D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1ED5045A2626CB460014263D /* MessageViewPresenter+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1EDB1C5624BC6AEA00FEFA7D /* Frameworks */ = {
@@ -771,6 +782,7 @@
 				EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */,
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
 				1E8879FA24890940002A553C /* BarcodeScannerViewController.swift in Sources */,
+				1ED5045B2626CB460014263D /* MessageViewPresenter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

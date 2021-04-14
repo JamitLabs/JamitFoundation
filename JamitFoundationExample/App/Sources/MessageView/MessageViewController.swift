@@ -1,10 +1,11 @@
 //  Copyright © 2021 Jamit Labs GmbH. All rights reserved.
 
 import JamitFoundation
+import MessageView
 import UIKit
 
 final class MessageViewController: StatefulViewController<MessageViewControllerViewModel>{
-    private let messageViewPresenter: MessageViewPresenter = .init()
+    private let messageViewPresenter: MessageViewPresenter = .init(configuration: .default)
 
     override func viewDidLoad() {
         super.viewDidLoad()
