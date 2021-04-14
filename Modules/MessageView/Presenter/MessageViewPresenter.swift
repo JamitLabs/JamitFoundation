@@ -2,17 +2,10 @@
 
 import Foundation
 import JamitFoundation
-import MessageView
 import UIKit
 
-final class MessageViewPresenter {
-    private enum Constants {
-        static let topSpacing: CGFloat = 40.0
-        static let leadingSpacing: CGFloat = 20.0
-        static let trailingSpacing: CGFloat = 20.0
-        static let bottomSpacing: CGFloat = 20.0
-        static let cornerRadius: CGFloat = 10.0
-    }
+public class MessageViewPresenter {
+    private let configuration: MessageViewPresenterConfiguration
 
     private var backgroundView: UIView?
     private var currentMessageView: MessageView?
@@ -50,7 +43,7 @@ final class MessageViewPresenter {
         }
 
         let targetSize = CGSize(
-            width: UIScreen.main.bounds.width - Constants.leadingSpacing - Constants.trailingSpacing,
+            width: UIScreen.main.bounds.width - configuration.leadingSpacing - configuration.trailingSpacing,
             height: UIView.layoutFittingCompressedSize.height
         )
         let size = messageView.model.contentView.systemLayoutSizeFitting(
@@ -60,7 +53,7 @@ final class MessageViewPresenter {
         )
 
         messageView.frame = .init(
-            x: Constants.leadingSpacing,
+            x: configuration.leadingSpacing,
             y: messageView.model.position == .bottom ? UIScreen.main.bounds.height : -size.height,
             width: size.width,
             height: size.height
@@ -86,37 +79,34 @@ final class MessageViewPresenter {
     private func handleBackgroundTap() {
         currentMessageView?.hideMessageView()
     }
+
+    public init(configuration: MessageViewPresenterConfiguration) {
+        self.configuration = configuration
+    }
 }
 
 extension MessageViewPresenter {
-    func showInfo(
-        withTitle title: String,
-        andMessage message: String,
+    public func showInfo(
+        contentView: UIView,
         position: MessageViewModel.Position = .bottom,
         shouldHaveBackgroundView: Bool = true,
         with backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3),
         completion: VoidCallback? = nil
     ) {
-        let infoMessageView: InfoMessageView = .instantiate()
-        infoMessageView.model = .init(
-            title: title,
-            message: message
-        )
-
         let messageView: MessageView = .instantiate()
         messageView.model = .init(
-            contentView: infoMessageView,
+            contentView: contentView,
             position: position,
-            topSpacing: Constants.topSpacing,
-            bottomSpacing: Constants.bottomSpacing,
-            messageViewBackgroundColor: .blue,
-            cornerRadius: Constants.cornerRadius,
-            animationDuration: 1.0,
-            animationOptions: [.curveEaseInOut],
+            topSpacing: configuration.topSpacing,
+            bottomSpacing: configuration.bottomSpacing,
+            messageViewBackgroundColor: configuration.messageViewBackgroundColor,
+            cornerRadius: configuration.cornerRadius,
+            animationDuration: configuration.animationDuration,
+            animationOptions: configuration.animationOptions,
             shouldHaveBackgroundView: shouldHaveBackgroundView,
             backgroundViewBackgroundColor: backgroundColor,
-            shouldAddSwipeGestureRecognizer: true,
-            shouldAddOverlayButton: true
+            shouldAddSwipeGestureRecognizer: configuration.shouldAddSwipeGestureRecognizer,
+            shouldAddOverlayButton: configuration.shouldAddOverlayButton
         ) { [weak self] in
             self?.hide(completion)
         }

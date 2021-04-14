@@ -51,7 +51,6 @@
 		1EBCCBDD25F4F11200079E3F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */; };
 		1EBCCBE125F4F12800079E3F /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE025F4F12800079E3F /* MessageViewController.xib */; };
 		1EBCCBE525F4F13700079E3F /* MessageViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */; };
-		1EBCCBEA25F4F29400079E3F /* MessageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE925F4F29400079E3F /* MessageViewPresenter.swift */; };
 		1EBCCBF125F4FE8700079E3F /* InfoMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBF025F4FE8700079E3F /* InfoMessageView.swift */; };
 		1EBCCBF725F4FE9000079E3F /* InfoMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBF625F4FE9000079E3F /* InfoMessageViewModel.swift */; };
 		1EBCCBFB25F4FE9700079E3F /* InfoMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCCBFA25F4FE9700079E3F /* InfoMessageView.xib */; };
@@ -152,7 +151,6 @@
 		1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		1EBCCBE025F4F12800079E3F /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerViewModel.swift; sourceTree = "<group>"; };
-		1EBCCBE925F4F29400079E3F /* MessageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenter.swift; sourceTree = "<group>"; };
 		1EBCCBF025F4FE8700079E3F /* InfoMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMessageView.swift; sourceTree = "<group>"; };
 		1EBCCBF625F4FE9000079E3F /* InfoMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMessageViewModel.swift; sourceTree = "<group>"; };
 		1EBCCBFA25F4FE9700079E3F /* InfoMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMessageView.xib; sourceTree = "<group>"; };
@@ -453,20 +451,11 @@
 			isa = PBXGroup;
 			children = (
 				1EBCCBEF25F4FE7A00079E3F /* Info */,
-				1EBCCBE825F4F28900079E3F /* Presenter */,
 				1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */,
 				1EBCCBE025F4F12800079E3F /* MessageViewController.xib */,
 				1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */,
 			);
 			path = MessageView;
-			sourceTree = "<group>";
-		};
-		1EBCCBE825F4F28900079E3F /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				1EBCCBE925F4F29400079E3F /* MessageViewPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		1EBCCBEF25F4FE7A00079E3F /* Info */ = {
@@ -746,7 +735,6 @@
 				1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */,
 				1E1031E924B6169C0015581B /* CollapsibleViewControllerViewModel.swift in Sources */,
 				1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */,
-				1EBCCBEA25F4F29400079E3F /* MessageViewPresenter.swift in Sources */,
 				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
 				1EBCCBF125F4FE8700079E3F /* InfoMessageView.swift in Sources */,
