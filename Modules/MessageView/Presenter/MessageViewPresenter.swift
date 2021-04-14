@@ -4,7 +4,7 @@ import Foundation
 import JamitFoundation
 import UIKit
 
-public class MessageViewPresenter {
+public final class MessageViewPresenter {
     private let configuration: MessageViewPresenterConfiguration
 
     private var backgroundView: UIView?
