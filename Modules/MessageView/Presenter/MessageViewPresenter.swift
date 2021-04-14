@@ -114,13 +114,18 @@ public final class MessageViewPresenter {
         self.configuration = configuration
     }
 
-    public func dismissAllMessages() {
-        hide()
-        messageContents.forEach { _ in hide() }
+    public func dismissAllMessages(animated: Bool = true) {
+        messageContents = []
+
+        guard animated else { return hide() }
+
+        currentMessageContent?.messageView.hideMessageView()
     }
 
-    public func dismissLatest() {
-        hide()
+    public func dismissLatest(animated: Bool = true) {
+        guard animated else { return hide() }
+
+        currentMessageContent?.messageView.hideMessageView()
     }
 }
 
