@@ -8,21 +8,37 @@ public class MessageViewPresenter {
     private let configuration: MessageViewPresenterConfiguration
 
     private var backgroundView: UIView?
-    private var currentMessageView: MessageView?
-    private var messageViews: [MessageView] = []
+    private var currentMessageContent: MessageContent?
+    private var messageContents: [MessageContent] = []
+    private var timer: Timer?
 
-    private func addToQueue(_ messageView: MessageView) {
-        messageViews.append(messageView)
+    private func addToQueue(_ messageView: MessageContent) {
+        messageContents.append(messageView)
     }
 
-    private func present(_ messageView: MessageView) {
-        guard currentMessageView == nil else { return addToQueue(messageView) }
+    private func present(_ messageContent: MessageContent) {
+        guard currentMessageContent == nil else { return addToQueue(messageContent) }
 
-        currentMessageView = messageView
-        attach(messageView: messageView)
+        currentMessageContent = messageContent
+        attach(messageView: messageContent.messageView)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            messageView.showMessageView()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            guard let self = self else { return }
+
+            messageContent.messageView.showMessageView()
+            switch messageContent.hideOption {
+            case let .timer(time):
+                self.timer = Timer.scheduledTimer(
+                    timeInterval: TimeInterval(time),
+                    target: self,
+                    selector: #selector(self.dismissCurrentMessage),
+                    userInfo: nil,
+                    repeats: false
+                )
+
+            case .userControlled:
+                break
+            }
         }
     }
 
@@ -46,51 +62,75 @@ public class MessageViewPresenter {
             width: UIScreen.main.bounds.width - configuration.leadingSpacing - configuration.trailingSpacing,
             height: UIView.layoutFittingCompressedSize.height
         )
-        let size = messageView.model.contentView.systemLayoutSizeFitting(
+
+        let fittingSize = messageView.model.contentView.systemLayoutSizeFitting(
             targetSize,
             withHorizontalFittingPriority: .required,
             verticalFittingPriority: .defaultLow
         )
 
-        messageView.frame = .init(
-            x: configuration.leadingSpacing,
-            y: messageView.model.position == .bottom ? UIScreen.main.bounds.height : -size.height,
-            width: size.width,
-            height: size.height
-        )
+        messageView.translatesAutoresizingMaskIntoConstraints = false
+        messageView.leftAnchor.constraint(equalTo: window.leftAnchor, constant: configuration.leadingSpacing).isActive = true
+        messageView.rightAnchor.constraint(equalTo: window.rightAnchor, constant: -configuration.trailingSpacing).isActive = true
+        messageView.heightAnchor.constraint(equalToConstant: fittingSize.height).isActive = true
+
+        switch messageView.model.position {
+        case .top:
+            messageView.topAnchor.constraint(equalTo: window.topAnchor, constant: configuration.topSpacing).isActive = true
+
+        default:
+            messageView.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -configuration.bottomSpacing).isActive = true
+        }
     }
 
-    private func hide(_ completion: VoidCallback?) {
-        currentMessageView?.removeFromSuperview()
-        currentMessageView = nil
+    @objc
+    private func dismissCurrentMessage() {
+        currentMessageContent?.messageView.hideMessageView()
+    }
+
+    private func hide() {
+        timer?.invalidate()
+        timer = nil
+        currentMessageContent?.messageView.removeFromSuperview()
+        currentMessageContent = nil
 
         backgroundView?.removeFromSuperview()
         backgroundView = nil
 
-        completion?()
+        currentMessageContent?.completion?()
 
-        guard let firstMessageView = messageViews.first else { return }
+        guard let firstMessageContent = messageContents.first else { return }
 
-        messageViews.removeFirst()
-        present(firstMessageView)
+        messageContents.removeFirst()
+        present(firstMessageContent)
     }
 
     @objc
     private func handleBackgroundTap() {
-        currentMessageView?.hideMessageView()
+        currentMessageContent?.messageView.hideMessageView()
     }
 
     public init(configuration: MessageViewPresenterConfiguration) {
         self.configuration = configuration
     }
+
+    public func dismissAllMessages() {
+        hide()
+        messageContents.forEach { _ in hide() }
+    }
+
+    public func dismissLatest() {
+        hide()
+    }
 }
 
 extension MessageViewPresenter {
-    public func showInfo(
+    public func show(
         contentView: UIView,
         position: MessageViewModel.Position = .bottom,
         shouldHaveBackgroundView: Bool = true,
         with backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3),
+        hideOption: MessageContent.HideOption = .userControlled,
         completion: VoidCallback? = nil
     ) {
         let messageView: MessageView = .instantiate()
@@ -108,9 +148,10 @@ extension MessageViewPresenter {
             shouldAddSwipeGestureRecognizer: configuration.shouldAddSwipeGestureRecognizer,
             shouldAddOverlayButton: configuration.shouldAddOverlayButton
         ) { [weak self] in
-            self?.hide(completion)
+            self?.hide()
         }
 
-        present(messageView)
+        let messageContent: MessageContent = .init(messageView: messageView, hideOption: hideOption, completion: completion)
+        present(messageContent)
     }
 }

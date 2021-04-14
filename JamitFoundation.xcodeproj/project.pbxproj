@@ -19,6 +19,7 @@
 		1EBCCBB325F4EE6700079E3F /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */; };
 		1ED504402626C1960014263D /* MessageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5043F2626C1960014263D /* MessageViewPresenter.swift */; };
 		1ED5044C2626C4670014263D /* MessageViewPresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */; };
+		1ED504732626E32D0014263D /* MessageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED504722626E32D0014263D /* MessageContent.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
 		A752F14825C43F380065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A752F14D25C43F380065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
@@ -234,6 +235,7 @@
 		1EBCCBBA25F4EF0700079E3F /* MessageView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MessageView.plist; sourceTree = "<group>"; };
 		1ED5043F2626C1960014263D /* MessageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenter.swift; sourceTree = "<group>"; };
 		1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenterConfiguration.swift; sourceTree = "<group>"; };
+		1ED504722626E32D0014263D /* MessageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContent.swift; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		A752F15425C43F380065CD94 /* CarouselView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarouselView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A752F15525C43F380065CD94 /* TimePickerView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TimePickerView.plist; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		1ED5043D2626C1760014263D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1ED504722626E32D0014263D /* MessageContent.swift */,
 				1ED5043F2626C1960014263D /* MessageViewPresenter.swift */,
 				1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */,
 			);
@@ -1053,6 +1056,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED504402626C1960014263D /* MessageViewPresenter.swift in Sources */,
+				1ED504732626E32D0014263D /* MessageContent.swift in Sources */,
 				1ED5044C2626C4670014263D /* MessageViewPresenterConfiguration.swift in Sources */,
 				1EBCCBB325F4EE6700079E3F /* MessageViewModel.swift in Sources */,
 				1EBCCBAF25F4EE5D00079E3F /* MessageView.swift in Sources */,
