@@ -4,6 +4,7 @@ import Foundation
 import JamitFoundation
 import UIKit
 
+/// The message view presenter used to show `MessageView`s
 public final class MessageViewPresenter {
     private let configuration: MessageViewPresenterConfiguration
 
@@ -110,10 +111,20 @@ public final class MessageViewPresenter {
         currentMessageContent?.messageView.hideMessageView()
     }
 
+    /**
+     * The initialiser for the `MessageViewPresenter`.
+     * 
+     * - Parameter configuration: The configuration used to adjust the appearance and showing of message views.
+     */
     public init(configuration: MessageViewPresenterConfiguration) {
         self.configuration = configuration
     }
 
+    /**
+     * Dismiss all message views.
+     *
+     * - Parameter animated: Decide whether the hiding is animared or not.
+     */
     public func dismissAllMessages(animated: Bool = true) {
         messageContents = []
 
@@ -122,6 +133,11 @@ public final class MessageViewPresenter {
         currentMessageContent?.messageView.hideMessageView()
     }
 
+    /**
+     * Dismiss the latest message view.
+     *
+     * - Parameter animated: Decide whether the hiding is animared or not.
+     */
     public func dismissLatest(animated: Bool = true) {
         guard animated else { return hide() }
 
@@ -130,6 +146,16 @@ public final class MessageViewPresenter {
 }
 
 extension MessageViewPresenter {
+    /**
+     * Show a message with the given content view.
+     *
+     * - Parameter contenView: The content view to embed into the message view.
+     * - Parameter position: The origin the message view should be animated from.
+     * - Parameter shouldHaveBackgroundView: Indicator whether the message view should be embedded in a full screen view to block user interaction.
+     * - Parameter backgroundColor: The background color of the background view.
+     * - Parameter hideOption: The hide option used to hide the message.
+     * - Parameter completion: The completion called when the message view was hidden.
+     */
     public func show(
         contentView: UIView,
         position: MessageViewModel.Position = .bottom,
