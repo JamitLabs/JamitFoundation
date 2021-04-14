@@ -98,22 +98,19 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
     /// Show the message view
     public func showMessageView() {
+        let originalY = center.y
+
         switch model.position {
         case .top:
-            showAnimate { [weak self] in
-                guard let self = self else { return }
-
-                self.center.y += self.bounds.height + self.model.topSpacing
-                self.layoutIfNeeded()
-            }
+            center.y -= (bounds.height + model.topSpacing)
 
         case .bottom:
-            showAnimate { [weak self] in
-                guard let self = self else { return }
+            center.y += bounds.height + model.bottomSpacing
+        }
 
-                self.center.y -= self.bounds.height + self.model.bottomSpacing
-                self.layoutIfNeeded()
-            }
+        showAnimate { [weak self] in
+            self?.center.y = originalY
+            self?.layoutIfNeeded()
         }
 
         isHidden = false
@@ -133,39 +130,26 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
     /// Hide the message view
     public func hideMessageView() {
+        var targetY = center.y
+
         switch model.position {
         case .top:
-            hideAnimation(
-                animations: { [weak self] in
-                    guard let self = self else { return }
-
-                    self.center.y -= self.bounds.height + self.model.topSpacing
-                    self.layoutIfNeeded()
-                },
-                completion: { [weak self] in
-                    guard let self = self else { return }
-
-                    self.isHidden = true
-                    self.model.completion?()
-                }
-            )
+            targetY -= (bounds.height + model.topSpacing)
 
         case .bottom:
-            hideAnimation(
-                animations: { [weak self] in
-                    guard let self = self else { return }
-
-                    self.center.y += self.bounds.height + self.model.bottomSpacing
-                    self.layoutIfNeeded()
-                },
-                completion: { [weak self] in
-                    guard let self = self else { return }
-
-                    self.isHidden = true
-                    self.model.completion?()
-                }
-            )
+            targetY += bounds.height + model.bottomSpacing
         }
+
+        hideAnimation(
+            animations: { [weak self] in
+                self?.center.y = targetY
+                self?.layoutIfNeeded()
+            },
+            completion: { [weak self] in
+                self?.isHidden = true
+                self?.model.completion?()
+            }
+        )
     }
 
     private func hideAnimation(animations: @escaping VoidCallback, completion: @escaping VoidCallback) {
