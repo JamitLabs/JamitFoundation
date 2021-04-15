@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A752F15725C43F3B0065CD94"
-               BuildableName = "WeakCache.framework"
-               BlueprintName = "WeakCache"
+               BlueprintIdentifier = "A752F17D25C43F4A0065CD94"
+               BuildableName = "GridView.framework"
+               BlueprintName = "GridView"
                ReferencedContainer = "container:JamitFoundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A752F15725C43F3B0065CD94"
-            BuildableName = "WeakCache.framework"
-            BlueprintName = "WeakCache"
+            BlueprintIdentifier = "A752F17D25C43F4A0065CD94"
+            BuildableName = "GridView.framework"
+            BlueprintName = "GridView"
             ReferencedContainer = "container:JamitFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

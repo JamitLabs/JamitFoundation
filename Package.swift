@@ -12,7 +12,10 @@ let package = Package(
         .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
         .library(name: "CarouselView", targets: ["CarouselView"]),
         .library(name: "TimePickerView", targets: ["TimePickerView"]),
-        .library(name: "WeakCache", targets: ["WeakCache"])
+        .library(name: "WeakCache", targets: ["WeakCache"]),
+        .library(name: "UserDefaults", targets: ["UserDefaults"]),
+        .library(name: "Keychain", targets: ["Keychain"]),
+        .library(name: "MessageView", targets: ["MessageView"])
     ],
     dependencies: [],
     targets: [
@@ -45,8 +48,8 @@ let package = Package(
             name: "TimePickerView",
             dependencies: ["JamitFoundation"],
             path: "Modules/TimePickerView"
-		),
-		.target(
+    		),
+    		.target(
             name: "WeakCache",
             dependencies: ["JamitFoundation"],
             path: "Modules/WeakCache/Sources"
@@ -55,7 +58,31 @@ let package = Package(
             name: "WeakCacheTests",
             dependencies: ["WeakCache"],
             path: "Modules/WeakCache/Tests"
+        ),
+        .target(
+            name: "UserDefaults",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/UserDefaults/Sources"
+        ),
+        .testTarget(
+            name: "UserDefaultsTests",
+            dependencies: ["UserDefaults"],
+            path: "Modules/UserDefaults/Tests"
+        ),
+        .target(
+            name: "Keychain",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/Keychain/Sources"
+        ),
+        .testTarget(
+            name: "KeychainTests",
+            dependencies: ["Keychain"],
+            path: "Modules/Keychain/Tests"
+        ),
+        .target(
+            name: "MessageView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/MessageView"
         )
     ]
 )
-
