@@ -12,6 +12,14 @@
 		1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */; };
 		1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */; };
 		1E80B038246ACA0400DB7514 /* UIControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B037246ACA0400DB7514 /* UIControl+extension.swift */; };
+		1EBCCB9625F4EE2200079E3F /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EBCCB9B25F4EE2200079E3F /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
+		1EBCCB9E25F4EE2200079E3F /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1EBCCBAF25F4EE5D00079E3F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBAE25F4EE5D00079E3F /* MessageView.swift */; };
+		1EBCCBB325F4EE6700079E3F /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */; };
+		1ED504402626C1960014263D /* MessageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5043F2626C1960014263D /* MessageViewPresenter.swift */; };
+		1ED5044C2626C4670014263D /* MessageViewPresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */; };
+		1ED504732626E32D0014263D /* MessageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED504722626E32D0014263D /* MessageContent.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
 		A752F14825C43F380065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A752F14D25C43F380065CD94 /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
@@ -77,6 +85,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1EBCCB9425F4EE2200079E3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CB31BF2371D0BE00E25E4B;
+			remoteInfo = JamitFoundation;
+		};
 		A752F14625C43F380065CD94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5CB31B72371D0BE00E25E4B /* Project object */;
@@ -129,6 +144,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1EBCCB9D25F4EE2200079E3F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1EBCCB9E25F4EE2200079E3F /* JamitFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A752F14F25C43F380065CD94 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +229,13 @@
 		1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderView.swift; sourceTree = "<group>"; };
 		1E0B89F824BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderViewModel.swift; sourceTree = "<group>"; };
 		1E80B037246ACA0400DB7514 /* UIControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+extension.swift"; sourceTree = "<group>"; };
+		1EBCCBA225F4EE2200079E3F /* MessageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBCCBAE25F4EE5D00079E3F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		1EBCCBBA25F4EF0700079E3F /* MessageView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MessageView.plist; sourceTree = "<group>"; };
+		1ED5043F2626C1960014263D /* MessageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenter.swift; sourceTree = "<group>"; };
+		1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenterConfiguration.swift; sourceTree = "<group>"; };
+		1ED504722626E32D0014263D /* MessageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContent.swift; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		A752F15425C43F380065CD94 /* CarouselView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarouselView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A752F15525C43F380065CD94 /* TimePickerView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TimePickerView.plist; sourceTree = "<group>"; };
@@ -266,6 +299,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1EBCCB9A25F4EE2200079E3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBCCB9B25F4EE2200079E3F /* JamitFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A752F14C25C43F380065CD94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +392,34 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
+		1EBCCB9125F4EE1A00079E3F /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				1ED5043E2626C17C0014263D /* View */,
+				1ED5043D2626C1760014263D /* Presenter */,
+			);
+			path = MessageView;
+			sourceTree = "<group>";
+		};
+		1ED5043D2626C1760014263D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1ED504722626E32D0014263D /* MessageContent.swift */,
+				1ED5043F2626C1960014263D /* MessageViewPresenter.swift */,
+				1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1ED5043E2626C17C0014263D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCCBAE25F4EE5D00079E3F /* MessageView.swift */,
+				1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1EFCDA6924C5C10600B41530 /* CollapsibleTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +438,7 @@
 				A752F17B25C43F410065CD94 /* WeakCache.plist */,
 				A752F18E25C43F4A0065CD94 /* CarouselView.plist */,
 				A752F1A125C43F4C0065CD94 /* GridView.plist */,
+				1EBCCBBA25F4EF0700079E3F /* MessageView.plist */,
 			);
 			path = Info.plists;
 			sourceTree = "<group>";
@@ -376,6 +446,7 @@
 		A75A6AE025C03683003BF4CE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1EBCCB9125F4EE1A00079E3F /* MessageView */,
 				A75A6AE125C03683003BF4CE /* PageView */,
 				A75A6AE425C03683003BF4CE /* CarouselView */,
 				A75A6AE725C03683003BF4CE /* WeakCache */,
@@ -491,6 +562,7 @@
 				A752F18D25C43F4A0065CD94 /* GridView.framework */,
 				A752F19F25C43F4C0065CD94 /* TimePickerView.framework */,
 				A7BCD13325C44ADF00687520 /* WeakCacheTests.xctest */,
+				1EBCCBA225F4EE2200079E3F /* MessageView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -622,6 +694,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1EBCCB9525F4EE2200079E3F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBCCB9625F4EE2200079E3F /* JamitFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A752F14725C43F380065CD94 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -681,6 +761,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1EBCCB9225F4EE2200079E3F /* MessageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EBCCB9F25F4EE2200079E3F /* Build configuration list for PBXNativeTarget "MessageView" */;
+			buildPhases = (
+				1EBCCB9525F4EE2200079E3F /* Headers */,
+				1EBCCB9725F4EE2200079E3F /* Sources */,
+				1EBCCB9A25F4EE2200079E3F /* Frameworks */,
+				1EBCCB9C25F4EE2200079E3F /* Resources */,
+				1EBCCB9D25F4EE2200079E3F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EBCCB9325F4EE2200079E3F /* PBXTargetDependency */,
+			);
+			name = MessageView;
+			productName = UIFoundation;
+			productReference = 1EBCCBA225F4EE2200079E3F /* MessageView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A752F14425C43F380065CD94 /* CarouselView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A752F15125C43F380065CD94 /* Build configuration list for PBXNativeTarget "CarouselView" */;
@@ -847,6 +947,9 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jamit Labs GmbH";
 				TargetAttributes = {
+					1EBCCB9225F4EE2200079E3F = {
+						LastSwiftMigration = 1240;
+					};
 					A7BCD13225C44ADF00687520 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -875,12 +978,20 @@
 				A752F16A25C43F410065CD94 /* BarcodeScanner */,
 				A752F17D25C43F4A0065CD94 /* GridView */,
 				A752F18F25C43F4C0065CD94 /* TimePickerView */,
+				1EBCCB9225F4EE2200079E3F /* MessageView */,
 				A7BCD13225C44ADF00687520 /* WeakCacheTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1EBCCB9C25F4EE2200079E3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A752F14E25C43F380065CD94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -940,6 +1051,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1EBCCB9725F4EE2200079E3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED504402626C1960014263D /* MessageViewPresenter.swift in Sources */,
+				1ED504732626E32D0014263D /* MessageContent.swift in Sources */,
+				1ED5044C2626C4670014263D /* MessageViewPresenterConfiguration.swift in Sources */,
+				1EBCCBB325F4EE6700079E3F /* MessageViewModel.swift in Sources */,
+				1EBCCBAF25F4EE5D00079E3F /* MessageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A752F14925C43F380065CD94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1046,6 +1169,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1EBCCB9325F4EE2200079E3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
+			targetProxy = 1EBCCB9425F4EE2200079E3F /* PBXContainerItemProxy */;
+		};
 		A752F14525C43F380065CD94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C5CB31BF2371D0BE00E25E4B /* JamitFoundation */;
@@ -1085,6 +1213,61 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1EBCCBA025F4EE2200079E3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/MessageView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.MessageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EBCCBA125F4EE2200079E3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plists/MessageView.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.JamitFoundation.MessageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A752F15225C43F380065CD94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1612,6 +1795,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1EBCCB9F25F4EE2200079E3F /* Build configuration list for PBXNativeTarget "MessageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBCCBA025F4EE2200079E3F /* Debug */,
+				1EBCCBA125F4EE2200079E3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A752F15125C43F380065CD94 /* Build configuration list for PBXNativeTarget "CarouselView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

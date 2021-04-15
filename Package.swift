@@ -14,7 +14,8 @@ let package = Package(
         .library(name: "TimePickerView", targets: ["TimePickerView"]),
         .library(name: "WeakCache", targets: ["WeakCache"]),
         .library(name: "UserDefaults", targets: ["UserDefaults"]),
-        .library(name: "Keychain", targets: ["Keychain"])
+        .library(name: "Keychain", targets: ["Keychain"]),
+        .library(name: "MessageView", targets: ["MessageView"])
     ],
     dependencies: [],
     targets: [
@@ -47,8 +48,8 @@ let package = Package(
             name: "TimePickerView",
             dependencies: ["JamitFoundation"],
             path: "Modules/TimePickerView"
-		),
-		.target(
+    		),
+    		.target(
             name: "WeakCache",
             dependencies: ["JamitFoundation"],
             path: "Modules/WeakCache/Sources"
@@ -77,7 +78,11 @@ let package = Package(
             name: "KeychainTests",
             dependencies: ["Keychain"],
             path: "Modules/Keychain/Tests"
+        ),
+        .target(
+            name: "MessageView",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/MessageView"
         )
     ]
 )
-

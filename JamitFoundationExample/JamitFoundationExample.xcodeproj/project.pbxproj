@@ -24,12 +24,6 @@
 		1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B402F23F2849300D9A6D5 /* TableViewTitleView.swift */; };
 		1E1B403223F284B700D9A6D5 /* TableViewTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B403123F284B700D9A6D5 /* TableViewTitleViewModel.swift */; };
 		1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B403323F284C100D9A6D5 /* TableViewTitleView.xib */; };
-		1E46DE4124AF6CE4007226EF /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4024AF6CE4007226EF /* PageView */; };
-		1E46DE4324AF6CE4007226EF /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4224AF6CE4007226EF /* BarcodeScanner */; };
-		1E46DE4524AF6CE4007226EF /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4424AF6CE4007226EF /* CarouselView */; };
-		1E46DE4724AF6CE4007226EF /* TimePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4624AF6CE4007226EF /* TimePickerView */; };
-		1E46DE4924AF6CE4007226EF /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4824AF6CE4007226EF /* JamitFoundation */; };
-		1E46DE4B24AF6CE4007226EF /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E46DE4A24AF6CE4007226EF /* GridView */; };
 		1E46DE4E24AF6DCF007226EF /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE4D24AF6DCF007226EF /* TimePickerViewController.swift */; };
 		1E46DE5024AF6DDD007226EF /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E46DE4F24AF6DDD007226EF /* TimePickerViewController.xib */; };
 		1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E46DE5124AF6DE6007226EF /* TimePickerViewControllerViewModel.swift */; };
@@ -44,6 +38,22 @@
 		1EB2D9852488F75E00E2B1A4 /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */; };
 		1EB2D9872488F76500E2B1A4 /* CarouselItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */; };
 		1EB2D9892488F77000E2B1A4 /* CarouselItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */; };
+		1EBCCBC625F4F0BC00079E3F /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBC525F4F0BC00079E3F /* BarcodeScanner */; };
+		1EBCCBC825F4F0BC00079E3F /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBC725F4F0BC00079E3F /* GridView */; };
+		1EBCCBCA25F4F0BC00079E3F /* UserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBC925F4F0BC00079E3F /* UserDefaults */; };
+		1EBCCBCC25F4F0BC00079E3F /* MessageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBCB25F4F0BC00079E3F /* MessageView */; };
+		1EBCCBCE25F4F0BC00079E3F /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBCD25F4F0BC00079E3F /* CarouselView */; };
+		1EBCCBD025F4F0BC00079E3F /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBCF25F4F0BC00079E3F /* Keychain */; };
+		1EBCCBD225F4F0BC00079E3F /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD125F4F0BC00079E3F /* PageView */; };
+		1EBCCBD425F4F0BC00079E3F /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD325F4F0BC00079E3F /* JamitFoundation */; };
+		1EBCCBD625F4F0BC00079E3F /* TimePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD525F4F0BC00079E3F /* TimePickerView */; };
+		1EBCCBD825F4F0BC00079E3F /* WeakCache in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD725F4F0BC00079E3F /* WeakCache */; };
+		1EBCCBDD25F4F11200079E3F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */; };
+		1EBCCBE125F4F12800079E3F /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE025F4F12800079E3F /* MessageViewController.xib */; };
+		1EBCCBE525F4F13700079E3F /* MessageViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */; };
+		1EBCCBF125F4FE8700079E3F /* InfoMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBF025F4FE8700079E3F /* InfoMessageView.swift */; };
+		1EBCCBF725F4FE9000079E3F /* InfoMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBF625F4FE9000079E3F /* InfoMessageViewModel.swift */; };
+		1EBCCBFB25F4FE9700079E3F /* InfoMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCCBFA25F4FE9700079E3F /* InfoMessageView.xib */; };
 		1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229323F2A24200C90405 /* ListItemViewModel.swift */; };
 		1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC7229623F2A38E00C90405 /* ListItemView.swift */; };
 		1EC7229923F2A39F00C90405 /* ListItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EC7229823F2A39F00C90405 /* ListItemView.xib */; };
@@ -57,6 +67,7 @@
 		1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */; };
 		1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */; };
 		1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */; };
+		1ED5045B2626CB460014263D /* MessageViewPresenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5045A2626CB460014263D /* MessageViewPresenter+Extension.swift */; };
 		1EFCDA7024C5C1C600B41530 /* CollapsibleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */; };
 		1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */; };
 		1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */; };
@@ -138,6 +149,12 @@
 		1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemView.swift; sourceTree = "<group>"; };
 		1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemView.xib; sourceTree = "<group>"; };
 		1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemViewModel.swift; sourceTree = "<group>"; };
+		1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		1EBCCBE025F4F12800079E3F /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1EBCCBF025F4FE8700079E3F /* InfoMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMessageView.swift; sourceTree = "<group>"; };
+		1EBCCBF625F4FE9000079E3F /* InfoMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMessageViewModel.swift; sourceTree = "<group>"; };
+		1EBCCBFA25F4FE9700079E3F /* InfoMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMessageView.xib; sourceTree = "<group>"; };
 		1EC7229323F2A24200C90405 /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		1EC7229623F2A38E00C90405 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		1EC7229823F2A39F00C90405 /* ListItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemView.xib; sourceTree = "<group>"; };
@@ -151,6 +168,7 @@
 		1ECA14AF242A9FE200321BFC /* MyScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewController.swift; sourceTree = "<group>"; };
 		1ECA14B1242AA24400321BFC /* MyScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyScrollViewController.xib; sourceTree = "<group>"; };
 		1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewControllerViewModel.swift; sourceTree = "<group>"; };
+		1ED5045A2626CB460014263D /* MessageViewPresenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageViewPresenter+Extension.swift"; sourceTree = "<group>"; };
 		1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsibleTableViewController.xib; sourceTree = "<group>"; };
 		1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
@@ -169,12 +187,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E46DE4324AF6CE4007226EF /* BarcodeScanner in Frameworks */,
-				1E46DE4B24AF6CE4007226EF /* GridView in Frameworks */,
-				1E46DE4924AF6CE4007226EF /* JamitFoundation in Frameworks */,
-				1E46DE4524AF6CE4007226EF /* CarouselView in Frameworks */,
-				1E46DE4724AF6CE4007226EF /* TimePickerView in Frameworks */,
-				1E46DE4124AF6CE4007226EF /* PageView in Frameworks */,
+				1EBCCBD625F4F0BC00079E3F /* TimePickerView in Frameworks */,
+				1EBCCBD825F4F0BC00079E3F /* WeakCache in Frameworks */,
+				1EBCCBC625F4F0BC00079E3F /* BarcodeScanner in Frameworks */,
+				1EBCCBCA25F4F0BC00079E3F /* UserDefaults in Frameworks */,
+				1EBCCBC825F4F0BC00079E3F /* GridView in Frameworks */,
+				1EBCCBD425F4F0BC00079E3F /* JamitFoundation in Frameworks */,
+				1EBCCBCC25F4F0BC00079E3F /* MessageView in Frameworks */,
+				1EBCCBD025F4F0BC00079E3F /* Keychain in Frameworks */,
+				1EBCCBCE25F4F0BC00079E3F /* CarouselView in Frameworks */,
+				1EBCCBD225F4F0BC00079E3F /* PageView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,17 +336,18 @@
 		1E1B401D23F27EF800D9A6D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1ECA14A7242A6B1200321BFC /* ActionView */,
+				1E8879F82489090C002A553C /* BarcodeScanner */,
+				1EB2D9712488EA7B00E2B1A4 /* CarouselView */,
+				1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */,
+				1E1031E324B616660015581B /* CollapsibleView */,
 				EBED3B7424D29EFB00CF9221 /* CollectionView */,
 				1E1B402023F27F0C00D9A6D5 /* Launch */,
 				1E1B402123F280E500D9A6D5 /* ListView */,
-				1E1B402223F2818C00D9A6D5 /* TableView */,
-				1ECA14A7242A6B1200321BFC /* ActionView */,
+				1EBCCBDB25F4F0CF00079E3F /* MessageView */,
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
-				1EB2D9712488EA7B00E2B1A4 /* CarouselView */,
+				1E1B402223F2818C00D9A6D5 /* TableView */,
 				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
-				1E1031E324B616660015581B /* CollapsibleView */,
-				1EFCDA6C24C5C17400B41530 /* CollapsibleTableView */,
-				1E8879F82489090C002A553C /* BarcodeScanner */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -426,6 +449,28 @@
 			path = CarouselItemView;
 			sourceTree = "<group>";
 		};
+		1EBCCBDB25F4F0CF00079E3F /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				1ED504592626CB300014263D /* Extension */,
+				1EBCCBEF25F4FE7A00079E3F /* Info */,
+				1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */,
+				1EBCCBE025F4F12800079E3F /* MessageViewController.xib */,
+				1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */,
+			);
+			path = MessageView;
+			sourceTree = "<group>";
+		};
+		1EBCCBEF25F4FE7A00079E3F /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCCBF025F4FE8700079E3F /* InfoMessageView.swift */,
+				1EBCCBFA25F4FE9700079E3F /* InfoMessageView.xib */,
+				1EBCCBF625F4FE9000079E3F /* InfoMessageViewModel.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		1EC7229523F2A34200C90405 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +521,14 @@
 				1ECA14B3242AA3D000321BFC /* MyScrollViewControllerViewModel.swift */,
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		1ED504592626CB300014263D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1ED5045A2626CB460014263D /* MessageViewPresenter+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1EDB1C5624BC6AEA00FEFA7D /* Frameworks */ = {
@@ -544,12 +597,16 @@
 			);
 			name = JamitFoundationExample;
 			packageProductDependencies = (
-				1E46DE4024AF6CE4007226EF /* PageView */,
-				1E46DE4224AF6CE4007226EF /* BarcodeScanner */,
-				1E46DE4424AF6CE4007226EF /* CarouselView */,
-				1E46DE4624AF6CE4007226EF /* TimePickerView */,
-				1E46DE4824AF6CE4007226EF /* JamitFoundation */,
-				1E46DE4A24AF6CE4007226EF /* GridView */,
+				1EBCCBC525F4F0BC00079E3F /* BarcodeScanner */,
+				1EBCCBC725F4F0BC00079E3F /* GridView */,
+				1EBCCBC925F4F0BC00079E3F /* UserDefaults */,
+				1EBCCBCB25F4F0BC00079E3F /* MessageView */,
+				1EBCCBCD25F4F0BC00079E3F /* CarouselView */,
+				1EBCCBCF25F4F0BC00079E3F /* Keychain */,
+				1EBCCBD125F4F0BC00079E3F /* PageView */,
+				1EBCCBD325F4F0BC00079E3F /* JamitFoundation */,
+				1EBCCBD525F4F0BC00079E3F /* TimePickerView */,
+				1EBCCBD725F4F0BC00079E3F /* WeakCache */,
 			);
 			productName = JamitFoundationExample;
 			productReference = 1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */;
@@ -624,7 +681,7 @@
 			);
 			mainGroup = 1E1B3FDB23F27E8700D9A6D5;
 			packageReferences = (
-				1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */,
+				1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */,
 			);
 			productRefGroup = 1E1B3FE523F27E8700D9A6D5 /* Products */;
 			projectDirPath = "";
@@ -650,11 +707,13 @@
 				1E1B3FEF23F27E8700D9A6D5 /* SampleListView.storyboard in Resources */,
 				1EB2D9872488F76500E2B1A4 /* CarouselItemView.xib in Resources */,
 				1E1B403423F284C100D9A6D5 /* TableViewTitleView.xib in Resources */,
+				1EBCCBFB25F4FE9700079E3F /* InfoMessageView.xib in Resources */,
 				1E4D4D53244EEA8200B22541 /* Localizable.strings in Resources */,
 				1EB2D9752488EAF900E2B1A4 /* CarouselViewController.xib in Resources */,
 				1E8879FC24890948002A553C /* BarcodeScannerViewController.xib in Resources */,
 				1ECA14A4242A1D7300321BFC /* TableViewItemView.xib in Resources */,
 				1E46DE5024AF6DDD007226EF /* TimePickerViewController.xib in Resources */,
+				1EBCCBE125F4F12800079E3F /* MessageViewController.xib in Resources */,
 				EBED3B8524D2A82900CF9221 /* FancyLabelView.xib in Resources */,
 				EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */,
 				1ECA14AB242A6BF700321BFC /* ActionViewController.xib in Resources */,
@@ -689,11 +748,13 @@
 				1ECA14B4242AA3D000321BFC /* MyScrollViewControllerViewModel.swift in Sources */,
 				1E1031E524B6168A0015581B /* CollapsibleViewController.swift in Sources */,
 				1EC7229723F2A38E00C90405 /* ListItemView.swift in Sources */,
+				1EBCCBF125F4FE8700079E3F /* InfoMessageView.swift in Sources */,
 				1EB2D9892488F77000E2B1A4 /* CarouselItemViewModel.swift in Sources */,
 				1ECA14A6242A1D8000321BFC /* TableViewItemViewModel.swift in Sources */,
 				1E46DE4E24AF6DCF007226EF /* TimePickerViewController.swift in Sources */,
 				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
 				1EB2D9732488EAEB00E2B1A4 /* CarouselViewController.swift in Sources */,
+				1EBCCBDD25F4F11200079E3F /* MessageViewController.swift in Sources */,
 				1EB2D9772488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift in Sources */,
 				1ECA14AD242A6BFF00321BFC /* ActionViewControllerViewModel.swift in Sources */,
 				1ECA14A9242A6BED00321BFC /* ActionViewController.swift in Sources */,
@@ -706,6 +767,7 @@
 				EBED3B8324D2A71C00CF9221 /* FancyLabelViewModel.swift in Sources */,
 				EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */,
 				1E1B402423F281D800D9A6D5 /* TableViewController.swift in Sources */,
+				1EBCCBE525F4F13700079E3F /* MessageViewControllerViewModel.swift in Sources */,
 				1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */,
 				EBED3B8924D2B00F00CF9221 /* FancyLabelViewCell.swift in Sources */,
 				1E1B403023F2849300D9A6D5 /* TableViewTitleView.swift in Sources */,
@@ -714,11 +776,13 @@
 				1ECA14A0242A1D6400321BFC /* TableViewItemTableViewCell.swift in Sources */,
 				1E8879FE24890952002A553C /* BarcodeScannerViewControllerViewModel.swift in Sources */,
 				1E1B402923F2824A00D9A6D5 /* TableViewViewModel.swift in Sources */,
+				1EBCCBF725F4FE9000079E3F /* InfoMessageViewModel.swift in Sources */,
 				EBED3B8024D2A57700CF9221 /* FancyLabelView.swift in Sources */,
 				1EC7229423F2A24200C90405 /* ListItemViewModel.swift in Sources */,
 				EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */,
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
 				1E8879FA24890940002A553C /* BarcodeScannerViewController.swift in Sources */,
+				1ED5045B2626CB460014263D /* MessageViewPresenter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,7 +1115,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
+		1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
@@ -1062,35 +1126,55 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1E46DE4024AF6CE4007226EF /* PageView */ = {
+		1EBCCBC525F4F0BC00079E3F /* BarcodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = PageView;
-		};
-		1E46DE4224AF6CE4007226EF /* BarcodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = BarcodeScanner;
 		};
-		1E46DE4424AF6CE4007226EF /* CarouselView */ = {
+		1EBCCBC725F4F0BC00079E3F /* GridView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = GridView;
+		};
+		1EBCCBC925F4F0BC00079E3F /* UserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = UserDefaults;
+		};
+		1EBCCBCB25F4F0BC00079E3F /* MessageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = MessageView;
+		};
+		1EBCCBCD25F4F0BC00079E3F /* CarouselView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = CarouselView;
 		};
-		1E46DE4624AF6CE4007226EF /* TimePickerView */ = {
+		1EBCCBCF25F4F0BC00079E3F /* Keychain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = TimePickerView;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = Keychain;
 		};
-		1E46DE4824AF6CE4007226EF /* JamitFoundation */ = {
+		1EBCCBD125F4F0BC00079E3F /* PageView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = PageView;
+		};
+		1EBCCBD325F4F0BC00079E3F /* JamitFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = JamitFoundation;
 		};
-		1E46DE4A24AF6CE4007226EF /* GridView */ = {
+		1EBCCBD525F4F0BC00079E3F /* TimePickerView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E46DE3F24AF6CE4007226EF /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = GridView;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = TimePickerView;
+		};
+		1EBCCBD725F4F0BC00079E3F /* WeakCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = WeakCache;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

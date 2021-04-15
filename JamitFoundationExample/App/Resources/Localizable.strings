@@ -7,6 +7,7 @@
 "SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE" = "CollapsibleTableViewController";
 "SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE" = "CollectionView";
 "SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE" = "Barcode Scanner";
+"SAMPLE_LIST_VIEW_CONTROLLER.MESSAGE_VIEW_ITEM.TITLE" = "Message View";
 
 "SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.TITLE" = "Barcode scanner not available";
 "SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_NOT_AVAILABLE.MESSAGE" = "The barcode scanner is only available on real devices and not on simulators. To test this functionality deploy it to any device and run it.";
