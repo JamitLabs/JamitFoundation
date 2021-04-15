@@ -5,8 +5,8 @@
         "package": "JamitFoundation",
         "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
         "state": {
-          "branch": "feature/message-view",
-          "revision": "675be8b62bee02e4e5eff2fa5143cc7f6289973d",
+          "branch": "develop",
+          "revision": "25951dd52925de91e5bbe191ce557094f637f511",
           "version": null
         }
       }

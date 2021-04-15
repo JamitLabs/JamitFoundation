@@ -1,6 +1,5 @@
 // Copyright © 2021 Jamit Labs GmbH. All rights reserved.
 
-import Foundation
 import JamitFoundation
 import UIKit
 

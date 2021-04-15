@@ -1,6 +1,5 @@
 //  Copyright © 2021 Jamit Labs GmbH. All rights reserved.
 
-import Foundation
 import UIKit
 
 /// The configuration of the `MessageViewPresenter`. Use this to configure the appearance and showing of messages.
