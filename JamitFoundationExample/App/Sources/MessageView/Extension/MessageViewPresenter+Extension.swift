@@ -8,9 +8,9 @@ extension MessageViewPresenter {
     func show(
         withTitle title: String,
         andMessage message: String,
-        position: MessageViewModel.Position = .bottom,
+        position: MessageViewAppearanceConfiguration.Position = .bottom,
         shouldHaveBackgroundView: Bool = true,
-        with backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3),
+        backgroundViewColor: UIColor = UIColor.black.withAlphaComponent(0.3),
         hideOption: MessageContent.HideOption = .userControlled,
         completion: VoidCallback? = nil
     ) {
@@ -22,9 +22,23 @@ extension MessageViewPresenter {
 
         show(
             contentView: infoMessageView,
-            position: position,
-            shouldHaveBackgroundView: shouldHaveBackgroundView,
-            with: backgroundColor,
+            appearanceConfiguration: .init(
+                position: position,
+                topSpacing: 40.0,
+                leadingSpacing: 20.0,
+                trailingSpacing: 20.0,
+                bottomSpacing: 20.0,
+                messageViewBackgroundColor: .blue,
+                cornerRadius: 10.0,
+                shouldHaveBackgroundView: shouldHaveBackgroundView,
+                backgroundViewBackgroundColor: backgroundViewColor,
+                shouldAddSwipeGestureRecognizer: true,
+                shouldAddOverlayButton: true
+            ),
+            animationConfiguration: .init(
+                animationDuration: 1.0,
+                animationOptions: [.curveEaseInOut]
+            ),
             hideOption: hideOption,
             completion: completion
         )

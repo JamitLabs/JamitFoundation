@@ -1119,7 +1119,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				branch = develop;
+				branch = feature/adjust_message_view_configuration;
 				kind = branch;
 			};
 		};
