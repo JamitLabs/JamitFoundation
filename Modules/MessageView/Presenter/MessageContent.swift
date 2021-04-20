@@ -19,7 +19,6 @@ public struct MessageContent {
     /// The completion called when the message was hidden.
     public let completion: VoidCallback?
 
-    
     /**
      * The initializer for the `MessageContent`.
      *

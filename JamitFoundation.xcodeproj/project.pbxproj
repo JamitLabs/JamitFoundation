@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E04A941262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04A940262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift */; };
+		1E04A945262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04A944262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift */; };
 		1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F424BC6C840087D132 /* CollapsibleView.swift */; };
 		1E0B89FA24BC6C850087D132 /* CollapsibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */; };
 		1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */; };
@@ -18,7 +20,6 @@
 		1EBCCBAF25F4EE5D00079E3F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBAE25F4EE5D00079E3F /* MessageView.swift */; };
 		1EBCCBB325F4EE6700079E3F /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */; };
 		1ED504402626C1960014263D /* MessageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5043F2626C1960014263D /* MessageViewPresenter.swift */; };
-		1ED5044C2626C4670014263D /* MessageViewPresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */; };
 		1ED504732626E32D0014263D /* MessageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED504722626E32D0014263D /* MessageContent.swift */; };
 		1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */; };
 		A752F14825C43F380065CD94 /* JamitFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CB32132371D1A700E25E4B /* JamitFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -224,6 +225,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E04A940262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewAppearanceConfiguration.swift; sourceTree = "<group>"; };
+		1E04A944262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewAnimationConfiguration.swift; sourceTree = "<group>"; };
 		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
 		1E0B89F524BC6C840087D132 /* CollapsibleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleViewModel.swift; sourceTree = "<group>"; };
 		1E0B89F724BC6C850087D132 /* DefaultCollapsibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCollapsibleHeaderView.swift; sourceTree = "<group>"; };
@@ -234,7 +237,6 @@
 		1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		1EBCCBBA25F4EF0700079E3F /* MessageView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MessageView.plist; sourceTree = "<group>"; };
 		1ED5043F2626C1960014263D /* MessageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenter.swift; sourceTree = "<group>"; };
-		1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewPresenterConfiguration.swift; sourceTree = "<group>"; };
 		1ED504722626E32D0014263D /* MessageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContent.swift; sourceTree = "<group>"; };
 		1EFCDA6A24C5C12000B41530 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
 		A752F15425C43F380065CD94 /* CarouselView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarouselView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,7 +408,6 @@
 			children = (
 				1ED504722626E32D0014263D /* MessageContent.swift */,
 				1ED5043F2626C1960014263D /* MessageViewPresenter.swift */,
-				1ED5044B2626C4670014263D /* MessageViewPresenterConfiguration.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -415,6 +416,8 @@
 			isa = PBXGroup;
 			children = (
 				1EBCCBAE25F4EE5D00079E3F /* MessageView.swift */,
+				1E04A944262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift */,
+				1E04A940262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift */,
 				1EBCCBB225F4EE6700079E3F /* MessageViewModel.swift */,
 			);
 			path = View;
@@ -1056,10 +1059,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED504402626C1960014263D /* MessageViewPresenter.swift in Sources */,
+				1E04A941262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift in Sources */,
 				1ED504732626E32D0014263D /* MessageContent.swift in Sources */,
-				1ED5044C2626C4670014263D /* MessageViewPresenterConfiguration.swift in Sources */,
 				1EBCCBB325F4EE6700079E3F /* MessageViewModel.swift in Sources */,
 				1EBCCBAF25F4EE5D00079E3F /* MessageView.swift in Sources */,
+				1E04A945262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
