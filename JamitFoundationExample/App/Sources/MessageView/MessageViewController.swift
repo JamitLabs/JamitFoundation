@@ -5,7 +5,7 @@ import MessageView
 import UIKit
 
 final class MessageViewController: StatefulViewController<MessageViewControllerViewModel>{
-    private let messageViewPresenter: MessageViewPresenter = .init(configuration: .default)
+    private let messageViewPresenter: MessageViewPresenter = .init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
             andMessage: "This is a message view presented from top with a background view",
             position: .top,
             shouldHaveBackgroundView: true,
-            with: UIColor.black.withAlphaComponent(0.3)
+            backgroundViewColor: UIColor.black.withAlphaComponent(0.3)
         ) {
            print("Did dismiss messag view from top with background view")
         }
@@ -77,7 +77,7 @@ final class MessageViewController: StatefulViewController<MessageViewControllerV
             andMessage: "This is a message view presented from bottom with a background view",
             position: .bottom,
             shouldHaveBackgroundView: true,
-            with: UIColor.black.withAlphaComponent(0.3)
+            backgroundViewColor: UIColor.black.withAlphaComponent(0.3)
         ) {
            print("Did dismiss messag view from bottom with background view")
         }

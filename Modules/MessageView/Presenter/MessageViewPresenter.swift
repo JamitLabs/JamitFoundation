@@ -5,8 +5,6 @@ import UIKit
 
 /// The message view presenter used to show `MessageView`s
 public final class MessageViewPresenter {
-    private let configuration: MessageViewPresenterConfiguration
-
     private var backgroundView: UIView?
     private var currentMessageContent: MessageContent?
     private var messageContents: [MessageContent] = []
@@ -45,9 +43,9 @@ public final class MessageViewPresenter {
     private func attach(messageView: MessageView) {
         guard let window = UIApplication.shared.windows.last else { return }
 
-        if messageView.model.shouldHaveBackgroundView {
+        if messageView.model.appearanceConfiguration.shouldHaveBackgroundView {
             let backgroundView: UIView = .init(frame: window.bounds)
-            backgroundView.backgroundColor = messageView.model.backgroundViewBackgroundColor
+            backgroundView.backgroundColor = messageView.model.appearanceConfiguration.backgroundViewBackgroundColor
             let tapGestureRecognizer: UITapGestureRecognizer = .init(target: self, action: #selector(handleBackgroundTap))
             backgroundView.addGestureRecognizer(tapGestureRecognizer)
             self.backgroundView = backgroundView
@@ -58,8 +56,13 @@ public final class MessageViewPresenter {
             window.addSubview(messageView)
         }
 
+        let topSpacing: CGFloat = messageView.model.appearanceConfiguration.topSpacing
+        let leadingSpacing: CGFloat = messageView.model.appearanceConfiguration.leadingSpacing
+        let trailingSpacing: CGFloat = messageView.model.appearanceConfiguration.trailingSpacing
+        let bottomSpacing: CGFloat = messageView.model.appearanceConfiguration.bottomSpacing
+
         let targetSize = CGSize(
-            width: UIScreen.main.bounds.width - configuration.leadingSpacing - configuration.trailingSpacing,
+            width: UIScreen.main.bounds.width - leadingSpacing - trailingSpacing,
             height: UIView.layoutFittingCompressedSize.height
         )
 
@@ -70,16 +73,16 @@ public final class MessageViewPresenter {
         )
 
         messageView.translatesAutoresizingMaskIntoConstraints = false
-        messageView.leftAnchor.constraint(equalTo: window.leftAnchor, constant: configuration.leadingSpacing).isActive = true
-        messageView.rightAnchor.constraint(equalTo: window.rightAnchor, constant: -configuration.trailingSpacing).isActive = true
+        messageView.leftAnchor.constraint(equalTo: window.leftAnchor, constant: leadingSpacing).isActive = true
+        messageView.rightAnchor.constraint(equalTo: window.rightAnchor, constant: -trailingSpacing).isActive = true
         messageView.heightAnchor.constraint(equalToConstant: fittingSize.height).isActive = true
 
-        switch messageView.model.position {
+        switch messageView.model.appearanceConfiguration.position {
         case .top:
-            messageView.topAnchor.constraint(equalTo: window.topAnchor, constant: configuration.topSpacing).isActive = true
+            messageView.topAnchor.constraint(equalTo: window.topAnchor, constant: topSpacing).isActive = true
 
         default:
-            messageView.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -configuration.bottomSpacing).isActive = true
+            messageView.bottomAnchor.constraint(equalTo: window.bottomAnchor, constant: -bottomSpacing).isActive = true
         }
     }
 
@@ -112,11 +115,9 @@ public final class MessageViewPresenter {
 
     /**
      * The initialiser for the `MessageViewPresenter`.
-     * 
-     * - Parameter configuration: The configuration used to adjust the appearance and showing of message views.
      */
-    public init(configuration: MessageViewPresenterConfiguration) {
-        self.configuration = configuration
+    public init() {
+        // Nothing to do here.
     }
 
     /**
@@ -149,34 +150,23 @@ extension MessageViewPresenter {
      * Show a message with the given content view.
      *
      * - Parameter contenView: The content view to embed into the message view.
-     * - Parameter position: The origin the message view should be animated from.
-     * - Parameter shouldHaveBackgroundView: Indicator whether the message view should be embedded in a full screen view to block user interaction.
-     * - Parameter backgroundColor: The background color of the background view.
+     * - Parameter appearanceConfiguration: The appearance configuration to use for the `MessageView`
+     * - Parameter animationConfiguration: The animation configuration to use for the `MessageView`.
      * - Parameter hideOption: The hide option used to hide the message.
      * - Parameter completion: The completion called when the message view was hidden.
      */
     public func show(
         contentView: UIView,
-        position: MessageViewModel.Position = .bottom,
-        shouldHaveBackgroundView: Bool = true,
-        with backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3),
+        appearanceConfiguration: MessageViewAppearanceConfiguration,
+        animationConfiguration: MessageViewAnimationConfiguration,
         hideOption: MessageContent.HideOption = .userControlled,
         completion: VoidCallback? = nil
     ) {
         let messageView: MessageView = .instantiate()
         messageView.model = .init(
             contentView: contentView,
-            position: position,
-            topSpacing: configuration.topSpacing,
-            bottomSpacing: configuration.bottomSpacing,
-            messageViewBackgroundColor: configuration.messageViewBackgroundColor,
-            cornerRadius: configuration.cornerRadius,
-            animationDuration: configuration.animationDuration,
-            animationOptions: configuration.animationOptions,
-            shouldHaveBackgroundView: shouldHaveBackgroundView,
-            backgroundViewBackgroundColor: backgroundColor,
-            shouldAddSwipeGestureRecognizer: configuration.shouldAddSwipeGestureRecognizer,
-            shouldAddOverlayButton: configuration.shouldAddOverlayButton
+            appearanceConfiguration: appearanceConfiguration,
+            animationConfiguration: animationConfiguration
         ) { [weak self] in
             self?.hide()
         }
