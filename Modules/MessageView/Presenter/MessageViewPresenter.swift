@@ -150,6 +150,11 @@ extension MessageViewPresenter {
      *
      * - Parameter contenView: The content view to embed into the message view.
      * - Parameter position: The origin the message view should be animated from.
+     * - Parameter messageViewBackgroundColor: The background color of the message view.
+     * - Parameter animationDuration: The animation duration used for origin animation.
+     * - Parameter animationOptions: The animation options to use with the animation.
+     * - Parameter shouldAddSwipeGestureRecognizer: Indicator whether a swipe gesture recognizer should be added.
+     * - Parameter shouldAddOverlayButton: Indicator whether an overlay button should be added.
      * - Parameter shouldHaveBackgroundView: Indicator whether the message view should be embedded in a full screen view to block user interaction.
      * - Parameter backgroundColor: The background color of the background view.
      * - Parameter hideOption: The hide option used to hide the message.
@@ -158,8 +163,13 @@ extension MessageViewPresenter {
     public func show(
         contentView: UIView,
         position: MessageViewModel.Position = .bottom,
+        messageViewBackgroundColor: UIColor = .white,
+        animationDuration: Double = 1.0,
+        animationOptions: UIView.AnimationOptions = [.curveEaseInOut],
+        shouldAddSwipeGestureRecognizer: Bool = true,
+        shouldAddOverlayButton: Bool = true,
         shouldHaveBackgroundView: Bool = true,
-        with backgroundColor: UIColor = UIColor.black.withAlphaComponent(0.3),
+        backgroundViewColor: UIColor = UIColor.black.withAlphaComponent(0.3),
         hideOption: MessageContent.HideOption = .userControlled,
         completion: VoidCallback? = nil
     ) {
@@ -169,14 +179,14 @@ extension MessageViewPresenter {
             position: position,
             topSpacing: configuration.topSpacing,
             bottomSpacing: configuration.bottomSpacing,
-            messageViewBackgroundColor: configuration.messageViewBackgroundColor,
+            messageViewBackgroundColor: messageViewBackgroundColor,
             cornerRadius: configuration.cornerRadius,
-            animationDuration: configuration.animationDuration,
-            animationOptions: configuration.animationOptions,
+            animationDuration: animationDuration,
+            animationOptions: animationOptions,
             shouldHaveBackgroundView: shouldHaveBackgroundView,
-            backgroundViewBackgroundColor: backgroundColor,
-            shouldAddSwipeGestureRecognizer: configuration.shouldAddSwipeGestureRecognizer,
-            shouldAddOverlayButton: configuration.shouldAddOverlayButton
+            backgroundViewBackgroundColor: backgroundViewColor,
+            shouldAddSwipeGestureRecognizer: shouldAddSwipeGestureRecognizer,
+            shouldAddOverlayButton: shouldAddOverlayButton
         ) { [weak self] in
             self?.hide()
         }
