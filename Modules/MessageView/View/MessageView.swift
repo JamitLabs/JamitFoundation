@@ -26,8 +26,8 @@ public final class MessageView: StatefulView<MessageViewModel> {
     public override func didChangeModel() {
         super.didChangeModel()
 
-        layer.cornerRadius = model.cornerRadius
-        backgroundColor = model.messageViewBackgroundColor
+        layer.cornerRadius = model.appearanceConfiguration.cornerRadius
+        backgroundColor = model.appearanceConfiguration.messageViewBackgroundColor
 
         setup()
 
@@ -35,18 +35,18 @@ public final class MessageView: StatefulView<MessageViewModel> {
         
         button.gestureRecognizers?.removeAll()
 
-        guard model.shouldAddSwipeGestureRecognizer else { return }
+        guard model.appearanceConfiguration.shouldAddSwipeGestureRecognizer else { return }
 
-        switch model.position {
+        switch model.appearanceConfiguration.position {
         case .top:
-            if model.shouldAddOverlayButton {
+            if model.appearanceConfiguration.shouldAddOverlayButton {
                 button.addGestureRecognizer(swipeUpGestureRecognizer)
             } else {
                 model.contentView.addGestureRecognizer(swipeUpGestureRecognizer)
             }
 
         case .bottom:
-            if model.shouldAddOverlayButton {
+            if model.appearanceConfiguration.shouldAddOverlayButton {
                 button.addGestureRecognizer(swipeDownGestureRecognizer)
             } else {
                 model.contentView.addGestureRecognizer(swipeDownGestureRecognizer)
@@ -65,7 +65,7 @@ public final class MessageView: StatefulView<MessageViewModel> {
         model.contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomAnchor.constraint(equalTo: model.contentView.bottomAnchor).isActive = true
 
-        guard model.shouldAddOverlayButton else { return }
+        guard model.appearanceConfiguration.shouldAddOverlayButton else { return }
 
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -100,12 +100,12 @@ public final class MessageView: StatefulView<MessageViewModel> {
     public func showMessageView() {
         let originalY = center.y
 
-        switch model.position {
+        switch model.appearanceConfiguration.position {
         case .top:
-            center.y -= (bounds.height + model.topSpacing)
+            center.y -= (bounds.height + model.appearanceConfiguration.topSpacing)
 
         case .bottom:
-            center.y += bounds.height + model.bottomSpacing
+            center.y += bounds.height + model.appearanceConfiguration.bottomSpacing
         }
 
         showAnimate { [weak self] in
@@ -118,9 +118,9 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
     private func showAnimate(animations: @escaping VoidCallback) {
         UIView.animate(
-            withDuration: model.animationDuration,
+            withDuration: model.animationConfiguration.animationDuration,
             delay: 0,
-            options: model.animationOptions,
+            options: model.animationConfiguration.animationOptions,
             animations: {
                 animations()
             },
@@ -132,12 +132,12 @@ public final class MessageView: StatefulView<MessageViewModel> {
     public func hideMessageView() {
         var targetY = center.y
 
-        switch model.position {
+        switch model.appearanceConfiguration.position {
         case .top:
-            targetY -= (bounds.height + model.topSpacing)
+            targetY -= (bounds.height + model.appearanceConfiguration.topSpacing)
 
         case .bottom:
-            targetY += bounds.height + model.bottomSpacing
+            targetY += bounds.height + model.appearanceConfiguration.bottomSpacing
         }
 
         hideAnimation(
@@ -154,9 +154,9 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
     private func hideAnimation(animations: @escaping VoidCallback, completion: @escaping VoidCallback) {
         UIView.animate(
-            withDuration: model.animationDuration,
+            withDuration: model.animationConfiguration.animationDuration,
             delay: 0,
-            options: model.animationOptions,
+            options: model.animationConfiguration.animationOptions,
             animations: {
                 animations()
             },
