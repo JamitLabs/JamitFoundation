@@ -15,6 +15,7 @@ public final class MessageViewPresenter {
     }
 
     private func present(_ messageContent: MessageContent) {
+        guard !messageContentIsInQueue(messageContent) else { return }
         guard currentMessageContent == nil else { return addToQueue(messageContent) }
 
         currentMessageContent = messageContent
@@ -38,6 +39,17 @@ public final class MessageViewPresenter {
                 break
             }
         }
+    }
+
+    private func messageContentIsInQueue(_ messageContent: MessageContent) -> Bool {
+        guard let equatable = messageContent.equatable else { return false }
+
+        var equatables: [String] = messageContents.compactMap { $0.equatable }
+        if let currentEquatable = currentMessageContent?.equatable {
+            equatables.append(currentEquatable)
+        }
+
+        return equatables.contains { $0 == equatable }
     }
 
     private func attach(messageView: MessageView) {
@@ -153,6 +165,7 @@ extension MessageViewPresenter {
      * - Parameter appearanceConfiguration: The appearance configuration to use for the `MessageView`
      * - Parameter animationConfiguration: The animation configuration to use for the `MessageView`.
      * - Parameter hideOption: The hide option used to hide the message.
+     * - Parameter equatable: The equtable evaluated to determine equal messages. Ignored if nil.
      * - Parameter completion: The completion called when the message view was hidden.
      */
     public func show(
@@ -160,6 +173,7 @@ extension MessageViewPresenter {
         appearanceConfiguration: MessageViewAppearanceConfiguration,
         animationConfiguration: MessageViewAnimationConfiguration,
         hideOption: MessageContent.HideOption = .userControlled,
+        equatable: String? = nil,
         completion: VoidCallback? = nil
     ) {
         let messageView: MessageView = .instantiate()
@@ -171,7 +185,7 @@ extension MessageViewPresenter {
             self?.hide()
         }
 
-        let messageContent: MessageContent = .init(messageView: messageView, hideOption: hideOption, completion: completion)
+        let messageContent: MessageContent = .init(messageView: messageView, hideOption: hideOption, equatable: equatable, completion: completion)
         present(messageContent)
     }
 }

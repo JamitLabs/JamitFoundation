@@ -16,6 +16,8 @@ public struct MessageContent {
     public let messageView: MessageView
     /// The hide option used to hide the message.
     public let hideOption: HideOption
+    /// The equtable evaluated to determine equal messages.
+    public let equatable: String?
     /// The completion called when the message was hidden.
     public let completion: VoidCallback?
 
@@ -24,15 +26,18 @@ public struct MessageContent {
      *
      * - Parameter messageView: The message view to show.
      * - Parameter hideOption: The hide option used to hide the message.
+     * - Parameter equatable: The equtable evaluated to determine equal messages.
      * - Parameter completion: The completion called when the message was hidden.
      */
     public init(
         messageView: MessageView,
         hideOption: HideOption,
+        equatable: String?,
         completion: VoidCallback?
     ) {
         self.messageView = messageView
         self.hideOption = hideOption
+        self.equatable = equatable
         self.completion = completion
     }
 }
