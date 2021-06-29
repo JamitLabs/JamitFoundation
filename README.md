@@ -4,7 +4,7 @@
 ![Version](https://img.shields.io/github/v/tag/JamitLabs/JamitFoundation?label=Version)
 ![Platforms](https://img.shields.io/badge/Platforms-iOS-yellow)
 ![License](https://img.shields.io/github/license/JamitLabs/JamitFoundation)
-![Carthage](https://img.shields.io/badge/Cartage-compatible-brightgreen)
+![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen)
 
 JamitFoundation is a lightweight collection of useful concepts to enable data and composition oriented development with UIKit.
 

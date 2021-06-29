@@ -103,7 +103,10 @@ public final class TimePickerView: StatefulView<TimePickerViewModel> {
 }
 
 extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int { TimePickerComponent.allCases.count }
+    /// Returns the number of 'columns' to display.
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        TimePickerComponent.allCases.count
+    }
 
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         guard let timePickerComponent = TimePickerComponent(rawValue: component) else { return 0 }
@@ -169,6 +172,7 @@ extension TimePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         return attributedString
     }
 
+    /// Returns width of column and height of row for each component.
     public func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         bounds.width / 3.0
     }
