@@ -7,10 +7,7 @@ import UIKit
 final class CarouselViewController: StatefulViewController<CarouselViewControllerViewModel> {
     @IBOutlet private var contentView: UIView!
 
-    private lazy var carouselView: CarouselView<CarouselItemView> = {
-        let carouselView = CarouselView<CarouselItemView>()
-        return carouselView
-    }()
+    private lazy var carouselView: CarouselView<CarouselItemView> = .instantiate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
