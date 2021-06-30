@@ -8,6 +8,8 @@
 
 JamitFoundation is a lightweight collection of useful concepts to enable data and composition oriented development with UIKit.
 
+## Table Of Contents
+
 1. [Motivation](#motivation)
 2. [Features](#features)
 3. [Installation](#installation)
@@ -19,7 +21,7 @@ JamitFoundation is a lightweight collection of useful concepts to enable data an
     - [Basics](#basics)
     - [Modules](#modules)
 5. [Contributing](#contributing)
-6. [License](/LICENSE)
+6. [License](#license)
 
 
 ## Motivation
@@ -285,3 +287,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 We welcome everyone to work with us together delivering helpful tooling to our open source community. 
 Feel free to create an issue to ask questions, give feedback, report bugs or share your new feature ideas. 
 Before creating pull requests please ensure that you have created a related issue ticket.
+
+## License
+
+The project license can be found [here](/LICENSE).
