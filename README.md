@@ -26,11 +26,11 @@ JamitFoundation is a lightweight collection of useful concepts to enable data an
 
 ## Motivation
 
-As an agency working on many different projects with Swift and UIKit brings up new challenges to deliver high quality solutions in reasonable time. It is important to maintain a common sense of code styles and app structure in the development team, but yet it is difficult to merge the collection of knowledge together when the team is split into smaller project groups working on very different topics. JamitFoundation was designed to merge the team knowledge into a reusable core framework which is used in all applications we deliver. It defines a lightweight protocol oriented concept and structure to write maintainable and reusable user interfaces with UIKit on iOS platforms. All general purpose solutions are combined together in modules and reusable views to improve quality over time and to stop reinventing the wheel. By sharing the framework with the open source community we invite you all to benefit from the usage and share your knowledge with others by contributing to the project.
+As an agency, working on many different projects with Swift and UIKit brings up new challenges to deliver high quality solutions in reasonable time. It is important to maintain a common sense of code styles and app structure in the development team, but yet it is difficult to merge the collection of knowledge together when the team is split into smaller project groups working on very different topics. JamitFoundation was designed to merge the team knowledge into a reusable core framework which is used in all applications we deliver. It defines a lightweight protocol-oriented concept and structure to write maintainable and reusable user interfaces with UIKit on iOS platforms. All general purpose solutions are combined together in modules and reusable views to improve quality over time and to stop reinventing the wheel. By sharing the framework with the open source community we invite you all to benefit from the usage and share your knowledge with others by contributing to the project.
 
 ## Features
 
-- Lightweight zero dependency based core framework
+- Lightweight, dependency-free core framework
 - Data oriented and declarative view creation and usage
 - Reusable UIKit components
 - Code sharing in views and tableview / collectionview cells
@@ -112,7 +112,7 @@ let mySecondView = MyOtherView.instantiate()
 
 #### StatefulView
 
-The StatefulView is the base view which contains a generic mutable state of type `Model`. The model contains all semantical data informations required to present the view. Every subclass of the `StatefulView` is intended to have a mutable state and should only be configured by assigning it's `Model`. Subviews inside a `StatefulView` should always be private and not accessible from outside. Callbacks should also be passed as closures inside the `Model` so that no methods of the view are called from outside. If a custom view is not ment to be subclassed we always define it as `final` and only leave it `open` if it is used to compose behaviour into other view classes by using generic parameters. 
+The StatefulView is the base view which contains a generic mutable state of type `Model`. The model contains all semantical data information required to present the view. Every subclass of the `StatefulView` is intended to have a mutable state and should only be configured by assigning it's `Model`. Subviews inside a `StatefulView` should always be private and not accessible from outside. Callbacks should also be passed as closures inside the `Model` so that no methods of the view are called from outside. If a custom view is not ment to be subclassed we always define it as `final` and only leave it `open` if it is used to compose behaviour into other view classes by using generic parameters. 
 
 Example:
 
@@ -209,7 +209,7 @@ final class CarouselViewController: StatefulViewController<CarouselViewControlle
 
 ##### Code Sharing
 
-Sharing the code between stateful views and table/collection view cells is straight forward by using the `ContainerTableViewCell` or `ContainerCollectionViewCell` which encapsulate a statefulview into a `TableViewCell` or `CollectionViewCell`.
+Sharing the code between stateful views and table/collection view cells is straightforward by using the `ContainerTableViewCell` or `ContainerCollectionViewCell` which encapsulate a statefulview into a `TableViewCell` or `CollectionViewCell`.
 
 Example:
 
