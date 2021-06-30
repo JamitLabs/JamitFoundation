@@ -11,6 +11,7 @@ import SwiftUI
 /// ```
 @propertyWrapper
 public class UserDefault<Value> where Value: Codable {
+    /// Callback providing the default value, that is used if no value is associated with the given key
     public typealias DefaultValue = () -> Value
 
     private let key: String
@@ -20,6 +21,7 @@ public class UserDefault<Value> where Value: Codable {
     @available(iOS 13.0, *)
     public var projectedValue: Binding<Value> { return .init(get: { self.wrappedValue }, set: { self.wrappedValue = $0 }) }
 
+    /// The wrapped value of the property value used to directly access the value
     public var wrappedValue: Value {
         get {
             guard let value = getValue() else {
