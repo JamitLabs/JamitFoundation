@@ -1,5 +1,6 @@
 import Foundation
 
+/// The default implementation of the `KeychainProtocol` used to access data in the device keychain.
 public final class Keychain: KeychainProtocol {
     /// Returns the shared defaults object.
     public static let `default`: Keychain = .init()

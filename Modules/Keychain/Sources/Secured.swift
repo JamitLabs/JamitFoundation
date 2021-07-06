@@ -1,7 +1,6 @@
 import Foundation
 import OSLog
 
-///
 /// `Secured` is a property wrapper that can be applied to any codable property to store it in the keychain
 ///
 /// Example:
@@ -67,6 +66,7 @@ public struct Secured<Value: Codable> {
         }
     }
 
+    /// The wrapped value of the property value used to directly access the value
     public var wrappedValue: Value? {
         didSet {
             do {

@@ -290,4 +290,4 @@ Before creating pull requests please ensure that you have created a related issu
 
 ## License
 
-The project license can be found [here](/LICENSE).
+This project is licensed under the terms of the MIT license. See the [LICENSE](/LICENSE) file.
