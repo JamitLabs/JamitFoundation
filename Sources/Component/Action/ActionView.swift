@@ -50,7 +50,7 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
 
         button.layer.cornerRadius = view.layer.cornerRadius
 
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, *) {
             button.layer.maskedCorners = view.layer.maskedCorners
         }
     }
