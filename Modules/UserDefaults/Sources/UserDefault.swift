@@ -1,5 +1,4 @@
 import Foundation
-import SwiftUI
 
 ///
 /// `UserDefault` is a property wrapper that can be applied to any codable property to store it in the user defaults
@@ -10,32 +9,26 @@ import SwiftUI
 /// var value: Bool
 /// ```
 @propertyWrapper
-public class UserDefault<Value> where Value: Codable {
-    /// Callback providing the default value, that is used if no value is associated with the given key
-    public typealias DefaultValue = () -> Value
-
+public struct UserDefault<Value> where Value: Codable {
     private let key: String
-    private let defaultValue: DefaultValue
+    private let defaultValue: Value
     private let defaults: UserDefaults
-
-    @available(iOS 13.0, *)
-    public var projectedValue: Binding<Value> { return .init(get: { self.wrappedValue }, set: { self.wrappedValue = $0 }) }
+    private let decoder: JSONDecoder
+    private let encoder: JSONEncoder
 
     /// The wrapped value of the property value used to directly access the value
     public var wrappedValue: Value {
         get {
-            guard let value = getValue() else {
-                let value = defaultValue()
-                setValue(value)
-
-                return value
-            }
+            guard let data = defaults.object(forKey: key) as? Data else { return defaultValue }
+            guard let value = try? decoder.decode(Value.self, from: data) else { return defaultValue }
 
             return value
         }
 
         set {
-            setValue(newValue)
+            guard let data = try? encoder.encode(newValue) else { return }
+
+            defaults.set(data, forKey: key)
         }
     }
 
@@ -43,34 +36,20 @@ public class UserDefault<Value> where Value: Codable {
     ///
     /// - Parameter key: The key associated with storing the value inside the UserDefaults
     /// - Parameter defaultValue: The default value, that is used if no value is associated with the given key
-    /// - Parameter defaults: The UserDefaults instance
-    public init(key: String, defaultValue: @autoclosure @escaping DefaultValue, defaults: UserDefaults = .standard) {
+    /// - Parameter defaults: The `UserDefaults` instance used to persist the data
+    /// - Parameter decoder: The `JSONDecoder` used to decode the value from user defaults
+    /// - Parameter encoder: The `JSONEncoder` used to encode the value to user defaults
+    public init(
+        key: String,
+        defaultValue: @autoclosure () -> Value,
+        defaults: UserDefaults = .standard,
+        decoder: JSONDecoder = .init(),
+        encoder: JSONEncoder = .init()
+    ) {
         self.key = key
-        self.defaultValue = defaultValue
+        self.defaultValue = defaultValue()
         self.defaults = defaults
-    }
-
-    private func setValue(_ newValue: Value) {
-        do {
-            let encoder = JSONEncoder()
-            let encodedValue = try encoder.encode(newValue)
-
-            defaults.set(encodedValue, forKey: key)
-        } catch {
-            NSLog("Encoding the value associated with the key: %@ threw an error: %@", key, error.localizedDescription)
-        }
-    }
-
-    private func getValue() -> Value? {
-        do {
-            let decoder = JSONDecoder()
-            guard let data = defaults.object(forKey: key) as? Data else { return nil }
-
-            return try decoder.decode(Value.self, from: data)
-        } catch {
-            NSLog("Decoding the value associated with the key: %@ threw an error: %@", key, error.localizedDescription)
-        }
-
-        return nil
+        self.decoder = decoder
+        self.encoder = encoder
     }
 }
