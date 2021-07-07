@@ -14,7 +14,9 @@ public final class ImageView: StatefulView<Image> {
     private typealias ImageCallback = (UIImage) -> Void
 
     private lazy var imageView: UIImageView = .init(frame: .zero)
-    private lazy var activityIndicator: UIActivityIndicatorView = .init(style: .gray)
+    private lazy var activityIndicator: UIActivityIndicatorView = .init(
+        style: Self.defaultActivityIndicatorStyle()
+    )
 
     private var errorCallback: ErrorCallback?
 
@@ -84,5 +86,15 @@ public final class ImageView: StatefulView<Image> {
                 callback(image)
             }
         }.resume()
+    }
+}
+
+extension ImageView {
+    private static func defaultActivityIndicatorStyle() -> UIActivityIndicatorView.Style {
+        #if os(tvOS)
+        return .white
+        #else
+        return .gray
+        #endif
     }
 }
