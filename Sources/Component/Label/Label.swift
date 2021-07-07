@@ -69,6 +69,8 @@ open class Label: UILabel {
         textColor = style.color
         font = style.font
         numberOfLines = style.numberOfLines
+        lineBreakMode = style.lineBreakMode
+        textAlignment = style.textAlignment
     }
 
     open override func prepareForInterfaceBuilder() {
