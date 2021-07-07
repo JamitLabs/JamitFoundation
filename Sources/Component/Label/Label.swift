@@ -20,6 +20,11 @@ open class Label: UILabel {
     @IBInspectable
     private(set) var localizationKey: String?
 
+    /// The style descriptor of the `Label`.
+    public var style: LabelStyle = .default {
+        didSet { didChangeStyle() }
+    }
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -56,6 +61,17 @@ open class Label: UILabel {
     ///
     /// - Attention: Always ensure calling `super.didChangeModel()` to avoid unexpected behaviour.
     open func didChangeModel() {}
+
+    /// This method is intended to be overriden by a subclass to listen for style changes.
+    ///
+    /// - Attention: Always ensure calling `super.didChangeStyle()` to avoid unexpected behaviour.
+    open func didChangeStyle() {
+        textColor = style.color
+        font = style.font
+        numberOfLines = style.numberOfLines
+        lineBreakMode = style.lineBreakMode
+        textAlignment = style.textAlignment
+    }
 
     open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
