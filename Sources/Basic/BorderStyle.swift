@@ -11,6 +11,31 @@ public struct BorderStyle {
 
     /// The corner radius of the border.
     public let radius: Radius
+
+    /// The designated initializer of `BorderStyle`.
+    ///
+    /// - Parameters:
+    ///   - color: The color of the border.
+    ///   - width: The width of the border.
+    ///   - radius: The corner radius of the border.
+    public init(
+        color: UIColor = Self.default.color,
+        width: CGFloat = Self.default.width,
+        radius: Radius = Self.default.radius
+    ) {
+        self.color = color
+        self.width = width
+        self.radius = radius
+    }
+}
+
+extension BorderStyle {
+    /// The default value of `BorderStyle`.
+    public static let `default`: Self = .init(
+        color: .clear,
+        width: 0,
+        radius: 0
+    )
 }
 
 extension UIView {
