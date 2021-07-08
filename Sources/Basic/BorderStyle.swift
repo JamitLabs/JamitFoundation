@@ -3,8 +3,13 @@ import UIKit
 
 /// A data structure describing the border style of a `UIView`.
 public struct BorderStyle {
+    /// The color of the border.
     public let color: UIColor
+
+    /// The width of the border.
     public let width: CGFloat
+
+    /// The corner radius of the border.
     public let radius: Radius
 }
 
