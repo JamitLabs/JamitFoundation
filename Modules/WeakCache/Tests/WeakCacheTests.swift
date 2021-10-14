@@ -5,7 +5,7 @@ import XCTest
 
 class WeakCacheTests: XCTestCase {
     func testAddingElement() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
+        let cache: WeakCache<CacheableElement> = .init()
 
         let element = CacheableElement()
         cache.append(element)
@@ -17,7 +17,7 @@ class WeakCacheTests: XCTestCase {
     }
 
     func testRemovingElement() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
+        let cache: WeakCache<CacheableElement> = .init()
 
         let element = CacheableElement()
         cache.append(element)
@@ -28,7 +28,7 @@ class WeakCacheTests: XCTestCase {
     }
 
     func testRemovingAllElements() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
+        let cache: WeakCache<CacheableElement> = .init()
 
         let generatedElements: [CacheableElement] = (0 ..< 10).map { _ in CacheableElement() }
         generatedElements.forEach { cache.append($0) }
@@ -39,7 +39,7 @@ class WeakCacheTests: XCTestCase {
     }
 
     func testElementShouldNotBeReferencedStrong() throws {
-        let cache: WeakCache<CacheableElement>  = .init()
+        let cache: WeakCache<CacheableElement> = .init()
 
         cache.append(CacheableElement())
         XCTAssertTrue(cache.all.isEmpty)

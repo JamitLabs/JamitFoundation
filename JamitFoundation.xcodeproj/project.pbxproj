@@ -54,6 +54,7 @@
 		A75A6B3025C037BC003BF4CE /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE325C03683003BF4CE /* PageView.swift */; };
 		A75A6B3F25C03917003BF4CE /* JamitFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; };
 		A75A6B4025C03917003BF4CE /* JamitFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB31C02371D0BE00E25E4B /* JamitFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A78AFEBC271850EE007E5F3B /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78AFEBB271850EE007E5F3B /* LabelStyle.swift */; };
 		A7BCD13825C44ADF00687520 /* WeakCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A752F16725C43F3B0065CD94 /* WeakCache.framework */; platformFilter = ios; };
 		A7BCD14425C44B2500687520 /* CacheableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AE925C03683003BF4CE /* CacheableElement.swift */; };
 		A7BCD14525C44B2500687520 /* WeakCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A6AEA25C03683003BF4CE /* WeakCacheTests.swift */; };
@@ -268,6 +269,7 @@
 		A75A6AF925C03683003BF4CE /* TimePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewModel.swift; sourceTree = "<group>"; };
 		A75A6B2D25C03787003BF4CE /* PageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75A6B2E25C03787003BF4CE /* PageView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PageView.plist; sourceTree = "<group>"; };
+		A78AFEBB271850EE007E5F3B /* LabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 		A7BCD13325C44ADF00687520 /* WeakCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeakCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BCD13725C44ADF00687520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C568604823AE166D001CFD85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				C5CB31E72371D10F00E25E4B /* Label.swift */,
+				A78AFEBB271850EE007E5F3B /* LabelStyle.swift */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -1164,6 +1167,7 @@
 				C5CB32092371D10F00E25E4B /* ScrollViewController.swift in Sources */,
 				C5CB320A2371D10F00E25E4B /* ListViewController.swift in Sources */,
 				1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */,
+				A78AFEBC271850EE007E5F3B /* LabelStyle.swift in Sources */,
 				C5CB31F72371D10F00E25E4B /* UIViewController+instantiate.swift in Sources */,
 				C568604B23AE166D001CFD85 /* TableViewCell.swift in Sources */,
 				1E0B89FC24BC6C850087D132 /* DefaultCollapsibleHeaderViewModel.swift in Sources */,
