@@ -53,7 +53,7 @@ public final class MessageViewPresenter {
     }
 
     private func attach(messageView: MessageView) {
-        guard let window = UIApplication.shared.windows.last else { return }
+        guard let window = UIApplication.shared.windows.first(where: \.isKeyWindow) else { return }
 
         if messageView.model.appearanceConfiguration.shouldHaveBackgroundView {
             let backgroundView: UIView = .init(frame: window.bounds)
