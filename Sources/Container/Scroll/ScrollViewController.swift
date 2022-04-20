@@ -3,8 +3,12 @@ import UIKit
 
 /// A container view controller that adds a scroll behaviour to its embedded content.
 public final class ScrollViewController: ViewController {
+    #if os(iOS)
     public override var childForStatusBarStyle: UIViewController? { return contentViewController }
+
     public override var childForStatusBarHidden: UIViewController? { return contentViewController }
+    #endif
+
     public override var navigationItem: UINavigationItem { return contentViewController.navigationItem }
 
     private var isContentViewBeingPresented: Bool = false
@@ -73,7 +77,7 @@ public final class ScrollViewController: ViewController {
         contentViewController.view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         contentViewController.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
 
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, *) {
             contentViewHeightConstraint = contentViewController.view.heightAnchor.constraint(
                 greaterThanOrEqualTo: scrollView.safeAreaLayoutGuide.heightAnchor
             )
@@ -107,6 +111,8 @@ public final class ScrollViewController: ViewController {
                 self.title = viewController.title
             }
         )
+
+        #if os(iOS)
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateContentInsetForKeyboard(_:)),
@@ -119,6 +125,7 @@ public final class ScrollViewController: ViewController {
             name: UIResponder.keyboardWillChangeFrameNotification,
             object: nil
         )
+        #endif
     }
 
     private func removeObservers() {
@@ -129,16 +136,19 @@ public final class ScrollViewController: ViewController {
 
     @objc
     private func updateContentInsetForKeyboard(_ notification: Notification) {
+        #if os(iOS)
         if notification.name == UIResponder.keyboardWillHideNotification {
             scrollView.contentInset = .zero
         } else if let keyboardFrameValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardFrame = view.convert(keyboardFrameValue.cgRectValue, from: view.window)
-            if #available(iOS 11.0, *) {
+
+            if #available(iOS 11.0, tvOS 11.0, *) {
                 scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardFrame.height - view.safeAreaInsets.bottom, right: 0)
             } else {
                 scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardFrame.height - view.layoutMargins.bottom, right: 0)
             }
         }
+        #endif
 
         scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
