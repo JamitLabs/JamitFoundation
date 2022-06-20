@@ -4,20 +4,20 @@ import UIKit
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct StatefulSwiftUIView<ContentView: StatefulViewProtocol>: UIViewRepresentable {
+public struct StatefulSwiftUIView<ContentView: StatefulViewProtocol>: UIViewRepresentable {
     @Binding private(set) var model: ContentView.Model
 
-    init(
+    public init(
         model: Binding<ContentView.Model> = .constant(.default)
     ) {
         _model = model
     }
 
-    func makeUIView(context: Context) -> ContentView {
+    public func makeUIView(context: Context) -> ContentView {
         return ContentView.instantiate()
     }
 
-    func updateUIView(_ view: ContentView, context: Context) {
+    public func updateUIView(_ view: ContentView, context: Context) {
         view.model = model
     }
 }

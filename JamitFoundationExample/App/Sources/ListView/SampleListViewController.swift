@@ -2,6 +2,7 @@
 
 import JamitFoundation
 import UIKit
+import SwiftUI
 
 final class SampleListViewController: ListViewController<ListItemView> {
     override func viewDidLoad() {
@@ -21,7 +22,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLAPSIBLE_TABLE_VIEW_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: "")),
 				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.MESSAGE_VIEW_ITEM.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.MESSAGE_VIEW_ITEM.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SWIFTUI_VIEW.TITLE", comment: ""))
             ]
         )
 
@@ -216,6 +218,13 @@ final class SampleListViewController: ListViewController<ListItemView> {
         viewController.model = .init()
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    @available(iOS 13.0, *)
+    private func showSwiftUIView() {
+        let viewController = UIHostingController(rootView: SwiftUISampleView())
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension SampleListViewController: UITableViewDelegate {
@@ -250,6 +259,11 @@ extension SampleListViewController: UITableViewDelegate {
 
         case 9:
             showMessageView()
+
+        case 10:
+            if #available(iOS 13.0, *) {
+                showSwiftUIView()
+            }
 
         default:
             break
