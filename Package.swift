@@ -7,15 +7,16 @@ let package = Package(
     platforms: [.iOS(.v9)],
     products: [
         .library(name: "JamitFoundation", targets: ["JamitFoundation"]),
-        .library(name: "PageView", targets: ["PageView"]),
-        .library(name: "GridView", targets: ["GridView"]),
         .library(name: "BarcodeScanner", targets: ["BarcodeScanner"]),
         .library(name: "CarouselView", targets: ["CarouselView"]),
-        .library(name: "TimePickerView", targets: ["TimePickerView"]),
-        .library(name: "WeakCache", targets: ["WeakCache"]),
-        .library(name: "UserDefaults", targets: ["UserDefaults"]),
+        .library(name: "GridView", targets: ["GridView"]),
         .library(name: "Keychain", targets: ["Keychain"]),
-        .library(name: "MessageView", targets: ["MessageView"])
+        .library(name: "MessageView", targets: ["MessageView"]),
+        .library(name: "PageView", targets: ["PageView"]),
+        .library(name: "SwiftUISupport", targets: ["SwiftUISupport"]),
+        .library(name: "TimePickerView", targets: ["TimePickerView"]),
+        .library(name: "UserDefaults", targets: ["UserDefaults"]),
+        .library(name: "WeakCache", targets: ["WeakCache"])
     ],
     dependencies: [],
     targets: [
@@ -83,6 +84,11 @@ let package = Package(
             name: "MessageView",
             dependencies: ["JamitFoundation"],
             path: "Modules/MessageView"
+        ),
+        .target(
+            name: "SwiftUISupport",
+            dependencies: ["JamitFoundation"],
+            path: "Modules/SwiftUISupport"
         )
     ]
 )
