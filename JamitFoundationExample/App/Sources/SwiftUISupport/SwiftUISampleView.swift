@@ -14,12 +14,28 @@ import UIKit
 
 @available(iOS 13.0, *)
 struct SwiftUISampleView: View {
-    @State private var model: ListItemViewModel = .default
+    @State private var images: [URL] = []
 
     var body: some View {
-        ZStack {
-            StatefulSwiftUIView
+        ScrollView {
+            VStack {
+                StatefulSwiftUIView<ActionView<ListItemView>>(
+                    model: .constant(
+                        ActionViewModel(
+                            content: ListItemViewModel(title: "Add"),
+                            action: {
+                                images.append(URL(string: "https://picsum.photos/200")!)
+                            }
+                        )
+                    )
+                )
+                .frame(height: 44)
 
+                ForEach(images, id: \.self) { url in
+                    StatefulSwiftUIView<ImageView>(model: .constant(.url(url)))
+                        .frame(height: 200)
+                }
+            }
         }
     }
 }
