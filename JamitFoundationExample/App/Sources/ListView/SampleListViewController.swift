@@ -23,7 +23,8 @@ final class SampleListViewController: ListViewController<ListItemView> {
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.COLLECTION_VIEW_ITEM.TITLE", comment: "")),
 				.init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.BARCODE_SCANNER_ITEM.TITLE", comment: "")),
                 .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.MESSAGE_VIEW_ITEM.TITLE", comment: "")),
-                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SWIFTUI_VIEW.TITLE", comment: ""))
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.UIKIT_INTEGRATION.TITLE", comment: "")),
+                .init(title: NSLocalizedString("SAMPLE_LIST_VIEW_CONTROLLER.SWIFTUI_INTEGRATION.TITLE", comment: ""))
             ]
         )
 
@@ -220,9 +221,15 @@ final class SampleListViewController: ListViewController<ListItemView> {
     }
 
     @available(iOS 13.0, *)
-    private func showSwiftUIView() {
-        let viewController = UIHostingController(rootView: SwiftUISampleView())
+    private func showUIKitIntegration() {
+        let viewController = UIHostingController(rootView: UIKitIntegrationView())
 
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    private func showSwiftUIIntegration() {
+        let viewController = SwiftUIIntegrationViewController.instantiate()
+        viewController.model = .default
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -262,8 +269,11 @@ extension SampleListViewController: UITableViewDelegate {
 
         case 10:
             if #available(iOS 13.0, *) {
-                showSwiftUIView()
+                showUIKitIntegration()
             }
+
+        case 11:
+            showSwiftUIIntegration()
 
         default:
             break

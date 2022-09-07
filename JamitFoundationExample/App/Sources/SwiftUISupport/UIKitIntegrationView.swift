@@ -13,13 +13,13 @@ import SwiftUISupport
 import UIKit
 
 @available(iOS 13.0, *)
-struct SwiftUISampleView: View {
+struct UIKitIntegrationView: View {
     @State private var images: [URL] = []
 
     var body: some View {
         ScrollView {
             VStack {
-                StatefulSwiftUIView<ActionView<ListItemView>>(
+                StatefulViewRepresentable<ActionView<ListItemView>>(
                     model: .constant(
                         ActionViewModel(
                             content: ListItemViewModel(title: "Add"),
@@ -32,7 +32,7 @@ struct SwiftUISampleView: View {
                 .frame(height: 44)
 
                 ForEach(images, id: \.self) { url in
-                    StatefulSwiftUIView<ImageView>(model: .constant(.url(url)))
+                    StatefulViewRepresentable<ImageView>(model: .constant(.url(url)))
                         .frame(height: 200)
                 }
             }
