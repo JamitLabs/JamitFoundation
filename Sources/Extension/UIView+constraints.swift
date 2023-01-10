@@ -3,7 +3,9 @@
 import UIKit
 
 extension UIView {
-    /// Centers the view relative to another view and limits its size to the its edges
+    /// Centers the view relative to another view.
+    ///
+    /// - Parameter otherView: The view to be centered in.
     public func center(in otherView: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
 
@@ -18,7 +20,12 @@ extension UIView {
         center(in: parent)
     }
 
-    /// Extends the view to another view edges
+    /// Extends the view to another view edges.
+    ///
+    /// - Parameters:
+    ///   - otherView: The view to be extended on.
+    ///   - insets: The insets to be applied in all edges.
+    ///   - priority: The priority of the constraints to be applied.
     public func constraintEdges(
         to otherView: UIView,
         insets: UIEdgeInsets = .zero,
@@ -32,7 +39,11 @@ extension UIView {
         leftAnchor.constraint(equalTo: otherView.leftAnchor, constant: insets.left).withPriority(priority).isActive = true
     }
 
-    /// Extends the view to the parents edges
+    /// Extends the view to the parents edges.
+    ///
+    /// - Parameters:
+    ///   - insets: The insets to be applied in all edges.
+    ///   - priority: The priority of the constraints to be applied.
     public func constraintEdgesToParent(
         insets: UIEdgeInsets = .zero,
         priority: UILayoutPriority = .required
@@ -42,7 +53,7 @@ extension UIView {
         constraintEdges(to: parent, insets: insets, priority: priority)
     }
 
-    /// Centers the view relative to parent view and limits its size to its edges
+    /// Centers the view relative to parent view and limits its size to its edges.
     public func constraintEdgesToParentAndCenter() {
         guard let parent = superview else { return }
 
