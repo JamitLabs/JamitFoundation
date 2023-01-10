@@ -67,13 +67,11 @@ public final class MessageView: StatefulView<MessageViewModel> {
 
         guard model.appearanceConfiguration.shouldAddOverlayButton else { return }
 
-        button.clipsToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
         addSubview(button)
-        button.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        button.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        button.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+        button.clipsToBounds = true
+        button.constraintEdgesToParent()
+
         button.addTarget(self, action: #selector(didTriggerAction), for: .primaryActionTriggered)
 
         isUserInteractionEnabled = true

@@ -43,21 +43,17 @@ public final class ScrollViewController: ViewController {
 
     public override func loadView() {
         containerView.backgroundColor = .white
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(scrollView)
+
         scrollView.alwaysBounceVertical = true
-        scrollView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+        scrollView.constraintEdgesToParent()
         scrollView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+
         scrollView.addSubview(contentView)
-        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+
+        contentView.constraintEdgesToParent()
         contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+
         self.view = containerView
     }
 
@@ -68,10 +64,7 @@ public final class ScrollViewController: ViewController {
         contentViewController.view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(contentViewController.view)
         contentViewController.view.frame = contentView.bounds
-        contentViewController.view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        contentViewController.view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        contentViewController.view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        contentViewController.view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        contentViewController.view.constraintEdgesToParent()
 
         if #available(iOS 11.0, *) {
             contentViewHeightConstraint = contentViewController.view.heightAnchor.constraint(

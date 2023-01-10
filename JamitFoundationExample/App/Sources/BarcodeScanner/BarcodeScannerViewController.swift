@@ -25,12 +25,9 @@ final class BarcodeScannerViewController: StatefulViewController<BarcodeScannerV
 
         title = "BarcodeScannerViewController"
 
-        barcodeScannerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(barcodeScannerView)
-        barcodeScannerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        barcodeScannerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        barcodeScannerView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        barcodeScannerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+
+        barcodeScannerView.constraintEdgesToParent()
     }
 
     override func viewWillAppear(_ animated: Bool) {
