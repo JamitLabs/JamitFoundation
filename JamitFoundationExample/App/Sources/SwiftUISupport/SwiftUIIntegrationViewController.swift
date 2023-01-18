@@ -15,14 +15,13 @@ final class SwiftUIIntegrationViewController: StatefulViewController<SwiftUIInte
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var candyButtonContainer: UIView!
 
-    private lazy var candyButtonSwiftUIView: SwiftUIContainerView<AnyView> = .init(parentViewController: self, contentView: AnyView(CandyButton {
+    private lazy var candyButtonSwiftUIView: SwiftUIContainerView<CandyButton> = .init(parentViewController: self, contentView: CandyButton {
         [weak self] in
             self?.teleportToCandyland()
-    }
-    ))
+    })
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         candyButtonContainer.addSubview(candyButtonSwiftUIView)
         candyButtonSwiftUIView.translatesAutoresizingMaskIntoConstraints = false
         candyButtonSwiftUIView.isUserInteractionEnabled = false
@@ -31,8 +30,6 @@ final class SwiftUIIntegrationViewController: StatefulViewController<SwiftUIInte
         candyButtonSwiftUIView.leadingAnchor.constraint(equalTo: candyButtonContainer.leadingAnchor).isActive = true
         candyButtonSwiftUIView.trailingAnchor.constraint(equalTo: candyButtonContainer.trailingAnchor).isActive = true
         candyButtonSwiftUIView.bottomAnchor.constraint(equalTo: candyButtonContainer.bottomAnchor).isActive = true
-//        candyButtonSwiftUIView.heightAnchor.constraint(equalToConstant: 120.0).isActive = true
-//        candyButtonSwiftUIView.backgroundColor = .red
     }
 
     override func didChangeModel() {

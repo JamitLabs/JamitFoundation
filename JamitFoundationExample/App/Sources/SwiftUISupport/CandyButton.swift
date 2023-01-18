@@ -1,6 +1,7 @@
 // Copyright © 2022 Jamit Labs GmbH. All rights reserved.
 
 import SwiftUI
+import SwiftUISupport
 
 struct CandyButton: View {
     let action: () -> Void
@@ -8,7 +9,6 @@ struct CandyButton: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
 
     var body: some View {
-//        NavigationView {
         VStack {
             Button("Hit me 2") {
                 navigationCoordinator.push(EmptyView())
@@ -22,8 +22,6 @@ struct CandyButton: View {
                 }
             }
         }
-
-//        }
     }
 }
 
@@ -35,16 +33,3 @@ struct CandyButton_Previews: PreviewProvider {
     }
 }
 
-class NavigationCoordinator: ObservableObject {
-    private weak var navigationController: UINavigationController?
-
-    init(navigationController: UINavigationController?) {
-        self.navigationController = navigationController
-    }
-
-    func push<Content: View>(_ view: Content) {
-        let viewController = UIHostingController(rootView: view)
-
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-}
