@@ -7,8 +7,19 @@ import UIKit
 public class SwiftUIContainerView<ContentView: View>: StatefulView<EmptyViewModel> {
     /// The UIViewController that holds the view hierarchy in which the `SwiftUIContainerView` is added as a subview
     public weak var parentViewController: UIViewController?
+    private let contentView: ContentView
 
-    private var hostingController: UIHostingController<ContentView>
+    private lazy var hostingController: UIHostingController<AnyView> = {
+        .init(
+            rootView:  AnyView(
+                contentView.environmentObject(
+                    NavigationCoordinator(
+                        navigationControllerProvider: self
+                    )
+                )
+            )
+        )
+    }()
 
     /// Initializes a `StatefulViewRepresentable`
     ///
@@ -17,7 +28,7 @@ public class SwiftUIContainerView<ContentView: View>: StatefulView<EmptyViewMode
     ///    - contentView: The SwiftUI view to be wrapped
     public init(parentViewController: UIViewController, contentView: ContentView) {
         self.parentViewController = parentViewController
-        self.hostingController = .init(rootView: contentView)
+        self.contentView = contentView
 
         super.init(frame: .zero)
         isUserInteractionEnabled = false
@@ -60,3 +71,11 @@ public class SwiftUIContainerView<ContentView: View>: StatefulView<EmptyViewMode
         hostingController.view.removeFromSuperview()
     }
 }
+
+@available(iOS 13.0, *)
+extension SwiftUIContainerView: NavigationControllerProvider {
+    public var navigationController: UINavigationController? {
+        parentViewController?.navigationController
+    }
+}
+
