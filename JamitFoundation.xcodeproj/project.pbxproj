@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9D2E0E296C8DD200A94540 /* NSLayoutConstraint+priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D2E0D296C8DD200A94540 /* NSLayoutConstraint+priority.swift */; };
+		0A9D2E10296C8DE700A94540 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D2E0F296C8DE700A94540 /* UIView+constraints.swift */; };
 		1E04A941262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04A940262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift */; };
 		1E04A945262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04A944262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift */; };
 		1E0B89F924BC6C850087D132 /* CollapsibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B89F424BC6C840087D132 /* CollapsibleView.swift */; };
@@ -226,6 +228,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A9D2E0D296C8DD200A94540 /* NSLayoutConstraint+priority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+priority.swift"; sourceTree = "<group>"; };
+		0A9D2E0F296C8DE700A94540 /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		1E04A940262EB69400EA0496 /* MessageViewAppearanceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewAppearanceConfiguration.swift; sourceTree = "<group>"; };
 		1E04A944262EB6A600EA0496 /* MessageViewAnimationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewAnimationConfiguration.swift; sourceTree = "<group>"; };
 		1E0B89F424BC6C840087D132 /* CollapsibleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleView.swift; sourceTree = "<group>"; };
@@ -587,9 +591,11 @@
 		C5CB31D82371D10F00E25E4B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0A9D2E0D296C8DD200A94540 /* NSLayoutConstraint+priority.swift */,
 				C5CB31DC2371D10F00E25E4B /* UICollectionView+recycling.swift */,
 				1E80B037246ACA0400DB7514 /* UIControl+extension.swift */,
 				C5CB31DA2371D10F00E25E4B /* UITableView+recycling.swift */,
+				0A9D2E0F296C8DE700A94540 /* UIView+constraints.swift */,
 				C5CB31DB2371D10F00E25E4B /* UIView+instantiate.swift */,
 				C5CB31D92371D10F00E25E4B /* UIViewController+instantiate.swift */,
 			);
@@ -1142,8 +1148,10 @@
 				1E0B89FB24BC6C850087D132 /* DefaultCollapsibleHeaderView.swift in Sources */,
 				C5CB31FE2371D10F00E25E4B /* StatefulView.swift in Sources */,
 				1EFCDA6B24C5C12000B41530 /* CollapsibleTableViewCell.swift in Sources */,
+				0A9D2E10296C8DE700A94540 /* UIView+constraints.swift in Sources */,
 				C5CB32012371D10F00E25E4B /* ContainerCollectionViewCell.swift in Sources */,
 				C5CB320B2371D10F00E25E4B /* ListViewModel.swift in Sources */,
+				0A9D2E0E296C8DD200A94540 /* NSLayoutConstraint+priority.swift in Sources */,
 				C5CB32022371D10F00E25E4B /* Label.swift in Sources */,
 				C5CB31FF2371D10F00E25E4B /* ContainerTableViewCell.swift in Sources */,
 				C5CB32062371D10F00E25E4B /* ActionView.swift in Sources */,

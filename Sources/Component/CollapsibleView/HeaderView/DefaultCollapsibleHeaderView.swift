@@ -31,12 +31,10 @@ public final class DefaultCollapsibleHeaderView: StatefulView<DefaultCollapsible
         arrowImageViewHeightConstraint?.isActive = true
         arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0).isActive = true
 
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16.0).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: arrowImageView.leadingAnchor, constant: -10.0).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16.0).isActive = true
+
+        titleLabel.constraintEdgesToParent()
+
         arrowImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor).isActive = true
     }
 

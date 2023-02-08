@@ -20,16 +20,13 @@ public final class PageView<ContentView: StatefulViewProtocol>: StatefulView<Pag
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        addSubview(scrollView)
+
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(scrollView)
-        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        scrollView.constraintEdgesToParent()
     }
 
     public override func didChangeModel() {

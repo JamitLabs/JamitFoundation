@@ -30,17 +30,15 @@ public final class CarouselView<ContentView: StatefulViewProtocol>: StatefulView
     public override func viewDidLoad() {
         super.viewDidLoad()
 
+        addSubview(scrollView)
+
         scrollView.clipsToBounds = false
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(scrollView)
-        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        scrollView.constraintEdgesToParent()
+
         scrollView.addSubview(leftContentViewPlaceholder)
         scrollView.addSubview(rightContentViewPlaceholder)
         scrollView.addSubview(leftOffscreenContentViewPlaceholder)
