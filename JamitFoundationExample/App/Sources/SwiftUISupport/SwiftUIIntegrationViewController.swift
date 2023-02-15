@@ -5,13 +5,7 @@ import UIKit
 import SwiftUI
 import SwiftUISupport
 
-protocol SwiftUIIntegrationViewControllerDelegate: AnyObject {
-    // TODO: not yet implemented
-}
-
 final class SwiftUIIntegrationViewController: StatefulViewController<SwiftUIIntegrationViewModel> {
-    weak var delegate: SwiftUIIntegrationViewControllerDelegate?
-
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var candyButtonContainer: UIView!
 

@@ -6,13 +6,21 @@ import SwiftUISupport
 struct CandyButton: View {
     let action: () -> Void
     @State private var isActive: Bool = false
-    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
 
     var body: some View {
         VStack {
-            Button("Hit me 2") {
-                navigationCoordinator.push(EmptyView())
+            UIKitNavigationLink(
+                destination: EmptyView()
+            ) {
+                Text("Hit me 2")
             }
+
+            NavigationLink(
+                destination: EmptyView()
+            ) {
+                Text("Hit me 3")
+            }
+
             NavigationLink(
                 destination: EmptyView(),
                 isActive: $isActive

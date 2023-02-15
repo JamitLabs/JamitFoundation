@@ -11,7 +11,7 @@ public class SwiftUIContainerView<ContentView: View>: StatefulView<EmptyViewMode
 
     private lazy var hostingController: UIHostingController<AnyView> = {
         .init(
-            rootView:  AnyView(
+            rootView: AnyView(
                 contentView.environmentObject(
                     NavigationCoordinator(
                         navigationControllerProvider: self
