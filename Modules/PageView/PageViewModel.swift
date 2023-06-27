@@ -38,7 +38,7 @@ public struct PageViewModel<Content: ViewModelProtocol>: ViewModelProtocol {
         axis: Axis = PageViewModel.default.axis,
         pages: [Content] = PageViewModel.default.pages,
         onPageIndexChanged: @escaping PageIndexChangeCallback = PageViewModel.default.onPageIndexChanged,
-        verticalScrollEnbaled: Bool = CustomPageViewModel.default.verticalScrollEnabled
+        verticalScrollEnbaled: Bool = PageViewModel.default.verticalScrollEnabled
     ) {
         self.axis = axis
         self.pages = pages
@@ -54,7 +54,7 @@ extension PageViewModel {
             axis: .horizontal,
             pages: [],
             onPageIndexChanged: { _ in },
-            verticalScrollEnbaled: true,
+            verticalScrollEnbaled: true
         )
     }
 }
