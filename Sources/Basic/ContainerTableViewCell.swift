@@ -22,12 +22,15 @@ open class ContainerTableViewCell<ContentView: StatefulViewProtocol>: TableViewC
     open class var isDynamicallyResizable: Bool { return false }
 
     /// The underlying view which is embedded into the `contentView`.
-    public private(set) lazy var view: ContentView = .instantiate()
+    public private(set) lazy var view: ContentView = .instantiate(bundle: bundle)
 
     private lazy var topConstraint: NSLayoutConstraint = view.topAnchor.constraint(equalTo: contentView.topAnchor)
     private lazy var leadingConstraint: NSLayoutConstraint = view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
     private lazy var trailingConstraint: NSLayoutConstraint = view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
     private lazy var bottomConstraint: NSLayoutConstraint = contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+
+    /// The bundle the view is being instantiated from.
+    open var bundle: Bundle = .main
 
     /// The current state of the underlying view.
     public var model: ContentView.Model {
