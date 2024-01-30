@@ -15,13 +15,9 @@ final class TimePickerViewController: StatefulViewController<TimePickerViewContr
 
         title = "TimePickerViewController"
         
-        timePickerView.translatesAutoresizingMaskIntoConstraints = false
         timePickerContainerView.addSubview(timePickerView)
 
-        timePickerView.leadingAnchor.constraint(equalTo: timePickerContainerView.leadingAnchor).isActive = true
-        timePickerView.trailingAnchor.constraint(equalTo: timePickerContainerView.trailingAnchor).isActive = true
-        timePickerView.topAnchor.constraint(equalTo: timePickerContainerView.topAnchor).isActive = true
-        timePickerView.bottomAnchor.constraint(equalTo: timePickerContainerView.bottomAnchor).isActive = true
+        timePickerView.constraintEdgesToParent()
     }
 
     override func didChangeModel() {

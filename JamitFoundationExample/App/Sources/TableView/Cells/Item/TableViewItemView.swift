@@ -26,13 +26,9 @@ final class TableViewItemView: StatefulView<TableViewItemViewModel> {
 
         contentView.layer.cornerRadius = 10.0
 
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         imageViewContainer.addSubview(imageView)
-        imageView.leadingAnchor.constraint(equalTo: imageViewContainer.leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: imageViewContainer.trailingAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: imageViewContainer.topAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: imageViewContainer.bottomAnchor).isActive = true
+
+        imageView.constraintEdgesToParent()
     }
 
     override func didChangeModel() {

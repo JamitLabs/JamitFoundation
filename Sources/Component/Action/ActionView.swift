@@ -29,13 +29,11 @@ public final class ActionView<ContentView: StatefulViewProtocol>: StatefulView<A
         view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
-        button.clipsToBounds = true
-        button.translatesAutoresizingMaskIntoConstraints = false
         addSubview(button)
-        button.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        button.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        button.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        button.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+        button.clipsToBounds = true
+        button.constraintEdgesToParent()
+        
         button.addTarget(self, action: #selector(didTriggerAction), for: .primaryActionTriggered)
         button.addTarget(self, action: #selector(didChangeButtonState), for: .allTouchEvents)
         button.addTarget(self, action: #selector(lateDidChangeButtonState), for: .allTouchEvents)

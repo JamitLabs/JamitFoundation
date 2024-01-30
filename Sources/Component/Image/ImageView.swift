@@ -25,18 +25,14 @@ public final class ImageView: StatefulView<Image> {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        imageView.constraintEdgesToParent()
+
         addSubview(activityIndicator)
+
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        activityIndicator.centerInParent()
     }
 
     public override func didChangeModel() {

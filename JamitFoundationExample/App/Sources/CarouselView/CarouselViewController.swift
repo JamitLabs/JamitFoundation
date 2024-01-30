@@ -14,12 +14,9 @@ final class CarouselViewController: StatefulViewController<CarouselViewControlle
 
         title = "CarouselViewController"
 
-        carouselView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(carouselView)
-        carouselView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        carouselView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        carouselView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        carouselView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+
+        carouselView.constraintEdgesToParent()
     }
 
     override func didChangeModel() {

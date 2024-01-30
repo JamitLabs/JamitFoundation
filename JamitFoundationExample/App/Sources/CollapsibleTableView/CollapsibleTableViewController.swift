@@ -19,12 +19,9 @@ final class CollapsibleTableViewController: StatefulViewController<CollapsibleTa
 
         title = "CollapsibleTableViewController"
 
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+
+        tableView.constraintEdgesToParent()
     }
 
     override func didChangeModel() {

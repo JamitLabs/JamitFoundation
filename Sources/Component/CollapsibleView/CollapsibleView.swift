@@ -63,10 +63,8 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
 
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         addSubview(actionButton)
-        actionButton.topAnchor.constraint(equalTo: headerView.topAnchor).isActive = true
-        actionButton.leadingAnchor.constraint(equalTo: headerView.leadingAnchor).isActive = true
-        actionButton.trailingAnchor.constraint(equalTo: headerView.trailingAnchor).isActive = true
-        actionButton.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
+
+        actionButton.constraintEdges(to: headerView)
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
