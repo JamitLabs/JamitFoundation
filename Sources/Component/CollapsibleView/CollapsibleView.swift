@@ -45,7 +45,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
 
     private lazy var stackView: UIStackView = {
         let stackView: UIStackView = .init()
-        stackView.alignment = .center
+        stackView.alignment = .leading
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
         return stackView
