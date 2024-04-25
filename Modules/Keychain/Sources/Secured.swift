@@ -80,21 +80,27 @@ public struct Secured<Value: Codable> {
     }
 
     private var searchQuery: [String: Any] {
-        [
+        var query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: key
         ]
+        if let accessGroup {
+            query[kSecAttrAccessGroup as String] = accessGroup
+        }
+        return query
     }
 
     private let key: String
     private let keychain: KeychainProtocol
+    private let accessGroup: String?
 
     /// The default initializer for `Secured`
     ///
     /// - Parameter key: The key associated with storing the value inside the Keychain
-    public init(key: String, keychain: KeychainProtocol = Keychain.default) {
+    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default) {
         self.key = key
         self.keychain = keychain
+        self.accessGroup = accessGroup
 
         do {
             wrappedValue = try loadValueFromKeychain()
