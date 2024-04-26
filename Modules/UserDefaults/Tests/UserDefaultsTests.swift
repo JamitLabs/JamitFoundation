@@ -9,13 +9,12 @@ class UserDefaultsTests: XCTestCase {
 
     func testSaveValue() throws {
         let userDefaults: MockUserDefaults = .init()
-        let value: UserDefault<String> = .init(key: key, defaultValue: self.sampleDefaultValue, defaults: userDefaults)
+        var value: UserDefault<String> = .init(key: key, defaultValue: self.sampleDefaultValue, defaults: userDefaults)
 
         XCTAssertEqual(sampleDefaultValue, value.wrappedValue)
-        XCTAssertTrue(userDefaults.isValueSet)
 
         value.wrappedValue = sampleValue
-
+        XCTAssertTrue(userDefaults.isValueSet)
         XCTAssertEqual(sampleValue, value.wrappedValue)
     }
 }
