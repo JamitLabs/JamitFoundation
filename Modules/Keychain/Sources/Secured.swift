@@ -81,7 +81,7 @@ public struct Secured<Value: Codable> {
         }
 
         if #available(iOS 10.0, *) {
-            os_log("An unexpected error occurred:\nKey: %@", keychainError.description(for: key))
+            os_log("An unexpected error occurred:\n%@", keychainError.description(for: key))
         } else {
             print(keychainError.description(for: key))
         }
