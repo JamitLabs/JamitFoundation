@@ -16,6 +16,8 @@ public struct Secured<Value: Codable> {
     private let defaultValue: Value?
 
     /// The wrapped value of the property value used to directly access the value
+    ///
+    /// - Note: This value can only return `nil`, if the `defaultValue` argument provided in the initializer is `nil`.
     public var wrappedValue: Value? {
         didSet {
             do {
@@ -42,6 +44,9 @@ public struct Secured<Value: Codable> {
     /// The default initializer for `Secured`
     ///
     /// - Parameter key: The key associated with storing the value inside the Keychain
+    /// - Parameter accessGroup: The access group to store the value in
+    /// - Parameter keychain: The keychain to store the value in
+    /// - Parameter defaultValue: The default value to use if the item was not found in the keychain. If this value is non-`nil`, `wrappedValue` will never be `nil`.
     public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default, defaultValue: Value? = nil) {
         self.key = key
         self.keychain = keychain
