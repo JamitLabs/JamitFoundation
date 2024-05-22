@@ -13,6 +13,7 @@ public struct Secured<Value: Codable> {
     private let key: String
     private let keychain: KeychainProtocol
     private let accessGroup: String?
+    private let defaultValue: Value?
 
     /// The wrapped value of the property value used to directly access the value
     public var wrappedValue: Value? {
@@ -41,13 +42,23 @@ public struct Secured<Value: Codable> {
     /// The default initializer for `Secured`
     ///
     /// - Parameter key: The key associated with storing the value inside the Keychain
-    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default) {
+    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default, defaultValue: Value? = nil) {
         self.key = key
         self.keychain = keychain
         self.accessGroup = accessGroup
+        self.defaultValue = defaultValue
 
         do {
-            wrappedValue = try loadValueFromKeychain()
+            if let loadedValue = try loadValueFromKeychain() {
+                wrappedValue = loadedValue
+            } else {
+                // If the item was not found, we may recover by returning the default value (if it was set)
+                if let defaultValue {
+                    wrappedValue = defaultValue
+                } else {
+                    throw KeychainError.itemNotFound
+                }
+            }
         } catch {
             logError(error)
         }
@@ -71,7 +82,7 @@ public struct Secured<Value: Codable> {
         }
     }
 
-    private func loadValueFromKeychain() throws -> Value {
+    private func loadValueFromKeychain() throws -> Value? {
         var searchQuery = self.searchQuery
         searchQuery[kSecReturnAttributes as String] = true
         searchQuery[kSecReturnData as String] = true
@@ -84,7 +95,8 @@ public struct Secured<Value: Codable> {
             let item = keychainResponse.queryResult as? [String: Any],
             let data = item[kSecValueData as String] as? Data
         else {
-            throw KeychainError.itemNotFound
+            // Item not found
+            return nil
         }
 
         do {
