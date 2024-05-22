@@ -41,4 +41,23 @@ class KeychainTests: XCTestCase {
         // The read data should be correct
         XCTAssertEqual(securedValue, "Hello World")
     }
+
+    func testItemNotFoundDefaultValue() {
+        let defaultValue = "Default Value"
+        var item: Secured<String> = .init(key: key, keychain: mockKeychain as KeychainProtocol, defaultValue: defaultValue)
+
+        XCTAssertEqual(item.wrappedValue, defaultValue)
+
+        item.wrappedValue = "Hello, world!"
+        XCTAssertEqual(item.wrappedValue, "Hello, world!")
+    }
+
+    func testItemNotFoundNoDefaultValue() {
+        var item: Secured<String> = .init(key: key, keychain: mockKeychain as KeychainProtocol)
+
+        XCTAssertEqual(item.wrappedValue, nil)
+
+        item.wrappedValue = "Hello, world!"
+        XCTAssertEqual(item.wrappedValue, "Hello, world!")
+    }
 }
