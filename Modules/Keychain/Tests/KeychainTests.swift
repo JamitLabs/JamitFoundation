@@ -52,6 +52,17 @@ class KeychainTests: XCTestCase {
         XCTAssertEqual(item.wrappedValue, "Hello, world!")
     }
 
+    func testItemNotFoundNilDefaultValue() {
+        @Secured(key: key, keychain: mockKeychain as KeychainProtocol, defaultValue: .none)
+        var item: String?
+
+        // There should be no error logs produced accessing the wrapper here.
+        XCTAssertEqual(item, nil)
+
+        item = "Hello, world!"
+        XCTAssertEqual(item, "Hello, world!")
+    }
+
     func testItemNotFoundNoDefaultValue() {
         var item: Secured<String> = .init(key: key, keychain: mockKeychain as KeychainProtocol)
 
