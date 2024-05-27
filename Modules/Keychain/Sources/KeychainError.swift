@@ -34,7 +34,6 @@ enum KeychainError: Error, LocalizedError {
     var recoverySuggestion: String? {
         switch self {
         case .itemNotFound: return "Please make sure that the item exists in the keychain before you try to access it"
-        case .deleteItem: return "Please make sure that the item exists in the keychain before you try to delete it"
         default: return nil
         }
     }
