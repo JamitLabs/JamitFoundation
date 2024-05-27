@@ -13,7 +13,6 @@ public struct Secured<Value: Codable> {
     private let key: String
     private let keychain: KeychainProtocol
     private let accessGroup: String?
-    private let defaultValue: Value?
 
     /// The wrapped value of the property value used to directly access the value
     ///
@@ -46,23 +45,40 @@ public struct Secured<Value: Codable> {
     /// - Parameter key: The key associated with storing the value inside the Keychain
     /// - Parameter accessGroup: The access group to store the value in
     /// - Parameter keychain: The keychain to store the value in
-    /// - Parameter defaultValue: The default value to use if the item was not found in the keychain. If this value is non-`nil`, `wrappedValue` will never be `nil`.
-    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default, defaultValue: Value? = nil) {
+    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default) {
         self.key = key
         self.keychain = keychain
         self.accessGroup = accessGroup
-        self.defaultValue = defaultValue
 
         do {
             if let loadedValue = try loadValueFromKeychain() {
                 wrappedValue = loadedValue
             } else {
-                // If the item was not found, we may recover by returning the default value (if it was set)
-                if let defaultValue {
-                    wrappedValue = defaultValue
-                } else {
-                    throw KeychainError.itemNotFound
-                }
+                // We don't have a defaultValue, so we throw an error
+                throw KeychainError.itemNotFound
+            }
+        } catch {
+            logError(error)
+        }
+    }
+
+    /// The default initializer for `Secured`
+    ///
+    /// - Parameter key: The key associated with storing the value inside the Keychain
+    /// - Parameter accessGroup: The access group to store the value in
+    /// - Parameter keychain: The keychain to store the value in
+    /// - Parameter defaultValue: The default value to use if the item was not found in the keychain
+    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default, defaultValue: Value?) {
+        self.key = key
+        self.keychain = keychain
+        self.accessGroup = accessGroup
+
+        do {
+            if let loadedValue = try loadValueFromKeychain() {
+                wrappedValue = loadedValue
+            } else {
+                // If the item was not found, we may recover by setting the default value
+                wrappedValue = defaultValue
             }
         } catch {
             logError(error)
