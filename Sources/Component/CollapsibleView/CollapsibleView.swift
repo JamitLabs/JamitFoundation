@@ -28,6 +28,8 @@ public protocol CollapsibleHeaderViewDelegate {
 ///     ),
 ///     items: [itemView],
 ///     isCollapsed: true,
+///     contentDistribution: .fillProportionally,
+///     contentAlignment: .leading,
 ///     animationDuration: 0.3
 /// )
 /// ```
@@ -45,9 +47,7 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
 
     private lazy var stackView: UIStackView = {
         let stackView: UIStackView = .init()
-        stackView.alignment = .leading
         stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
         return stackView
     }()
 
@@ -80,6 +80,9 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
         super.didChangeModel()
 
         headerView.model = model.headerViewModel
+
+        stackView.distribution = model.contentDistribution
+        stackView.alignment = model.contentAlignment
 
         if (stackView.arrangedSubviews.count != model.items.count) {
             stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
