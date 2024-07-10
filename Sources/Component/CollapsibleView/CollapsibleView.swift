@@ -107,10 +107,17 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
         isCollapsed.toggle()
         model.didChangeCollapsibleState?(isCollapsed)
 
-        UIView.animate(withDuration: model.animationDuration) {
+        /// Update the content items to be either hidden or visible
+        func updateItems() {
             self.model.items.forEach { view in
                 view.isHidden = self.isCollapsed
             }
+        }
+
+        if model.isAnimated {
+            UIView.animate(withDuration: model.animationDuration, animations: updateItems)
+        } else {
+            updateItems()
         }
 
         (headerView as? CollapsibleHeaderViewDelegate)?.didChangeCollapsibleState(to: isCollapsed)
