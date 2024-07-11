@@ -51,6 +51,9 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
         return stackView
     }()
 
+    private var isCollapsed: Bool = false
+    private var finishedInitialCollapsedSetup: Bool = false
+
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -79,6 +82,11 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
     public override func didChangeModel() {
         super.didChangeModel()
 
+        if !finishedInitialCollapsedSetup {
+            isCollapsed = model.isInitiallyCollapsed
+            finishedInitialCollapsedSetup = true
+        }
+
         headerView.model = model.headerViewModel
 
         stackView.distribution = model.contentDistribution
@@ -88,24 +96,31 @@ public final class CollapsibleView<HeaderView: StatefulViewProtocol>: StatefulVi
             stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
 
             model.items.forEach { view in
-                view.isHidden = model.isCollapsed
+                view.isHidden = isCollapsed
                 stackView.addArrangedSubview(view)
             }
-        } else {
-            UIView.animate(withDuration: model.animationDuration) {
-                self.model.items.forEach { view in
-                    view.isHidden = self.model.isCollapsed
-                }
-            }
         }
-
-        (headerView as? CollapsibleHeaderViewDelegate)?.didChangeCollapsibleState(to: model.isCollapsed)
     }
 
     @objc
     private func didTriggerAction() {
-        model.isCollapsed.toggle()
-        model.didChangeCollapsibleState?(model.isCollapsed)
+        isCollapsed.toggle()
+        model.didChangeCollapsibleState?(isCollapsed)
+
+        /// Update the content items to be either hidden or visible
+        func updateItems() {
+            self.model.items.forEach { view in
+                view.isHidden = self.isCollapsed
+            }
+        }
+
+        if model.isAnimated {
+            UIView.animate(withDuration: model.animationDuration, animations: updateItems)
+        } else {
+            updateItems()
+        }
+
+        (headerView as? CollapsibleHeaderViewDelegate)?.didChangeCollapsibleState(to: isCollapsed)
     }
 
     @objc
