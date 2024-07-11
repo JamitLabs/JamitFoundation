@@ -25,6 +25,43 @@ public struct CollapsibleViewModel<HeaderViewModel: ViewModelProtocol>: ViewMode
     ///
     /// - Parameter headerViewModel: The model of the header view.
     /// - Parameter items: The items to add to the collapsible view.
+    /// - Parameter isCollapsed: The state of the collapsible view when it is first presented.
+    ///             This will not be updated by the `CollapsibleView` on subsequent state changes.
+    /// - Parameter isAnimated: Whether to animate the collapsing and expanding of the content items
+    /// - Parameter animationDuration: The animation duration for the state change of the collapsible view
+    /// - Parameter contentDistribution: The distribution of the content items in the collapsible view
+    /// - Parameter contentAlignment: The alignment of the content items in the collapsible view
+    /// - Parameter didChangeCollapsibleState: The closure to call when the collapsible state changes.
+    @available(
+        *,
+        deprecated,
+        renamed: "init(headerViewModel:items:isInitiallyCollapsed:isAnimated:animationDuration:contentDistribution:contentAlignment:didChangeCollapsibleState:)",
+        message: "The isCollapsed property now only reflects the initial state of the collapsible view. Use the didChangeCollapsibleState closure to get notified about further state changes."
+    )
+    public init(
+        headerViewModel: HeaderViewModel = Self.default.headerViewModel,
+        items: [UIView] = Self.default.items,
+        isCollapsed: Bool = Self.default.isInitiallyCollapsed,
+        isAnimated: Bool = Self.default.isAnimated,
+        animationDuration: TimeInterval = Self.default.animationDuration,
+        contentDistribution: UIStackView.Distribution = Self.default.contentDistribution,
+        contentAlignment: UIStackView.Alignment = Self.default.contentAlignment,
+        didChangeCollapsibleState: ((Bool) -> Void)? = Self.default.didChangeCollapsibleState
+    ) {
+        self.headerViewModel = headerViewModel
+        self.items = items
+        self.isInitiallyCollapsed = isCollapsed
+        self.isAnimated = isAnimated
+        self.animationDuration = animationDuration
+        self.contentDistribution = contentDistribution
+        self.contentAlignment = contentAlignment
+        self.didChangeCollapsibleState = didChangeCollapsibleState
+    }
+
+    /// The default initializer of `CollapsibleViewModel`.
+    ///
+    /// - Parameter headerViewModel: The model of the header view.
+    /// - Parameter items: The items to add to the collapsible view.
     /// - Parameter isInitiallyCollapsed: The state of the collapsible view when it is first presented.
     ///             This will not be updated by the `CollapsibleView` on subsequent state changes.
     /// - Parameter isAnimated: Whether to animate the collapsing and expanding of the content items
