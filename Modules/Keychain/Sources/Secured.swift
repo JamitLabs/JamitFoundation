@@ -13,6 +13,7 @@ public struct Secured<Value: Codable> {
     private let key: String
     private let keychain: KeychainProtocol
     private let accessGroup: String?
+    private let accessibleAttribute: AccessibleAttribute?
 
     /// The wrapped value of the property value used to directly access the value
     ///
@@ -37,6 +38,11 @@ public struct Secured<Value: Codable> {
         if let accessGroup {
             query[kSecAttrAccessGroup as String] = accessGroup
         }
+
+        if let accessibleAttribute {
+            query[kSecAttrAccessible as String] = accessibleAttribute.key
+        }
+
         return query
     }
 
@@ -45,10 +51,11 @@ public struct Secured<Value: Codable> {
     /// - Parameter key: The key associated with storing the value inside the Keychain
     /// - Parameter accessGroup: The access group to store the value in
     /// - Parameter keychain: The keychain to store the value in
-    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default) {
+    public init(key: String, accessGroup: String? = nil, accessibleAttribute: AccessibleAttribute? = nil, keychain: KeychainProtocol = Keychain.default) {
         self.key = key
         self.keychain = keychain
         self.accessGroup = accessGroup
+        self.accessibleAttribute = accessibleAttribute
 
         do {
             if let loadedValue = try loadValueFromKeychain() {
@@ -66,12 +73,14 @@ public struct Secured<Value: Codable> {
     ///
     /// - Parameter key: The key associated with storing the value inside the Keychain
     /// - Parameter accessGroup: The access group to store the value in
+    /// - Parameter accessibleAttribute: The attribute which inidicates when the value is available in the Keychain
     /// - Parameter keychain: The keychain to store the value in
     /// - Parameter defaultValue: The default value to use if the item was not found in the keychain
-    public init(key: String, accessGroup: String? = nil, keychain: KeychainProtocol = Keychain.default, defaultValue: Value?) {
+    public init(key: String, accessGroup: String? = nil, accessibleAttribute: AccessibleAttribute? = nil, keychain: KeychainProtocol = Keychain.default, defaultValue: Value?) {
         self.key = key
         self.keychain = keychain
         self.accessGroup = accessGroup
+        self.accessibleAttribute = accessibleAttribute
 
         do {
             if let loadedValue = try loadValueFromKeychain() {
@@ -162,6 +171,33 @@ public struct Secured<Value: Codable> {
             status == errSecItemNotFound
         else {
             throw KeychainError.deleteItem
+        }
+    }
+}
+
+public enum AccessibleAttribute {
+    case unlockedThisDeviceOnly
+    case passcodeSetThisDeviceOnly
+    case unlocked
+    case afterFirstUnlockThisDeviceOnly
+    case afterFirstUnlock
+
+    public var key: CFString {
+        switch self {
+        case .unlockedThisDeviceOnly:
+            kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+
+        case .passcodeSetThisDeviceOnly:
+            kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
+
+        case .unlocked:
+            kSecAttrAccessibleWhenUnlocked
+
+        case .afterFirstUnlockThisDeviceOnly:
+            kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+
+        case .afterFirstUnlock:
+            kSecAttrAccessibleAfterFirstUnlock
         }
     }
 }
