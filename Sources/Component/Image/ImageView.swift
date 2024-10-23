@@ -14,7 +14,7 @@ public final class ImageView: StatefulView<Image> {
     private typealias ImageCallback = (UIImage) -> Void
 
     private lazy var imageView: UIImageView = .init(frame: .zero)
-    private lazy var activityIndicator: UIActivityIndicatorView = .init(style: .gray)
+    private lazy var activityIndicator: UIActivityIndicatorView = .init()
 
     private var errorCallback: ErrorCallback?
 
