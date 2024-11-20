@@ -16,6 +16,7 @@ public final class PageView<ContentView: StatefulViewProtocol>: StatefulView<Pag
     private lazy var scrollView: UIScrollView = .instantiate()
     private lazy var contentViews: [ContentView] = []
     private var contentViewIndex: Int = 0
+    private var verticalScrollEnabled: Bool = true
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ public final class PageView<ContentView: StatefulViewProtocol>: StatefulView<Pag
     public override func didChangeModel() {
         super.didChangeModel()
 
+        verticalScrollEnabled = model.verticalScrollEnabled
         switch model.axis {
         case .horizontal:
             scrollView.alwaysBounceHorizontal = true
@@ -65,6 +67,14 @@ public final class PageView<ContentView: StatefulViewProtocol>: StatefulView<Pag
         updateContentLayout()
     }
 
+    public func scrollToPage(atIndex index: Int, animated: Bool = true) {
+        let contentOffset = CGPoint(
+            x: CGFloat(index) * bounds.width,
+            y: scrollView.contentOffset.y
+        )
+        scrollView.setContentOffset(contentOffset, animated: animated)
+    }
+
     private func updateContentLayout() {
         let totalContentDimension = CGFloat(contentViews.count) * min(bounds.width, bounds.height)
         scrollView.contentSize = CGSize(
@@ -82,6 +92,9 @@ public final class PageView<ContentView: StatefulViewProtocol>: StatefulView<Pag
     }
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if((scrollView.contentOffset.y > 0 || scrollView.contentOffset.y < 0) && !verticalScrollEnabled) {
+            scrollView.contentOffset.y = 0
+        }
         let newContentViewIndex: Int
         switch model.axis {
         case .horizontal:
