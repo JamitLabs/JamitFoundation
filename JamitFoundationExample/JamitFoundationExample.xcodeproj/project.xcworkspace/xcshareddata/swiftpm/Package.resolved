@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "JamitFoundation",
-        "repositoryURL": "https://github.com/JamitLabs/JamitFoundation",
-        "state": {
-          "branch": "develop",
-          "revision": "95e534d2ee2bd2f4070b28c4b3954ad63b66d0c7",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "jamitfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JamitLabs/JamitFoundation",
+      "state" : {
+        "branch" : "feature/swiftui-integration",
+        "revision" : "610261cee2ba951a7a6d680fb32416adc7ca0d63"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

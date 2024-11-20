@@ -38,16 +38,6 @@
 		1EB2D9852488F75E00E2B1A4 /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9842488F75E00E2B1A4 /* CarouselItemView.swift */; };
 		1EB2D9872488F76500E2B1A4 /* CarouselItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB2D9862488F76500E2B1A4 /* CarouselItemView.xib */; };
 		1EB2D9892488F77000E2B1A4 /* CarouselItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2D9882488F77000E2B1A4 /* CarouselItemViewModel.swift */; };
-		1EBCCBC625F4F0BC00079E3F /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBC525F4F0BC00079E3F /* BarcodeScanner */; };
-		1EBCCBC825F4F0BC00079E3F /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBC725F4F0BC00079E3F /* GridView */; };
-		1EBCCBCA25F4F0BC00079E3F /* UserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBC925F4F0BC00079E3F /* UserDefaults */; };
-		1EBCCBCC25F4F0BC00079E3F /* MessageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBCB25F4F0BC00079E3F /* MessageView */; };
-		1EBCCBCE25F4F0BC00079E3F /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBCD25F4F0BC00079E3F /* CarouselView */; };
-		1EBCCBD025F4F0BC00079E3F /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBCF25F4F0BC00079E3F /* Keychain */; };
-		1EBCCBD225F4F0BC00079E3F /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD125F4F0BC00079E3F /* PageView */; };
-		1EBCCBD425F4F0BC00079E3F /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD325F4F0BC00079E3F /* JamitFoundation */; };
-		1EBCCBD625F4F0BC00079E3F /* TimePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD525F4F0BC00079E3F /* TimePickerView */; };
-		1EBCCBD825F4F0BC00079E3F /* WeakCache in Frameworks */ = {isa = PBXBuildFile; productRef = 1EBCCBD725F4F0BC00079E3F /* WeakCache */; };
 		1EBCCBDD25F4F11200079E3F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBDC25F4F11200079E3F /* MessageViewController.swift */; };
 		1EBCCBE125F4F12800079E3F /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE025F4F12800079E3F /* MessageViewController.xib */; };
 		1EBCCBE525F4F13700079E3F /* MessageViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCCBE425F4F13700079E3F /* MessageViewControllerViewModel.swift */; };
@@ -71,6 +61,22 @@
 		1EFCDA7024C5C1C600B41530 /* CollapsibleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */; };
 		1EFCDA7124C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */; };
 		1EFCDA7224C5C1C600B41530 /* CollapsibleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */; };
+		C54191302860ACF700E29C3B /* UIKitIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541912F2860ACF700E29C3B /* UIKitIntegrationView.swift */; };
+		C5DAE5BE299D26EB00CC8947 /* BarcodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5BD299D26EB00CC8947 /* BarcodeScanner */; };
+		C5DAE5C0299D26EB00CC8947 /* CarouselView in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5BF299D26EB00CC8947 /* CarouselView */; };
+		C5DAE5C2299D26EB00CC8947 /* GridView in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5C1299D26EB00CC8947 /* GridView */; };
+		C5DAE5C4299D26EB00CC8947 /* JamitFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5C3299D26EB00CC8947 /* JamitFoundation */; };
+		C5DAE5C6299D26EB00CC8947 /* Keychain in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5C5299D26EB00CC8947 /* Keychain */; };
+		C5DAE5C8299D26EB00CC8947 /* MessageView in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5C7299D26EB00CC8947 /* MessageView */; };
+		C5DAE5CA299D26EB00CC8947 /* PageView in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5C9299D26EB00CC8947 /* PageView */; };
+		C5DAE5CC299D26EB00CC8947 /* SwiftUISupport in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5CB299D26EB00CC8947 /* SwiftUISupport */; };
+		C5DAE5CE299D26EB00CC8947 /* TimePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5CD299D26EB00CC8947 /* TimePickerView */; };
+		C5DAE5D0299D26EB00CC8947 /* UserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5CF299D26EB00CC8947 /* UserDefaults */; };
+		C5DAE5D2299D26EB00CC8947 /* WeakCache in Frameworks */ = {isa = PBXBuildFile; productRef = C5DAE5D1299D26EB00CC8947 /* WeakCache */; };
+		C930B43328C87B220037BE9C /* SwiftUIIntegrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930B43228C87B220037BE9C /* SwiftUIIntegrationViewController.swift */; };
+		C930B43528C87B2B0037BE9C /* CandyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930B43428C87B2B0037BE9C /* CandyButton.swift */; };
+		C930B43728C87B310037BE9C /* SwiftUIIntegrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C930B43628C87B310037BE9C /* SwiftUIIntegrationViewController.xib */; };
+		C930B43928C87B3E0037BE9C /* SwiftUIIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930B43828C87B3E0037BE9C /* SwiftUIIntegrationViewModel.swift */; };
 		EBED3B7624D2A00400CF9221 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */; };
 		EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */; };
 		EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */; };
@@ -172,6 +178,11 @@
 		1EFCDA6D24C5C1C600B41530 /* CollapsibleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapsibleTableViewController.xib; sourceTree = "<group>"; };
 		1EFCDA6E24C5C1C600B41530 /* CollapsibleTableViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1EFCDA6F24C5C1C600B41530 /* CollapsibleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewController.swift; sourceTree = "<group>"; };
+		C541912F2860ACF700E29C3B /* UIKitIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitIntegrationView.swift; sourceTree = "<group>"; };
+		C930B43228C87B220037BE9C /* SwiftUIIntegrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIIntegrationViewController.swift; sourceTree = "<group>"; };
+		C930B43428C87B2B0037BE9C /* CandyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyButton.swift; sourceTree = "<group>"; };
+		C930B43628C87B310037BE9C /* SwiftUIIntegrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftUIIntegrationViewController.xib; sourceTree = "<group>"; };
+		C930B43828C87B3E0037BE9C /* SwiftUIIntegrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIIntegrationViewModel.swift; sourceTree = "<group>"; };
 		EBED3B7524D2A00400CF9221 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		EBED3B7924D2A16100CF9221 /* SampleCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewController.xib; sourceTree = "<group>"; };
 		EBED3B7B24D2A49100CF9221 /* SampleCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewViewModel.swift; sourceTree = "<group>"; };
@@ -187,16 +198,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBCCBD625F4F0BC00079E3F /* TimePickerView in Frameworks */,
-				1EBCCBD825F4F0BC00079E3F /* WeakCache in Frameworks */,
-				1EBCCBC625F4F0BC00079E3F /* BarcodeScanner in Frameworks */,
-				1EBCCBCA25F4F0BC00079E3F /* UserDefaults in Frameworks */,
-				1EBCCBC825F4F0BC00079E3F /* GridView in Frameworks */,
-				1EBCCBD425F4F0BC00079E3F /* JamitFoundation in Frameworks */,
-				1EBCCBCC25F4F0BC00079E3F /* MessageView in Frameworks */,
-				1EBCCBD025F4F0BC00079E3F /* Keychain in Frameworks */,
-				1EBCCBCE25F4F0BC00079E3F /* CarouselView in Frameworks */,
-				1EBCCBD225F4F0BC00079E3F /* PageView in Frameworks */,
+				C5DAE5CE299D26EB00CC8947 /* TimePickerView in Frameworks */,
+				C5DAE5BE299D26EB00CC8947 /* BarcodeScanner in Frameworks */,
+				C5DAE5C2299D26EB00CC8947 /* GridView in Frameworks */,
+				C5DAE5C0299D26EB00CC8947 /* CarouselView in Frameworks */,
+				C5DAE5C4299D26EB00CC8947 /* JamitFoundation in Frameworks */,
+				C5DAE5C6299D26EB00CC8947 /* Keychain in Frameworks */,
+				C5DAE5C8299D26EB00CC8947 /* MessageView in Frameworks */,
+				C5DAE5D2299D26EB00CC8947 /* WeakCache in Frameworks */,
+				C5DAE5D0299D26EB00CC8947 /* UserDefaults in Frameworks */,
+				C5DAE5CC299D26EB00CC8947 /* SwiftUISupport in Frameworks */,
+				C5DAE5CA299D26EB00CC8947 /* PageView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +358,7 @@
 				1E1B402123F280E500D9A6D5 /* ListView */,
 				1EBCCBDB25F4F0CF00079E3F /* MessageView */,
 				1ECA14AE242A9F8E00321BFC /* ScrollView */,
+				C541912E2860ACE600E29C3B /* SwiftUISupport */,
 				1E1B402223F2818C00D9A6D5 /* TableView */,
 				1E46DE4C24AF6DB3007226EF /* TimePickerView */,
 			);
@@ -548,6 +561,18 @@
 			path = CollapsibleTableView;
 			sourceTree = "<group>";
 		};
+		C541912E2860ACE600E29C3B /* SwiftUISupport */ = {
+			isa = PBXGroup;
+			children = (
+				C541912F2860ACF700E29C3B /* UIKitIntegrationView.swift */,
+				C930B43228C87B220037BE9C /* SwiftUIIntegrationViewController.swift */,
+				C930B43628C87B310037BE9C /* SwiftUIIntegrationViewController.xib */,
+				C930B43428C87B2B0037BE9C /* CandyButton.swift */,
+				C930B43828C87B3E0037BE9C /* SwiftUIIntegrationViewModel.swift */,
+			);
+			path = SwiftUISupport;
+			sourceTree = "<group>";
+		};
 		EBED3B7424D29EFB00CF9221 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,16 +622,17 @@
 			);
 			name = JamitFoundationExample;
 			packageProductDependencies = (
-				1EBCCBC525F4F0BC00079E3F /* BarcodeScanner */,
-				1EBCCBC725F4F0BC00079E3F /* GridView */,
-				1EBCCBC925F4F0BC00079E3F /* UserDefaults */,
-				1EBCCBCB25F4F0BC00079E3F /* MessageView */,
-				1EBCCBCD25F4F0BC00079E3F /* CarouselView */,
-				1EBCCBCF25F4F0BC00079E3F /* Keychain */,
-				1EBCCBD125F4F0BC00079E3F /* PageView */,
-				1EBCCBD325F4F0BC00079E3F /* JamitFoundation */,
-				1EBCCBD525F4F0BC00079E3F /* TimePickerView */,
-				1EBCCBD725F4F0BC00079E3F /* WeakCache */,
+				C5DAE5BD299D26EB00CC8947 /* BarcodeScanner */,
+				C5DAE5BF299D26EB00CC8947 /* CarouselView */,
+				C5DAE5C1299D26EB00CC8947 /* GridView */,
+				C5DAE5C3299D26EB00CC8947 /* JamitFoundation */,
+				C5DAE5C5299D26EB00CC8947 /* Keychain */,
+				C5DAE5C7299D26EB00CC8947 /* MessageView */,
+				C5DAE5C9299D26EB00CC8947 /* PageView */,
+				C5DAE5CB299D26EB00CC8947 /* SwiftUISupport */,
+				C5DAE5CD299D26EB00CC8947 /* TimePickerView */,
+				C5DAE5CF299D26EB00CC8947 /* UserDefaults */,
+				C5DAE5D1299D26EB00CC8947 /* WeakCache */,
 			);
 			productName = JamitFoundationExample;
 			productReference = 1E1B3FE423F27E8700D9A6D5 /* JamitFoundationExample.app */;
@@ -681,7 +707,7 @@
 			);
 			mainGroup = 1E1B3FDB23F27E8700D9A6D5;
 			packageReferences = (
-				1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */,
+				C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */,
 			);
 			productRefGroup = 1E1B3FE523F27E8700D9A6D5 /* Products */;
 			projectDirPath = "";
@@ -718,6 +744,7 @@
 				EBED3B7A24D2A16100CF9221 /* SampleCollectionViewController.xib in Resources */,
 				1ECA14AB242A6BF700321BFC /* ActionViewController.xib in Resources */,
 				1E4DC76C23F2B4CF00F940D7 /* TableViewController.xib in Resources */,
+				C930B43728C87B310037BE9C /* SwiftUIIntegrationViewController.xib in Resources */,
 				1ECA14B2242AA24400321BFC /* MyScrollViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +781,7 @@
 				1E46DE4E24AF6DCF007226EF /* TimePickerViewController.swift in Sources */,
 				1E1B402E23F2845100D9A6D5 /* TableViewTitleTableViewCell.swift in Sources */,
 				1EB2D9732488EAEB00E2B1A4 /* CarouselViewController.swift in Sources */,
+				C930B43528C87B2B0037BE9C /* CandyButton.swift in Sources */,
 				1EBCCBDD25F4F11200079E3F /* MessageViewController.swift in Sources */,
 				1EB2D9772488EB0800E2B1A4 /* CarouselViewControllerViewModel.swift in Sources */,
 				1ECA14AD242A6BFF00321BFC /* ActionViewControllerViewModel.swift in Sources */,
@@ -761,8 +789,10 @@
 				1E1B3FEC23F27E8700D9A6D5 /* SampleListViewController.swift in Sources */,
 				1E1031F524B729750015581B /* CollapsibleItemView.swift in Sources */,
 				EBED3B8B24D2B06400CF9221 /* FancyLabelSupplementaryView.swift in Sources */,
+				C54191302860ACF700E29C3B /* UIKitIntegrationView.swift in Sources */,
 				1ECA14A2242A1D6C00321BFC /* TableViewItemView.swift in Sources */,
 				1ECA14B0242A9FE200321BFC /* MyScrollViewController.swift in Sources */,
+				C930B43328C87B220037BE9C /* SwiftUIIntegrationViewController.swift in Sources */,
 				1E46DE5224AF6DE6007226EF /* TimePickerViewControllerViewModel.swift in Sources */,
 				EBED3B8324D2A71C00CF9221 /* FancyLabelViewModel.swift in Sources */,
 				EBED3B7C24D2A49100CF9221 /* SampleCollectionViewViewModel.swift in Sources */,
@@ -783,6 +813,7 @@
 				1E1B3FE823F27E8700D9A6D5 /* AppDelegate.swift in Sources */,
 				1E8879FA24890940002A553C /* BarcodeScannerViewController.swift in Sources */,
 				1ED5045B2626CB460014263D /* MessageViewPresenter+Extension.swift in Sources */,
+				C930B43928C87B3E0037BE9C /* SwiftUIIntegrationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,7 +989,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				INFOPLIST_FILE = App/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -977,7 +1008,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB7EUU9D79;
 				INFOPLIST_FILE = App/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1115,65 +1146,70 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
+		C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JamitLabs/JamitFoundation";
 			requirement = {
-				branch = develop;
+				branch = "feature/swiftui-integration";
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1EBCCBC525F4F0BC00079E3F /* BarcodeScanner */ = {
+		C5DAE5BD299D26EB00CC8947 /* BarcodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = BarcodeScanner;
 		};
-		1EBCCBC725F4F0BC00079E3F /* GridView */ = {
+		C5DAE5BF299D26EB00CC8947 /* CarouselView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = GridView;
-		};
-		1EBCCBC925F4F0BC00079E3F /* UserDefaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = UserDefaults;
-		};
-		1EBCCBCB25F4F0BC00079E3F /* MessageView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = MessageView;
-		};
-		1EBCCBCD25F4F0BC00079E3F /* CarouselView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = CarouselView;
 		};
-		1EBCCBCF25F4F0BC00079E3F /* Keychain */ = {
+		C5DAE5C1299D26EB00CC8947 /* GridView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = Keychain;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = GridView;
 		};
-		1EBCCBD125F4F0BC00079E3F /* PageView */ = {
+		C5DAE5C3299D26EB00CC8947 /* JamitFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
-			productName = PageView;
-		};
-		1EBCCBD325F4F0BC00079E3F /* JamitFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = JamitFoundation;
 		};
-		1EBCCBD525F4F0BC00079E3F /* TimePickerView */ = {
+		C5DAE5C5299D26EB00CC8947 /* Keychain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = Keychain;
+		};
+		C5DAE5C7299D26EB00CC8947 /* MessageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = MessageView;
+		};
+		C5DAE5C9299D26EB00CC8947 /* PageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = PageView;
+		};
+		C5DAE5CB299D26EB00CC8947 /* SwiftUISupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = SwiftUISupport;
+		};
+		C5DAE5CD299D26EB00CC8947 /* TimePickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = TimePickerView;
 		};
-		1EBCCBD725F4F0BC00079E3F /* WeakCache */ = {
+		C5DAE5CF299D26EB00CC8947 /* UserDefaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EBCCBC425F4F0BC00079E3F /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
+			productName = UserDefaults;
+		};
+		C5DAE5D1299D26EB00CC8947 /* WeakCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5DAE5BC299D26EB00CC8947 /* XCRemoteSwiftPackageReference "JamitFoundation" */;
 			productName = WeakCache;
 		};
 /* End XCSwiftPackageProductDependency section */
